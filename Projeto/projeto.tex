@@ -1,0 +1,176 @@
+% !TEX TS-program = XeLaTeX+MakeIndex+BibTeX
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+%\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+
+\usepackage{fontspec}
+\setmainfont{Linux Libertine G}
+\linespread{1.05}
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{amsfonts}
+\usepackage{color}
+%\usepackage{booktabs} % for much better looking tables
+%\usepackage{array} % for better arrays (eg matrices) in maths
+%\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{microtype}
+\usepackage[numbers]{natbib}
+%\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+\usepackage[hidelinks]{hyperref}
+
+% For Computer Modern:
+%\def\Cpp{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
+% For Linux Libertine G
+\def\Cpp{{C\nolinebreak[4]\raisebox{.20ex}{\small\bf++}}}
+
+\newcommand{\todo}[1]{\textsf{\color{red}#1}}
+
+%%% END Article customizations
+
+\title{Desenvolvimento e Reutilização de Testes Automatizados em Aplicações Web}
+\author{Lucas Antunes Amaral \\ \emph{Universidade Federal de Santa Maria}}
+%\date{} % Activate to display a given date or no date (if empty), otherwise the current date is printed 
+
+\begin{document}
+	\maketitle
+	
+	\section{Identificação}
+	
+	\begin{description} \itemsep 0pt
+		\item[Resumo:] ~\\
+		A constante busca pela qualidade de uma solução em forma de software, fez com que empresas do ramo de desenvolvimento,
+		aderissem e enxergassem a importância da realização de testes automatizados em seus sistemas. A partir deste cenário,
+		surgiram inúmeras ferramentas e \emph{frameworks} para suprir esta demanda, que propõe-se  a ampliar a otimização de tempo e
+		eficácia das aplicações implementadas, visando uma garantia maior na qualidade das mesmas. Contudo, é sabido que criar
+		um novo teste para cada nova funcionalidade ou demanda do sistema, torna-se muito custoso sendo necessário um grande
+		desprendimento de recursos humanos, sendo assim, este trabalho objetiva apresentar scripts de testes automatizados para
+		sistemas \emph{web}, que possam de forma mais genérica e com poucas alterações, serem reutilizados, de forma escalável,
+		para novos casos de testes, que sigam o mesmo escopo.
+		\item[Período de execução:] Agosto de 2015 a Dezembro de 2015
+		\item[Unidades participantes:] ~\\ Curso de Ciência da Computação
+		\item[Área de conhecimento:] Ciência da Computação
+		\item[Linha de Pesquisa:] Linguagens de Programação, Qualidade de Software, Testes de Software
+		\item[Tipo de projeto:] Trabalho de Conclusão de Curso
+		\item[Participantes:] ~\\ Profª Andrea Schwertner Charão -- Orientadora \\ Lucas Antunes Amaral -- Orientando
+	\end{description}
+	
+	\section{Introdução}
+	
+	Data a atual conjectura do mercado de desenvolvimento de software, é fundamental para
+	que uma aplicação mantenha-se viva de forma competitiva, apresentar diferencias ao seu publico alvo, desta maneira a
+	área de qualidade de software ganha cada vez mais espaço dentro das empresas de TI e em especial as ferramentas e metodologias
+	de teste de software ganham maior visibilidade.
+	
+	Os testes de software podem ocorrer em todas as etapas do desenvolvimento e de diferentes formas, contudo,
+	sempre objetivam atender na totalidade os requisitos do sistema e simultaneamente amplificar a qualidade da solução
+	codificada. São inúmeras as vantagens de utilizar-se testes automatizados ao invés dos testes manuais em uma aplicação,
+	apesar de aparentemente ser mais prático e rápido realizar um teste manual, a cada nova alteração em um módulo do sistema,
+	o teste tem que ser todo refeito e a tendência que \emph{BUG's} novos sejam gerados até mesmo em funcionalidades já testadas é enorme,
+	problema este que não ocorre quando a abordagem escolhida é a automatização dos testes.
+	
+	Apesar de apresentar grandes vantagens, os testes automatizados demandam um grande custo inicial em sua codificação,
+	e com isso, aumenta o envolvimento da equipe de qualidade, pensando nesse problema, podemos buscar formas alternativas para
+	que posasse usufruir de toda estas virtudes dos testes automatizados, e ao mesmo tempo, utilizar de forma eficiência os
+	recursos disponíveis em uma instituição.
+	
+	\section{Objetivos}
+	
+	\subsection{Objetivo Geral}
+	
+	Este trabalho tem como objetivo principal, apresentar um conjunto de casos de teste e testes que possam ser reutilizados de
+	forma otimizada em novas funcionalidades de uma aplicação ou em sistemas que sigam os mesmos padrões e comportamento dos
+	softwares conhecidos.
+	
+	\subsection{Objetivos Específicos}
+	\begin{itemize}
+		\item Apontar diferenças de casos de testes
+		\item Gerar testes replicáveis
+		\item Gerar casos de testes genéricos para um escopo definido
+	\end{itemize}
+	
+	\section{Justificativa}
+	
+	A qualidade de software  é uma das variáveis essenciais para que um projeto de software tenha sucesso,
+	sendo assim, torna-se cada vez mais necessário a inserção de testes automatizados em projetos web,
+	agregando aos mesmos uma maior confiabilidade e redução nos possíveis \emph{BUG's} que o sistema possa
+	apresentar. Para que haja a possibilidade de aumentar a qualidade dos sistemas, sem que seja necessário uma maior
+	demanda de recursos humanos para a área de qualidade, podemos adotar práticas de reuso de códigos de testes, visando
+	maximizar a produtividade e eficiência, além de,  simultaneamente obter um produto final com uma garantia de qualidade
+	superior.
+	
+	\section{Revisão de Literatura}
+	
+	\subsection{Qualidade de Software}
+
+	\subsection{Testes de Software}
+	
+	\subsection{Cucumber}
+
+	\subsection{Selenium HQ}
+	
+	\section{Plano de Atividades e Cronograma}
+
+	O cronograma de atividades será composto de 5 etapas, são elas:
+	
+	\begin{enumerate}
+		\item \label{activity:study} \textbf{EConfiguração e estudo sobre \emph{Selenium HQ} e \emph{Cucumber}:}
+		Nesta etapa, ocorrerá os devidos estudos sobre as ferramentas escolhidas para
+		desenvolvimento deste trabalho, assim como a instalação das mesmas.
+		\item \label{activity:initial_port} \textbf{Desenvolvimento de testes 1º software:}
+		Trata-se de elencar alguns testes necessários no primeiro software selecionado para o desenvolvimento,
+		e após, codificá-los.
+		\item \label{activity:compare} \textbf{Desenvolvimento de testes 2º software:}
+		Desenvolvimento de testes para o segundo software web deste projeto.
+		\item \label{activity:parallelize} \textbf{Análise das similaridades dos testes desenvolvidos:}
+		Análise das diferenças e igualdades, dos testes desenvolvidos sobre as dois sistemas web selecionados,
+		elencando um padrão que possa ser reutilizado.
+		\item \label{activity:finish_port} \textbf{Confecção de rotinas e testes genéricos para aplicações web:}
+		Codificação de testes padronizados, que possam ser utilizados em grande parte e com poucas alterações,
+		em outros projetos que sigam o mesmo padrão que os estudados neste trabalho.
+	\end{enumerate}
+	
+
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{c|ccccc}
+			Etapa & Agosto & Setembro & Outubro & Novembro & Dezembro \\ \hline
+			\ref{activity:study} & \checkmark & \checkmark & & & \\
+			\ref{activity:initial_port} & & \checkmark & \checkmark & & \\
+			\ref{activity:compare} & & \checkmark & \checkmark & & \\
+			\ref{activity:parallelize} & & & \checkmark & \checkmark & \\
+			\ref{activity:finish_port} & & & & &\checkmark \\
+		\end{tabular}
+		\caption{Cronograma de Atividades}
+	\end{table}
+	
+	\section{Recursos}
+	
+	Como recursos físicos, serão utilizados neste trabalho, apenas o computador pessoal do pesquisador juntamente
+	com ferramentas \emph{open source} para teste de software web, que serão instaladas no mesmo.
+	
+	\section{Resultados Esperados}
+	
+	Ao término deste projeto, espera-se ter como resultado, um conjunto de testes e casos de testes genéricos,
+	que possam ser aplicados em um software web que possua características similares aos softwares utilizados
+	nesta pesquisa.
+	
+	\bibliographystyle{abbrvnat}
+	\bibliography{../graphics,../languages}
+	
+\end{document}

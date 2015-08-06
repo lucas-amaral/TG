@@ -1,4 +1,4 @@
-% !TEX TS-program = XeLaTeX+MakeIndex+BibTeX
+	% !TEX TS-program = XeLaTeX+MakeIndex+BibTeX
 % !TEX encoding = UTF-8 Unicode
 
 \documentclass[12pt]{article}
@@ -85,39 +85,67 @@
 	problema este que não ocorre quando a abordagem escolhida é a automatização dos testes.
 	
 	Apesar de apresentar grandes vantagens, os testes automatizados demandam um grande custo inicial em sua codificação,
-	e com isso, aumenta o envolvimento da equipe de qualidade, pensando nesse problema, podemos buscar formas alternativas para
-	que posasse usufruir de toda estas virtudes dos testes automatizados, e ao mesmo tempo, utilizar de forma eficiência os
+	e com isso, aumenta o envolvimento da equipe de qualidade. Pensando nesse problema, podemos buscar formas alternativas para
+	que se possa usufruir de todas estas virtudes dos testes automatizados, e, ao mesmo tempo, utilizar de forma eficiênte os
 	recursos disponíveis em uma instituição.
 	
 	\section{Objetivos}
 	
 	\subsection{Objetivo Geral}
 	
-	Este trabalho tem como objetivo principal, apresentar um conjunto de casos de teste e testes que possam ser reutilizados de
+	Este trabalho tem como objetivo principal apresentar um conjunto de casos de teste e testes que possam ser reutilizados de
 	forma otimizada em novas funcionalidades de uma aplicação ou em sistemas que sigam os mesmos padrões e comportamento dos
 	softwares conhecidos.
 	
 	\subsection{Objetivos Específicos}
 	\begin{itemize}
 		\item Apontar diferenças de casos de testes
-		\item Gerar testes replicáveis
+		\item Gerar testes automaziados reaplicáveis em novos casos
 		\item Gerar casos de testes genéricos para um escopo definido
 	\end{itemize}
 	
 	\section{Justificativa}
 	
-	A qualidade de software  é uma das variáveis essenciais para que um projeto de software tenha sucesso,
-	sendo assim, torna-se cada vez mais necessário a inserção de testes automatizados em projetos web,
+	A qualidade de software  é uma das variáveis essenciais para que um projeto de software tenha sucesso.
+	Sendo assim, torna-se cada vez mais necessário a inserção de testes automatizados em projetos web,
 	agregando aos mesmos uma maior confiabilidade e redução nos possíveis \emph{BUG's} que o sistema possa
 	apresentar. Para que haja a possibilidade de aumentar a qualidade dos sistemas, sem que seja necessário uma maior
 	demanda de recursos humanos para a área de qualidade, podemos adotar práticas de reuso de códigos de testes, visando
-	maximizar a produtividade e eficiência, além de,  simultaneamente obter um produto final com uma garantia de qualidade
+	maximizar a produtividade e eficiência, além de, simultaneamente, obter um produto final com uma garantia de qualidade
 	superior.
 	
 	\section{Revisão de Literatura}
 	
 	\subsection{Qualidade de Software}
+	
+	A Qualidade de software é uma sub-área oriunda da engenharia de software, que tem com foco central apresentar metodologias,
+	procedimentos e métricas que garantam a qualidade no processo de desenvolvimento de um sistema. Apesar de ocorrer no processo, a Qualidade de software
+	objetiva obter qualidade no produto final, e, com isso, consiga contemplar na totalidade os requisitos tratados com o cliente ao longo do processo.
+    \citeauthor{de2006introduccao} \cite{de2006introduccao} afirma que a qualidade de software está diretamente relacionada a um gerenciamento
+    rigoroso de requisitos, uma gerência efetiva de projetos e em um processo de desenvolvimento bem definido, gerenciado e em melhoria contínua. Afirma também,
+    que atividades de verificação e uso de métricas para controle de projetos e processo também estão inseridas nesse contexto, contribuindo para tomadas de
+    decisão e para antecipação de problemas.
 
+    Mas como medir a qualidade de um sistema em questão? Para responder este questiamento, Garvin \cite{garvin1987competing} propõe o conceito que ele chama de
+    oito dimensões, que seriam em ordem, qualidade do desempenho, qualidade dos recursos, confiabilidade, conformidade, durabilidade, facilidade de manutenção,
+    estética e percepção. Segundo \citeauthor{garvin1987competing}, atendendo a estes oito critérios, o sistema apresentará qualidade.
+    \citeauthor{pressman2011engenharia} \cite{pressman2011engenharia} complementa a definição de Garvin mesclando-a com a norma ISO 9126, e aponta os fatores
+    críticos para o sucesso neste caso, como sendo: Intuição, Eficiência, Robustez e Riquiza.
+
+	
+	\subsection{Qualidade do processo}
+	
+	A qualidade de software é largamente determinada pela qualidade dos processos utilizados para o desenvolvimento. Deste modo, a melhoria 
+	da qualidade de software é obtida pela melhoria da qualidade dos processos \cite{koscianski2007qualidade}. 
+	
+	\subsection{Qualidade do produto}
+
+	Existe uma relação direta entre qualidade de produto e qualidade do processo, pois, para obtenção da qualidade do produto final,
+	faz-se necessário adquirir primeiramente qualidade nos processos que compoem o desenvolvimento do mesmo.
+	Avaliar a qualidade de um produto de software é verificar, através de técnicas e atividades operacionais o quanto os requisitos são atendidos. Tais requisitos,
+	de uma maneira geral são a expressão das necessidades, explicitados em termos quantitativos ou qualitativos, e têm por objetivo definir as características de
+	um software, a fim de permitir o exame de seu atendimento \cite{koscianski2007qualidade}.
+	
 	\subsection{Testes de Software}
 	
 	\subsection{Cucumber}
@@ -129,7 +157,7 @@
 	O cronograma de atividades será composto de 5 etapas, são elas:
 	
 	\begin{enumerate}
-		\item \label{activity:study} \textbf{EConfiguração e estudo sobre \emph{Selenium HQ} e \emph{Cucumber}:}
+		\item \label{activity:study} \textbf{Configuração e estudo sobre \emph{Selenium HQ} e \emph{Cucumber}:}
 		Nesta etapa, ocorrerá os devidos estudos sobre as ferramentas escolhidas para
 		desenvolvimento deste trabalho, assim como a instalação das mesmas.
 		\item \label{activity:initial_port} \textbf{Desenvolvimento de testes 1º software:}
@@ -138,7 +166,7 @@
 		\item \label{activity:compare} \textbf{Desenvolvimento de testes 2º software:}
 		Desenvolvimento de testes para o segundo software web deste projeto.
 		\item \label{activity:parallelize} \textbf{Análise das similaridades dos testes desenvolvidos:}
-		Análise das diferenças e igualdades, dos testes desenvolvidos sobre as dois sistemas web selecionados,
+		Análise das diferenças e igualdades dos testes desenvolvidos sobre os dois sistemas web selecionados,
 		elencando um padrão que possa ser reutilizado.
 		\item \label{activity:finish_port} \textbf{Confecção de rotinas e testes genéricos para aplicações web:}
 		Codificação de testes padronizados, que possam ser utilizados em grande parte e com poucas alterações,
@@ -166,11 +194,11 @@
 	
 	\section{Resultados Esperados}
 	
-	Ao término deste projeto, espera-se ter como resultado, um conjunto de testes e casos de testes genéricos,
+	Ao término deste projeto, espera-se ter como resultado um conjunto de testes e casos de testes genéricos,
 	que possam ser aplicados em um software web que possua características similares aos softwares utilizados
 	nesta pesquisa.
 	
 	\bibliographystyle{abbrvnat}
-	\bibliography{../graphics,../languages}
+	\bibliography{../referências}
 	
 \end{document}

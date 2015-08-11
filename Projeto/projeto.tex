@@ -133,12 +133,12 @@
     críticos para o sucesso neste caso, como sendo: Intuição, Eficiência, Robustez e Riqueza.
 
 	
-	\subsection{Qualidade do processo}
+	\subsubsection{Qualidade do processo}
 	
 	A qualidade de software é largamente determinada pela qualidade dos processos utilizados para o desenvolvimento. Deste modo, a melhoria 
 	da qualidade de software é obtida pela melhoria da qualidade dos processos \cite{koscianski2007qualidade}. 
 	
-	\subsection{Qualidade do produto}
+	\subsubsection{Qualidade do produto}
 
 	Existe uma relação direta entre qualidade de produto e qualidade do processo, pois, para obtenção da qualidade do produto final,
 	faz-se necessário adquirir primeiramente qualidade nos processos que compõem o desenvolvimento do mesmo.
@@ -146,16 +146,18 @@
 	de uma maneira geral são a expressão das necessidades, explicitados em termos quantitativos ou qualitativos, e têm por objetivo definir as características de
 	um software, a fim de permitir o exame de seu atendimento \cite{koscianski2007qualidade}.
 	
-	\subsection{Testes de Software}
+	\subsubsection{Testes de Software}
 
 	É a atividade responsável por apresentar os erros existentes em um determinado programa, por isso, pode ser vista como uma atividade destrutível, pois visa expor os defeitos para depois corrigir os mesmos, e, de preferência, em um estágio inicial. Quanto mais tarde um defeito for identificado mais caro fica para corrigi-lo e mais, os custos de descobrir e corrigir o defeito no software aumentam exponencialmente na proporção em que o trabalho evolui através das fases do projeto de desenvolvimento \cite{boehm1976quantitative}. O teste possibilita também, validar se os requisitos inicias do sistema, alinhados pelos stakeholders, estão contemplados em sua plenitude.
 
 	Apesar de não ser possível, através de testes, provar que um programa está correto, os testes, se conduzidos sistemática e criteriosamente, contribuem para aumentar a confiança de que o software desempenha as funções especificadas e evidenciar algumas características mínimas do ponto de vista da qualidade do produto \cite{maldonado2004introduccao}. Sendo assim, se faz essencial o mapeamento de um processo de testes para que se possa criar garantias e métricas que reduzam os erros, maximizando a qualidade, \citeauthor{crespo2004metodologia} \cite{crespo2004metodologia} descreve o processo de teste, como sendo a composição de quatro macro etapas: Planejamento, projeto, execução e acompanhamento dos testes de unidade.
 
-	\subsection{Estratégias de Testes}
+	\subsubsection{Estratégias de Testes}
 	A Estratégia de testes se caracteriza pela definição da abordagem geral a ser aplicada nos testes, descrevendo como o software será testado, identificando os níveis de testes que serão aplicados, os métodos, técnicas e ferramentas a serem utilizada \cite{rios2006teste}. Existem muitas estratégias mas podemos destacar entre elas: Teste de unidade, integração, sistema, aceitação e regressão, funcional e carga. Se pode também, mesclar mais de uma estratégia com o intuito de reduzir os possíveis defeitos que o sistema venha a ter.	
 
-	\subsection{Cucumber}
+	\subsection{Ferramentas para teste de software}
+
+	\subsubsection{Cucumber}
 	Cucumber é um ferramenta de desenvolvimento de testes, voltado para sistemas web, que adota uma linguagem de alto nível bem próxima à uma linguagem natural e tem suas origens fixadas sobre a metodologia BDD (Behavior Driven Development). Cucumber é escrita em linguagem Ruby, mas pode ser utilizada para executar especificações de aplicações escritas em qualquer linguagem \cite{nunescucumber}. 
 
 	A ferramenta funciona basicamente através da leitura de arquivos com a extensão feature, os quais descrevem em linguagem natural uma funcionalidade e casos de teste, conhecidos como cenários.     
@@ -168,11 +170,15 @@
 		\label{fig:codigo_cucumber}
 	\end{figure}
 
-	\subsection{Selenium HQ}
+	\subsubsection{Selenium HQ}
 	É um framework open source, utilizado para automatização de testes funcionais em aplicações web \cite{chiavegatto1desenvolvimento}. Segundo \citeauthor{pereiraestudoselenium} \cite{pereiraestudoselenium}, se trata de uma ferramenta de fácil uso e eficiente para desenvolver casos de teste, permitindo os testes de aceitação ou funcional, regressão e de desempenho. 
 	Selenium trabalha como um plugin do navegador Firefox, o mesmo trás muita praticidade pois permite que se possa capturar cliques e valores digitados transformando-os em um caso de teste. Ele é composto por quatro ferramentas: Selenium IDE, Selenium Grid, Selenium RC e Selenium WebDrive. 
 
 	A  utilização  de  comandos  no  Selenium  consiste  em  digitar  o  comando  seguido  de  dois parâmetros  tal  como  por  exemplo \emph{verifyText //div//a[2] Login}. Dependendo  do  comando,  os parâmetros poderão ser opcionais, aliás, alguns comandos não necessitam de parâmetros para serem executados \cite{sixpenceautomatizaccao}.
+
+	\subsection{Reuso de testes}
+
+	\section{Metodologia}
 
 	\section{Plano de Atividades e Cronograma}
 

@@ -115,6 +115,8 @@
 	superior.
 	
 	\section{Revisão de Literatura}
+
+	Abaixo, serão apresentados conceitos relativos os conteúdos abordados neste trabalho, descrevendo, qualidade de softeware, ferramentas de teste de software, assim como o reuso de testes.
 	
 	\subsection{Qualidade de Software}
 	
@@ -156,10 +158,12 @@
 	A Estratégia de testes se caracteriza pela definição da abordagem geral a ser aplicada nos testes, descrevendo como o software será testado, identificando os níveis de testes que serão aplicados, os métodos, técnicas e ferramentas a serem utilizada \cite{rios2006teste}. Existem muitas estratégias mas podemos destacar entre elas: Teste de unidade, integração, sistema, aceitação e regressão, funcional e carga. Se pode também, mesclar mais de uma estratégia com o intuito de reduzir os possíveis defeitos que o sistema venha a ter.	
 
 	\subsection{Ferramentas para teste de software}
-	Existem muitas ferramentas desenvolvidas para realização de testes de software web, dentre destas serão descritas 2 ferramentas que serão utilizadas para o desenvolvimento deste trabalho.
+	Existem muitas ferramentas desenvolvidas para realização de testes de software web, neste trabalho serão descritas duas(2) dentre elas, que serão as ferramentas utilizadas no desenvolvimento dos testes estudados.
 
 	\subsubsection{Cucumber}
 	Cucumber é um ferramenta de desenvolvimento de testes, voltado para sistemas web, que adota uma linguagem de alto nível bem próxima à uma linguagem natural e tem suas origens fixadas sobre a metodologia BDD (Behavior Driven Development). Cucumber é escrita em linguagem Ruby, mas pode ser utilizada para executar especificações de aplicações escritas em qualquer linguagem \cite{nunescucumber}. 
+
+	A escolha dessa ferramenta, baseou-se na fácil transcrição dos requisitos do sistema para a linguagem em questão, tornando possível conferir se os requisitos estão contemplados pelas funções e métodos descritos no sistema \emph{web}. \citeauthor{lopescucumbervalor}\cite{lopescucumbervalor} compara Cucumber com o \emph{software} Capybara e afirma que o cucumber apresentar um código mais legível e amigável. Uma observação é que o código com Capybara faz referência para vários detalhes de implementação, enquanto o código do Cucumber reserva isso apenas para os Steps e não para o arquivo de feature \cite{lopescucumbervalor}. 
 
 	A ferramenta funciona basicamente através da leitura de arquivos com a extensão feature, os quais descrevem em linguagem natural uma funcionalidade e casos de teste, conhecidos como cenários.     
 	Como os testes estão escritos em uma linguagem natural, e não de programação, Cucumber precisa pesquisar pelo código associado aos passos que formam o cenário em arquivos auxiliares \cite{scmitzcucumberreview}. Cucumber executa seus arquivos \emph{.feature}, e esses arquivos contêm especificações executáveis escritos em uma linguagem chamada Gherkin \cite{cucumberwiki}, que, possui um layout bem definido. Inicia pela descrição de uma funcionalidade, que por sua vez possui cenários, onde, um cenário é descrito da seguinte forma: \emph{Dado} alguma condição \emph{Quando} outra condição \emph{E} terceira condição \emph{Então} faça algo, conforme ilustra a figura \ref{fig:codigo_cucumber}.
@@ -177,11 +181,14 @@
 
 	A  utilização  de  comandos  no  Selenium  consiste  em  digitar  o  comando  seguido  de  dois parâmetros  tal  como  por  exemplo \emph{verifyText //div//a[2] Login}. Dependendo  do  comando,  os parâmetros poderão ser opcionais, aliás, alguns comandos não necessitam de parâmetros para serem executados \cite{sixpenceautomatizaccao}.
 
+	A escolha de Selenium no desenvolvimento deste projeto, se deu pelo fato de ser um \emph{framework open source} que possui um vasto leque de ferramentas para testes de sistemas web. Outro fator importante para sua escolha, é a possibilidade de interação do Selenium HQ com o Cucumber. Ela  se  destaca  entre  as 
+    demais ferramentas  gratuitas pelo fato de ser a mais completa, permitindo integração com várias linguagens,  outros \emph{frameworks}, além de suportar inúmeros navegadores e sistemas operacionais \cite{pereiraestudoselenium}.
+
 	\subsection{Reuso de testes}
 
 	\section{Metodologia}
 
-	O projeto em questão, se trata de um trabalho exploratório, onde o mesmo será dividido em 3 grande fases, que seriam:
+	O projeto em questão, se trata de um trabalho exploratório, onde o mesmo será dividido em três(3) grandes fases, que seriam:
 
 	\subsection{Planejamento dos testes necessários}
 	Fase na qual serão elencados potenciais classes que necessitam de maiores cuidados nos sistemas escolhidos, será também, o momento onde ocorrerá o mapeamento dos casos de testes necessários que deverão ser
@@ -191,7 +198,7 @@
 	Momento no qual serão escritos os códigos dos testes planejados na primeira fase do projeto, utilizando Selenium HQ e Cucumber como ferramentas para codificação dos mesmos.
 
     \subsection{Análise e geração de casos de teste reutilizaveis}
-    Fase final do projeto, responsável pela geração de \emph{scripts} que contenham testes que possam ser reaproveitados em novas situações e funcionalidades para aplicações web que sigam o mesmo perfil das
+    Ultima etapa do projeto, responsável pela geração de \emph{scripts} que contenham testes que possam ser reaproveitados em novas situações e funcionalidades para aplicações web que sigam o mesmo perfil das
     aplicações para os quais os mesmos foram criados.
 
 	\section{Plano de Atividades e Cronograma}

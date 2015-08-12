@@ -116,7 +116,7 @@
 	
 	\section{Revisão de Literatura}
 
-	Abaixo, serão apresentados conceitos relativos os conteúdos abordados neste trabalho, descrevendo, qualidade de softeware, ferramentas de teste de software, assim como o reuso de testes.
+	Abaixo, serão apresentados conceitos relativos os conteúdos abordados neste trabalho, descrevendo, qualidade de software, ferramentas de teste de software, assim como o reuso de testes.
 	
 	\subsection{Qualidade de Software}
 	
@@ -163,7 +163,7 @@
 	\subsubsection{Cucumber}
 	Cucumber é um ferramenta de desenvolvimento de testes, voltado para sistemas web, que adota uma linguagem de alto nível bem próxima à uma linguagem natural e tem suas origens fixadas sobre a metodologia BDD (Behavior Driven Development). Cucumber é escrita em linguagem Ruby, mas pode ser utilizada para executar especificações de aplicações escritas em qualquer linguagem \cite{nunescucumber}. 
 
-	A escolha dessa ferramenta, baseou-se na fácil transcrição dos requisitos do sistema para a linguagem em questão, tornando possível conferir se os requisitos estão contemplados pelas funções e métodos descritos no sistema \emph{web}. \citeauthor{lopescucumbervalor}\cite{lopescucumbervalor} compara Cucumber com o \emph{software} Capybara e afirma que o cucumber apresentar um código mais legível e amigável. Uma observação é que o código com Capybara faz referência para vários detalhes de implementação, enquanto o código do Cucumber reserva isso apenas para os Steps e não para o arquivo de feature \cite{lopescucumbervalor}. 
+	A escolha dessa ferramenta, baseou-se na fácil transcrição dos requisitos do sistema para a linguagem em questão, tornando possível conferir se os requisitos estão contemplados pelas funções e métodos descritos no sistema \emph{web}. \citeauthor{lopescucumbervalor}\cite{lopescucumbervalor} compara Cucumber com o \emph{software} Capybara e afirma que o primeiro apresentar um código mais legível e amigável. Uma observação é que o código com Capybara faz referência para vários detalhes de implementação, enquanto o código do Cucumber reserva isso apenas para os \emph{Steps} e não para o arquivo de feature \cite{lopescucumbervalor}. 
 
 	A ferramenta funciona basicamente através da leitura de arquivos com a extensão feature, os quais descrevem em linguagem natural uma funcionalidade e casos de teste, conhecidos como cenários.     
 	Como os testes estão escritos em uma linguagem natural, e não de programação, Cucumber precisa pesquisar pelo código associado aos passos que formam o cenário em arquivos auxiliares \cite{scmitzcucumberreview}. Cucumber executa seus arquivos \emph{.feature}, e esses arquivos contêm especificações executáveis escritos em uma linguagem chamada Gherkin \cite{cucumberwiki}, que, possui um layout bem definido. Inicia pela descrição de uma funcionalidade, que por sua vez possui cenários, onde, um cenário é descrito da seguinte forma: \emph{Dado} alguma condição \emph{Quando} outra condição \emph{E} terceira condição \emph{Então} faça algo, conforme ilustra a figura \ref{fig:codigo_cucumber}.
@@ -186,6 +186,12 @@
 
 	\subsection{Reuso de testes}
 
+	Visando melhor aproveitar os recursos existentes em uma instituição e ainda assim apresentar garantias na qualidade do produto/serviço entreges aos clientes, desenvolvedores do mundo todo, começaram a apresentar teses e modelos que buscam criar testes genéricos e padronizados. Um padrão é um pedaço de informação instrutiva e nomeada, que captura a estrutura essencial e \emph{“insights”} de uma família bem sucedida de soluções aprovadas
+	para um determinado problema, o qual surge em um determinado contexto \cite{cagnin2004reuso}. 
+
+	\citeauthor{guizzardi2000desenvolvimento} diz que por razões histórias a área de desenvolvimento de software não atingiu a maturidade que outras áreas da engenharia atingiram, complenta afirmando, apesar disso, é inegável que algum avanço tenha sido alcançado, pois a forma de realização dessa atividade evoluiu de 
+    uma atividade realizada de forma quase artesanal, para um processo de desenvolvimento bem estruturado e que, nos melhores casos, contempla inclusive atividades de gerência e avaliação da qualidade \cite{guizzardi2000desenvolvimento}. Com isso, a reutilização dos testes já codificados, se mostra uma importante prática no desenvolvimento, que ainda apresenta muitas incognitas e possibilidades para as equipes de TI, principalmente na geração de casos de testes que possam ser reutilizados em situações que apresentem um padrão parecedido com os casos já conhecidos.
+
 	\section{Metodologia}
 
 	O projeto em questão, se trata de um trabalho exploratório, onde o mesmo será dividido em três(3) grandes fases, que seriam:
@@ -197,7 +203,7 @@
 	\subsection{Programação dos testes automatizados}
 	Momento no qual serão escritos os códigos dos testes planejados na primeira fase do projeto, utilizando Selenium HQ e Cucumber como ferramentas para codificação dos mesmos.
 
-    \subsection{Análise e geração de casos de teste reutilizaveis}
+    \subsection{Análise e geração de casos de teste reutilizáveis}
     Ultima etapa do projeto, responsável pela geração de \emph{scripts} que contenham testes que possam ser reaproveitados em novas situações e funcionalidades para aplicações web que sigam o mesmo perfil das
     aplicações para os quais os mesmos foram criados.
 

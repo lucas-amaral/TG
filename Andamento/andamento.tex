@@ -256,24 +256,18 @@ Abaixo, serão descritas as atividades desenvolvidas afim de alcançar os objeti
 
 \section{Escolha dos sistemas}
 
-Para desenvolver os testes automatizados deste trabalhos, foram escolhidos 2 sistemas web desenvolvidos na linguagem de programação Java, com suas interfaces desenvolvidas em jsp, contando com funções ajax e javascript.
-
-\section{Ambiente de Desenvolvimento e Organização de Projeto}
-
-\subsection{Java}
-\subsection{JUnit}
-\subsection{Selenium}
+Para desenvolver os testes automatizados deste trabalho, foram escolhidos 2 sistemas web desenvolvidos na linguagem de programação Java, com suas interfaces desenvolvidas em \emph{JSP}, contando com funções \emph{Ajax} e \emph{Javascript}.
 
 \section{Organização do Código - Solução 1}
 
-Em um primeiro momento, com objetivo de automatizar os testes de uma aplicação e reduzir o trabalho na codificação de novos testes para as equipes de desenvolvimento e testes de uma empresa, criou-se uma abordagem baseada em anotações de classes Java com o intuito de mapear qual seriam as classes e métodos utilizados nos formulários do software que deveriam ser testado, nesta abordagem, todo o método ou classe anotada deveria ser testado. 
+Em um primeiro momento, com objetivo de automatizar os testes de uma aplicação e reduzir o trabalho na codificação de novos testes para as equipes de desenvolvimento e testes de uma empresa, criou-se uma abordagem baseada em anotações de classes Java com o intuito de mapear qual seriam as classes e métodos utilizados nos formulários do software que deveriam ser testados. 
 
-A ideia inicial seria informar através de uma anotação, qual deveria ser o teste executado para cada método mapeado com a anotação em questão, sendo assim, inserindo uma anotação sobre um método, saberia-se qual propriedade aquele método corresponderia em um determinado formulário, assim como o tipo do mesmo (input, text, select, radiobuttom, checkbox) e o valor que deveria ser inserido no mesmo. Informações como, o formulário que deveria ser testado e o valor de aceitação para o teste seriam inseridos na anotação da classe. Para realizar esta tarefa foi descrita a seguinte classe de anotação.
+A ideia inicial seria informar através de uma anotação, qual deveria ser o teste executado para cada método mapeado com a anotação em questão, sendo assim, inserindo uma anotação sobre um método, se saberia qual propriedade aquele método corresponderia em um determinado formulário, assim como o tipo do mesmo (input, text, select, radiobuttom, checkbox) e o valor que deveria ser inserido no mesmo. Informações como o formulário que deveria ser testado e o valor de aceitação para o teste seriam inseridos na anotação da classe. Para realizar esta tarefa foi descrita a seguinte classe de anotação.
 
 
 \subsection{\texttt{Teste.java}}
 
-A interface \texttt{Teste.java} procura com seus métodos mapear as ações que serão necessárias para a execução de um teste Selenium utilizando elementos da classe WebDriver, conforme apresentaremos mais adiante neste experimento.
+A interface \texttt{Teste.java} procura com seus métodos mapear as ações que serão necessárias para a execução de um teste \emph{Selenium} utilizando elementos da classe \emph{WebDriver}, conforme apresentaremos mais adiante neste experimento.
 
 \begin{figure}[!htb]
 \begin{lstlisting}
@@ -362,9 +356,9 @@ public class Disciplina {
 \end{figure}
 
 \subsection{\texttt{TesteFormulario.java}}
-Para realizar o teste propriamente dito, criou-se nos projetos utilizados, uma classe de testes denominada TesteFormulaio.java, onde a mesma utilizaria as anotações do framework JUnit  para executar os testes necessários. A classe desenvolvida possui um método principal denominado testaFormularios, onde a ideia principal do mesmo seria buscar de forma recursiva, todas as classes do projeto anotadas pela interface Teste que criamos, e para cada uma das mesma cria-se elementos webDrive para executar as ações indicadas pela anotação. 
+Para realizar o teste propriamente dito, criou-se nos projetos utilizados, uma classe de testes denominada \texttt{TesteFormulaio.java}, onde a mesma utilizaria as anotações do \emph{framework JUnit}  para executar os testes necessários. A classe desenvolvida possui um método principal denominado \texttt{testaFormularios}, onde a ideia principal do mesmo seria buscar de forma recursiva, todas as classes do projeto anotadas pela interface Teste que criamos, e para cada uma das mesmas cria-se elementos \emph{webDrive} para executar as ações indicadas pela anotação. 
 
-	Para tormar o método testaFormularios e seus sub-métodos mais genérios, utilizou-se Java Reflection para tratar todas as classes e métodos simplesmente como objetos, possibilitando assim, o reuso do mesmo para qualquer teste necessário dentro deste projeto. Vemos, a seguir, o código desta classe:
+	Para tornar o método \texttt{testaFormularios} e seus sub métodos mais genéricos, utilizou-se \emph{Java Reflection} para tratar todas as classes e métodos simplesmente como objetos, possibilitando assim, o reuso do mesmo para qualquer teste necessário dentro deste projeto. Vemos, a seguir, o código desta classe:
 	
 \subsubsection{\texttt{testaFormularios()}}
 Função principal da classe de testes, responsável por, de forma iterativa, buscar em cada classe que possui a anotações Teste do projeto em questão.
@@ -396,7 +390,7 @@ public void testaFormularios() {
 \end{figure}
 
 \subsubsection{\texttt{executaTeste()}}
-Método responsável por encontrar no browser o campo necessário e passá-lo para o método que ira executar as ações necessárias.
+Método responsável por encontrar no browser o campo necessário e passá-lo para o método que irá executar as ações necessárias.
 
 \begin{figure}[!htb]
 \begin{lstlisting}
@@ -546,14 +540,12 @@ private WebElement getEncontraCampo(String identificador, String campo) {
 
 Após a finalização do desenvolvimento desta primeira solução encontrada, notou-se a clara necessidade de alteração na sistemática de como os teste ocorreriam, necessidade esta oriunda de algumas limitações que a solução trás, como por exemplo, a não possibilidade de realizar testes que envolvam mais de um método, tornando praticamente inviável a tarefa de realizar testes funcionais, pois não seria possível mapear um cenário mais completo, que depende de mais de uma variável e que tem uma sequência bem mapeada que deve ser seguida. 
 
-Outro fator determinante, para o descontinuamento desta solução, foi o fato de por permitir apenas testes unitários, o mesmo não possibilitaria o teste de um mesmo campo, com dois valores diferentes e além disto, também não seria viável a execução de testes unitários para um sistema muito grande, pois é sabido que os testes devem ser executados sobre os pontos criticos do software e não na totalidade do projeto.
+Outro fator determinante para o descontinua mento desta solução, foi o fato de por permitir apenas testes unitários, o mesmo não possibilitaria o teste de um mesmo campo, com dois valores diferentes e além disto, também não seria viável a execução de testes unitários para um sistema muito grande, pois é sabido que os testes devem ser executados sobre os pontos críticos do software e não na totalidade do projeto.
 
 \chapter{Próximas Etapas}
 Como continuação do trabalho realizado até o momento, são planejadas as seguintes atividades:
-\begin{enumerate}
 
-\end{enumerate}
 \setlength{\baselineskip}{\baselineskip}
 \bibliographystyle{abnt}
-\bibliography{../graphics,../languages}
+\bibliography{../referências}
 \end{document}

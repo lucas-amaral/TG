@@ -1,0 +1,78 @@
+\begin{thebibliography}{\hspace{\parindent}}
+
+\bibitem[BOEHM; BROWN; LIPOW(1976)BOEHM; BROWN; LIPOW]{boehm1976quantitative}
+  BOEHM, B.~W.; BROWN, J.~R.; LIPOW, M\@. Quantitative evaluation of software
+  quality. In: SOFTWARE ENGINEERING, 2. \textbf{Proceedings{\ldots}}
+  [S.l.:~s.n.], 1976. p.592--605.
+
+\bibitem[CAGNIN et~al.(2004)CAGNIN; MALDONADO; CHAN; PENTEADO;
+  GERMANO]{cagnin2004reuso} CAGNIN, M.~I. et~al\@. Reuso na Atividade de Teste
+  para Reduzir Custo e Esfor{\c{c}}o de VV\&T no Desenvolvimento e na
+  Reengenharia de Software. \textbf{XVIII Simp{\'o}sio Brasileiro de Engenharia
+  de Software (SBES)}, [S.l.], p.71--84, 2004.
+
+\bibitem[CHIAVEGATTO$^1$ et~al.(????)CHIAVEGATTO$^1$; SILVA; VIEIRA;
+  MALVEZZI$^1$]{chiavegatto1desenvolvimento} CHIAVEGATTO$^1$, R.~B. et~al\@.
+  Desenvolvimento Orientado a Comportamento com Testes Automatizados utilizando
+  JBehave e Selenium., [S.l.].
+
+\bibitem[CRESPO et~al.(2004)CRESPO; SILVA; BORGES; SALVIANO; TEIVE; JUNIOR;
+  JINO]{crespo2004metodologia} CRESPO, A.~N. et~al\@. Uma metodologia para
+  teste de Software no Contexto da Melhoria de Processo. \textbf{Simp{\'o}sio
+  Brasileiro de Qualidade de Software}, [S.l.], p.271--285, 2004.
+
+\bibitem[GARVIN(1987)GARVIN]{garvin1987competing} GARVIN, D.~A\@. Competing on
+  the 8 dimensions of quality. \textbf{Harvard business review}, [S.l.], v.65,
+  n.6, p.101--109, 1987.
+
+\bibitem[GUIZZARDI(2000)GUIZZARDI]{guizzardi2000desenvolvimento} GUIZZARDI,
+  G\@. \textbf{Desenvolvimento para e com reuso}: um estudo de caso no
+  dom{\'\i}nio de v{\'\i}deo sob demanda. 2000. Tese (Doutorado em Ci{\^e}ncia
+  da Computa{\c{c}}{\~a}o) --- Universidade Federal do Esp{\'\i}rito Santo.
+
+\bibitem[KOSCIANSKI; SOARES(2007)KOSCIANSKI; SOARES]{koscianski2007qualidade}
+  KOSCIANSKI, A.; SOARES, M. d.~S\@. \textbf{Qualidade de software}. [S.l.]:
+  S{\~a}o Paulo: Novatec Editora, 2007.
+
+\bibitem[LOPES(????)LOPES]{lopescucumbervalor} LOPES, D\@. \textbf{O Cucumber
+  ainda tem o seu valor}. Accessed: 2015-08-10,
+  \url{http://www.infoq.com/br/articles/valor-cucumber}.
+
+\bibitem[MALDONADO et~al.(2004)MALDONADO; BARBOSA; VINCENZI; DELAMARO; SOUZA;
+  JINO]{maldonado2004introduccao} MALDONADO, J.~C. et~al\@. Introdu{\c{c}}ao ao
+  teste de software. \textbf{S{\~a}o Carlos}, [S.l.], 2004.
+
+\bibitem[NUNES(????)NUNES]{nunescucumber} NUNES, D\@. Automação de Testes de
+  Aceitação com Cucumber e JRuby., [S.l.].
+
+\bibitem[PEREIRA(????)PEREIRA]{pereiraestudoselenium} PEREIRA, D.~V\@. Estudo
+  da ferramenta selenium ide para testes automatizados de aplicações web.,
+  [S.l.].
+
+\bibitem[PRESSMAN(2011)PRESSMAN]{pressman2011engenharia} PRESSMAN, R.~S\@.
+  \textbf{Engenharia de software}. [S.l.]: McGraw Hill Brasil, 2011.
+
+\bibitem[REFERENCE CUCUMBER.IO(????)REFERENCE CUCUMBER.IO]{cucumberwiki}
+  REFERENCE Cucumber.io. Accessed: 2015-08-05,
+  \url{https://cucumber.io/docs/reference}.
+
+\bibitem[RIOS(2006)RIOS]{rios2006teste} RIOS, E\@. \textbf{Teste de software}.
+  [S.l.]: Alta Books Editora, 2006.
+
+\bibitem[SCHMITZ; BECKER; BERLATTO(????)SCHMITZ; BECKER;
+  BERLATTO]{scmitzcucumberreview} SCHMITZ, F.~H.; BECKER, H.; BERLATTO, L.
+  d.~F\@. \textbf{Cucumber - Um breve review}. Accessed: 2015-08-06,
+  \url{http://pt.slideshare.net/LaisBerlatto2/cucumber-um-breve-review}.
+
+\bibitem[SIXPENCE; AD{\~A}O; SMITH(????)SIXPENCE; AD{\~A}O;
+  SMITH]{sixpenceautomatizaccao} SIXPENCE, E.; AD{\~A}O, P.; SMITH, C\@.
+  AUTOMATIZA{\c{C}}{\~A}O DE CASOS DE TESTE COMO PROCESSO DE MELHORIA DA
+  QUALIDADE DO SOFTWARE: o caso da aplica{\c{c}}{\~a}o e-learning isupac3 no
+  isutc., [S.l.].
+
+\bibitem[VASCONCELOS et~al.(2006)VASCONCELOS; ROUILLER; MACHADO;
+  MEDEIROS]{de2006introduccao} VASCONCELOS, A. M.~L.~de et~al\@.
+  Introdu{\c{c}}{\~a}o {\`a} Engenharia de Software e {\`a} Qualidade de
+  Software., [S.l.], 2006.
+
+\end{thebibliography}

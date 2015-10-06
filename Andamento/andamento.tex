@@ -300,9 +300,11 @@ Outro fator determinante para o descontinuamento desta solução, foi o fato de 
 
 \subsection{\texttt{Teste.java}}
 
-A interface \texttt{Teste.java} procura com seus métodos mapear as ações que serão necessárias para a execução de um teste \emph{Selenium} utilizando elementos da classe \emph{WebDriver}, conforme apresentaremos mais adiante neste experimento.
+A interface \texttt{Teste.java} procura com seus métodos mapear as ações que serão necessárias para a execução de um teste \emph{Selenium} utilizando elementos da classe \emph{WebDriver}. 
 
-\begin{figure}[!htb]
+Cada método existente nesta classe descreve uma ação específica necessária para manipular elementos \emph{HTML} na execução do teste.
+
+\begin{figure}[!htt]
 \begin{lstlisting}
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
@@ -336,20 +338,17 @@ public @interface Teste {
 	\label{code:Teste.java}
 \end{figure}
 
+
 Abaixo temos uma classe que demonstra a forma como ocorre as anotações utilizando a interface Teste.
 
-\begin{figure}[!htb]
+\begin{figure}[!htt]
 \begin{lstlisting}
 @Teste(getUrl = "/cadastro-disciplina.htm", getCampo = "salvar", click = true
         ,getIdentificadorAssert = TestePropriedades.IDENTIFICADOR_CSS, getCampoAssert = "h4", getValorEsperadoAssert = "Sucesso!")
 public class Disciplina {
-    private Long id;
     private String codigo;
     private String nome;
     private Integer cargaHoraria;
-    private Boolean preAprovada;
-    private Boolean ativa;
-    private Instituicao instituicao;
    
     @Teste(getCampo = "ativa1", click = true)
     public Boolean getAtiva() {
@@ -358,15 +357,6 @@ public class Disciplina {
 
     public void setAtiva(Boolean ativa) {
         this.ativa = ativa;
-    }
-
-    @Teste(getCampo = "preAprovada1", click = true)
-    public Boolean getPreAprovada() {
-        return preAprovada != null && preAprovada;
-    }
-
-    public void setPreAprovada(Boolean preAprovada) {
-        this.preAprovada = preAprovada;
     }
 
     @Teste(getCampo = "cargaHoraria", getValor = "60", isSelect = true)

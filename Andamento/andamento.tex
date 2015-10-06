@@ -112,10 +112,10 @@
 \begin{abstract}
 A constante busca pela qualidade de uma solução em forma de software, fez com que empresas do ramo de desenvolvimento,
 aderissem e enxergassem a importância da realização de testes automatizados em seus sistemas. A partir deste cenário,
-surgiram inúmeras ferramentas e frameworks para suprir esta demanda, que se propõe  a ampliar a otimização de tempo e
+surgiram inúmeras ferramentas e \emph{frameworks} para suprir esta demanda, que se propõe  a ampliar a otimização de tempo e
 eficácia das aplicações implementadas, visando uma garantia maior na qualidade das mesmas. Contudo, é sabido que criar
 um novo teste para cada nova funcionalidade ou demanda do sistema, se torna muito custoso, sendo necessário um grande
-desprendimento de recursos humanos. Assim, este trabalho objetiva apresentar scripts de testes automatizados para
+desprendimento de recursos humanos. Assim, este trabalho objetiva apresentar \emph{scripts} de testes automatizados para
 sistemas web, que possam, de maneira mais genérica e com poucas alterações, serem reutilizados, de forma escalável,
 para novos casos de testes, que sigam o mesmo escopo.
 \end{abstract}
@@ -254,16 +254,44 @@ principalmente na geração de casos de testes que possam ser reutilizados em si
 
 Abaixo, serão descritas as atividades desenvolvidas afim de alcançar os objetivos propostos por este trabalho. Será apresentada a estrutura básica dos sistemas escolhidos para inserção dos testes automatizados, assim como trechos dos códigos desenvolvidos e estrutura das soluções encontradas ao longo do desenvolvimento do projeto.
 
-\section{Escolha dos sistemas}
+\section{Delimitação de escopo}
 
-Para desenvolver os testes automatizados deste trabalho, foram escolhidos 2 sistemas web desenvolvidos na linguagem de programação Java, com suas interfaces desenvolvidas em \emph{JSP}, contando com funções \emph{Ajax} e \emph{Javascript}.
+Como escopo, foram delimitados alguns pré-requisitos necessários para utilização da solução proposta neste trabalho, onde, o sistema deve ser um software \emph{web}, desenvolvido na linguagem de programação \emph{Java}, podendo apresentar também funções \emph{Ajax} e \emph{Javascript}.
 
-\section{Organização do Código - Solução 1}
+\section{Visão geral da solução}
+Em um primeiro momento, com objetivo de automatizar os testes de uma aplicação afim de reduzir o esforço na confecção e codificação de novos testes para as equipes de desenvolvimento e testes de uma empresa, escolheu-se desenvolver uma solução baseada em três etapas que são descritas conforme imagem abaixo.
 
-Em um primeiro momento, com objetivo de automatizar os testes de uma aplicação e reduzir o trabalho na codificação de novos testes para as equipes de desenvolvimento e testes de uma empresa, criou-se uma abordagem baseada em anotações de classes Java com o intuito de mapear qual seriam as classes e métodos utilizados nos formulários do software que deveriam ser testados. 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{solucao1}
+	\caption{Estrutura da solução.}
+	\label{fig:solucao1	}
+\end{figure}
 
-A ideia inicial seria informar através de uma anotação, qual deveria ser o teste executado para cada método mapeado com a anotação em questão, sendo assim, inserindo uma anotação sobre um método, se saberia qual propriedade aquele método corresponderia em um determinado formulário, assim como o tipo do mesmo (input, text, select, radiobuttom, checkbox) e o valor que deveria ser inserido no mesmo. Informações como o formulário que deveria ser testado e o valor de aceitação para o teste seriam inseridos na anotação da classe. Para realizar esta tarefa foi descrita a seguinte classe de anotação.
+Temos como ponto de partida um sistema onde se possuí pouco ou nenhum teste codificado. Para o mesmo, descrevemos  três fases no desenvolvimento de uma solução em forma de testes para o sistema, que seriam: criar uma classe de testes genérica, responsável por realizar os testes necessários na aplicação,
+descrever uma interface de anotação que representaria ações de elementos web (\emph{HTML}) que seriam testados posteriormente e por fim inserir as anotações nos métodos e classes do sistema que devem ser testados nesta aplicação.
 
+\section{Classe genérica de testes}
+Por tratar-se de uma abordagem para sistemas-web, optou-se pela utilização de dois \emph{frameworks} de testes que possibilitam interação com elementos \emph{web} para confecção da classe responsável pela execução dos testes automatizados, o primeiro seria o \emph{Selenium}. Através da utilização da classe \texttt{WebDrive}, contida no pacote do mesmo, podemos descrever uma sequência de passos que são executados por um navegador, como cliques e inserção de dados em campos de um formulário. Sendo assim instanciando um objeto \emph{WebDrive} podemos iniciar um navegador e realizar uma série de instruções pré-determinadas para validar se a aplicação comporta-se de forma adequada.
+
+Por fim, necessitamos validar se após realizar o preenchimento de formulários do \emph{software}, o resultado obtido condiz com o resultado esperado. Neste momento é onde faz-se necessário a adição de trechos de códigos \emph{Junit} na classe de teste desenvolvida, pois o mesmo disponibiliza em seu pacote, um conjunto de métodos \emph{assert}, com os quais, se faz possível comparar, por exemplo, se após salvar um formulário de cadastro, a mensagem de "cadastrado com sucesso" aparece na tela.
+
+\section{Interface de anotação}
+
+Após finalizar o desenvolvimento da classe de testes genérica, passou-se a existir a necessidade de criar um mecanismo para informar para a classe de testes, qual seriam as validações necessárias. Para esta tarefa, por tratar-se de projetos \emph{Java}, resolveu-se criar uma \emph{interface} de anotação que seria vinculada aos métodos e classes onde, seriam necessários executar os testes posteriores. Desta forma, a classe responsável pela execução dos testes, varreria as classes do sistemas e toda vez que encontra-se uma classe anotada por essa \emph{interface}, executaria um teste, onde cada método que necessitaria de um teste possuiria em sua anotação o tipo do campo, as ações que deveriam ser executas e o valor que deveria ser preenchido.
+
+Desta forma, os métodos da interface criada para esta solução, representa na verdade as ações que a classe \texttt{WebDrive} possibilita para os desenvolvedores.
+
+\section{Inserção das anotações no projeto}
+Por fim, a ultima etapa da solução em questão, trata-se de uma etapa contínua no projeto, pois sempre que uma nova classe é mapeada no sistema ou um novo cadastro é criado, a mesma ocorrerá. Nesta etapa se faz necessário a adição das anotações nos códigos do projeto, onde se deve inserir a anotação em todas as classes e métodos que devem ser testados. Na anotação são inseridas informações referente as ações que devem ser executadas para a propriedade em questão.
+
+\section{Avaliação da solução}
+Após a finalização do desenvolvimento desta primeira solução encontrada, notou-se a clara necessidade de alteração na sistemática de como os teste ocorreriam, necessidade esta oriunda de algumas limitações que a solução trás, como por exemplo, a não possibilidade de realizar testes que envolvam mais de um método, tornando praticamente inviável a tarefa de realizar testes funcionais, pois não seria possível mapear um cenário mais completo, que depende de mais de uma variável e que tem uma sequência bem mapeada que deve ser seguida. 
+
+Outro fator determinante para o descontinuamento desta solução, foi o fato de por utilizar anotações, o mesmo não possibilitaria o teste de um mesmo campo, com dois valores diferentes, pois só seria possível informar na anotação do método um valor de teste. Além disto, também não seria viável a execução de testes unitários para um sistema muito grande, pois é sabido que os testes devem ser executados sobre os pontos críticos do software e não na totalidade do projeto.
+
+
+\section{Códigos}
 
 \subsection{\texttt{Teste.java}}
 
@@ -358,10 +386,7 @@ public class Disciplina {
 \subsection{\texttt{TesteFormulario.java}}
 Para realizar o teste propriamente dito, criou-se nos projetos utilizados, uma classe de testes denominada \texttt{TesteFormulaio.java}, onde a mesma utilizaria as anotações do \emph{framework JUnit}  para executar os testes necessários. A classe desenvolvida possui um método principal denominado \texttt{testaFormularios}, onde a ideia principal do mesmo seria buscar de forma recursiva, todas as classes do projeto anotadas pela interface Teste que criamos, e para cada uma das mesmas cria-se elementos \emph{webDrive} para executar as ações indicadas pela anotação. 
 
-	Para tornar o método \texttt{testaFormularios} e seus sub métodos mais genéricos, utilizou-se \emph{Java Reflection} para tratar todas as classes e métodos simplesmente como objetos, possibilitando assim, o reuso do mesmo para qualquer teste necessário dentro deste projeto. Vemos, a seguir, o código desta classe:
-	
-\subsubsection{\texttt{testaFormularios()}}
-Função principal da classe de testes, responsável por, de forma iterativa, buscar em cada classe que possui a anotações Teste do projeto em questão.
+Para tornar o método \texttt{testaFormularios} e seus sub métodos mais genéricos, utilizou-se \emph{Java Reflection} para tratar todas as classes e métodos simplesmente como objetos, possibilitando assim, o reuso do mesmo para qualquer teste necessário dentro deste projeto. Vemos, a seguir, o código desta classe:
 
 \begin{figure}[!htb]
 \begin{lstlisting}
@@ -388,159 +413,6 @@ public void testaFormularios() {
 \end{lstlisting}
 	\label{code:testaFormularios}
 \end{figure}
-
-\subsubsection{\texttt{executaTeste()}}
-Método responsável por encontrar no browser o campo necessário e passá-lo para o método que irá executar as ações necessárias.
-
-\begin{figure}[!htb]
-\begin{lstlisting}
-public void executaTeste(Teste teste, Boolean submeteUrl) {
-    WebElement webElement = getEncontraCampo(teste.getIdentificador(), teste.getCampo());
-    if (webElement != null) {
-        executaAcoes(teste, webElement, submeteUrl);
-    }
-}
-\end{lstlisting}
-	\label{code:executaTeste}
-\end{figure}
-
-\subsubsection{\texttt{executaAcoes()}}
-Recebe como parâmetro a anotação atual e o elemento html(WebDriver), e com isso executa as ações necessárias.
-
-\begin{figure}[!htb]
-\begin{lstlisting}
-private void executaAcoes(Teste teste, WebElement webElement, Boolean submeteUrl) {
-	if (!teste.getUrl().equals("") && submeteUrl) {
-        webDriver.get(TestePropriedades.urlSistema + teste.getUrl());
-    }
-    if (teste.limpar()) {
-        webElement.clear();
-    }
-    if (teste.isSelect()) {
-        Select select = new Select(webElement);
-        if (!teste.getValor().equals("")) {
-            select.selectByVisibleText(teste.getValor());
-        }
-    } else if (!teste.getValor().equals("")) {
-        webElement.sendKeys(teste.getValor());
-    }
-    if (teste.click()) {
-        webElement.click();
-    }
-    if (teste.submit()) {
-        webElement.submit();
-    }
-    if (!teste.getCampoAssert().equals("")) {
-        executaComparacao(teste);
-    }
-}
-\end{lstlisting}
-	\label{code:executaAcoes}
-\end{figure}
-
-\subsubsection{\texttt{executaComparacao()}}
-Ultimo estágio do teste unitário, onde o mesmo confere se o valor esperado pelo formulário é o mesmo apresentado pelo browser após executar todas as ações mapeadas.
-
-\begin{figure}[!htb]
-\begin{lstlisting}
-private void executaComparacao(Teste teste) {
-	WebElement webElementAssert = getEncontraCampo(teste.getIdentificadorAssert(), teste.getCampoAssert());
-    if (teste.getTipoAssert().equals(TestePropriedades.TIPO_ASSERT_IGUAL) && !teste.getValorEsperadoAssert().equals("")) {
-        assertEquals(teste.getValorEsperadoAssert(), getValorPropriedadeCampo(webElementAssert, teste));
-    } else if (teste.getTipoAssert().equals(TestePropriedades.TIPO_ASSERT_DIFERENTE) && !teste.getValorEsperadoAssert().equals("")) {
-        assertNotEquals(teste.getValorEsperadoAssert(), getValorPropriedadeCampo(webElementAssert, teste));
-    } else if (teste.getTipoAssert().equals(TestePropriedades.TIPO_ASSERT_COLECAO_IGUAL) && !teste.getValorEsperadoAssert().equals("")) {
-        //todo: preciso de um objeto e não string
-    } else if (teste.getTipoAssert().equals(TestePropriedades.TIPO_ASSERT_VERDADEIRO)) {
-        if (!teste.getValorEsperadoAssert().equals("")) {
-            assertTrue(teste.getValorEsperadoAssert(), (Boolean) getValorPropriedadeCampo(webElementAssert, teste));
-        } else {
-            assertTrue((Boolean) getValorPropriedadeCampo(webElementAssert, teste));
-        }
-    } else if (teste.getTipoAssert().equals(TestePropriedades.TIPO_ASSERT_FALSO)) {
-        if (!teste.getValorEsperadoAssert().equals("")) {
-            assertFalse(teste.getValorEsperadoAssert(), (Boolean) getValorPropriedadeCampo(webElementAssert, teste));
-        } else {
-            assertFalse((Boolean) getValorPropriedadeCampo(webElementAssert, teste));
-        }
-    } else if (teste.getTipoAssert().equals(TestePropriedades.TIPO_ASSERT_NULO)) {
-        if (!teste.getValorEsperadoAssert().equals("")) {
-            assertNull(teste.getValorEsperadoAssert(), getValorPropriedadeCampo(webElementAssert, teste));
-        } else {
-            assertNull(getValorPropriedadeCampo(webElementAssert, teste));
-        }
-    } else if (teste.getTipoAssert().equals(TestePropriedades.TIPO_ASSERT_NAO_NULO)) {
-        if (!teste.getValorEsperadoAssert().equals("")) {
-            assertNotNull(teste.getValorEsperadoAssert(), getValorPropriedadeCampo(webElementAssert, teste));
-        } else {
-            assertNotNull(getValorPropriedadeCampo(webElementAssert, teste));
-        }
-    }
-}
-\end{lstlisting}
-	\label{code:executaComparacao}
-\end{figure}
-
-\subsubsection{\texttt{getValorpropriedadeCampo()}}
-Retorna o elemento html encontrado no navegador utilizando as informações inseridas na anotação do método/classe.
-
-\begin{figure}[!htb]
-\begin{lstlisting}
-private Object getValorPropriedadeCampo(WebElement webElement, Teste teste) {
-	if (teste.getAtributoCampoComparacaoAssert()
-		.equals(TestePropriedades.ATRIBUTO_COMPARACAO_ASSERT_TEXTO)) {
-        return webElement.getText();
-    } else if (teste.getAtributoCampoComparacaoAssert()
-    		.equals(TestePropriedades.ATRIBUTO_COMPARACAO_ASSERT_NOME_TAG)) {
-        return webElement.getTagName();
-    } else if (teste.getAtributoCampoComparacaoAssert()
-    		.equals(TestePropriedades.ATRIBUTO_COMPARACAO_ASSERT_ATRIBUTO)) {
-        return null;
-    } else if (teste.getAtributoCampoComparacaoAssert()
-    		.equals(TestePropriedades.ATRIBUTO_COMPARACAO_ASSERT_VALOR_CSS)) {
-        return null;
-    } else if (teste.getAtributoCampoComparacaoAssert()
-    		.equals(TestePropriedades.ATRIBUTO_COMPARACAO_ASSERT_CAMPO_EXIBIDO)) {
-        return webElement.isDisplayed();
-    } else if (teste.getAtributoCampoComparacaoAssert()
-    		.equals(TestePropriedades.ATRIBUTO_COMPARACAO_ASSERT_CAMPO_SELECIONADO)) {
-        return webElement.isSelected();
-    } else if (teste.getAtributoCampoComparacaoAssert()
-    		.equals(TestePropriedades.ATRIBUTO_COMPARACAO_ASSERT_CAMPO_HABILITADO)) {
-        return webElement.isEnabled();
-    }
-    return null;
-}
-\end{lstlisting}
-	\label{code:getValorpropriedadeCampo}
-\end{figure}
-
-\subsubsection{\texttt{getEncontraCampo()}}
-Retorna o elemento html procurado.
-
-\begin{figure}[!htb]
-\begin{lstlisting}
-private WebElement getEncontraCampo(String identificador, String campo) {
-	if (identificador.equals(TestePropriedades.IDENTIFICADOR_ID)) {
-		return webDriver.findElement(By.id(campo));
-    } else if (identificador.equals(TestePropriedades.IDENTIFICADOR_NOME)) {
-        return webDriver.findElement(By.name(campo));
-    } else if (identificador.equals(TestePropriedades.IDENTIFICADOR_NOME_CLASSE)) {
-        return webDriver.findElement(By.className(campo));
-    } else if (identificador.equals(TestePropriedades.IDENTIFICADOR_CSS)) {
-        return webDriver.findElement(By.cssSelector(campo));
-    } else if (identificador.equals(TestePropriedades.IDENTIFICADOR_XPATH)) {
-        return webDriver.findElement(By.xpath(campo));
-    }
-    return null;    
-}
-\end{lstlisting}
-	\label{code:getEncontraCampo}
-\end{figure}
-
-Após a finalização do desenvolvimento desta primeira solução encontrada, notou-se a clara necessidade de alteração na sistemática de como os teste ocorreriam, necessidade esta oriunda de algumas limitações que a solução trás, como por exemplo, a não possibilidade de realizar testes que envolvam mais de um método, tornando praticamente inviável a tarefa de realizar testes funcionais, pois não seria possível mapear um cenário mais completo, que depende de mais de uma variável e que tem uma sequência bem mapeada que deve ser seguida. 
-
-Outro fator determinante para o descontinua mento desta solução, foi o fato de por permitir apenas testes unitários, o mesmo não possibilitaria o teste de um mesmo campo, com dois valores diferentes e além disto, também não seria viável a execução de testes unitários para um sistema muito grande, pois é sabido que os testes devem ser executados sobre os pontos críticos do software e não na totalidade do projeto.
 
 \chapter{Próximas Etapas}
 Como continuação do trabalho realizado até o momento, são planejadas as seguintes atividades:

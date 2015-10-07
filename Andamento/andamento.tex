@@ -93,7 +93,7 @@
 \orientadoratrue
 
 \committee[Profª. Dr.]{Bernardi}{Giliane}{UFSM}
-\committee[Me.]{Pereira}{Adriano}{UFSM}
+\committee[MSc.]{Pereira}{Adriano}{UFSM}
 
 \date{8}{Outubro}{2014}
 
@@ -213,10 +213,10 @@ Existem muitas ferramentas desenvolvidas para realização de testes de software
 \subsection{Cucumber}
 Cucumber é um ferramenta de desenvolvimento de testes, voltado para sistemas web, que adota uma linguagem de alto nível bem próxima à uma linguagem natural e tem suas origens fixadas sobre a metodologia BDD (Behavior Driven Development). Cucumber é escrita em linguagem Ruby, mas pode ser utilizada para executar especificações de aplicações escritas em qualquer linguagem \cite{nunescucumber}.
 
-A escolha dessa ferramenta, baseou-se na fácil transcrição dos requisitos do sistema para a linguagem em questão, tornando possível conferir se os requisitos estão contemplados pelas funções e métodos descritos no sistema \emph{web}. \citeauthor{lopescucumbervalor}\cite{lopescucumbervalor} compara Cucumber com o \emph{software} Capybara e afirma que o primeiro apresentar um código mais legível e amigável. Uma observação é que o código com Capybara faz referência para vários detalhes de implementação, enquanto o código do Cucumber reserva isso apenas para os \emph{Steps} e não para o arquivo de feature \cite{lopescucumbervalor}.
+A escolha dessa ferramenta, baseou-se na fácil transcrição dos requisitos do sistema para a linguagem em questão, tornando possível conferir se os requisitos estão contemplados pelas funções e métodos descritos no sistema web. \citeauthor{lopescucumbervalor}\cite{lopescucumbervalor} compara Cucumber com o software Capybara e afirma que o primeiro apresentar um código mais legível e amigável. Uma observação é que o código com Capybara faz referência para vários detalhes de implementação, enquanto o código do Cucumber reserva isso apenas para os \emph{Steps} e não para o arquivo de feature \cite{lopescucumbervalor}.
 
 A ferramenta funciona basicamente através da leitura de arquivos com a extensão feature, os quais descrevem em linguagem natural uma funcionalidade e casos de teste, conhecidos como cenários.
-Como os testes estão escritos em uma linguagem natural, e não de programação, Cucumber precisa pesquisar pelo código associado aos passos que formam o cenário em arquivos auxiliares \cite{scmitzcucumberreview}. Cucumber executa seus arquivos \emph{.feature}, e esses arquivos contêm especificações executáveis escritos em uma linguagem chamada Gherkin \cite{cucumberwiki}, que, possui um layout bem definido. Inicia pela descrição de uma funcionalidade, que por sua vez possui cenários, onde, um cenário é descrito da seguinte forma: \emph{Dado} alguma condição \emph{Quando} outra condição \emph{E} terceira condição \emph{Então} faça algo, conforme ilustra a figura \ref{fig:codigo_cucumber}.
+Como os testes estão escritos em uma linguagem natural, e não de programação, Cucumber precisa pesquisar pelo código associado aos passos que formam o cenário em arquivos auxiliares \cite{scmitzcucumberreview}. Cucumber executa seus arquivos \texttt{.feature}, e esses arquivos contêm especificações executáveis escritos em uma linguagem chamada Gherkin \cite{cucumberwiki}, que, possui um layout bem definido. Inicia pela descrição de uma funcionalidade, que por sua vez possui cenários, onde, um cenário é descrito da seguinte forma: \emph{Dado} alguma condição \emph{Quando} outra condição \emph{E} terceira condição \emph{Então} faça algo, conforme ilustra a figura \ref{fig:codigo_cucumber}.
 
 \begin{figure}[!htb]
     \centering
@@ -239,7 +239,7 @@ importante para sua escolha, é a possibilidade de interação do Selenium HQ co
 várias linguagens,  outros \emph{frameworks}, além de suportar inúmeros navegadores e sistemas operacionais \cite{pereiraestudoselenium}.
 
 \subsection{JUnit}
-JUnit é uma ferramenta de apoio ao teste unitário, a qual auxilia desenvolvedores na automação dos testes e verificação dos resultados \cite{biasi2006geraccao}. A escolha desta ferramenta, como parte integrante da solução desenvolvida deveu-se ao fato de a mesma ser voltada para sistemas desenvolvidos na linguagem de programção \emph{Java}, além de ser altamente versátil, possibilitando assim, integração em um único código da mesma com os demais \emph{frameworks} que serão utilizados(\emph{Selenium} e \emph{Cucumber}).
+JUnit é uma ferramenta de apoio ao teste unitário, a qual auxilia desenvolvedores na automação dos testes e verificação dos resultados \cite{biasi2006geraccao}. A escolha desta ferramenta, como parte integrante da solução desenvolvida deveu-se ao fato de a mesma ser voltada para sistemas desenvolvidos na linguagem de programção Java, além de ser altamente versátil, possibilitando assim, integração em um único código da mesma com os demais \emph{frameworks} que seroã utilizados(Selenium e Cucumber).
 
 Se justifica a sua utilização neste trabalho, por tratar-se de uma \emph{API} que viabiliza a comparação de um valor obtido em algum teste com o valor esperado pelo mesmo. Desta forma, pode-se validar e verificar se a funcionalidade de um sistema está funcionando adequadamente.
 
@@ -257,40 +257,40 @@ principalmente na geração de casos de testes que possam ser reutilizados em si
 
 \chapter{Desenvolvimento}
 
-Abaixo, serão descritas as atividades desenvolvidas afim de alcançar os objetivos propostos por este trabalho. Será apresentada a estrutura básica dos sistemas escolhidos para inserção dos testes automatizados, assim como trechos dos códigos desenvolvidos e estrutura das soluções encontradas ao longo do desenvolvimento do projeto.
+Abaixo, serão descritas as atividades desenvolvidas a fim de alcançar os objetivos propostos por este trabalho. Será apresentada a estrutura básica dos sistemas escolhidos para inserção dos testes automatizados, assim como trechos dos códigos desenvolvidos e estrutura das soluções encontradas ao longo do desenvolvimento do projeto.
 
 \section{Delimitação de escopo}
 
-Como escopo, foram delimitados alguns pré-requisitos necessários para utilização da solução proposta neste trabalho, onde, o sistema deve ser um software \emph{web}, desenvolvido na linguagem de programação \emph{Java}, podendo apresentar também funções \emph{Ajax} e \emph{Javascript}.
+Como escopo, foram delimitados alguns pré-requisitos necessários para utilização da solução proposta neste trabalho, onde, o sistema deve ser um software web, desenvolvido na linguagem de programação Java, podendo apresentar também funções Ajax e Javascript.
 
 \section{Visão geral da solução}
-Em um primeiro momento, com objetivo de automatizar os testes de uma aplicação afim de reduzir o esforço na confecção e codificação de novos testes para as equipes de desenvolvimento e testes de uma empresa, escolheu-se desenvolver uma solução baseada em três etapas que são descritas conforme imagem abaixo.
+Em um primeiro momento, com objetivo de automatizar os testes de uma aplicação afim de reduzir o esforço na confecção e codificação de novos testes para as equipes de desenvolvimento e testes de uma empresa, escolheu-se desenvolver uma solução baseada em três etapas que são descritas conforme imagem \ref{fig:solucao1}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.8\textwidth]{solucao1}
 	\caption{Estrutura da solução.}
-	\label{fig:solucao1	}
+	\label{fig:solucao1}
 \end{figure}
 
-Temos como ponto de partida um sistema onde se possuí pouco ou nenhum teste codificado. Para o mesmo, descrevemos  três fases no desenvolvimento de uma solução em forma de testes para o sistema, que seriam: criar uma classe de testes genérica, responsável por realizar os testes necessários na aplicação,
+Temos como ponto de partida um sistema onde se possui pouco ou nenhum teste codificado. Para o mesmo, descrevemos  três fases no desenvolvimento de uma solução em forma de testes para o sistema, que seriam: criar uma classe de testes genérica, responsável por realizar os testes necessários na aplicação,
 descrever uma interface de anotação que representaria ações de elementos web (\emph{HTML}) que seriam testados posteriormente e por fim inserir as anotações nos métodos e classes do sistema que devem ser testados nesta aplicação.
 
 \section{Classe genérica de testes}
-Por tratar-se de uma abordagem para sistemas-web, optou-se pela utilização de dois \emph{frameworks} de testes que possibilitam interação com elementos \emph{web} para confecção da classe responsável pela execução dos testes automatizados, o primeiro seria o \emph{Selenium}. Através da utilização da classe \texttt{WebDrive}, contida no pacote do mesmo, podemos descrever uma sequência de passos que são executados por um navegador, como cliques e inserção de dados em campos de um formulário. Sendo assim instanciando um objeto \emph{WebDrive} podemos iniciar um navegador e realizar uma série de instruções pré-determinadas para validar se a aplicação comporta-se de forma adequada.
+Por tratar-se de uma abordagem para sistemas-web, optou-se pela utilização de dois frameworks de testes que possibilitam interação com elementos web para confecção da classe responsável pela execução dos testes automatizados, o primeiro seria o Selenium. Através da utilização da classe \texttt{WebDrive}, contida no pacote do mesmo, podemos descrever uma sequência de passos que são executados por um navegador, como cliques e inserção de dados em campos de um formulário. Sendo assim instanciando um objeto \texttt{WebDrive} podemos iniciar um navegador e realizar uma série de instruções pré-determinadas para validar se a aplicação comporta-se de forma adequada.
 
-Por fim, necessitamos validar se após realizar o preenchimento de formulários do \emph{software}, o resultado obtido condiz com o resultado esperado. Neste momento é onde faz-se necessário a adição de trechos de códigos \emph{Junit} na classe de teste desenvolvida, pois o mesmo disponibiliza em seu pacote, um conjunto de métodos \emph{assert}, com os quais, se faz possível comparar, por exemplo, se após salvar um formulário de cadastro, a mensagem de "cadastrado com sucesso" aparece na tela.
+Por fim, necessitamos validar se após realizar o preenchimento de formulários do software, o resultado obtido condiz com o resultado esperado. Neste momento é onde faz-se necessário a adição de trechos de códigos Junit na classe de teste desenvolvida, pois o mesmo disponibiliza em seu pacote, um conjunto de métodos \emph{assert}, com os quais, se faz possível comparar, por exemplo, se após salvar um formulário de cadastro, a mensagem de "cadastrado com sucesso" aparece na tela.
 
 \section{Interface de anotação}
 
-Após finalizar o desenvolvimento da classe de testes genérica, passou-se a existir a necessidade de criar um mecanismo para informar para a classe de testes, qual seriam as validações necessárias. Para esta tarefa, por tratar-se de projetos \emph{Java}, resolveu-se criar uma \emph{interface} de anotação que seria vinculada aos métodos e classes onde, seriam necessários executar os testes posteriores. Desta forma, a classe responsável pela execução dos testes, varreria as classes do sistemas e toda vez que encontra-se uma classe anotada por essa \emph{interface}, executaria um teste, onde cada método que necessitaria de um teste possuiria em sua anotação o tipo do campo, as ações que deveriam ser executas e o valor que deveria ser preenchido.
+Após finalizar o desenvolvimento da classe de testes genérica, passou-se a existir a necessidade de criar um mecanismo para informar para a classe de testes, qual seriam as validações necessárias. Para esta tarefa, por tratar-se de projetos Java, resolveu-se criar uma interface de anotação que seria vinculada aos métodos e classes onde, seriam necessários executar os testes posteriores. Desta forma, a classe responsável pela execução dos testes, varreria as classes do sistemas e toda vez que encontra-se uma classe anotada por essa interface, executaria um teste, onde cada método que necessitaria de um teste possuiria em sua anotação o tipo do campo, as ações que deveriam ser executas e o valor que deveria ser preenchido.
 
 Desta forma, os métodos da interface criada para esta solução, representa na verdade as ações que a classe \texttt{WebDrive} possibilita para os desenvolvedores.
 
 \section{Inserção das anotações no projeto}
 Por fim, a ultima etapa da solução em questão, trata-se de uma etapa contínua no projeto, pois sempre que uma nova classe é mapeada no sistema ou um novo cadastro é criado, a mesma ocorrerá. Nesta etapa se faz necessário a adição das anotações nos códigos do projeto, onde se deve inserir a anotação em todas as classes e métodos que devem ser testados. Na anotação são inseridas informações referente as ações que devem ser executadas para a propriedade em questão.
 
-\section{Avaliação da solução}
+\section{Discução sobre a solução}
 Após a finalização do desenvolvimento desta primeira solução encontrada, notou-se a clara necessidade de alteração na sistemática de como os teste ocorreriam, necessidade esta oriunda de algumas limitações que a solução trás, como por exemplo, a não possibilidade de realizar testes que envolvam mais de um método, tornando praticamente inviável a tarefa de realizar testes funcionais, pois não seria possível mapear um cenário mais completo, que depende de mais de uma variável e que tem uma sequência bem mapeada que deve ser seguida. 
 
 Outro fator determinante para o descontinuamento desta solução, foi o fato de por utilizar anotações, o mesmo não possibilitaria o teste de um mesmo campo, com dois valores diferentes, pois só seria possível informar na anotação do método um valor de teste. Além disto, também não seria viável a execução de testes unitários para um sistema muito grande, pois é sabido que os testes devem ser executados sobre os pontos críticos do software e não na totalidade do projeto.
@@ -300,7 +300,7 @@ Outro fator determinante para o descontinuamento desta solução, foi o fato de 
 
 \subsection{\texttt{Teste.java}}
 
-A interface \texttt{Teste.java} procura com seus métodos mapear as ações que serão necessárias para a execução de um teste \emph{Selenium} utilizando elementos da classe \emph{WebDriver}. 
+A interface \texttt{Teste.java} procura com seus métodos mapear as ações que serão necessárias para a execução de um teste Selenium utilizando elementos da classe \texttt{WebDriver}. 
 
 Cada método existente nesta classe descreve uma ação específica necessária para manipular elementos \emph{HTML} na execução do teste.
 
@@ -379,7 +379,7 @@ public class Disciplina {
 \end{figure}
 
 \subsection{\texttt{TesteFormulario.java}}
-Para realizar o teste propriamente dito, criou-se nos projetos utilizados, uma classe de testes denominada \texttt{TesteFormulaio.java}, onde a mesma utilizaria as anotações do \emph{framework JUnit}  para executar os testes necessários. A classe desenvolvida possui um método principal denominado \texttt{testaFormularios}, onde a ideia principal do mesmo seria buscar de forma recursiva, todas as classes do projeto anotadas pela interface Teste que criamos, e para cada uma das mesmas cria-se elementos \emph{webDrive} para executar as ações indicadas pela anotação. 
+Para realizar o teste propriamente dito, criou-se nos projetos utilizados, uma classe de testes denominada \texttt{TesteFormulaio.java}, onde a mesma utilizaria as anotações do framework JUnit  para executar os testes necessários. A classe desenvolvida possui um método principal denominado \texttt{testaFormularios}, onde a ideia principal do mesmo seria buscar de forma recursiva, todas as classes do projeto anotadas pela interface Teste que criamos, e para cada uma das mesmas cria-se elementos \emph{webDrive} para executar as ações indicadas pela anotação. 
 
 Para tornar o método \texttt{testaFormularios} e seus sub métodos mais genéricos, utilizou-se \emph{Java Reflection} para tratar todas as classes e métodos simplesmente como objetos, possibilitando assim, o reuso do mesmo para qualquer teste necessário dentro deste projeto. Vemos, a seguir, o código desta classe:
 
@@ -413,10 +413,9 @@ public void testaFormularios() {
 Como continuação do trabalho realizado até o momento, são planejadas as seguintes atividades:
 
 \begin{enumerate}
-	\item Alterar a modelagem visando permitir a realização de testes funcionais.
-	\item Inserção do Cucumber para descrever cenários para os testes.
-	\item Implementar e disponibilizar suporte para funções Ajax na solução.
-	\item Realizar comparações para validar solução genérica desenvolvida.
+	\item Alterar a modelagem visando permitir a realização de testes funcionais: Para permitir que cenários sejam contemplados por testes funcionais, será acoplado a solução a utilização da linguagem Cucumber, onde cada cenário corresponderá a ações do Selenium.
+	\item Ampliar área de abrangência da solução: Implementar e disponibilizar suporte a funções Ajax.
+	\item Realizar comparações para validar solução genérica desenvolvida: Apresentar motivos pelo qual deve-se utilizar solução e o ganho que a mesma trás para uma equipe de pequeno porte.
 \end{enumerate}
 
 \setlength{\baselineskip}{\baselineskip}

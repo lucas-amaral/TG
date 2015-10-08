@@ -163,7 +163,7 @@ softwares conhecidos.
 A qualidade de software  é uma das variáveis essenciais para que um projeto de software tenha sucesso.
 Sendo assim, torna-se cada vez mais necessário a inserção de testes automatizados em projetos web,
 agregando aos mesmos uma maior confiabilidade e redução nos possíveis erros que o sistema possa
-apresentar. Para que haja a possibilidade de aumentar a qualidade dos sistemas, sem que seja necessário uma maior
+apresentar. Para que haja a possibilidade de aumentar a qualidade dos sistemas, sem que seja necessária uma maior
 demanda de recursos humanos para a área de qualidade, podemos adotar práticas de reuso de códigos de testes, visando
 maximizar a produtividade e eficiência, além de, simultaneamente, obter um produto final com uma garantia de qualidade
 superior.
@@ -211,7 +211,7 @@ teste, como sendo a composição de quatro macro etapas: Planejamento, projeto, 
 
 \subsection{Estratégias de Testes}
 A Estratégia de testes se caracteriza pela definição da abordagem geral a ser aplicada nos testes, descrevendo como o software será testado, identificando os níveis de testes que serão aplicados, os métodos,
-técnicas e ferramentas a serem utilizada \cite{rios2006teste}. Existem muitas estratégias mas podemos destacar entre elas: Teste de unidade, integração, sistema, aceitação e regressão, funcional e carga. Se pode também,
+técnicas e ferramentas a serem utilizada \cite{rios2006teste}. Existem muitas estratégias, mas podemos destacar entre elas: Teste de unidade, integração, sistema, aceitação e regressão, funcional e carga. Se pode também,
 mesclar mais de uma estratégia com o intuito de reduzir os possíveis defeitos que o sistema venha a ter.
 
 \section{Ferramentas para teste de software}
@@ -247,8 +247,8 @@ A  utilização  de  comandos  no  Selenium  consiste  em  digitar  o  comando  
 poderão ser opcionais, aliás, alguns comandos não necessitam de parâmetros para serem executados \cite{sixpenceautomatizaccao}.
 
 Selenium foi escolhida como umas das ferramentas no desenvolvimento deste projeto pelo fato de ser um \emph{framework open source} que possui um vasto leque de ferramentas para testes de sistemas web. Outro fator
-importante para sua escolha, é a possibilidade de interação do Selenium HQ com o Cucumber. Ela  se  destaca  entre  as demais ferramentas  gratuitas pelo fato de ser a mais completa, permitindo integração com
-várias linguagens,  outros \emph{frameworks}, além de suportar inúmeros navegadores e sistemas operacionais \cite{pereiraestudoselenium}.
+importante para sua escolha é a possibilidade de interação do Selenium HQ com o Cucumber. Ela se destaca entre as demais ferramentas gratuitas pelo fato de ser a mais completa, permitindo integração com
+várias linguagens, outros \emph{frameworks}, além de suportar inúmeros navegadores e sistemas operacionais \cite{pereiraestudoselenium}.
 
 \subsection{JUnit}
 JUnit é uma ferramenta de apoio ao teste unitário, a qual auxilia desenvolvedores na automação dos testes e verificação dos resultados \cite{biasi2006geraccao}. A escolha desta ferramenta, como parte integrante da solução desenvolvida deveu-se ao fato
@@ -299,7 +299,7 @@ Por tratar-se de uma abordagem para sistemas web, optou-se pela utilização de 
 o primeiro seria o Selenium. Através da utilização da classe \texttt{WebDrive}, contida no pacote do mesmo, podemos descrever uma sequência de passos que são executados por um navegador, como cliques e inserção de dados em campos de um
 formulário. Sendo assim instanciando um objeto \texttt{WebDrive} podemos iniciar um navegador e realizar uma série de instruções pré-determinadas para validar se a aplicação comporta-se de forma adequada.
 
-Por fim, necessitamos validar se após realizar o preenchimento de formulários do software, o resultado obtido condiz com o resultado esperado. Neste momento é onde faz-se necessário a adição de trechos de códigos Junit na classe de teste
+Por fim, necessitamos validar se após realizar o preenchimento de formulários do software, o resultado obtido condiz com o resultado esperado. Neste momento é onde se faz necessário a adição de trechos de códigos Junit na classe de teste
 desenvolvida, pois o mesmo disponibiliza em seu pacote, um conjunto de métodos \emph{assert}, com os quais, se faz possível comparar, por exemplo, se após salvar um formulário de cadastro, a mensagem de "cadastrado com sucesso" aparece na tela.
 A imagem \ref{code:TestaFormularios.java}, apresenta um trecho da classe confeccionada para realização dos testes.
 
@@ -421,12 +421,12 @@ public class Disciplina {
 Na anotação são inseridas informações referente as ações que devem ser executadas para a propriedade em questão. Os métodos possuem anotações referentes apenas ao campo que representam, enquanto as informações mais gerais sobre
 a página que está sendo testada, são inseridas na anotação da Classe propriamente dita.
 
-\section{Discução sobre a solução}
+\section{Discussão sobre a solução}
 Após a finalização do desenvolvimento desta primeira solução encontrada, notou-se a clara necessidade de alteração na sistemática de como os teste ocorreriam, necessidade esta oriunda de algumas limitações que a solução trás,
 como por exemplo, a não possibilidade de realizar testes que envolvam mais de um método, tornando praticamente inviável a tarefa de realizar testes funcionais, pois não seria possível mapear um cenário mais completo, que depende
 de mais de uma variável e que tem uma sequência bem mapeada que deve ser seguida.
 
-Outro fator determinante para o descontinuamento desta solução, foi o fato de por utilizar anotações, o mesmo não possibilitaria o teste de um mesmo campo, com dois valores diferentes, pois só seria possível informar na anotação do
+Outro fator determinante paraa alteração desta solução, foi o fato de por utilizar anotações, o mesmo não possibilitaria o teste de um mesmo campo, com dois valores diferentes, pois só seria possível informar na anotação do
 método um valor de teste. Além disto, também não seria viável a execução de testes unitários para um sistema muito grande, pois é sabido que os testes devem ser executados sobre os pontos críticos do software e não na totalidade do projeto.
 
 \chapter{Próximas Etapas}

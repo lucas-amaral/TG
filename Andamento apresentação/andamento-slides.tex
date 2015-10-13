@@ -1,0 +1,203 @@
+% !TEX TS-program = XeLaTeX
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  \usetheme{Dresden}
+
+  \setbeamercovered{transparent}
+  \useinnertheme{circles}
+  \usecolortheme{lsc}
+  \beamertemplatenavigationsymbolsempty
+}
+
+\setbeamertemplate{headline}{}
+\setbeamercovered{invisible}
+
+
+\usepackage[brazil]{babel}
+% or whatever
+
+%\usepackage[utf8]{inputenc}
+
+%\usefonttheme{serif}
+
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\setmainfont{Linux Libertine G}
+\setsansfont{Source Sans Pro}
+\setmonofont{Source Code Pro}
+
+\usepackage{textcomp}
+\usepackage{listings}
+
+\lstdefinelanguage{Java}{
+  %keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywords={struct, fn, let, box, mut, pub, impl, for, match, const},
+  %keywordstyle=\color{blue}\bfseries,
+  %ndkeywords={class, export, boolean, throw, implements, import, this},
+  %ndkeywords={Add, Num},
+  %ndkeywordstyle=\color{darkgray}\bfseries,
+  %identifierstyle=\color{black},
+  sensitive=true,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  %commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color[rgb]{0.0,0.4,0.65}\ttfamily,
+  %morestring=[b]',
+  morestring=[b]"
+}
+
+\lstdefinestyle{yuriks}{
+	basicstyle=\scriptsize\ttfamily,
+	commentstyle=\color[rgb]{0,0.5,0}\normalfont,
+}
+
+\lstset{
+	language=Rust,
+	style=yuriks,
+	frame=single,
+	texcl=true,
+	numbers=left,
+	showstringspaces=false,
+	}
+
+\def\Cpp{{C\nolinebreak[4]\raisebox{.2ex}{\scriptsize\bf++}}}
+%\def\Cpp{{C\nolinebreak[4]\raisebox{.3ex}{\small++}}}
+
+\title{Desenvolvimento e Reutilização de Testes Automatizados em Aplicações Web}
+\author[Lucas Antunes Amaral]{Lucas Antunes Amaral\\Orientador: Profª Drª Andrea Scwertner Charão}
+\institute[UFSM]{Ciência da Computação\\Universidade Federal de Santa Maria}
+\date{16/10/2015}
+
+\pgfdeclareimage[height=0.75cm]{university-logo}{images/CienciaDaComputacao.png}
+\logo{\pgfuseimage{university-logo}}
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+	%\pgfuseimage{university-logo}
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Introdução}
+\begin{frame}{Introdução}
+	\begin{itemize}
+		\item Ferramenta utilizadas:
+		\begin{itemize}
+			\item Selenium
+			\item JUnit
+		\end{itemize}
+		\item Área de aplicação: Sistemas Web
+		\begin{itemize}
+			\item Requisitos do sistema
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{Objetivos}
+\begin{frame}{Objetivos}
+	\begin{itemize}
+		\item Apresentar \emph{scripts} reutilizáveis de teste
+		\begin{itemize}
+			\item<2-> Importar classes genéricas
+			\item<2-> Pouca manutenção/implementação dos códigos
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{Justificativa}
+\begin{frame}{Justificativa}
+	\begin{itemize}
+		\item Reduzir o trabalho na criação de novos códigos de teste
+		\item Reutilizar ao máximo solução prontas para testes
+		\item Aumentar qualidade da solução entregue
+	\end{itemize}
+\end{frame}
+
+\section{Fundamentação}
+\subsection{Teste de software}
+\subsection{Ferramentas de teste de software}
+\begin{frame}{Ferramentas de teste de software}
+	\begin{itemize}
+		\item Selenium HQ
+		\item Cucumber
+		\item JUnit
+	\end{itemize}
+\end{frame}
+\section{Desenvolvimento}
+\subsection{Delimitação do escopo}
+\begin{frame}{Delimitação do escopo}
+	\begin{itemize}
+		\item Sistemas web
+		\begin{itemize}
+			\item Desenvolvido em Java.
+			\item Suporte Ajax e Javascript.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\pgfdeclareimage[height=4.0cm]{solucao1}{images/solucao1.png}
+\subsection{Visão geral da solução}
+\begin{frame}{Visão geral da solução}
+    \begin{itemize}
+		\item Interface de anotação 
+		\item Classe de teste (Junit + Selenium) 
+	\end{itemize}
+	\visible<2->{\begin{center}\pgfuseimage{solucao1}\end{center}}
+\end{frame}
+\subsection{Discussão sobre a solução}
+\section{Próximos Passos}
+\subsection{Permitir testes funcionais}
+\begin{frame}{Permitir testes funcionais}
+	\begin{itemize}
+		\item Alterar a modelagem visando permitir a realização de testes funcionais.
+		\begin{itemize}
+			\item Para permitir que cenários sejam contemplados por testes funcionais, será acoplado a solução a utilização da linguagem Cucumber, onde cada cenário será descrito por um conjunto de ações do Selenium.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{Ampliar área de abrangência da solução}
+\begin{frame}{Ampliar área de abrangência da solução}
+	\begin{itemize}
+		\item Implementar e disponibilizar suporte para elementos mais complexos.
+	\end{itemize}
+\end{frame}
+
+\subsection{Validação da solução}
+\begin{frame}{Validação da solução desenvolvida}
+	\begin{itemize}
+		\item Realizar comparações para validar solução genérica desenvolvida.
+		\item Apresentar motivos pelo qual deve-se utilizar a solução e o ganho que a mesma trás para uma equipe que possui
+	recursos humanos limitado.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\end{document}

@@ -34,35 +34,32 @@
 \usepackage{listings}
 
 \lstdefinelanguage{Java}{
-  %keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
-  keywords={struct, fn, let, box, mut, pub, impl, for, match, const},
-  %keywordstyle=\color{blue}\bfseries,
-  %ndkeywords={class, export, boolean, throw, implements, import, this},
+  keywords={public, private, new, true, false, catch, void, return, null, for, switch, var, if, in, while, else, case, break},
+  %keywords={struct, fn, let, box, mut, pub, impl, for, match, const},
+  keywordstyle=\color[rgb]{0.4,0.4,0.65}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this, 
+    @Before, @Test, @After, Funcionalidade, Contexto, Dado, Quando, E, Entao, @Dado, @Quando, @E, @Entao, @Documented, @Retention, @Target, @Teste},
   %ndkeywords={Add, Num},
-  %ndkeywordstyle=\color{darkgray}\bfseries,
+  ndkeywordstyle=\color{purple}\bfseries,
   %identifierstyle=\color{black},
   sensitive=true,
   comment=[l]{//},
   morecomment=[s]{/*}{*/},
-  %commentstyle=\color{purple}\ttfamily,
+  commentstyle=\color{purple}\ttfamily,
   stringstyle=\color[rgb]{0.0,0.4,0.65}\ttfamily,
   %morestring=[b]',
   morestring=[b]"
 }
 
-\lstdefinestyle{yuriks}{
-	basicstyle=\scriptsize\ttfamily,
-	commentstyle=\color[rgb]{0,0.5,0}\normalfont,
-}
-
 \lstset{
-	language=Rust,
-	style=yuriks,
+	language=Java,
+	basicstyle=\tiny,
+	commentstyle=\color[rgb]{0,0.2,0}\normalfont,
 	frame=single,
-	texcl=true,
+	%texcl=true,
 	numbers=left,
 	showstringspaces=false,
-	}
+}
 
 \def\Cpp{{C\nolinebreak[4]\raisebox{.2ex}{\scriptsize\bf++}}}
 %\def\Cpp{{C\nolinebreak[4]\raisebox{.3ex}{\small++}}}
@@ -160,7 +157,9 @@ public class LoginTeste {
     private static String url = "inf.ufsm.br/piec";
     
     @Before
-    public void setUp() throws Exception { driver = new FirefoxDriver(); }
+    public void setUp() throws Exception { 
+        driver = new FirefoxDriver(); 
+    }
     
     @Test
     public void testeLoginSucesso() {
@@ -191,11 +190,11 @@ public class LoginTeste {
     \begin{lstlisting}
 Funcionalidade: Fazer login
   Contexto: Login com sucesso
-    Dado que eu queira acessar o endereço inf.ufsm.br/login.htm
-    Quando preencho o campo login com o valor lamaral buscando pelo id
-    E preencho o campo senha com o valor teste123 buscando pelo id
-    E clico no elemento button.btn.btn-default buscando pelo css
-    Entao o atributo "Sucesso!" do elemento "Bem vindo" buscando pelo id não está nulo
+    Dado que eu queira acessar o endereço "inf.ufsm.br/login.htm"
+    Quando preencho o campo "login" com o valor "lamaral" buscando pelo "id"
+    E preencho o campo "senha" com o valor "teste123" buscando pelo "id"
+    E clico no elemento "button.btn.btn-default" buscando pelo "css"
+    Entao o atributo "Sucesso!" do elemento "box_s" buscando pelo "id" não está nulo
 	\end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]{Ferramentas de teste de software}
@@ -271,7 +270,7 @@ public @interface Teste {
 
     //findElement
     String getCampo() default ""; //campo html do formulário
-    String getIdentificador() default "id"; //Informar se deve buscar um id, name, class ou css
+    String getIdentificador() default "id"; //Informar se deve buscar um id, name, etc
 
     boolean isSelect() default false;
 
@@ -292,8 +291,8 @@ public @interface Teste {
     \item Exemplo de classe contendo anotações
     \begin{lstlisting}
 @Teste(getUrl = "/cadastro-disciplina.htm", getCampo = "salvar", click = true
-    ,getIdentificadorAssert = TestePropriedades.IDENTIFICADOR_CSS, getCampoAssert = "h4"
-    , getValorEsperadoAssert = "Sucesso!")
+    ,getIdentificadorAssert = TestePropriedades.IDENTIFICADOR_CSS
+    , getCampoAssert = "h4", getValorEsperadoAssert = "Sucesso!")
 public class Disciplina {
     private String codigo;
     private String nome;
@@ -309,7 +308,9 @@ public class Disciplina {
     @Teste(getCampo = "cargaHoraria", getValor = "60", isSelect = true)
     public Integer getCargaHoraria() { return cargaHoraria; }
 
-    public void setCargaHoraria(Integer cargaHoraria) { this.cargaHoraria = cargaHoraria; }
+    public void setCargaHoraria(Integer cargaHoraria) { 
+        this.cargaHoraria = cargaHoraria; 
+    }
 
     @Teste(getCampo = "nome", getValor = "Disciplina teste")
     public String getNome() { return nome; }
@@ -321,8 +322,8 @@ public class Disciplina {
     \begin{lstlisting}
 @Test
 public void testaFormularios() {
-	for (Class classe : getCarregaClasses()) {
-		Teste testeClasse = TestePropriedades.teste(classe);
+    for (Class classe : getCarregaClasses()) {
+        Teste testeClasse = TestePropriedades.teste(classe);
         if (!testeClasse.getUrl().equals("")) {
             webDriver.get(TestePropriedades.urlSistema + testeClasse.getUrl());
         }
@@ -334,24 +335,32 @@ public void testaFormularios() {
         }
         executaTeste(testeClasse, false);
         System.out.println("Formulário da classe "+classe.getName()+" testado!");
-	}
+    }
 }
 	\end{lstlisting}
 \end{frame}
 \subsection{Discussão sobre a solução}
 \begin{frame}{Discussão sobre a solução}
-    \item Qualidades
-    \begin{itemize}
-		\item Suporta testes unitários
-		\item Curva de aprendizado pequena, necessário apenas inserir anotações
-		\item Suporte para funções básicas executadas em um sistema web (click's, seleções, etc)
-	\end{itemize}
-    \item Limitações
-    \begin{itemize}
-		\item Não possibilita a realização de testes funcionais
-		\item Um campo só pode conter um valor de teste
-		\item Não suporta elementos que dependam de funções Ajax
-	\end{itemize}
+     \begin{columns}[T] % contents are top vertically aligned
+     \begin{column}[T]{5cm} % each column can also be its own environment
+        \begin{block}{Qualidades}
+    	    \begin{itemize}
+        		\item Suporta testes unitários
+        		\item Curva de aprendizado pequena, necessário apenas inserir anotações
+        		\item Suporte para funções básicas executadas em um sistema web (click's, seleções, etc)
+        	\end{itemize}
+    	\end{block}
+     \end{column}
+     \begin{column}[T]{5cm} % alternative top-align that's better for graphics
+        \begin{alertblock}{Limitações}
+            \begin{itemize}
+            	\item Não possibilita a realização de testes funcionais
+            	\item Um campo só pode conter um valor de teste
+            	\item Não suporta elementos que dependam de funções Ajax
+            \end{itemize}
+        \end{alertblock}
+     \end{column}
+     \end{columns}
 \end{frame}
 \section{Próximos Passos}
 \subsection{Próximos Passos}

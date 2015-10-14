@@ -135,7 +135,7 @@
 \pgfdeclareimage[height=1.0cm]{selenium_logo}{images/selenium_logo.png}
 \pgfdeclareimage[height=1.0cm]{cucumber_logo}{images/cucumber_logo.png}
 \pgfdeclareimage[height=2.0cm]{junit_logo}{images/junit_logo.jpg}
-\pgfdeclareimage[height=4.5cm]{selenium_ide}{images/selenium_ide.PNG}
+\pgfdeclareimage[height=6.0cm]{selenium_ide}{images/selenium_ide.PNG}
 \section{Fundamentação}
 \subsection{Ferramentas de teste de software}
 \begin{frame}{Ferramentas de teste de software}
@@ -233,14 +233,24 @@ public void compararSeNulo(String atributo, String campo, String identificador) 
 	\end{itemize}
 \end{frame}
 \subsection{Reuso de testes}
+\begin{frame}{Reuso de testes}
+    \begin{itemize}
+        \item Visando qualidade dos produtos e serviços, desenvolvedores apresentam teses e modelos
+        \item Buscam criar testes genéricos e padronizados
+    \end{itemize}
+    \begin{block}{}
+         Um padrão é um pedaço de informação instrutiva e nomeada, que captura a estrutura essencial
+e \emph{“insights”}, de uma família bem sucedida de soluções aprovadas, para um determinado problema, o qual surge em um determinado contexto [CAGNIN et al., 2004].
+    \end{block}
+\end{frame}
 \section{Desenvolvimento}
 \subsection{Delimitação do escopo}
 \begin{frame}{Delimitação do escopo}
 	\begin{itemize}
 		\item Sistemas web
 		\begin{itemize}
-			\item Desenvolvidos em Java.
-			\item Suporte para funções Ajax e Javascript.
+			\item Desenvolvidos em Java
+			\item Suporte para funções Ajax e Javascript
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -329,41 +339,37 @@ public void testaFormularios() {
 	\end{lstlisting}
 \end{frame}
 \subsection{Discussão sobre a solução}
-\item Qualidades
+\begin{frame}{Discussão sobre a solução}
+    \item Qualidades
     \begin{itemize}
 		\item Suporta testes unitários
 		\item Curva de aprendizado pequena, necessário apenas inserir anotações
 		\item Suporte para funções básicas executadas em um sistema web (click's, seleções, etc)
 	\end{itemize}
-\item Limitações
+    \item Limitações
     \begin{itemize}
 		\item Não possibilita a realização de testes funcionais
 		\item Um campo só pode conter um valor de teste
 		\item Não suporta elementos que dependam de funções Ajax
 	\end{itemize}
-\section{Próximos Passos}
-\subsection{Permitir testes funcionais}
-\begin{frame}{Permitir testes funcionais}
-	\begin{itemize}
-		\item Alterar a modelagem visando permitir a realização de testes funcionais.
-		\begin{itemize}
-			\item Acoplar a solução a utilização da linguagem Cucumber, onde cada cenário descreverá um conjunto de ações do Selenium.
-		\end{itemize}
-	\end{itemize}
 \end{frame}
-\subsection{Ampliar área de abrangência da solução}
-\begin{frame}{Ampliar área de abrangência da solução}
+\section{Próximos Passos}
+\subsection{Próximos Passos}
+\begin{frame}{Próximos Passos}
+    \item Permitir testes funcionais
+	\begin{itemize}
+		\item Acoplar a solução a utilização da linguagem Cucumber, onde cada cenário descreverá um conjunto de ações do Selenium.
+	\end{itemize}
+    \item Ampliar área de abrangência da solução
 	\begin{itemize}
 		\item Implementar e disponibilizar suporte para elementos mais complexos.
 	\end{itemize}
 \end{frame}
-
-\subsection{Validação da solução}
-\begin{frame}{Validação da solução desenvolvida}
+\begin{frame}{Próximos Passos}
+    \item Validação da solução desenvolvida
 	\begin{itemize}
 		\item Realizar comparações para validar solução genérica desenvolvida.
-		\item Apresentar motivos pelo qual deve-se utilizar a solução e o ganho que a mesma trás para uma equipe que possui
-	recursos humanos limitado.
+		\item Apresentar motivos pelo qual deve-se utilizar a solução e o ganho que a mesma trás para uma equipe que possui recursos humanos limitado.
 	\end{itemize}
 \end{frame}
 
@@ -371,5 +377,5 @@ public void testaFormularios() {
 \begin{frame}
 \titlepage
 \end{frame}
-
 \end{document}
+\bibliography{../referências}

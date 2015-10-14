@@ -68,7 +68,7 @@
 %\def\Cpp{{C\nolinebreak[4]\raisebox{.3ex}{\small++}}}
 
 \title{Desenvolvimento e Reutilização de Testes Automatizados em Aplicações Web}
-\author[Lucas Antunes Amaral]{Lucas Antunes Amaral\\Orientador: Profª Drª Andrea Scwertner Charão}
+\author[Lucas Antunes Amaral]{Lucas Antunes Amaral\\Orientador: Profª Drª Andrea Schwertner Charão}
 \institute[UFSM]{Ciência da Computação\\Universidade Federal de Santa Maria}
 \date{16/10/2015}
 
@@ -104,81 +104,253 @@
 
 \section{Introdução}
 \begin{frame}{Introdução}
+	\begin{block}{Teste de software}
+	    É uma atividade destrutível, pois visa expor os defeitos para depois corrigir os mesmos.
+	\end{block}
 	\begin{itemize}
-		\item Ferramenta utilizadas:
-		\begin{itemize}
-			\item Selenium
-			\item JUnit
-		\end{itemize}
-		\item Área de aplicação: Sistemas Web
-		\begin{itemize}
-			\item Requisitos do sistema
-		\end{itemize}
+		\item Responsável por apresentar os erros existentes em um determinado programa.
+		\item Aumenta a confiança de que o software desempenha as funções especificadas.
 	\end{itemize}
 \end{frame}
 
 \subsection{Objetivos}
 \begin{frame}{Objetivos}
+    \begin{block}{Objetivo principal}
+	    Apresentar solução de teste reutilizável para novos casos de teste ou novos projetos.
+	\end{block}
 	\begin{itemize}
-		\item Apresentar \emph{scripts} reutilizáveis de teste
-		\begin{itemize}
-			\item<2-> Importar classes genéricas
-			\item<2-> Pouca manutenção/implementação dos códigos
-		\end{itemize}
+		\item Reduzir o trabalho na criação de novos códigos de teste
+		\item Tornar solução genérica e replicável
 	\end{itemize}
 \end{frame}
 
 \subsection{Justificativa}
 \begin{frame}{Justificativa}
 	\begin{itemize}
-		\item Reduzir o trabalho na criação de novos códigos de teste
-		\item Reutilizar ao máximo solução prontas para testes
-		\item Aumentar qualidade da solução entregue
+		\item Entregar software com maior qualidade
+		\item Equipes com recursos humanos limitados
+		\item Garantir maior confiabilidade e redução de erros
 	\end{itemize}
 \end{frame}
-
+\pgfdeclareimage[height=1.0cm]{selenium_logo}{images/selenium_logo.png}
+\pgfdeclareimage[height=1.0cm]{cucumber_logo}{images/cucumber_logo.png}
+\pgfdeclareimage[height=2.0cm]{junit_logo}{images/junit_logo.jpg}
+\pgfdeclareimage[height=4.5cm]{selenium_ide}{images/selenium_ide.PNG}
 \section{Fundamentação}
-\subsection{Teste de software}
 \subsection{Ferramentas de teste de software}
 \begin{frame}{Ferramentas de teste de software}
+    \pgfuseimage{selenium_logo}
+    \item Selenium HQ
 	\begin{itemize}
-		\item Selenium HQ
-		\item Cucumber
-		\item JUnit
+		\item Ferramenta para testes em aplicações web pelo browser de forma automatizada
+        \item Os testes rodam diretamente num browser simulando ações de um usuário
+        \item Testa se a página web produz o resultado esperado
 	\end{itemize}
 \end{frame}
+\begin{frame}{Ferramentas de teste de software}
+    \pgfuseimage{selenium_logo}
+    \item Selenium IDE
+    \begin{center}\pgfuseimage{selenium_ide}\end{center}
+\end{frame}
+\begin{frame}[fragile]{Ferramentas de teste de software}
+    \item Selenium WebDriver
+    \begin{lstlisting}
+public class LoginTeste {
+    private WebDriver driver;
+    private static String url = "inf.ufsm.br/piec";
+    
+    @Before
+    public void setUp() throws Exception { driver = new FirefoxDriver(); }
+    
+    @Test
+    public void testeLoginSucesso() {
+        driver.get(url);
+        driver.findElement(By.id("login")).sendKeys("lucas");
+        driver.findElement(By.name("senha")).sendKeys("senha123");
+        driver.findElement(By.cssSelector("button.btn.btn-default")).click();
+        assertEquals("Sucesso!", driver.findElement(By.cssSelector("h4")).getText());
+    }
+    
+    @After
+    public void tearDown() { driver.quit(); }
+}
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Ferramentas de teste de software}
+    \pgfuseimage{cucumber_logo}
+    \item Cucumber
+	\begin{itemize}
+		\item Linguagem bem próxima da linguagem natural
+		\item Permite escrever cenários que ilustrem as regras de negócio
+        \item Serve como documentação das funcionalidades solicitadas
+	\end{itemize}
+\end{frame}
+\begin{frame}[fragile]{Ferramentas de teste de software}
+    \pgfuseimage{cucumber_logo}
+    \item Cucumber
+    \begin{lstlisting}
+Funcionalidade: Fazer login
+  Contexto: Login com sucesso
+    Dado que eu queira acessar o endereço inf.ufsm.br/login.htm
+    Quando preencho o campo login com o valor lamaral buscando pelo id
+    E preencho o campo senha com o valor teste123 buscando pelo id
+    E clico no elemento button.btn.btn-default buscando pelo css
+    Entao o atributo "Sucesso!" do elemento "Bem vindo" buscando pelo id não está nulo
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Ferramentas de teste de software}
+    \pgfuseimage{cucumber_logo}
+    \item Cucumber
+    \begin{lstlisting}
+@Dado("^que eu queira acessar o endereco (.*)$")
+public void acessarEndereco(String url) {
+    // descrever ações aqui
+}
+
+@E("^preencho o campo (.*) com o valor (.*) buscando pelo (.*)$")
+public void preencherCampo(String campo, String valor, String identificador) {
+    // descrever ações aqui
+}
+
+@E("^clico no elemento (.*) buscando pelo (.*)$")
+public void clicarElemento(String campo, String identificador) {
+    // descrever ações aqui
+}
+
+@Entao("^comparar se atributo (.*) do elemento (.*) buscando pelo (.*) é nulo$")
+public void compararSeNulo(String atributo, String campo, String identificador) {
+    assertNull(...);
+}
+
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Ferramentas de teste de software}
+    \pgfuseimage{junit_logo}
+    \item JUnit
+	\begin{itemize}
+		\item Usa asserções para testar os resultados esperados
+        \item Adequado para os testes unitários e de integração
+	\end{itemize}
+\end{frame}
+\subsection{Reuso de testes}
 \section{Desenvolvimento}
 \subsection{Delimitação do escopo}
 \begin{frame}{Delimitação do escopo}
 	\begin{itemize}
 		\item Sistemas web
 		\begin{itemize}
-			\item Desenvolvido em Java.
-			\item Suporte Ajax e Javascript.
+			\item Desenvolvidos em Java.
+			\item Suporte para funções Ajax e Javascript.
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 \pgfdeclareimage[height=4.0cm]{solucao1}{images/solucao1.png}
 \subsection{Visão geral da solução}
 \begin{frame}{Visão geral da solução}
-    \begin{itemize}
-		\item Interface de anotação 
-		\item Classe de teste (Junit + Selenium) 
-	\end{itemize}
-	\visible<2->{\begin{center}\pgfuseimage{solucao1}\end{center}}
+    \item Modelagem da solução
+	\begin{center}\pgfuseimage{solucao1}\end{center}
+\end{frame}
+\begin{frame}[fragile]{Visão geral da solução}
+    \item Interface de anotação
+    \begin{lstlisting}
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.TYPE, ElementType.METHOD})
+public @interface Teste {
+    String getUrl() default "";
+
+    //findElement
+    String getCampo() default ""; //campo html do formulário
+    String getIdentificador() default "id"; //Informar se deve buscar um id, name, class ou css
+
+    boolean isSelect() default false;
+
+    String getValor() default ""; //utilizado como sendKeys e selectText
+    boolean click() default false;
+    boolean submit() default false;
+    boolean limpar() default false;
+
+    String getTipoAssert() default "igual";
+    String getCampoAssert() default "";
+    String getIdentificadorAssert() default "id";
+    String getValorEsperadoAssert() default "";
+    String getAtributoCampoComparacaoAssert() default "texto";
+}
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Visão geral da solução}
+    \item Exemplo de classe contendo anotações
+    \begin{lstlisting}
+@Teste(getUrl = "/cadastro-disciplina.htm", getCampo = "salvar", click = true
+    ,getIdentificadorAssert = TestePropriedades.IDENTIFICADOR_CSS, getCampoAssert = "h4"
+    , getValorEsperadoAssert = "Sucesso!")
+public class Disciplina {
+    private String codigo;
+    private String nome;
+    private Integer cargaHoraria;
+
+    @Teste(getCampo = "ativa1", click = true)
+    public Boolean getAtiva() {
+        return ativa == null || ativa;
+    }
+
+    public void setAtiva(Boolean ativa) { this.ativa = ativa; }
+
+    @Teste(getCampo = "cargaHoraria", getValor = "60", isSelect = true)
+    public Integer getCargaHoraria() { return cargaHoraria; }
+
+    public void setCargaHoraria(Integer cargaHoraria) { this.cargaHoraria = cargaHoraria; }
+
+    @Teste(getCampo = "nome", getValor = "Disciplina teste")
+    public String getNome() { return nome; }
+}
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Visão geral da solução}
+    \item Classe genérica de teste
+    \begin{lstlisting}
+@Test
+public void testaFormularios() {
+	for (Class classe : getCarregaClasses()) {
+		Teste testeClasse = TestePropriedades.teste(classe);
+        if (!testeClasse.getUrl().equals("")) {
+            webDriver.get(TestePropriedades.urlSistema + testeClasse.getUrl());
+        }
+        for(Method metodo: classe.getDeclaredMethods()) {
+            Teste teste = TestePropriedades.teste(metodo);
+            if (teste != null) {
+                executaTeste(teste, true);
+            }
+        }
+        executaTeste(testeClasse, false);
+        System.out.println("Formulário da classe "+classe.getName()+" testado!");
+	}
+}
+	\end{lstlisting}
 \end{frame}
 \subsection{Discussão sobre a solução}
+\item Qualidades
+    \begin{itemize}
+		\item Suporta testes unitários
+		\item Curva de aprendizado pequena, necessário apenas inserir anotações
+		\item Suporte para funções básicas executadas em um sistema web (click's, seleções, etc)
+	\end{itemize}
+\item Limitações
+    \begin{itemize}
+		\item Não possibilita a realização de testes funcionais
+		\item Um campo só pode conter um valor de teste
+		\item Não suporta elementos que dependam de funções Ajax
+	\end{itemize}
 \section{Próximos Passos}
 \subsection{Permitir testes funcionais}
 \begin{frame}{Permitir testes funcionais}
 	\begin{itemize}
 		\item Alterar a modelagem visando permitir a realização de testes funcionais.
 		\begin{itemize}
-			\item Para permitir que cenários sejam contemplados por testes funcionais, será acoplado a solução a utilização da linguagem Cucumber, onde cada cenário será descrito por um conjunto de ações do Selenium.
+			\item Acoplar a solução a utilização da linguagem Cucumber, onde cada cenário descreverá um conjunto de ações do Selenium.
 		\end{itemize}
 	\end{itemize}
 \end{frame}
-
 \subsection{Ampliar área de abrangência da solução}
 \begin{frame}{Ampliar área de abrangência da solução}
 	\begin{itemize}

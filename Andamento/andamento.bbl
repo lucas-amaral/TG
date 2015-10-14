@@ -2,7 +2,7 @@
 
 \bibitem[BIASI(2006)BIASI]{biasi2006geraccao} BIASI, L.~B\@. Gera{\c{c}}{\~a}o
   automatizada de drivers e stubs de teste para JUnit a partir de
-  especifica{\c{c}}{\~o}es U2TP., [S.l.], 2006.
+  especifica{\c{c}}{\~o}es U2TP. }, [S.l.], 2006.
 
 \bibitem[BOEHM; BROWN; LIPOW(1976)BOEHM; BROWN; LIPOW]{boehm1976quantitative}
   BOEHM, B.~W.; BROWN, J.~R.; LIPOW, M\@. Quantitative evaluation of software
@@ -18,7 +18,7 @@
 \bibitem[CHIAVEGATTO$^1$ et~al.(2013)CHIAVEGATTO$^1$; SILVA; VIEIRA;
   MALVEZZI$^1$]{chiavegatto1desenvolvimento} CHIAVEGATTO$^1$, R.~B. et~al\@.
   Desenvolvimento Orientado a Comportamento com Testes Automatizados utilizando
-  JBehave e Selenium., [S.l.], 2013.
+  JBehave e Selenium. }, [S.l.], 2013.
 
 \bibitem[CRESPO et~al.(2004)CRESPO; SILVA; BORGES; SALVIANO; TEIVE; JUNIOR;
   JINO]{crespo2004metodologia} CRESPO, A.~N. et~al\@. Uma metodologia para
@@ -47,10 +47,10 @@
   teste de software. \textbf{S{\~a}o Carlos}, [S.l.], 2004.
 
 \bibitem[NUNES(2009)NUNES]{nunescucumber} NUNES, D\@. Automação de Testes de
-  Aceitação com Cucumber e JRuby., [S.l.], 2009.
+  Aceitação com Cucumber e JRuby. }, [S.l.], 2009.
 
 \bibitem[PEREIRA(2012)PEREIRA]{pereiraestudoselenium} PEREIRA, D.~V\@. Estudo
-  da ferramenta selenium ide para testes automatizados de aplicações web.,
+  da ferramenta selenium ide para testes automatizados de aplicações web. },
   [S.l.], 2012.
 
 \bibitem[PRESSMAN(2011)PRESSMAN]{pressman2011engenharia} PRESSMAN, R.~S\@.
@@ -78,6 +78,6 @@
 \bibitem[VASCONCELOS et~al.(2006)VASCONCELOS; ROUILLER; MACHADO;
   MEDEIROS]{de2006introduccao} VASCONCELOS, A. M.~L.~de et~al\@.
   Introdu{\c{c}}{\~a}o {\`a} Engenharia de Software e {\`a} Qualidade de
-  Software., [S.l.], 2006.
+  Software. }, [S.l.], 2006.
 
 \end{thebibliography}

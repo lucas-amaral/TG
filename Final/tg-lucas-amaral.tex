@@ -17,10 +17,10 @@
 \usepackage[hidelinks,
             bookmarksopen=true,linktoc=none,colorlinks=true,
             linkcolor=black,citecolor=black,filecolor=magenta,urlcolor=blue,
-            pdftitle={Exploração da Linguagem Rust para o Desenvolvimento de um Path Tracer Paralelo},
-            pdfauthor={Yuri Kunde Schlesner},
-            pdfsubject={Trabalho de Graduação},
-            pdfkeywords={Computação Gráfica, Linguagens de Programação, Programação Paralela, Rust, Path Tracing, Informática, UFSM}
+            pdftitle={Desenvolvimento e ReutilizaÃ§Ã£o de Testes Automatizados em AplicaÃ§Ãµes Web},
+            pdfauthor={Lucas Antunes Amaral},
+            pdfsubject={Trabalho de GraduaÃ§Ã£o},
+            pdfkeywords={Qualidade de Software, Testes automatizados de Software, Linguagens de ProgramaÃƒÂ§ÃƒÂ£o, Selenium HQ, Cucumber, InformÃƒÂ¡tica, UFSM}
             ]{hyperref}
 %\usepackage[brazilian]{babel}
 
@@ -80,16 +80,16 @@
 	xleftmargin=0cm,
 	xrightmargin=0cm,
 	literate=
-		{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
-		{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
-		{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
-		{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
-		{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
-		{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
-		{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
-		{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
-		{ã}{{\~a}}1 {Ã}{{\~A}}1 {õ}{{\~o}}1 {Õ}{{\~O}}1
-		{ç}{{\c c}}1 {Ç}{{\c C}}1,
+		{Ã¡}{{\'a}}1 {Ã©}{{\'e}}1 {Ã­}{{\'i}}1 {Ã³}{{\'o}}1 {Ãº}{{\'u}}1
+		{Ã}{{\'A}}1 {Ã‰}{{\'E}}1 {Ã}{{\'I}}1 {Ã“}{{\'O}}1 {Ãš}{{\'U}}1
+		{Ã }{{\`a}}1 {Ã¨}{{\`e}}1 {Ã¬}{{\`i}}1 {Ã²}{{\`o}}1 {Ã¹}{{\`u}}1
+		{Ã€}{{\`A}}1 {Ãˆ}{{\'E}}1 {ÃŒ}{{\`I}}1 {Ã’}{{\`O}}1 {Ã™}{{\`U}}1
+		{Ã¤}{{\"a}}1 {Ã«}{{\"e}}1 {Ã¯}{{\"i}}1 {Ã¶}{{\"o}}1 {Ã¼}{{\"u}}1
+		{Ã„}{{\"A}}1 {Ã‹}{{\"E}}1 {Ã}{{\"I}}1 {Ã–}{{\"O}}1 {Ãœ}{{\"U}}1
+		{Ã¢}{{\^a}}1 {Ãª}{{\^e}}1 {Ã®}{{\^i}}1 {Ã´}{{\^o}}1 {Ã»}{{\^u}}1
+		{Ã‚}{{\^A}}1 {ÃŠ}{{\^E}}1 {Ã}{{\^I}}1 {Ã”}{{\^O}}1 {Ã›}{{\^U}}1
+		{Ã£}{{\~a}}1 {Ãƒ}{{\~A}}1 {Ãµ}{{\~o}}1 {Ã•}{{\~O}}1
+		{Ã§}{{\c c}}1 {Ã‡}{{\c C}}1,
 	texcl=true,
 	%numbers=left,
 	showstringspaces=false,
@@ -109,25 +109,25 @@
 
 %%% END Article customizations
 
-\title{Desenvolvimento e Reutilização de Testes Automatizados em Aplicações Web}
+\title{Desenvolvimento e ReutilizaÃ§Ã£o de Testes Automatizados em AplicaÃ§Ãµes Web}
 \author{Amaral}{Lucas Antunes}
-\course{Curso de Ciência da Computação}
-\altcourse{Curso de Ciência da Computação}
+\course{Curso de CiÃªncia da ComputaÃ§Ã£o}
+\altcourse{Curso de CiÃªncia da ComputaÃ§Ã£o}
 \institute{Centro de Tecnologia}
-\degree{Bacharel em Ciência da Computação}
+\degree{Bacharel em CiÃªncia da ComputaÃ§Ã£o}
 
 \trabalhoNumero{}
-\advisor[Profª.]{Drª.}{Charão}{Andrea Schwertner}
+\advisor[ProfÂª.]{DrÂª.}{CharÃ£o}{Andrea Schwertner}
 \orientadoratrue
 
-\committee[Profª. Dr.]{Bernardi}{Giliane}{UFSM}
+\committee[ProfÂª. Dr.]{Bernardi}{Giliane}{UFSM}
 \committee[MSc.]{Pereira}{Adriano}{UFSM}
 
 \date{4}{Dezembro}{2015}
 
 \keyword{Qualidade de Software}
 \keyword{Testes automatizados de Software}
-\keyword{Linguagens de Programação}
+\keyword{Linguagens de ProgramaÃ§Ã£o}
 \keyword{Selenium HQ}
 \keyword{Cucumber}
 
@@ -139,24 +139,22 @@
 %\includepdf[pages={-}]{folha_de_aprovacao.pdf}
 
 \chapter*{Agradecimentos}
-
 \begin{abstract}
-A constante busca pela qualidade de uma solução em forma de software, fez com que empresas do ramo de desenvolvimento aderissem e enxergassem a importância da realização de testes automatizados em seus sistemas. A partir deste cenário,
-surgiram inúmeras ferramentas e \emph{frameworks} para suprir esta demanda, que se propõe  a ampliar a otimização de tempo e
-eficácia das aplicações implementadas, visando uma garantia maior na qualidade das mesmas. Contudo, é sabido que criar
-um novo teste para cada nova funcionalidade ou demanda do sistema, se torna muito custoso, sendo necessário um grande
+A constante busca pela qualidade de uma soluÃ§Ã£o em forma de software, fez com que empresas do ramo de desenvolvimento aderissem a realizaÃ§Ã£o de testes automatizados em seus sistemas. A partir deste cenÃ¡rio,
+surgiram inÃºmeras ferramentas e \emph{frameworks} para suprir esta demanda, que se propÃµem  a ampliar a otimizaÃ§Ã£o de tempo e
+eficÃ¡cia das aplicaÃ§Ãµes implementadas, visando uma garantia maior na qualidade das mesmas. Contudo, Ã© sabido que criar
+um novo teste para cada nova funcionalidade ou demanda do sistema, torna-se muito custoso, sendo necessÃ¡rio um grande
 desprendimento de recursos humanos. Assim, este trabalho objetiva apresentar \emph{scripts} de testes automatizados para
-sistemas web, que possam, de maneira mais genérica e com poucas alterações, serem reutilizados, de forma escalável,
+sistemas web, que possam, de maneira mais genÃ©rica e com poucas alteraÃ§Ãµes, serem reutilizados, de forma escalÃ¡vel,
 para novos casos de testes, que sigam o mesmo escopo.
 \end{abstract}
 
-\begin{englishabstract}
-{}
-{}
-{}
-{December}
-{nd}
-\end{englishabstract}
+%\begin{englishabstract}
+%{}
+%{}
+%{}
+%{December}
+%\end{englishabstract}
 
 \tableofcontents
 \listoffigures
@@ -165,185 +163,191 @@ para novos casos de testes, que sigam o mesmo escopo.
 
 \setlength{\baselineskip}{1.5\baselineskip}
 
-%	\item[Período de execução:] Setembro de 2014 a Dezembro de 2014
-%	\item[Unidades participantes:] ~\\ Curso de Ciência da Computação \\ Departamento de Eletrônica e Computação
-%	\item[Área de conhecimento:] Ciência da Computação
-%	\item[Linha de Pesquisa:] Computação Gráfica, Linguagens de Programação, Programação Paralela
-%	\item[Tipo de projeto:] Trabalho de Conclusão de Curso
+%	\item[PerÃ­odo de execuÃ§Ã£o:] Setembro de 2014 a Dezembro de 2014
+%	\item[Unidades participantes:] ~\\ Curso de CiÃªncia da ComputaÃ§Ã£o \\ Departamento de EletrÃ´nica e ComputaÃ§Ã£o
+%	\item[Ãrea de conhecimento:] CiÃªncia da ComputaÃ§Ã£o
+%	\item[Linha de Pesquisa:] ComputaÃ§Ã£o GrÃ¡fica, Linguagens de ProgramaÃ§Ã£o, ProgramaÃ§Ã£o Paralela
+%	\item[Tipo de projeto:] Trabalho de ConclusÃ£o de Curso
 
-\chapter{Introdução}
+\chapter{IntroduÃ§Ã£o}
 
-Dada a atual conjectura do mercado de desenvolvimento de software é fundamental, para
-que uma aplicação se mantenha viva de forma competitiva, apresentar diferenciais ao seu público alvo. Desta
-maneira, a área de qualidade de software ganha cada vez mais espaço dentro das empresas de TI e, em especial, as ferramentas e
+Dada a atual conjectura do mercado de desenvolvimento de software Ã© fundamental, para
+que uma aplicaÃ§Ã£o se mantenha viva de forma competitiva, apresentar diferenciais ao seu pÃºblico alvo. Desta
+maneira, a Ã¡rea de qualidade de software ganha cada vez mais espaÃ§o dentro das empresas de tecnologia da informaÃ§Ã£o e, em especial, as ferramentas e
 metodologias de teste de software ganham maior visibilidade.
 
 Os testes de software podem ocorrer em todas as etapas do desenvolvimento e de diferentes formas, contudo,
-sempre objetivam atender na totalidade os requisitos do sistema e, simultaneamente, amplificar a qualidade da solução
-codificada. São inúmeras as vantagens de se utilizar testes automatizados ao invés dos testes manuais em uma aplicação.
-Apesar de, aparentemente, ser mais prático e rápido realizar um teste manual, a cada nova alteração em um módulo do sistema,
-o teste tem que ser todo refeito e a tendência que novos erros sejam gerados, até mesmo em funcionalidades já testadas, é enorme,
-problema este que não ocorre quando a abordagem escolhida é a automatização dos testes.
+sempre objetivam atender na totalidade os requisitos do sistema e, simultaneamente, amplificar a qualidade da soluÃ§Ã£o
+codificada. SÃ£o inÃºmeras as vantagens de se utilizar testes automatizados ao invÃ©s dos testes manuais em uma aplicaÃ§Ã£o.
+Apesar de, aparentemente, ser mais prÃ¡tico e rÃ¡pido realizar um teste manual, a cada nova alteraÃ§Ã£o em um mÃ³dulo do sistema,
+o teste tem que ser todo refeito e a tendÃªncia que novos erros sejam gerados, atÃ© mesmo em funcionalidades jÃ¡ testadas, Ã© enorme,
+problema este que nÃ£o ocorre quando a abordagem escolhida Ã© a automatizaÃ§Ã£o dos testes.
 
-Mesmo apresentando grandes vantagens, os testes automatizados demandam um grande custo inicial em sua codificação e, com isso, aumenta o
+Mesmo apresentando grandes vantagens, os testes automatizados demandam um grande custo inicial em sua codificaÃ§Ã£o e, com isso, aumentam o
 envolvimento da equipe de qualidade. Pensando nesse problema, podemos buscar formas alternativas para
 que se possa usufruir de todas estas virtudes dos testes automatizados e, ao mesmo tempo, utilizar de forma eficiente os
-recursos disponíveis em uma instituição.
+recursos disponÃ­veis em uma instituiÃ§Ã£o.
 
 \section{Objetivos}
 
 \subsection{Objetivo Geral}
 
 Este trabalho tem como objetivo principal apresentar um conjunto de casos de teste e testes que possam ser reutilizados de
-forma otimizada em novas funcionalidades de uma aplicação ou em sistemas que sigam os mesmos padrões e comportamento dos
+forma otimizada em novas funcionalidades de uma aplicaÃ§Ã£o ou em sistemas que sigam os mesmos padrÃµes e comportamento dos
 softwares conhecidos.
 
 \subsection{Passos de metodologia}
 \begin{itemize}
-	\item Apontar diferenças de casos de testes;
-    \item Gerar testes automatizados reaplicáveis em novos casos;
-    \item Gerar casos de testes genéricos para um escopo definido.
+	\item Apontar diferenÃ§as de casos de testes;
+    \item Gerar testes automatizados reaplicÃ¡veis em novos casos;
+    \item Gerar casos de testes genÃ©ricos para um escopo definido.
 \end{itemize}
 
 \section{Justificativa}
 
-A qualidade de software  é uma das variáveis essenciais para que um projeto de software tenha sucesso.
-Sendo assim, torna-se cada vez mais necessário a inserção de testes automatizados em projetos web agregando, aos mesmos, uma maior confiabilidade e redução nos possíveis erros que o sistema possa
-apresentar. Para que haja a possibilidade de aumentar a qualidade dos sistemas, sem que seja necessária uma maior
-demanda de recursos humanos para a área de qualidade, podemos adotar práticas de reuso de códigos de testes, visando
-maximizar a produtividade e eficiência, além de, simultaneamente, obter um produto final com uma garantia de qualidade
+A qualidade de software  Ã© uma das variÃ¡veis essenciais para que um projeto de software tenha sucesso.
+Sendo assim, torna-se cada vez mais necessÃ¡ria a inserÃ§Ã£o de testes automatizados em projetos web agregando, aos mesmos, uma maior confiabilidade e reduÃ§Ã£o nos possÃ­veis erros que o sistema possa
+apresentar. Para que haja a possibilidade de aumentar a qualidade dos sistemas, sem que seja necessÃ¡ria uma maior
+demanda de recursos humanos para a Ã¡rea de qualidade, podemos adotar prÃ¡ticas de reuso de cÃ³digos de testes, visando
+maximizar a produtividade e eficiÃªncia, alÃ©m de, simultaneamente, obter um produto final com uma garantia de qualidade
 superior.
 
-\chapter{Fundamentos e Revisão de Literatura}
+\chapter{Fundamentos e RevisÃ£o de Literatura}
 
-Neste capítulo, serão apresentados conceitos relativos aos conteúdos abordados neste trabalho, descrevendo qualidade de software, ferramentas de teste de software, assim como, o reuso de testes.
+Neste capÃ­tulo, serÃ£o apresentados conceitos relativos aos conteÃºdos abordados neste trabalho, descrevendo qualidade de software, ferramentas de teste de software, assim como, o reuso de testes.
 
 \section{Qualidade de Software}
 
-A Qualidade de software é uma subárea, oriunda da engenharia de software, que tem como foco central apresentar metodologias,
-procedimentos e métricas que garantam a qualidade no processo de desenvolvimento de um sistema. Apesar de ocorrer no processo, a qualidade de software
+A Qualidade de software Ã© uma subÃ¡rea, oriunda da engenharia de software, que tem como foco central apresentar metodologias,
+procedimentos e mÃ©tricas que garantam a qualidade no processo de desenvolvimento de um sistema. Apesar de ocorrer no processo, a qualidade de software
 objetiva obter qualidade no produto final e, com isso, conseguir contemplar na totalidade os requisitos tratados com o cliente ao longo do processo.
-\citeauthor{de2006introduccao} \cite{de2006introduccao} afirma que a qualidade de software está diretamente relacionada a um gerenciamento
-rigoroso de requisitos, uma gerência efetiva de projetos e em um processo de desenvolvimento bem definido gerenciado e em melhoria contínua. Afirma também,
-que atividades de verificação e uso de métricas para controle de projetos e processo também estão inseridas nesse contexto, contribuindo para tomadas de
-decisão e para antecipação de problemas.
+\citeauthor{de2006introduccao} \cite{de2006introduccao} afirmam que a qualidade de software estÃ¡ diretamente relacionada a um gerenciamento
+rigoroso de requisitos, uma gerÃªncia efetiva de projetos e em um processo de desenvolvimento bem definido gerenciado e em melhoria contÃ­nua. Afirmam tambÃ©m,
+que atividades de verificaÃ§Ã£o e uso de mÃ©tricas para controle de projetos e processo tambÃ©m estÃ£o inseridas nesse contexto, contribuindo para tomadas de
+decisÃ£o e para antecipaÃ§Ã£o de problemas.
 
-Mas como medir a qualidade de um sistema em questão? Para responder este questionamento, Garvin \cite{garvin1987competing} propõe o conceito que ele chama de
-oito dimensões que seriam, em ordem, qualidade do desempenho, qualidade dos recursos, confiabilidade, conformidade, durabilidade, facilidade de manutenção,
-estética e percepção. Segundo \citeauthor{garvin1987competing}, atendendo a estes oito critérios, o sistema apresentará qualidade.
-\citeauthor{pressman2011engenharia} \cite{pressman2011engenharia} complementa a definição de Garvin mesclando-a com a norma ISO 9126, e aponta os fatores
-críticos para o sucesso neste caso, como sendo: Intuição, Eficiência, Robustez e Riqueza.
+Mas como medir a qualidade de um sistema em questÃ£o? Para responder este questionamento, Garvin \cite{garvin1987competing} propÃµe o conceito que ele chama de
+oito dimensÃµes que seriam, em ordem, qualidade do desempenho, qualidade dos recursos, confiabilidade, conformidade, durabilidade, facilidade de manutenÃ§Ã£o,
+estÃ©tica e percepÃ§Ã£o. Segundo \citeauthor{garvin1987competing}, atendendo a estes oito critÃ©rios, o sistema apresentarÃ¡ qualidade.
+\citeauthor{pressman2011engenharia} \cite{pressman2011engenharia} complementa a definiÃ§Ã£o de Garvin mesclando-a com a norma ISO 9126, e aponta os fatores
+crÃ­ticos para o sucesso neste caso, como sendo: IntuiÃ§Ã£o, EficiÃªncia, Robustez e Riqueza.
 
 \subsection{Qualidade do processo}
-A qualidade de software é largamente determinada pela qualidade dos processos utilizados para o desenvolvimento. Deste modo, a melhoria
-da qualidade de software é obtida pela melhoria da qualidade dos processos \cite{koscianski2007qualidade}.
+A qualidade de software Ã© largamente determinada pela qualidade dos processos utilizados para o desenvolvimento. Deste modo, a melhoria
+da qualidade de software Ã© obtida pela melhoria da qualidade dos processos \cite{koscianski2007qualidade}.
 
 \subsection{Qualidade do produto}
-Existe uma relação direta entre qualidade de produto e qualidade do processo, pois, para obtenção da qualidade do produto final,
-faz-se necessário adquirir primeiramente qualidade nos processos que compõem o desenvolvimento do mesmo.
-Avaliar a qualidade de um produto de software é verificar, através de técnicas e atividades operacionais, o quanto os requisitos são atendidos. Tais requisitos,
-de uma maneira geral são a expressão das necessidades, explicitados em termos quantitativos ou qualitativos e têm por objetivo definir as características de
+Existe uma relaÃ§Ã£o direta entre qualidade de produto e qualidade do processo, pois, para obtenÃ§Ã£o da qualidade do produto final,
+faz-se necessÃ¡rio adquirir primeiramente qualidade nos processos que compÃµem o desenvolvimento do mesmo.
+Avaliar a qualidade de um produto de software Ã© verificar, atravÃ©s de tÃ©cnicas e atividades operacionais, o quanto os requisitos sÃ£o atendidos. Tais requisitos,
+de uma maneira geral sÃ£o a expressÃ£o das necessidades, explicitados em termos quantitativos ou qualitativos e tÃªm por objetivo definir as caracterÃ­sticas de
 um software, a fim de permitir o exame de seu atendimento \cite{koscianski2007qualidade}.
 
-\subsection{Testes de Software}
-É a atividade responsável por apresentar os erros existentes em um determinado programa. Por isso pode ser vista como uma atividade destrutível, pois visa expor os defeitos para depois corrigir os mesmos e, de preferência, em
-um estágio inicial. Quanto mais tarde um defeito for identificado, mais caro fica para corrigi-lo e mais, os custos de descobrir e corrigir o defeito no software, aumentam exponencialmente na proporção em que o trabalho
-evolui através das fases do projeto de desenvolvimento \cite{boehm1976quantitative}. O teste possibilita também validar se os requisitos inicias do sistema, alinhados pelos \emph{stakeholders}, estão contemplados em sua plenitude.
+\section{Testes de Software}
+Ã‰ a atividade responsÃ¡vel por apresentar os erros existentes em um determinado programa. Por isso, pode ser vista como uma atividade destrutÃ­vel, pois visa expor os defeitos para depois corrigir os mesmos e, de preferÃªncia, em
+um estÃ¡gio inicial. Quanto mais tarde um defeito for identificado, mais caro fica para corrigi-lo, e mais, os custos de descobrir e corrigir o defeito no software aumentam exponencialmente na proporÃ§Ã£o em que o trabalho
+evolui atravÃ©s das fases do projeto de desenvolvimento \cite{boehm1976quantitative}. O teste possibilita tambÃ©m validar se os requisitos inicias do sistema, alinhados pelos \emph{stakeholders}, estÃ£o contemplados em sua plenitude.
 
-Apesar de não ser possível, através de testes, provar que um programa está correto, os testes, se conduzidos sistemática e criteriosamente, contribuem para
-aumentar a confiança de que o software desempenha as funções especificadas e evidenciar algumas características mínimas do ponto de vista da qualidade do produto \cite{maldonado2004introduccao}. Sendo assim,
-se faz essencial o mapeamento de um processo de testes para que se possa criar garantias e métricas que reduzam os erros, maximizando a qualidade, \citeauthor{crespo2004metodologia} \cite{crespo2004metodologia} descreve o processo de
-teste, como sendo a composição de quatro macro etapas: Planejamento, projeto, execução e acompanhamento dos testes de unidade.
+Apesar de nÃ£o ser possÃ­vel, atravÃ©s de testes, provar que um programa estÃ¡ correto, os testes, se conduzidos sistemÃ¡tica e criteriosamente, contribuem para
+aumentar a confianÃ§a de que o software desempenha as funÃ§Ãµes especificadas e evidenciar algumas caracterÃ­sticas mÃ­nimas do ponto de vista da qualidade do produto \cite{maldonado2004introduccao}. Sendo assim,
+faz-se essencial o mapeamento de um processo de testes para que se possa criar garantias e mÃ©tricas que reduzam os erros, maximizando a qualidade, \citeauthor{crespo2004metodologia} \cite{crespo2004metodologia} descrevem o processo de
+teste como sendo a composiÃ§Ã£o de quatro macro etapas: Planejamento, projeto, execuÃ§Ã£o e acompanhamento dos testes de unidade.
 
-\subsection{Estratégias de Testes}
-A Estratégia de testes se caracteriza pela definição da abordagem geral a ser aplicada nos testes, descrevendo como o software será testado, identificando os níveis de testes que serão aplicados, os métodos,
-técnicas e ferramentas a serem utilizada \cite{rios2006teste}. Existem muitas estratégias, mas podemos destacar entre elas: teste de unidade, integração, sistema, aceitação e regressão, funcional e carga. Pode-se também
-mesclar mais de uma estratégia com o intuito de reduzir os possíveis defeitos que o sistema venha a ter.
+\subsection{Plano de teste}
+\subsection{Casos de teste}
 
-\section{Ferramentas para teste de software}
-Existem muitas ferramentas desenvolvidas para realização de testes de software web. Neste trabalho serão descritas três(3) dentre elas, que serão as ferramentas utilizadas no desenvolvimento dos testes estudados.
+\subsection{EstratÃ©gias de Testes}
+A EstratÃ©gia de testes se caracteriza pela definiÃ§Ã£o da abordagem geral a ser aplicada nos testes, descrevendo como o software serÃ¡ testado, identificando os nÃ­veis de testes que serÃ£o aplicados, os mÃ©todos,
+tÃ©cnicas e ferramentas a serem utilizada \cite{rios2006teste}. Existem muitas estratÃ©gias, mas podemos destacar entre elas: teste de unidade, integraÃ§Ã£o, sistema, aceitaÃ§Ã£o e regressÃ£o, funcional e carga. Pode-se tambÃ©m
+mesclar mais de uma estratÃ©gia com o intuito de reduzir os possÃ­veis defeitos que o sistema venha a ter.
 
-\subsection{Cucumber}
-Cucumber é um ferramenta de desenvolvimento de testes, voltado para sistemas web, que adota uma linguagem de alto nível bem próxima a uma linguagem natural e tem suas origens fixadas sobre a metodologia BDD (\emph{Behavior Driven Development}). Cucumber
-é escrita em linguagem Ruby, mas pode ser utilizada para executar especificações de aplicações escritas em qualquer linguagem \cite{nunescucumber}.
+\subsection{Testes de sistemas web}
 
-A escolha dessa ferramenta baseou-se na fácil transcrição dos requisitos do sistema para a linguagem em questão, tornando possível conferir se os requisitos estão contemplados pelas funções e métodos descritos no sistema web.
-\citeauthor{lopescucumbervalor}\cite{lopescucumbervalor} compara Cucumber com o software Capybara e afirma que o primeiro apresenta um código mais legível e amigável. Uma observação é que o código com Capybara faz
-referência para vários detalhes de implementação, enquanto o código do Cucumber reserva isso apenas para os \emph{Steps} e não para o arquivo de \texttt{feature} \cite{lopescucumbervalor}.
+\subsection{Ferramentas para teste de software}
+Existem muitas ferramentas desenvolvidas para realizaÃ§Ã£o de testes de software web. Neste trabalho serÃ£o descritas trÃªs(3) dentre elas, que serÃ£o as ferramentas utilizadas no desenvolvimento dos testes estudados.
 
-A ferramenta funciona basicamente através da leitura de arquivos com a extensão \texttt{feature}, os quais descrevem em linguagem natural uma funcionalidade e casos de teste, conhecidos como cenários.
-Como os testes estão escritos em uma linguagem natural e não de programação, Cucumber precisa pesquisar pelo código associado aos passos que formam o cenário em arquivos auxiliares \cite{scmitzcucumberreview}. Cucumber
-executa seus arquivos \texttt{.feature} e esses arquivos contêm especificações executáveis escritos em uma linguagem chamada Gherkin \cite{cucumberwiki}, que possui um layout bem definido. Inicia pela descrição de uma funcionalidade
-que, por sua vez, possui cenários; onde, um cenário é descrito da seguinte forma: \texttt{Dado} alguma condição \texttt{Quando} outra condição \texttt{E} terceira condição \texttt{Então} faça algo, conforme ilustra a figura \ref{fig:codigo_cucumber}.
+\subsubsection{Cucumber}
+Cucumber Ã© um ferramenta de desenvolvimento de testes, voltado para sistemas web, que adota uma linguagem de alto nÃ­vel bem prÃ³xima a uma linguagem natural e tem suas origens fixadas sobre a metodologia BDD (\emph{Behavior Driven Development}). Cucumber
+Ã© escrita em linguagem Ruby, mas pode ser utilizada para executar especificaÃ§Ãµes de aplicaÃ§Ãµes escritas em qualquer linguagem \cite{nunescucumber}.
+
+A escolha dessa ferramenta baseou-se na fÃ¡cil transcriÃ§Ã£o dos requisitos do sistema para a linguagem em questÃ£o, tornando possÃ­vel conferir se os requisitos estÃ£o contemplados pelas funÃ§Ãµes e mÃ©todos descritos no sistema web.
+\citeauthor{lopescucumbervalor}\cite{lopescucumbervalor} compara Cucumber com o software Capybara e afirma que o primeiro apresenta um cÃ³digo mais legÃ­vel e amigÃ¡vel. Uma observaÃ§Ã£o Ã© que o cÃ³digo com Capybara faz
+referÃªncia para vÃ¡rios detalhes de implementaÃ§Ã£o, enquanto o cÃ³digo do Cucumber reserva isso apenas para os \emph{Steps} e nÃ£o para o arquivo de \texttt{feature} \cite{lopescucumbervalor}.
+
+A ferramenta funciona basicamente atravÃ©s da leitura de arquivos com a extensÃ£o \texttt{feature}, os quais descrevem em linguagem natural uma funcionalidade e casos de teste, conhecidos como cenÃ¡rios.
+Como os testes estÃ£o escritos em uma linguagem natural e nÃ£o de programaÃ§Ã£o, Cucumber precisa pesquisar pelo cÃ³digo associado aos passos que formam o cenÃ¡rio em arquivos auxiliares \cite{scmitzcucumberreview}. Cucumber
+executa seus arquivos \texttt{.feature} e esses arquivos contÃªm especificaÃ§Ãµes executÃ¡veis escritos em uma linguagem chamada Gherkin \cite{cucumberwiki}, que possui um layout bem definido. Inicia pela descriÃ§Ã£o de uma funcionalidade
+que, por sua vez, possui cenÃ¡rios; onde, um cenÃ¡rio Ã© descrito da seguinte forma: \texttt{Dado} alguma condiÃ§Ã£o \texttt{Quando} outra condiÃ§Ã£o \texttt{E} terceira condiÃ§Ã£o \texttt{EntÃ£o} faÃ§a algo, conforme ilustra a figura \ref{fig:codigo_cucumber}.
 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.8\textwidth]{codigo_cucumber}
-    \caption{Um exemplo de código cucumber.}
+    \caption{Um exemplo de cÃ³digo cucumber.}
     \label{fig:codigo_cucumber}
 \end{figure}
 
-\subsection{Selenium HQ}
-É um \emph{framework} open source utilizado para automatização de testes funcionais em aplicações web \cite{chiavegatto1desenvolvimento}. Segundo \citeauthor{pereiraestudoselenium} \cite{pereiraestudoselenium} se trata
-de uma ferramenta de fácil uso e eficiente para desenvolver casos de teste, permitindo os testes de aceitação ou funcional, regressão e de desempenho.
-Selenium trabalha como um plugin do navegador Firefox, o mesmo traz muita praticidade pois permite que se possa capturar cliques e valores digitados, transformando-os em um caso de teste. Ele é composto por
+\subsubsection{Selenium HQ}
+Ã‰ um \emph{framework} open source utilizado para automatizaÃ§Ã£o de testes funcionais em aplicaÃ§Ãµes web \cite{chiavegatto1desenvolvimento}. Segundo \citeauthor{pereiraestudoselenium} \cite{pereiraestudoselenium} se trata
+de uma ferramenta de fÃ¡cil uso e eficiente para desenvolver casos de teste, permitindo os testes de aceitaÃ§Ã£o ou funcional, regressÃ£o e de desempenho.
+Selenium trabalha como um plugin do navegador Firefox, o mesmo traz muita praticidade pois permite que se possa capturar cliques e valores digitados, transformando-os em um caso de teste. Ele Ã© composto por
 quatro ferramentas: Selenium IDE, Selenium Grid, Selenium RC e Selenium WebDrive.
 
-A utilização de comandos no Selenium consiste em digitar o comando seguido de dois parâmetros tal como, por exemplo, \texttt{verifyText //div//a[2] Login}. Dependendo  do comando os parâmetros poderão ser opcionais, pois, alguns comandos não necessitam de parâmetros para serem executados \cite{sixpenceautomatizaccao}.
+A utilizaÃ§Ã£o de comandos no Selenium consiste em digitar o comando seguido de dois parÃ¢metros tal como, por exemplo, \texttt{verifyText //div//a[2] Login}. Dependendo  do comando os parÃ¢metros poderÃ£o ser opcionais, pois, alguns comandos nÃ£o necessitam de parÃ¢metros para serem executados \cite{sixpenceautomatizaccao}.
 
 Selenium foi escolhida como umas das ferramentas no desenvolvimento deste projeto pelo fato de ser um \emph{framework open source} que possui um vasto leque de ferramentas para testes de sistemas web. Outro fator
-importante para sua escolha é a possibilidade de interação do Selenium HQ com o Cucumber. Ela se destaca entre as demais ferramentas gratuitas pelo fato de ser a mais completa, permitindo integração com
-várias linguagens, outros \emph{frameworks}, além de suportar inúmeros navegadores e sistemas operacionais \cite{pereiraestudoselenium}.
+importante para sua escolha Ã© a possibilidade de interaÃ§Ã£o do Selenium HQ com o Cucumber. Ela se destaca entre as demais ferramentas gratuitas pelo fato de ser a mais completa, permitindo integraÃ§Ã£o com
+vÃ¡rias linguagens, outros \emph{frameworks}, alÃ©m de suportar inÃºmeros navegadores e sistemas operacionais \cite{pereiraestudoselenium}.
 
-\subsection{JUnit}
-JUnit é uma ferramenta de apoio ao teste unitário, a qual auxilia desenvolvedores na automação dos testes e verificação dos resultados \cite{biasi2006geraccao}. A escolha desta ferramenta, como parte integrante da solução desenvolvida, deveu-se ao fato, de a mesma ser voltada para sistemas desenvolvidos na linguagem de programação Java, além de ser altamente versátil, possibilitando assim, integração em um único código da mesma com os demais \emph{frameworks} que serão utilizados(Selenium e Cucumber).
+\subsubsection{JUnit}
+JUnit Ã© uma ferramenta de apoio ao teste unitÃ¡rio, a qual auxilia desenvolvedores na automaÃ§Ã£o dos testes e verificaÃ§Ã£o dos resultados \cite{biasi2006geraccao}. A escolha desta ferramenta, como parte integrante da soluÃ§Ã£o desenvolvida, deveu-se ao fato de a mesma ser voltada para sistemas desenvolvidos na linguagem de programaÃ§Ã£o Java, alÃ©m de ser altamente versÃ¡til, possibilitando assim, integraÃ§Ã£o em um Ãºnico cÃ³digo da mesma com os demais \emph{frameworks} que serÃ£o utilizados(Selenium e Cucumber).
 
-Se justifica a sua utilização neste trabalho por tratar-se de uma API (\emph{Application Programming Interface}), que viabiliza a comparação de um valor obtido em algum teste com o valor esperado pelo mesmo. Desta forma, pode-se validar e verificar se
-a funcionalidade de um sistema está trabalhando adequadamente.
+Justifica-se a sua utilizaÃ§Ã£o neste trabalho por tratar-se de uma API (\emph{Application Programming Interface}), que viabiliza a comparaÃ§Ã£o de um valor obtido em algum teste com o valor esperado pelo mesmo. Desta forma, pode-se validar e verificar se
+a funcionalidade de um sistema estÃ¡ trabalhando adequadamente.
+
 
 \section{Reuso de testes}
 
-Visando melhor aproveitar os recursos existentes em uma instituição e, ainda assim apresentar garantias na qualidade do produto/serviço entregues aos clientes, desenvolvedores do mundo todo começaram a apresentar
-teses e modelos, que buscam criar testes genéricos e padronizados. Um padrão é um pedaço de informação instrutiva e nomeada, que captura a estrutura essencial
-e \emph{“insights”}, de uma família bem sucedida de soluções aprovadas, para um determinado problema, o qual surge em um determinado contexto \cite{cagnin2004reuso}.
+Visando melhor aproveitar os recursos existentes em uma instituiÃ§Ã£o e, ainda assim apresentar garantias na qualidade do produto/serviÃ§o entregues aos clientes, desenvolvedores do mundo todo comeÃ§aram a apresentar
+teses e modelos que buscam criar testes genÃ©ricos e padronizados. Um padrÃ£o Ã© um pedaÃ§o de informaÃ§Ã£o instrutiva e nomeada, que captura a estrutura essencial
+e \emph{â€œinsightsâ€}, de uma famÃ­lia bem sucedida de soluÃ§Ãµes aprovadas, para um determinado problema, o qual surge em um determinado contexto \cite{cagnin2004reuso}.
 
-\citeauthor{guizzardi2000desenvolvimento} diz que, por razões históricas, a área de desenvolvimento de software não atingiu a maturidade que outras áreas da engenharia atingiram. Complementa afirmando que, apesar disso, é inegável que algum avanço tenha sido alcançado, pois a forma de realização dessa atividade evoluiu de uma atividade realizada de forma quase artesanal, para um processo de
-desenvolvimento bem estruturado e que, nos melhores casos, contempla inclusive atividades de gerência e avaliação da qualidade \cite{guizzardi2000desenvolvimento}.
-Com isso, a reutilização dos testes já codificados se mostra uma importante prática no desenvolvimento e que ainda apresenta muitas incógnitas e possibilidades para as equipes de TI,
-principalmente na geração de casos de testes que possam ser reutilizados em situações que apresentem um padrão parecido com os casos já conhecidos.
+\citeauthor{guizzardi2000desenvolvimento} diz que, por razÃµes histÃ³ricas, a Ã¡rea de desenvolvimento de software nÃ£o atingiu a maturidade que outras Ã¡reas da engenharia atingiram. Complementa afirmando que, apesar disso, Ã© inegÃ¡vel que algum avanÃ§o tenha sido alcanÃ§ado, pois a forma de realizaÃ§Ã£o dessa atividade evoluiu de uma atividade realizada de forma quase artesanal, para um processo de
+desenvolvimento bem estruturado e que, nos melhores casos, contempla inclusive atividades de gerÃªncia e avaliaÃ§Ã£o da qualidade \cite{guizzardi2000desenvolvimento}.
+Com isso, a reutilizaÃ§Ã£o dos testes jÃ¡ codificados se mostra uma importante prÃ¡tica no desenvolvimento e que ainda apresenta muitas incÃ³gnitas e possibilidades para as equipes de TI,
+principalmente na geraÃ§Ã£o de casos de testes que possam ser reutilizados em situaÃ§Ãµes que apresentem um padrÃ£o parecido com os casos jÃ¡ conhecidos.
 
 \chapter{Desenvolvimento}
 
-Abaixo serão descritas as atividades desenvolvidas a fim de alcançar os objetivos propostos por este trabalho. Será apresentada o escopo do projeto, assim como, trechos dos códigos desenvolvidos e estrutura das soluções encontradas ao longo do desenvolvimento do projeto.
+A seguir serÃ£o descritas as atividades desenvolvidas a fim de alcanÃ§ar os objetivos propostos por este trabalho. SerÃ¡ apresentado o escopo do projeto, assim como trechos dos cÃ³digos desenvolvidos e estrutura das soluÃ§Ãµes encontradas ao longo do desenvolvimento do projeto.
 
-\section{Delimitação de escopo}
+\section{DelimitaÃ§Ã£o de escopo}
 
-Como escopo foram delimitados alguns pré-requisitos necessários para utilização da solução proposta neste trabalho, onde, o sistema deve ser um software web desenvolvido na linguagem de programação Java,
-podendo apresentar também funções Ajax e Javascript.
+Como escopo, foram delimitados alguns prÃ©-requisitos necessÃ¡rios para utilizaÃ§Ã£o da soluÃ§Ã£o proposta neste trabalho, onde o sistema deve ser um software web desenvolvido na linguagem de programaÃ§Ã£o Java,
+podendo apresentar tambÃ©m funÃ§Ãµes Ajax e Javascript.
 
-\section{Visão geral da solução}
-Em um primeiro momento, com objetivo de automatizar os testes de uma aplicação a fim de reduzir o esforço na confecção e codificação de novos testes para as equipes de desenvolvimento e testes de uma empresa,
-escolheu-se desenvolver uma solução baseada em três etapas que são descritas conforme imagem \ref{fig:solucao1}.
+\section{VisÃ£o geral da soluÃ§Ã£o}
+Em um primeiro momento, com objetivo de automatizar os testes de uma aplicaÃ§Ã£o a fim de reduzir o esforÃ§o na confecÃ§Ã£o e codificaÃ§Ã£o de novos testes para as equipes de desenvolvimento e testes de uma organizaÃ§Ã£o,
+escolheu-se desenvolver uma soluÃ§Ã£o baseada em trÃªs etapas que sÃ£o descritas conforme imagem \ref{fig:solucao1}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.8\textwidth]{solucao1}
-	\caption{Estrutura da solução.}
+	\caption{Estrutura da soluÃ§Ã£o.}
 	\label{fig:solucao1}
 \end{figure}
 
-Temos como ponto de partida um sistema onde se possui pouco ou nenhum teste codificado. Para o mesmo descrevemos  três fases no desenvolvimento de uma solução, em forma de testes para o sistema,
-que seriam: criar uma classe de testes genérica, responsável por realizar os testes necessários na aplicação, descrever uma interface de anotação que representaria ações de elementos web (\emph{HTML}) que
-seriam testados posteriormente, e por fim, inserir as anotações nos métodos e classes do sistema que devem ser testados nesta aplicação.
+Temos como ponto de partida um sistema onde se possui pouco ou nenhum teste codificado. Para o mesmo descrevemos  trÃªs fases no desenvolvimento de uma soluÃ§Ã£o, em forma de testes para o sistema,
+que seriam: criar uma classe de testes genÃ©rica, responsÃ¡vel por realizar os testes necessÃ¡rios na aplicaÃ§Ã£o, descrever uma interface de anotaÃ§Ã£o que representaria aÃ§Ãµes de elementos web (\emph{HTML}) que
+seriam testados posteriormente, e por fim, inserir as anotaÃ§Ãµes nos mÃ©todos e classes do sistema que devem ser testados nesta aplicaÃ§Ã£o.
 
-\section{Classe genérica de testes}
-Por tratar-se de uma abordagem para sistemas web, optou-se pela utilização de dois frameworks de testes, que possibilitam interações com elementos web, para confecção da classe responsável pela execução dos testes automatizados,
-o primeiro seria o Selenium. Através da utilização da classe \texttt{WebDrive}, contida no pacote do mesmo, podemos descrever uma sequência de passos que são executados por um navegador, como cliques e inserção de dados em campos de um
-formulário. Sendo assim, instanciando um objeto \texttt{WebDrive}, podemos iniciar um navegador e realizar uma série de instruções pré-determinadas para validar se a aplicação comporta-se de forma adequada.
+\section{Classe genÃ©rica de testes}
+Por tratar-se de uma abordagem para sistemas web, optou-se pela utilizaÃ§Ã£o de dois frameworks de testes, que possibilitam interaÃ§Ãµes com elementos web, para confecÃ§Ã£o da classe responsÃ¡vel pela execuÃ§Ã£o dos testes automatizados.
+O primeiro Ã© o Selenium. AtravÃ©s da utilizaÃ§Ã£o da classe \texttt{WebDrive}, contida em seu pacote, podemos descrever uma sequÃªncia de passos que sÃ£o executados por um navegador, como cliques e inserÃ§Ã£o de dados em campos de um
+formulÃ¡rio. Sendo assim, instanciando um objeto \texttt{WebDrive}, podemos iniciar um navegador e realizar uma sÃ©rie de instruÃ§Ãµes prÃ©-determinadas para validar se a aplicaÃ§Ã£o comporta-se de forma adequada.
 
-Por fim, necessitamos validar se após realizar o preenchimento de formulários do software, o resultado obtido condiz com o resultado esperado. Neste momento é onde se faz necessária a adição de trechos de códigos Junit na classe de teste
-desenvolvida, pois o mesmo disponibiliza em seu pacote um conjunto de métodos \emph{assert}, com os quais, se faz possível comparar, por exemplo, se após salvar um formulário de cadastro, a mensagem de "cadastrado com sucesso" aparece na tela.
-A imagem \ref{code:TestaFormularios.java}, apresenta um trecho da classe confeccionada para realização dos testes.
+Por fim, necessitamos validar se apÃ³s realizar o preenchimento de formulÃ¡rios do software, o resultado obtido condiz com o resultado esperado. Neste momento Ã© onde se faz necessÃ¡ria a adiÃ§Ã£o de trechos de cÃ³digos Junit na classe de teste
+desenvolvida, pois o mesmo disponibiliza em seu pacote um conjunto de mÃ©todos \emph{assert}, com os quais Ã© possÃ­vel comparar, por exemplo, se apÃ³s salvar um formulÃ¡rio de cadastro, a mensagem de "cadastrado com sucesso" aparece na tela.
+A imagem \ref{code:TestaFormularios.java} apresenta um trecho da classe confeccionada para realizaÃ§Ã£o dos testes.
 
 \begin{figure}[!htb]
 \begin{lstlisting}
@@ -364,25 +368,25 @@ public void testaFormularios() {
             }
         }
         executaTeste(testeClasse, false);
-        System.out.println("Formulário da classe " + classe.getName() + " testado!");
+        System.out.println("FormulÃ¡rio da classe " + classe.getName() + " testado!");
 	}
 }
 \end{lstlisting}
-    \caption{Classe genérica de teste desenvolvida}
+    \caption{Classe genÃ©rica de teste desenvolvida}
 	\label{code:TestaFormularios.java}
 \end{figure}
 
-A classe desenvolvida possui um método principal denominado \texttt{testaFormularios}, onde a ideia principal do mesmo seria buscar,
-de forma recursiva, todas as classes do projeto anotadas pela interface que indica que a classe deve ser testada e para cada uma das mesmas cria-se elementos \texttt{webDrive} para executar as ações indicadas pela anotação.
+A classe desenvolvida possui um mÃ©todo principal denominado \texttt{testaFormularios}, onde a ideia principal do mesmo seria buscar,
+de forma recursiva, todas as classes do projeto anotadas pela interface que indica que a classe deve ser testada e para cada uma das mesmas cria-se elementos \texttt{webDrive} para executar as aÃ§Ãµes indicadas pela anotaÃ§Ã£o.
 
-\section{Interface de anotação}
+\section{Interface de anotaÃ§Ã£o}
 
-Após finalizar o desenvolvimento da classe de testes genérica, passou a existir a necessidade de criar um mecanismo para informar, para a classe de testes, quais seriam as validações necessárias. Para esta tarefa,
-por tratar-se de projetos Java, resolveu-se criar uma interface de anotação que seria vinculada aos métodos e classes, onde seriam necessários executar os testes posteriores. Desta forma, a classe \texttt{TestaFormulario.java},
-responsável pela execução dos testes, varreria as classes do sistemas, e toda vez que encontrar uma classe anotada por essa interface, executaria um teste, onde, cada método que necessitaria de um teste possuiria em sua anotação o tipo do campo,
-as ações que deveriam ser executas e o valor que deveria ser preenchido.
+ApÃ³s finalizar o desenvolvimento da classe de testes genÃ©rica, passou a existir a necessidade de criar um mecanismo para informar, para a classe de testes, quais seriam as validaÃ§Ãµes necessÃ¡rias. Para esta tarefa,
+por tratar-se de projetos Java, resolveu-se criar uma interface de anotaÃ§Ã£o que seria vinculada aos mÃ©todos e classes, onde seriam necessÃ¡rios executar os testes posteriores. Desta forma, a classe \texttt{TestaFormulario.java},
+responsÃ¡vel pela execuÃ§Ã£o dos testes, varreria as classes do sistemas, e toda vez que encontrar uma classe anotada por essa interface, executaria um teste, onde, cada mÃ©todo que necessitaria de um teste possuiria em sua anotaÃ§Ã£o o tipo do campo,
+as aÃ§Ãµes que deveriam ser executas e o valor que deveria ser preenchido.
 
-Deu-se o nome de \texttt{Teste.java} para a interface, e sua estrutura está ilustrada em \ref{code:Teste.java}.
+Deu-se o nome de \texttt{Teste.java} para a interface, e sua estrutura estÃ¡ ilustrada em \ref{code:Teste.java}.
 
 \begin{figure}[!htt]
 \begin{lstlisting}
@@ -393,7 +397,7 @@ public @interface Teste {
     String getUrl() default "";
 
     //findElement
-    String getCampo() default ""; //campo html do formulário
+    String getCampo() default ""; //campo html do formulÃ¡rio
     String getIdentificador() default "id"; //Informar se deve buscar um id, name, class ou css
 
     boolean isSelect() default false;
@@ -418,12 +422,12 @@ public @interface Teste {
 	\label{code:Teste.java}
 \end{figure}
 
-Tem-se então que cada método existente nesta classe representa uma ação específica da classe \texttt{WebDrive}, possibilitando, assim, manipular elementos \emph{HTML} na execução do teste.
+Tem-se entÃ£o que cada mÃ©todo existente nesta classe representa uma aÃ§Ã£o especÃ­fica da classe \texttt{WebDrive}, possibilitando, assim, manipular elementos \emph{HTML} na execuÃ§Ã£o do teste.
 
-\section{Inserção das anotações no projeto}
-Por fim, a ultima etapa da solução em questão, trata-se de uma etapa contínua no projeto, pois sempre que uma nova classe é mapeada no sistema ou um novo cadastro é criado, a mesma ocorrerá. Nesta etapa se faz necessário a
-adição das anotações nos códigos do projeto, onde se deve inserir a anotação em todas as classes e métodos que devem ser testados.
-O código \ref{code:Disciplina.java} ilustra e exemplifica a forma como ocorre as anotações utilizando a interface Teste em uma determinada classe Java.
+\section{InserÃ§Ã£o das anotaÃ§Ãµes no projeto}
+Por fim, a ultima etapa da soluÃ§Ã£o em questÃ£o, trata-se de uma etapa contÃ­nua no projeto, pois sempre que uma nova classe Ã© mapeada no sistema ou um novo cadastro Ã© criado, a mesma ocorrerÃ¡. Nesta etapa se faz necessÃ¡ria a
+adiÃ§Ã£o das anotaÃ§Ãµes nos cÃ³digos do projeto, onde se deve inserir a anotaÃ§Ã£o em todas as classes e mÃ©todos que devem ser testados.
+O cÃ³digo \ref{code:Disciplina.java} ilustra e exemplifica uma classe Java contendo anotaÃ§Ãµes referentes a interface Teste.
 
 \begin{figure}[!htt]
 \begin{lstlisting}
@@ -461,23 +465,24 @@ public class Disciplina {
 	\label{code:Disciplina.java}
 \end{figure}
 
-Na anotação são inseridas informações referente às ações que devem ser executadas para a propriedade em questão. Os métodos possuem anotações referentes apenas ao campo que representam, enquanto as informações mais gerais sobre
-a página que está sendo testada, são inseridas na anotação da Classe propriamente dita.
+Na anotaÃ§Ã£o sÃ£o inseridas informaÃ§Ãµes referente Ã s aÃ§Ãµes que devem ser executadas para a propriedade em questÃ£o. Os mÃ©todos possuem anotaÃ§Ãµes referentes apenas ao campo que representam, enquanto as informaÃ§Ãµes mais gerais sobre
+a pÃ¡gina que estÃ¡ sendo testada, sÃ£o inseridas na anotaÃ§Ã£o da Classe propriamente dita.
 
-\section{Discussão sobre a solução}
-Após a finalização do desenvolvimento desta primeira solução encontrada, notou-se a clara necessidade de alteração na sistemática de como os teste ocorreriam. Necessidade esta oriunda de algumas limitações que a solução trás
-como, por exemplo, a não possibilidade de realizar testes que envolvam mais de um método, tornando praticamente inviável a tarefa de realizar testes funcionais, pois não seria possível mapear um cenário mais completo, que depende
-de mais de uma variável e tem uma sequência bem mapeada que deve ser seguida.
+\section{DiscussÃ£o sobre a soluÃ§Ã£o}
+ApÃ³s a finalizaÃ§Ã£o do desenvolvimento desta primeira soluÃ§Ã£o encontrada, notou-se a clara necessidade de alteraÃ§Ã£o na sistemÃ¡tica de como os teste ocorreriam. Necessidade esta oriunda de algumas limitaÃ§Ãµes que a soluÃ§Ã£o trÃ¡s
+como, por exemplo, a nÃ£o possibilidade de realizar testes que envolvam mais de um mÃ©todo, tornando praticamente inviÃ¡vel a tarefa de realizar testes funcionais, pois nÃ£o seria possÃ­vel mapear um cenÃ¡rio mais completo, que depende
+de mais de uma variÃ¡vel e tem uma sequÃªncia bem mapeada que deve ser seguida.
 
-Outro fator determinante para a alteração desta solução foi o fato de, ao se utilizar anotações, o mesmo não possibilitaria o teste de um mesmo campo, com dois valores diferentes, pois só seria possível informar na anotação do
-método um único valor utilizado no teste. Além disto, também não seria viável a execução de testes unitários para um sistema muito grande, pois é sabido que os testes devem ser executados sobre os pontos críticos do software e não na totalidade do projeto.\end{lstlisting}
+Outro fator determinante para a alteraÃ§Ã£o desta soluÃ§Ã£o foi o fato de, ao se utilizar anotaÃ§Ãµes, o mesmo nÃ£o possibilitaria o teste de um mesmo campo, com dois valores diferentes, pois sÃ³ seria possÃ­vel informar na anotaÃ§Ã£o do
+mÃ©todo um Ãºnico valor utilizado no teste. AlÃ©m disto, tambÃ©m nÃ£o seria viÃ¡vel a execuÃ§Ã£o de testes unitÃ¡rios para um sistema muito grande, pois Ã© sabido que os testes devem ser executados sobre os pontos crÃ­ticos do software e nÃ£o na totalidade do projeto.
+%\end{lstlisting}
 
 \chapter{Resultados}
 
-\subsection{Discussão dos Resultados}
-\chapter{Conclusão}
+\subsection{DiscussÃ£o dos Resultados}
+\chapter{ConclusÃ£o}
 
 \setlength{\baselineskip}{\baselineskip}
 \bibliographystyle{abnt}
-\bibliography{../graphics,../languages}
+\bibliography{../referÃªncias}
 \end{document}

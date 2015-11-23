@@ -1,0 +1,33 @@
+\select@language {brazilian}
+\contentsline {chapter}{Lista de Figuras}{6}{chapter*.4}
+\contentsline {chapter}{Lista de Tabelas}{7}{chapter*.5}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{8}{chapter.1}
+\contentsline {section}{\numberline {1.1}Objetivos}{8}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Objetivo Geral}{8}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Passos de metodologia}{8}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Justificativa}{9}{section.1.2}
+\contentsline {chapter}{\numberline {2}Fundamentos e Revis\IeC {\~a}o de Literatura}{10}{chapter.2}
+\contentsline {section}{\numberline {2.1}Qualidade de Software}{10}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Qualidade do processo}{10}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Qualidade do produto}{11}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Testes de Software}{11}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Plano de teste}{12}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Casos de teste}{12}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Estrat\IeC {\'e}gias de Testes}{12}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Testes de sistemas web}{12}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Ferramentas para teste de software}{12}{subsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.5.1}Cucumber}{12}{subsubsection.2.2.5.1}
+\contentsline {subsubsection}{\numberline {2.2.5.2}Selenium HQ}{13}{subsubsection.2.2.5.2}
+\contentsline {subsubsection}{\numberline {2.2.5.3}JUnit}{14}{subsubsection.2.2.5.3}
+\contentsline {section}{\numberline {2.3}Reuso de testes}{14}{section.2.3}
+\contentsline {chapter}{\numberline {3}Desenvolvimento}{16}{chapter.3}
+\contentsline {section}{\numberline {3.1}Delimita\IeC {\c c}\IeC {\~a}o de escopo}{16}{section.3.1}
+\contentsline {section}{\numberline {3.2}Vis\IeC {\~a}o geral da solu\IeC {\c c}\IeC {\~a}o}{16}{section.3.2}
+\contentsline {section}{\numberline {3.3}Classe gen\IeC {\'e}rica de testes}{17}{section.3.3}
+\contentsline {section}{\numberline {3.4}Interface de anota\IeC {\c c}\IeC {\~a}o}{18}{section.3.4}
+\contentsline {section}{\numberline {3.5}Inser\IeC {\c c}\IeC {\~a}o das anota\IeC {\c c}\IeC {\~o}es no projeto}{19}{section.3.5}
+\contentsline {section}{\numberline {3.6}Discuss\IeC {\~a}o sobre a solu\IeC {\c c}\IeC {\~a}o}{19}{section.3.6}
+\contentsline {chapter}{\numberline {4}Resultados}{21}{chapter.4}
+\contentsline {subsection}{\numberline {4.0.1}Discuss\IeC {\~a}o dos Resultados}{21}{subsection.4.0.1}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{22}{chapter.5}
+\contentsline {chapter}{Refer{\^e}ncias}{23}{chapter*.11}

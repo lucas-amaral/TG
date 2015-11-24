@@ -2,7 +2,7 @@
 
 \bibitem[BIASI(2006)BIASI]{biasi2006geraccao} BIASI, L.~B\@. Gera{\c{c}}{\~a}o
   automatizada de drivers e stubs de teste para JUnit a partir de
-  especifica{\c{c}}{\~o}es U2TP., [S.l.], 2006.
+  especifica{\c{c}}{\~o}es U2TP. , [S.l.], 2006.
 
 \bibitem[BOEHM; BROWN; LIPOW(1976)BOEHM; BROWN; LIPOW]{boehm1976quantitative}
   BOEHM, B.~W.; BROWN, J.~R.; LIPOW, M\@. Quantitative evaluation of software
@@ -18,12 +18,17 @@
 \bibitem[CHIAVEGATTO$^1$ et~al.(2013)CHIAVEGATTO$^1$; SILVA; VIEIRA;
   MALVEZZI$^1$]{chiavegatto1desenvolvimento} CHIAVEGATTO$^1$, R.~B. et~al\@.
   Desenvolvimento Orientado a Comportamento com Testes Automatizados utilizando
-  JBehave e Selenium., [S.l.], 2013.
+  JBehave e Selenium. , [S.l.], 2013.
 
 \bibitem[CRESPO et~al.(2004)CRESPO; SILVA; BORGES; SALVIANO; TEIVE; JUNIOR;
   JINO]{crespo2004metodologia} CRESPO, A.~N. et~al\@. Uma metodologia para
   teste de Software no Contexto da Melhoria de Processo. \textbf{Simp{\'o}sio
   Brasileiro de Qualidade de Software}, [S.l.], p.271--285, 2004.
+
+\bibitem[CUCUMBER WAVES GOODBYE TO GIVENSCENARIO(2009)CUCUMBER WAVES GOODBYE TO
+  GIVENSCENARIO]{givenscenario} CUCUMBER Waves Goodbye to GivenScenario.
+  Accessed: 2015-11-24,
+  \url{http://blog.josephwilk.net/ruby/cucumber-waves-goodbye-to-givenscenario.html}.
 
 \bibitem[DORNBUSCH; FISCHER; STARTZ(2014)DORNBUSCH; FISCHER;
   STARTZ]{dornbusch2014entrega} DORNBUSCH, R.; FISCHER, S.; STARTZ, R\@.
@@ -74,7 +79,7 @@
   testing}. [S.l.]: John Wiley \& Sons, 2011.
 
 \bibitem[NUNES(2009)NUNES]{nunescucumber} NUNES, D\@. Automa{\c{c}}{\~a}o de
-  Testes de Aceita{\c{c}}{\~a}o com Cucumber e JRuby., [S.l.], 2009.
+  Testes de Aceita{\c{c}}{\~a}o com Cucumber e JRuby. , [S.l.], 2009.
 
 \bibitem[OLIVEIRA et~al.(2007)OLIVEIRA; G{\'O}IS; SOUZA;
   FARIAS]{de2007utilizaccao} OLIVEIRA, R.~B.~de et~al\@. Utiliza{\c{c}}{\~a}o

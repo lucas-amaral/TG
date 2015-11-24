@@ -31,13 +31,15 @@
 \contentsline {subsection}{\numberline {3.2.3}Inser\IeC {\c c}\IeC {\~a}o das anota\IeC {\c c}\IeC {\~o}es no projeto}{21}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Discuss\IeC {\~a}o sobre a solu\IeC {\c c}\IeC {\~a}o}{21}{subsection.3.2.4}
 \contentsline {section}{\numberline {3.3}Solu\IeC {\c c}\IeC {\~a}o Cucumber + Selenium WebDriver}{22}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Classe gen\IeC {\'e}rica de testes}{22}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Classe que descreve Steps}{23}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.1}Classe gen\IeC {\'e}rica de testes}{23}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Classe que descreve Steps}{24}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Descri\IeC {\c c}\IeC {\~a}o de cen\IeC {\'a}rios}{25}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Utilizando a mesma janela do navegador para execu\IeC {\c c}\IeC {\~a}o dos testes}{25}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Validando solu\IeC {\c c}\IeC {\~a}o em sistemas web}{26}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.1}Utilizando a mesma janela do navegador para execu\IeC {\c c}\IeC {\~a}o dos testes}{26}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Validando solu\IeC {\c c}\IeC {\~a}o em sistemas web}{27}{subsection.3.4.2}
 \contentsline {subsubsection}{\numberline {3.4.2.1}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema de registro de disciplinas complementares}{27}{subsubsection.3.4.2.1}
-\contentsline {chapter}{\numberline {4}Resultados}{29}{chapter.4}
-\contentsline {subsection}{\numberline {4.0.1}Discuss\IeC {\~a}o dos Resultados}{29}{subsection.4.0.1}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{30}{chapter.5}
-\contentsline {chapter}{Refer{\^e}ncias}{31}{chapter*.17}
+\contentsline {subsubsection}{\numberline {3.4.2.2}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema SILAS BPMs}{28}{subsubsection.3.4.2.2}
+\contentsline {subsection}{\numberline {3.4.3}Considera\IeC {\c c}\IeC {\~o}es sobre a solu\IeC {\c c}\IeC {\~a}o Cucumber + Selenium}{29}{subsection.3.4.3}
+\contentsline {chapter}{\numberline {4}Resultados}{30}{chapter.4}
+\contentsline {subsection}{\numberline {4.0.1}Discuss\IeC {\~a}o dos Resultados}{30}{subsection.4.0.1}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{31}{chapter.5}
+\contentsline {chapter}{Refer{\^e}ncias}{32}{chapter*.18}

@@ -501,7 +501,15 @@ método um único valor utilizado no teste. Além disto, também não seria viá
 
 \section{Solução Cucumber + Selenium WebDriver}
 Visando a produção de testes funcionais de aceitação, optou-se pela inclusão do framework Cucumber na composição desta nova solução, somando-se assim as demais ferramentas já utilizadas até o atual momento. A mesma foi escolhida com base em sua interface amigável, que possibilita descrever um cenário completo e de fácil entendimento por todos os envolvidos do projeto, sendo assim, garante uma maior qualidade também quando pensamos em documentação das funcionalidades desenvolvidas em um sistema.
-A solução é composta por três estágios, onde em um primeiro será inserido no projeto a classe genérica de testes já descrita, porem dela só serão utilizados os métodos que descrevem ações do Selenium WebDriver. No segundo estágio ocorre a adição de uma classe onde são apresentados métodos que representam \texttt{Steps} da linguagem Cucumber o que possibilita descrever no ultimo estágio cenários no Cucumber em arquivos \texttt{.feature} que descrevem testes para as funcionalidades codificadas no sistema. A imagem \ref{fig:solucao2} apresenta esse fluxo.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{solucao2}
+	\caption{Estrutura da solução utilizando Selenium + Cucumber.}
+	\label{fig:solucao2}
+\end{figure}
+
+A solução é composta por três estágios, onde em um primeiro será inserido no projeto a classe genérica de testes já descrita, porem dela só serão utilizados os métodos que descrevem ações do Selenium WebDriver. No segundo estágio ocorre a adição de uma classe onde são apresentados métodos que representam \emph{steps} da linguagem Cucumber o que possibilita descrever no ultimo estágio cenários no Cucumber em arquivos \texttt{.feature} que descrevem testes para as funcionalidades codificadas no sistema. A imagem \ref{fig:solucao2} apresenta esse fluxo.
 
 \subsection{Classe genérica de testes}
 Na classe genérica de testes foram mantidos os métodos anteriormente utilizados que permitiam gerenciar ações do Selenium WebDriver, como apresenta a figura \ref{code:Classe genérica contendo métodos WebDriver}.
@@ -509,15 +517,7 @@ Entretanto foram removidos os métodos que realizavam os testes com base nas ano
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
-	
-		
-    private final SharedDriver webDriver;
-
-    public TesteFormulario(SharedDriver webDriver) {
-        this.webDriver = webDriver;
-    }
-	
-    public Object getValorPropriedadeCampo(WebElement webElement, String atributo, String valorAtributo) {
+	public Object getValorPropriedadeCampo(WebElement webElement, String atributo, String valorAtributo) {
         if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_TEXTO)) {
             return webElement.getText();
         } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_NOME_TAG)) {
@@ -559,8 +559,7 @@ Entretanto foram removidos os métodos que realizavam os testes com base nas ano
             return By.linkText(campo);
         } else if (identificador.equals(IDENTIFICADOR_NOME_TAG)) {
             return By.tagName(campo);
-        }
-        return null;
+        } return null;
     }
 	\end{lstlisting}
 	\caption{Métodos para busca de elemento web utilizando Selenium WebDriver}
@@ -613,6 +612,15 @@ A classe \texttt{Steps.java} foi criada com intuido de realizar o elo de ligaç�
         if (webElement != null) {
             webElement.click();
         }
+    }
+    
+    @E("^submeto o elemento (.*) buscado pelo (.*)$")
+    public WebElement submeterElemento(String campo, String identificador) {
+        WebElement webElement = funcoes.getEncontraCampo(identificador, campo);
+        if (webElement != null) {
+            webElement.submit();
+        }
+        return webElement;
     }
 	\end{lstlisting}
 	\caption{Classe genérica contendo steps Cucumber que descrevem ações do Selenium WebDriver}
@@ -698,7 +706,7 @@ Ao iniciar os testes na solução, após finalizar a codificação da mesma, not
 
 \subsection{Validando solução em sistemas web}
 Após a finalização da codificação da solução, iniciou-se a fase de validação e aplicação da solução utilizando Cucumber + Selenium em softwares web. Nesta etapa foram escolhidos dois softwares web que respeitassem os requisitos existentes no escopo delimitado pelo projeto em questão. O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicitação de disciplinas complementares de graduação do curso de Ciência da Computação da Universidade Federal de Santa Maria. O Segundo sistema onde os testes funcionais seriam aplicados seria um software de uma empresa privada da região de Santa Maria, chamada Megatecnologia, onde este sistema comercializado como SILAS BPMs, apresenta
-um sistema voltado para modelagem de processo BPM's, onde é possível descrever etapas, tramitações, telas e campos de um processo.
+um sistema voltado para modelagem de processo BPMs, onde é possível descrever etapas, tramitações, telas e campos de um processo.
 
 \subsubsection{Aplicando solução no sistema de registro de disciplinas complementares}
 Para realização desta tarefa, foram utilizadas as funcionalidades descritas no documento de especificação deste software para validar se o mesmo apresenta todas as funcionalidades que se compromete a atender.
@@ -760,8 +768,17 @@ Delineacao do Cenario: 1 - Não permitir inserir no PIEC disciplina que não fa�
 
 Em \texttt{Delineacao do Cenario} ao invés de ser inserido valores para testes, são informados os rótulos existentes no cabeçalho da tabela do recurso \texttt{Exemplos}. Desta forma quando o teste for ser executado esse valor será substituído em tempo de execução pelo valor existente nessa coluna para cada uma das linhas da tabela.
 
+Utilizando-se destes recursos concluiu-se de forma satisfatória a codificação de cenários de testes para todos os requisitos existentes neste sistema.
 
-Utilizando-se destes recursos concluiu-se de forma satisfatória a descrição de testes para todos os requisitos existentes neste sistema.
+\subsubsection{Aplicando solução no sistema SILAS BPMs}
+Para o software em questão, por tratar-se de um sistema que possui mais de 8 anos de desenvolvimento e por não possuir nenhum tipo de teste automatizado codificado, optou-se por retirar do \emph{task bord} onde a equipe de desenvolvimento da empresa em questão gerenciava tarefas à desenvolver e desenvolvidas, as ultimas funcionalidades finalizadas como cenários para realizar os primeiros testes.
+Logo no início do mapeamento dos testes, notou-se necessidades que o sistema de registros de disciplinas complementares não possuía. Como, por exemplo, a necessidade de guardar valores de um campo, para após submeter alguma função comparar com o novo valor do campo em questão. Também percebeu-se a indispensabilidade de permitir ações condicionais nos testes, essa necessidade se deu pelo fato de em alguns casos não se conhecer o estado atual de algum elemento na tela em questão, e desta forma o teste poderia falhar mesmo quando não existisse problema.
+Após algumas tentativas de utilizar a solução proposta para esses novos cenários, notou-se que seria inviável trabalhar sem que essas questões fossem viabilizadas.
+
+\subsection{Considerações sobre a solução Cucumber + Selenium}
+Com o avanço na confecção de testes aplicados em sistemas reais, percebeu-se uma série de vantagens e desvantagens na utilização desta solução no processo de desenvolvimento e testes de funcionalidades.
+Como vantagens podemos elencar o fato de ao escrever cenários utilizando o IDE que tenha suporte para a linguagem Cucumber, pouco se escreve, reutilizando sempre os \emph{steps} descritos na classe \texttt{Steps.java}, sendo assim necessário apenas informar os parâmetros esperados pelo mesmos. Ainda destaca-se o fato de os cenários descreverem de forma simples o que deve ocorrer na funcionalidade testada, e desta forma servem também como documentação.
+Quando pensamos nos pontos fracos da solução, podemos destacar os empecilhos detectados no desenvolvimento de testes para a aplicação SILAS BPMs. Somam-se a estes, algumas limitações que a linguagem Cucumber possui, como o fato de não ser possível reutilizar um cenário dentro de outro cenário\footnote{Essa funcionalidade estava disponível na primeira versão da linguagem, mas a mesma foi removida. Embora o exemplo pode fazer sentido quando se trabalha de forma sequencial através dos cenários a longo prazo produz-se cenários que são difíceis de manter e entender \cite{givenscenario}. } ou até mesmo utilizar como parâmetro valores que diferem dos tipos comuns da linguagem Java (int, float, String).
 
 
 \chapter{Resultados}

@@ -2,7 +2,7 @@
 
 \bibitem[BIASI(2006)BIASI]{biasi2006geraccao} BIASI, L.~B\@. Gera{\c{c}}{\~a}o
   automatizada de drivers e stubs de teste para JUnit a partir de
-  especifica{\c{c}}{\~o}es U2TP. }, [S.l.], 2006.
+  especifica{\c{c}}{\~o}es U2TP., [S.l.], 2006.
 
 \bibitem[BOEHM; BROWN; LIPOW(1976)BOEHM; BROWN; LIPOW]{boehm1976quantitative}
   BOEHM, B.~W.; BROWN, J.~R.; LIPOW, M\@. Quantitative evaluation of software
@@ -18,12 +18,22 @@
 \bibitem[CHIAVEGATTO$^1$ et~al.(2013)CHIAVEGATTO$^1$; SILVA; VIEIRA;
   MALVEZZI$^1$]{chiavegatto1desenvolvimento} CHIAVEGATTO$^1$, R.~B. et~al\@.
   Desenvolvimento Orientado a Comportamento com Testes Automatizados utilizando
-  JBehave e Selenium. }, [S.l.], 2013.
+  JBehave e Selenium., [S.l.], 2013.
 
 \bibitem[CRESPO et~al.(2004)CRESPO; SILVA; BORGES; SALVIANO; TEIVE; JUNIOR;
   JINO]{crespo2004metodologia} CRESPO, A.~N. et~al\@. Uma metodologia para
   teste de Software no Contexto da Melhoria de Processo. \textbf{Simp{\'o}sio
   Brasileiro de Qualidade de Software}, [S.l.], p.271--285, 2004.
+
+\bibitem[DORNBUSCH; FISCHER; STARTZ(2014)DORNBUSCH; FISCHER;
+  STARTZ]{dornbusch2014entrega} DORNBUSCH, R.; FISCHER, S.; STARTZ, R\@.
+  \textbf{Entrega Cont{\'\i}nua}: como entregar software. [S.l.]: Bookman
+  Editora, 2014.
+
+\bibitem[FIDELIS; MARTINS(2004)FIDELIS; MARTINS]{fidelis2004fireweb} FIDELIS,
+  W. I.~O.; MARTINS, E\@. FireWeb: uma ferramenta de suporte aos testes de
+  regress{\~a}o de aplica{\c{c}}{\~o}es web. \textbf{18th SBES--11th Tools
+  Session}, [S.l.], p.1--6, 2004.
 
 \bibitem[GARVIN(1987)GARVIN]{garvin1987competing} GARVIN, D.~A\@. Competing on
   the 8 dimensions of quality. \textbf{Harvard business review}, [S.l.], v.65,
@@ -33,6 +43,13 @@
   G\@. \textbf{Desenvolvimento para e com reuso}: um estudo de caso no
   dom{\'\i}nio de v{\'\i}deo sob demanda. 2000. Tese (Doutorado em Ci{\^e}ncia
   da Computa{\c{c}}{\~a}o) --- Universidade Federal do Esp{\'\i}rito Santo.
+
+\bibitem[JOMORI; VOLPE; ZABEU(2004)JOMORI; VOLPE; ZABEU]{jomori2004qualidade}
+  JOMORI, S.~M.; VOLPE, R.; ZABEU, A. C.~P\@. Qualidade de software.
+  \textbf{Revista TECHOJE,(IETEC-Instituto de Educa{\c{c}}{\~a}o
+  Tecnol{\'o}gica), ano XIII. Dispon{\'\i}vel em:< http://www. ietec. com.
+  br/ietec/techoje/techoje/tecnologiadainformacao/2004/07/01/2004\_07\_01\_0001.
+  2xt/-template\_ interna}, [S.l.], 2004.
 
 \bibitem[KOSCIANSKI; SOARES(2007)KOSCIANSKI; SOARES]{koscianski2007qualidade}
   KOSCIANSKI, A.; SOARES, M. d.~S\@. \textbf{Qualidade de software}. [S.l.]:
@@ -46,12 +63,25 @@
   JINO]{maldonado2004introduccao} MALDONADO, J.~C. et~al\@. Introdu{\c{c}}ao ao
   teste de software. \textbf{S{\~a}o Carlos}, [S.l.], 2004.
 
+\bibitem[MYERS; SANDLER; BADGETT(2011)MYERS; SANDLER; BADGETT]{myers2011art}
+  MYERS, G.~J.; SANDLER, C.; BADGETT, T\@. \textbf{The art of software
+  testing}. [S.l.]: John Wiley \& Sons, 2011.
+
 \bibitem[NUNES(2009)NUNES]{nunescucumber} NUNES, D\@. Automa{\c{c}}{\~a}o de
-  Testes de Aceita{\c{c}}{\~a}o com Cucumber e JRuby. }, [S.l.], 2009.
+  Testes de Aceita{\c{c}}{\~a}o com Cucumber e JRuby., [S.l.], 2009.
+
+\bibitem[OLIVEIRA et~al.(2007)OLIVEIRA; G{\'O}IS; SOUZA;
+  FARIAS]{de2007utilizaccao} OLIVEIRA, R.~B.~de et~al\@. Utiliza{\c{c}}{\~a}o
+  de Padr{\~o}es para Otimizar a Automa{\c{c}}{\~a}o de Testes Funcionais de
+  Software., [S.l.], 2007.
 
 \bibitem[PEREIRA(2012)PEREIRA]{pereiraestudoselenium} PEREIRA, D.~V\@. Estudo
   da ferramenta selenium ide para testes automatizados de aplica{\c{c}}{\~o}es
-  web. }, [S.l.], 2012.
+  web., [S.l.], 2012.
+
+\bibitem[PIQUEIRO; ZADRA(2015)PIQUEIRO; ZADRA]{piqueiro2015} PIQUEIRO, T.
+  J.~C.; ZADRA, A.~N\@. Processo de Testes: abordagem de projeto de testes.,
+  [S.l.], January~2015.
 
 \bibitem[PRESSMAN(2011)PRESSMAN]{pressman2011engenharia} PRESSMAN, R.~S\@.
   \textbf{Engenharia de software}. [S.l.]: McGraw Hill Brasil, 2011.
@@ -78,6 +108,6 @@
 \bibitem[VASCONCELOS et~al.(2006)VASCONCELOS; ROUILLER; MACHADO;
   MEDEIROS]{de2006introduccao} VASCONCELOS, A. M.~L.~de et~al\@.
   Introdu{\c{c}}{\~a}o {\`a} Engenharia de Software e {\`a} Qualidade de
-  Software. }, [S.l.], 2006.
+  Software., [S.l.], 2006.
 
 \end{thebibliography}

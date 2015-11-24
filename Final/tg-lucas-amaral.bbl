@@ -51,6 +51,12 @@
   br/ietec/techoje/techoje/tecnologiadainformacao/2004/07/01/2004\_07\_01\_0001.
   2xt/-template\_ interna}, [S.l.], 2004.
 
+\bibitem[KARINSALO; ABRAHAMSSON(2004)KARINSALO;
+  ABRAHAMSSON]{karinsalo2004software} KARINSALO, M.; ABRAHAMSSON, P\@. Software
+  reuse and the test development process: a combined approach. In:
+  \textbf{Software Reuse}: methods, techniques, and tools. [S.l.]: Springer,
+  2004. p.59--68.
+
 \bibitem[KOSCIANSKI; SOARES(2007)KOSCIANSKI; SOARES]{koscianski2007qualidade}
   KOSCIANSKI, A.; SOARES, M. d.~S\@. \textbf{Qualidade de software}. [S.l.]:
   S{\~a}o Paulo: Novatec Editora, 2007.
@@ -68,16 +74,16 @@
   testing}. [S.l.]: John Wiley \& Sons, 2011.
 
 \bibitem[NUNES(2009)NUNES]{nunescucumber} NUNES, D\@. Automa{\c{c}}{\~a}o de
-  Testes de Aceita{\c{c}}{\~a}o com Cucumber e JRuby., [S.l.], 2009.
+  Testes de Aceita{\c{c}}{\~a}o com Cucumber e JRuby. , [S.l.], 2009.
 
 \bibitem[OLIVEIRA et~al.(2007)OLIVEIRA; G{\'O}IS; SOUZA;
   FARIAS]{de2007utilizaccao} OLIVEIRA, R.~B.~de et~al\@. Utiliza{\c{c}}{\~a}o
   de Padr{\~o}es para Otimizar a Automa{\c{c}}{\~a}o de Testes Funcionais de
-  Software., [S.l.], 2007.
+  Software. , [S.l.], 2007.
 
 \bibitem[PEREIRA(2012)PEREIRA]{pereiraestudoselenium} PEREIRA, D.~V\@. Estudo
   da ferramenta selenium ide para testes automatizados de aplica{\c{c}}{\~o}es
-  web., [S.l.], 2012.
+  web. , [S.l.], 2012.
 
 \bibitem[PIQUEIRO; ZADRA(2015)PIQUEIRO; ZADRA]{piqueiro2015} PIQUEIRO, T.
   J.~C.; ZADRA, A.~N\@. Processo de Testes: abordagem de projeto de testes.,

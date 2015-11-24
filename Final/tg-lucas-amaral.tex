@@ -285,7 +285,7 @@ Cucumber é um ferramenta de desenvolvimento de testes, voltado para sistemas we
 é escrita em linguagem Ruby, mas pode ser utilizada para executar especificações de aplicações escritas em qualquer linguagem \cite{nunescucumber}.
 
 A escolha dessa ferramenta baseou-se na fácil transcrição dos requisitos do sistema para a linguagem em questão, tornando possível conferir se os requisitos estão contemplados pelas funções e métodos descritos no sistema web.
-\citeauthor{lopescucumbervalor}\cite{lopescucumbervalor} compara Cucumber com o software Capybara e afirma que o primeiro apresenta um código mais legível e amigável. Uma observação é que o código com Capybara faz
+\citeauthor{lopescucumbervalor}\cite{lopescucumbervalor} compara Cucumber com o software Capybara\footnote{Capybara é uma biblioteca escrita na linguagem de programação Ruby que torna fácil simular como um usuário interage com sua aplicação. http://jnicklas.github.io/capybara/} e afirma que o primeiro apresenta um código mais legível e amigável. Uma observação é que o código com Capybara faz
 referência para vários detalhes de implementação, enquanto o código do Cucumber reserva isso apenas para os \emph{Steps} e não para o arquivo de \texttt{feature} \cite{lopescucumbervalor}.
 
 A ferramenta funciona basicamente através da leitura de arquivos com a extensão \texttt{feature}, os quais descrevem em linguagem natural uma funcionalidade e casos de teste, conhecidos como cenários.
@@ -330,6 +330,13 @@ e \emph{?insights?}, de uma família bem sucedida de soluções aprovadas, para 
 desenvolvimento bem estruturado e que, nos melhores casos, contempla inclusive atividades de gerência e avaliação da qualidade \cite{guizzardi2000desenvolvimento}.
 Com isso, a reutilização dos testes já codificados se mostra uma importante prática no desenvolvimento e que ainda apresenta muitas incógnitas e possibilidades para as equipes de TI,
 principalmente na geração de casos de testes que possam ser reutilizados em situações que apresentem um padrão parecido com os casos já conhecidos.
+
+Como solução em forma de reutilização de teste, \cite{cagnin2004reuso} apresentam uma abordagem composta por: a) uma estratégia, que define e associa requisitos de teste a padrões de linguagens de padrões  de análise; b) diretrizes, que apoiam o engenheiro de software na decisão de quais requisitos de teste disponíveis devem ser reusados e instanciados para casos de teste concretos. A estratégia que define os requisitos de teste da abordagem proposta foi aplicada aos padrões de uma
+linguagem de padrões de análise, utilizados na reengenharia de um sistema legado de biblioteca. Já \cite{karinsalo2004software} sugerem um modelo de processo de desenvolvimento de teste que leva técnicas de reutilização de software e atividades em conta, revela ainda que, a fim de produzir material de teste reutilizável, as entidades de software tem de ser expressa em termos de recursos, em que os materiais de ensaio estão anexados.
+
+Segundo \cite{patel2014test}, Tata Consultancy Services (TCS)  é uma empresa provedora de serviços em TI (ITSP) que desenvolveu um repositório de casos de teste reutilizáveis com o objetivo de reduzir o custo dos testes em projetos de Implementação de software empresarial (ESI).\cite{patel2014test} trás um estudo do programa de reutilização para analisar o seu impacto. Um conjunto de métricas foram definidos e os dados pertinentes foram obtidas a partir de usuários do repositório.
+
+\cite{crespo2004metodologia} apresentam uma metodologia para implantação ou melhoria do processo de teste em empresas desenvolvedoras de software, com o objetivo de viabilizar a utilização das práticas de teste pelas empresas. Apesar de não tratar-se de uma solução que contenha reutilização de software este trabalho tem relação direta com o trabalho desenvolvido pois a reutilização nada mais visa que melhorias no processo de desenvolvimento dos testes de software.
 
 \chapter{Desenvolvimento}
 

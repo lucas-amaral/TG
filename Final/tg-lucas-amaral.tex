@@ -347,7 +347,7 @@ A seguir serão descritas as atividades desenvolvidas a fim de alcançar os obje
 Como escopo, foram delimitados alguns pré-requisitos necessários para utilização da solução proposta neste trabalho, onde o sistema deve ser um software web desenvolvido na linguagem de programação Java,
 podendo apresentar também funções Ajax e Javascript.
 
-\section{Visão geral da solução}
+\section{Solução utilizando interface de anotação + Selenium WebDriver}
 Em um primeiro momento, com objetivo de automatizar os testes de uma aplicação a fim de reduzir o esforço na confecção e codificação de novos testes para as equipes de desenvolvimento e testes de uma organização,
 escolheu-se desenvolver uma solução baseada em três etapas que são descritas conforme imagem \ref{fig:solucao1}.
 
@@ -362,7 +362,7 @@ Temos como ponto de partida um sistema onde se possui pouco ou nenhum teste codi
 que seriam: criar uma classe de testes genérica, responsável por realizar os testes necessários na aplicação, descrever uma interface de anotação que representaria ações de elementos web (\emph{HTML}) que
 seriam testados posteriormente, e por fim, inserir as anotações nos métodos e classes do sistema que devem ser testados nesta aplicação.
 
-\section{Classe genérica de testes}
+\subsection{Classe genérica de testes}
 Por tratar-se de uma abordagem para sistemas web, optou-se pela utilização de dois frameworks de testes, que possibilitam interações com elementos web, para confecção da classe responsável pela execução dos testes automatizados.
 O primeiro é o Selenium. Através da utilização da classe \texttt{WebDrive}, contida em seu pacote, podemos descrever uma sequência de passos que são executados por um navegador, como cliques e inserção de dados em campos de um
 formulário. Sendo assim, instanciando um objeto \texttt{WebDrive}, podemos iniciar um navegador e realizar uma série de instruções pré-determinadas para validar se a aplicação comporta-se de forma adequada.
@@ -401,7 +401,7 @@ public void testaFormularios() {
 A classe desenvolvida possui um método principal denominado \texttt{testaFormularios}, onde a ideia principal do mesmo seria buscar,
 de forma recursiva, todas as classes do projeto anotadas pela interface que indica que a classe deve ser testada e para cada uma das mesmas cria-se elementos \texttt{webDrive} para executar as ações indicadas pela anotação.
 
-\section{Interface de anotação}
+\subsection{Interface de anotação}
 
 Após finalizar o desenvolvimento da classe de testes genérica, passou a existir a necessidade de criar um mecanismo para informar, para a classe de testes, quais seriam as validações necessárias. Para esta tarefa,
 por tratar-se de projetos Java, resolveu-se criar uma interface de anotação que seria vinculada aos métodos e classes, onde seriam necessários executar os testes posteriores. Desta forma, a classe \texttt{TestaFormulario.java},
@@ -446,7 +446,7 @@ public @interface Teste {
 
 Tem-se então que cada método existente nesta classe representa uma ação específica da classe \texttt{WebDrive}, possibilitando, assim, manipular elementos \emph{HTML} na execução do teste.
 
-\section{Inserção das anotações no projeto}
+\subsection{Inserção das anotações no projeto}
 Por fim, a ultima etapa da solução em questão, trata-se de uma etapa contínua no projeto, pois sempre que uma nova classe é mapeada no sistema ou um novo cadastro é criado, a mesma ocorrerá. Nesta etapa se faz necessária a
 adição das anotações nos códigos do projeto, onde se deve inserir a anotação em todas as classes e métodos que devem ser testados.
 O código \ref{code:Disciplina.java} ilustra e exemplifica uma classe Java contendo anotações referentes a interface Teste.
@@ -490,7 +490,7 @@ public class Disciplina {
 Na anotação são inseridas informações referente às ações que devem ser executadas para a propriedade em questão. Os métodos possuem anotações referentes apenas ao campo que representam, enquanto as informações mais gerais sobre
 a página que está sendo testada, são inseridas na anotação da Classe propriamente dita.
 
-\section{Discussão sobre a solução}
+\subsection{Discussão sobre a solução}
 Após a finalização do desenvolvimento desta primeira solução encontrada, notou-se a clara necessidade de alteração na sistemática de como os teste ocorreriam. Necessidade esta oriunda de algumas limitações que a solução trás
 como, por exemplo, a não possibilidade de realizar testes que envolvam mais de um método, tornando praticamente inviável a tarefa de realizar testes funcionais, pois não seria possível mapear um cenário mais completo, que depende
 de mais de uma variável e tem uma sequência bem mapeada que deve ser seguida.
@@ -498,6 +498,271 @@ de mais de uma variável e tem uma sequência bem mapeada que deve ser seguida.
 Outro fator determinante para a alteração desta solução foi o fato de, ao se utilizar anotações, o mesmo não possibilitaria o teste de um mesmo campo, com dois valores diferentes, pois só seria possível informar na anotação do
 método um único valor utilizado no teste. Além disto, também não seria viável a execução de testes unitários para um sistema muito grande, pois é sabido que os testes devem ser executados sobre os pontos críticos do software e não na totalidade do projeto.
 %\end{lstlisting}
+
+\section{Solução Cucumber + Selenium WebDriver}
+Visando a produção de testes funcionais de aceitação, optou-se pela inclusão do framework Cucumber na composição desta nova solução, somando-se assim as demais ferramentas já utilizadas até o atual momento. A mesma foi escolhida com base em sua interface amigável, que possibilita descrever um cenário completo e de fácil entendimento por todos os envolvidos do projeto, sendo assim, garante uma maior qualidade também quando pensamos em documentação das funcionalidades desenvolvidas em um sistema.
+A solução é composta por três estágios, onde em um primeiro será inserido no projeto a classe genérica de testes já descrita, porem dela só serão utilizados os métodos que descrevem ações do Selenium WebDriver. No segundo estágio ocorre a adição de uma classe onde são apresentados métodos que representam \texttt{Steps} da linguagem Cucumber o que possibilita descrever no ultimo estágio cenários no Cucumber em arquivos \texttt{.feature} que descrevem testes para as funcionalidades codificadas no sistema. A imagem \ref{fig:solucao2} apresenta esse fluxo.
+
+\subsection{Classe genérica de testes}
+Na classe genérica de testes foram mantidos os métodos anteriormente utilizados que permitiam gerenciar ações do Selenium WebDriver, como apresenta a figura \ref{code:Classe genérica contendo métodos WebDriver}.
+Entretanto foram removidos os métodos que realizavam os testes com base nas anotações inseridas nas classes Java do projeto.
+
+\begin{figure}[!htt]
+	\begin{lstlisting}
+	
+		
+    private final SharedDriver webDriver;
+
+    public TesteFormulario(SharedDriver webDriver) {
+        this.webDriver = webDriver;
+    }
+	
+    public Object getValorPropriedadeCampo(WebElement webElement, String atributo, String valorAtributo) {
+        if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_TEXTO)) {
+            return webElement.getText();
+        } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_NOME_TAG)) {
+            return webElement.getTagName();
+        } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_ATRIBUTO)) {
+            return webElement.getAttribute(valorAtributo);
+        } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_VALOR_CSS)) {
+            return webElement.getCssValue(valorAtributo);
+        } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_CAMPO_EXIBIDO)) {
+            return webElement.isDisplayed();
+        } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_CAMPO_SELECIONADO)) {
+            return webElement.isSelected();
+        } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_CAMPO_HABILITADO)) {
+            return webElement.isEnabled();
+        } else if (atributo.equals(ATRIBUTO_COMPARACAO_URL)) {
+            return webDriver.getCurrentUrl();
+        } else if (atributo.equals(ATRIBUTO_COMPARACAO_TITULO_PAGINA)) {
+            return webDriver.getTitle();
+        }
+        return null;
+    }
+
+    public WebElement getEncontraCampo(String identificador, String campo) {
+        return webDriver.findElement(getEncontra(identificador, campo));
+    }
+
+    public By getEncontra(String identificador, String campo) {
+        if (identificador.equals(IDENTIFICADOR_ID)) {
+            return By.id(campo);
+        } else if (identificador.equals(IDENTIFICADOR_NOME)) {
+            return By.name(campo);
+        } else if (identificador.equals(IDENTIFICADOR_NOME_CLASSE)) {
+            return By.className(campo);
+        } else if (identificador.equals(IDENTIFICADOR_CSS)) {
+            return By.cssSelector(campo);
+        } else if (identificador.equals(IDENTIFICADOR_XPATH)) {
+            return By.xpath(campo);
+        } else if (identificador.equals(IDENTIFICADOR_TEXTO_DO_LINK)) {
+            return By.linkText(campo);
+        } else if (identificador.equals(IDENTIFICADOR_NOME_TAG)) {
+            return By.tagName(campo);
+        }
+        return null;
+    }
+	\end{lstlisting}
+	\caption{Métodos para busca de elemento web utilizando Selenium WebDriver}
+	\label{code:Classe genérica contendo métodos WebDriver}
+\end{figure}
+
+\subsection{Classe que descreve Steps}
+A classe \texttt{Steps.java} foi criada com intuido de realizar o elo de ligação entre as ações da classe WebDriver e frases utilizadas nos arquivos \texttt{.feature} da linguagem Cucumber. Nesta classe foram confeccionados métodos que mapeiam ações do Cucumber e dentro dos mesmos ocorrem as chamadas dos métodos da classe WebDriver como ilustra o código em \ref{code:Classe com Steps Cucumber}.
+
+\begin{figure}[!htt]
+	\begin{lstlisting}
+    @Dado("^atribuir timeout navegador (\\d+)$")
+    public void setTimeoutNavegador(int timeout) {
+        webDriver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
+    }
+
+    @Dado("^acesso o endereco (.*)$")
+    public void acessarEndereco(String url) {
+        webDriver.get(TestePropriedades.urlSistema + url);
+    }
+
+    @Quando("^seleciono a opcao (.*) no campo (.*) buscando pelo (.*)$")
+    public void selecionarOpcaoCampo(String opcao, String campo, String identificador) {
+        WebElement webElement = getEncontraCampo(identificador, campo);
+        if (webElement != null) {
+            Select select = new Select(webElement);
+            select.selectByVisibleText(opcao);
+        }
+    }
+
+    @E("^limpo o campo (.*) buscando pelo (.*)$")
+    public void limparCampo(String campo, String identificador) {
+        WebElement webElement = getEncontraCampo(identificador, campo);
+        if (webElement != null) {
+            webElement.clear();
+        }
+    }
+
+    @E("^preencho o campo (.*) com o valor (.*) buscando pelo (.*)$")
+    public void preencherCampo(String campo, String valor, String identificador) {
+        WebElement webElement = getEncontraCampo(identificador, campo);
+        if (webElement != null) {
+            webElement.sendKeys(valor);
+        }
+    }
+
+    @E("^clico no elemento (.*) buscando pelo (.*)$")
+    public void clicarElemento(String campo, String identificador) {
+        WebElement webElement = getEncontraCampo(identificador, campo);
+        if (webElement != null) {
+            webElement.click();
+        }
+    }
+	\end{lstlisting}
+	\caption{Classe genérica contendo steps Cucumber que descrevem ações do Selenium WebDriver}
+	\label{code:Classe com Steps Cucumber}
+\end{figure}
+
+A linguagem Cucumber quando trabalha conjuntamente com Java, disponibiliza anotações como: \texttt{@Dado, @Quando, @E e @Entao} que corresponde de forma 1 para 1 frases descritas nos arquivos \texttt{.feature}.
+Como podemos ver na ilustração, cada método que corresponde a um \emph{Step} do Cucumber apresenta uma anotação que identifica o mesmo, contendo uma frase fixa e parâmetros que são esperados. Dessa forma pode-se descrever frases que correspondam a pequenas ações executadas em um navegador, assim, cada método é responsável por executar uma ação específica, tornando possível reutilizar estes métodos para compor os cenários que posteriormente serão descritos.
+
+Para tornar a solução mais completa, inseriu-se nesse classe, métodos que permitissem manipular campos que dependessem de chamadas Ajax e JavaScript, como demonstra a imagem \ref{code:Método WebDriverWait}
+
+\begin{figure}[!htt]
+	\begin{lstlisting}
+@E("^aguardo (\\d+) milisegundos para verificar se elemento (.*) buscando pelo (.*) esta presente$")
+public void aguardarCampoExistente(Long tempo, String campo, String identificador) {
+    WebDriverWait webDriverWait = new WebDriverWait(webDriver, tempo);
+    webDriverWait.until(ExpectedConditions.presenceOfElementLocated(
+        funcoes.getEncontra(identificador, campo)));
+}
+
+@E("^aguardo (\\d+) milisegundos para verificar se elemento (.*) buscando pelo (.*) esta visivel$")
+public void aguardarCampoVisivel(Long tempo, String campo, String identificador) {
+    WebDriverWait webDriverWait = new WebDriverWait(webDriver, tempo);
+    webDriverWait.until(ExpectedConditions.visibilityOf(funcoes.getEncontraCampo(identificador, campo)));
+}
+
+@E("^aguardo (\\d+) milisegundos para verificar se elemento (.*) buscando pelo (.*) desapareceu$")
+public void aguardarCampoDesaparecer(Long tempo, String campo, String identificador) {
+    WebDriverWait webDriverWait = new WebDriverWait(webDriver, tempo);
+    webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(
+        funcoes.getEncontra(identificador, campo)));
+}
+	\end{lstlisting}
+	\caption{Método que permite manipulações com espera de tempo ou ação}
+	\label{code:Método WebDriverWait}
+\end{figure}
+
+Essas ações são possíveis através da utilização dos métodos oferecidos pela classe \texttt{WebDriverWait} do Selenium.
+
+\section{Descrição de cenários}
+Após a inserção das duas classes Java apresentados anteriormente no projeto, torna-se possível escrever cenários que representem as funcionalidades que devem ser testadas.
+Desta forma, pode-se criar arquivos \texttt{.feature} onde os cenários são compostos por uma sequência definida utilizando os passos descritos na classe \texttt{Steps}, onde a mesma realiza as ações em um navegador.
+Podemos ver um exemplo desta abordagem no código apresentado em \ref{code:feature}.
+
+\begin{figure}[!htt]
+	\begin{lstlisting}
+#language: pt
+
+Funcionalidade: Ações executadas por um aluno do curso de Ciência da Computação no registro de seu
+  plano individual de estudos complementares.
+
+  Contexto: Fazer login no sistema como um aluno
+    Dado acesso o endereco /login.htm
+    Quando preencho o campo login com o valor lamaral buscando pelo id
+    E preencho o campo senha com o valor teste123 buscando pelo id
+    E clico no elemento button.btn.btn-default buscando pelo css
+    Entao verifico se atributo nome tag do elemento id buscando pelo nome não está nulo
+
+  @aceitacao
+  Cenario: Adicionar umas disciplina ao plano com sucesso.
+    Dado seleciono a opcao ELC1051 - Computação Gráfica Avançada (60h) no campo idDisciplinaAdicionar buscando pelo id
+    Quando preencho o campo piecDisciplinaAdicionar.cursoOfertante com o valor Ciência da Computação buscando pelo id
+    E preencho o campo piecDisciplinaAdicionar.semestreAnoRealizacao com o valor II/2011 buscando pelo id
+    E clico no elemento adicionarPiecDisciplina buscando pelo id
+    Entao comparo a igualdade entre o valor esperado Sucesso! com atributo texto do elemento h4 buscando pelo css
+
+  @rejeicao
+  Cenario: Não permitir adicionar disciplina ao plano quando a mesma já está incluida.
+    Dado seleciono a opcao ELC1051 - Computação Gráfica Avançada (60h) no campo idDisciplinaAdicionar buscando pelo id
+    Quando preencho o campo piecDisciplinaAdicionar.cursoOfertante com o valor Ciência da Computação buscando pelo id
+    E preencho o campo piecDisciplinaAdicionar.semestreAnoRealizacao com o valor II/2011 buscando pelo id
+    E clico no elemento adicionarPiecDisciplina buscando pelo id
+    Entao comparo a igualdade entre o valor esperado Disciplina já inserida no plano. com atributo texto do elemento piec.errors buscando pelo id
+	\end{lstlisting}
+	\caption{Testes de uma funcionalidade descrita por seus cenários em um arquivo .feature}
+	\label{code:feature}
+\end{figure}
+
+Como visto em \ref{code:feature}, basta utilizar os passos previamente definidos nos métodos da classe \texttt{Steps.java} complementando apenas com os parâmetros necessários para identificação do elemento que se deseja manipular em uma tela do sistema web.
+
+\subsection{Utilizando a mesma janela do navegador para execução dos testes}
+Ao iniciar os testes na solução, após finalizar a codificação da mesma, notou-se que existia um perda de tempo quando os testes eram executados pois, a cada cenários executado o Selenium WebDriver fechava a janela do navegador ativa e quando um novo cenário fosse executado uma nova janela era aberta. Para evitar que este retrabalho fosse realizado e assim fosse possível reutilizar a janela do navegador ativa, encontrou-se na documentação existente na página da linguagem Cucumber\footnote{https://cucumber.io/} solução para esta questão utilizando a classe \texttt{SharedDriver} desenvolvida por Aslak Hellesoy e disponibilizada no projeto \texttt{cucumber-jvm\footnote{https://github.com/cucumber/cucumber-jvm/blob/master/examples/java-webbit-websockets-selenium/src/test/java/cucumber/examples/java/websockets/SharedDriver.java}}, onde deve-se instanciar um objeto desta classe no lugar da classe WebDriver utilizada anteriormente.
+
+\subsection{Validando solução em sistemas web}
+Após a finalização da codificação da solução, iniciou-se a fase de validação e aplicação da solução utilizando Cucumber + Selenium em softwares web. Nesta etapa foram escolhidos dois softwares web que respeitassem os requisitos existentes no escopo delimitado pelo projeto em questão. O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicitação de disciplinas complementares de graduação do curso de Ciência da Computação da Universidade Federal de Santa Maria. O Segundo sistema onde os testes funcionais seriam aplicados seria um software de uma empresa privada da região de Santa Maria, chamada Megatecnologia, onde este sistema comercializado como SILAS BPMs, apresenta
+um sistema voltado para modelagem de processo BPM's, onde é possível descrever etapas, tramitações, telas e campos de um processo.
+
+\subsubsection{Aplicando solução no sistema de registro de disciplinas complementares}
+Para realização desta tarefa, foram utilizadas as funcionalidades descritas no documento de especificação deste software para validar se o mesmo apresenta todas as funcionalidades que se compromete a atender.
+Como o processo apresenta dois atores principais, onde o primeiro seria o aluno e o segundo um membro do colegiado do curso, foram separados os testes em dois arquivos \texttt{.feature}, o primeiro contendo ações realizadas por alunos e o segundo para ações que um membro do colegiado executa.
+
+Como forma de reduzir o trabalho de um desenvolvedor de teste, utilizando os recursos disponibilizados pelo framework Cucumber, pode-se utilizar o recurso \texttt{Contexto} para descrever uma sequência de passos que deverá ser executada para cada um dos cenários de uma funcionalidade, assim evita-se de ter que reescrever a mesma sequência de passos para todo os cenários. A imagem \ref{code:Contexto} exemplifica essa utilização.
+
+\begin{figure}[!htt]
+	\begin{lstlisting}
+Funcionalidade: Ações executadas por um membro do colegiado do curso de Ciência da Computação na aprovação/regeição de
+  planos individuais de estudos complementares.
+
+  Contexto: Fazer login no sistema como um aluno
+    Dado acesso o endereco /login.htm
+    Quando preencho o campo login com o valor colegiado buscando pelo id
+    E preencho o campo senha com o valor colegiado123 buscando pelo id
+    E clico no elemento button.btn.btn-default buscando pelo css
+    Entao verifico se atributo nome tag do elemento id buscando pelo nome não está nulo
+	\end{lstlisting}
+	\caption{Exemplo de utilização do Contexto em um arquivo Cucumber}
+	\label{code:Contexto}
+\end{figure}
+
+O \texttt{Contexto} deve ser descrito no inicio do código de uma funcionalidade, antes dos cenários do mesmo.
+
+Outro recurso da linguagem Cucumber útil para redução na escrita de novos testes, é a recurso \texttt{Delineacao do Cenario}, onde a mesma permite reutilizar o mesmo cenário aplicando os
+valores descritos em uma tabela descrita pelo  recurso \texttt{Exemplos} como mostra o código \ref{code:Delineacao}
+
+\begin{figure}[!htt]
+	\begin{lstlisting}
+Delineacao do Cenario: 1 - Não permitir inserir no PIEC disciplina que não faça parte do curso, sem o preenchimento do campo relevância da integralização
+     2 - Não permitir cadastrar nova instituição com sigla já cadastrada
+     3 - Não permitir cadastrar nova disciplina sem sua respectiva sigla
+     4 - Não permitir cadastrar nova disciplina sem sua respectiva nome
+     5 - Não permitir inserir disciplina com uma sigla já cadastrada
+    Dado seleciono a opcao Adicionar outra disciplina no campo idDisciplinaAdicionar buscando pelo id
+    Quando preencho o campo novaDisciplina.codigo com o valor <codigoDis> buscando pelo id
+    E preencho o campo novaDisciplina.nome com o valor <nomeNovaDisciplina> buscando pelo id
+    E preencho o campo piecDisciplinaAdicionar.relevanciaIntegralizacao com o valor <relevancia> buscando pelo id
+    E seleciono a opcao Adicionar outra instituição no campo novaDisciplina.idInstituicao buscando pelo id
+    E seleciono a opcao 78 horas no campo novaDisciplina.cargaHoraria buscando pelo id
+    E preencho o campo novaInstituicao.nome com o valor Universidade Teste buscando pelo id
+    E preencho o campo novaInstituicao.sigla com o valor <siglaInst> buscando pelo id
+    E preencho o campo piecDisciplinaAdicionar.arquivoPlanoEnsino com o valor C:\\Users\\Lucas\\Desktop\\putty.exe buscando pelo id
+    E clico no elemento adicionarPiecDisciplina buscando pelo id
+    Entao comparo a igualdade entre o valor esperado <msgErro> com atributo texto do elemento piec.errors buscando pelo id
+
+  Exemplos:
+    | codigoDis | nomeNovaDisciplina | relevancia | siglaInst | msgErro                     |
+    | TESTE95   | Teste informática  |            | USC       | Preencha o campo relevância.|
+    | TESTE95   | Teste informática  | Teste 1    | UFSM      | Sigla já cadastrada         |
+    |           | Teste informática  | Teste 2    | UFT       | Preencha o campo código.    |
+    | TESTE98   |                    | Teste 3    | UFS       | Preencha o campo nome.      |
+    | ELC1051   | Computação Gráfica | Teste 4    | UFAR      | Código já cadastrado.       |
+	\end{lstlisting}
+	\caption{Cenário executado para cada linha existente na tabela Exemplos}
+	\label{code:Delineacao}
+\end{figure}
+
+Em \texttt{Delineacao do Cenario} ao invés de ser inserido valores para testes, são informados os rótulos existentes no cabeçalho da tabela do recurso \texttt{Exemplos}. Desta forma quando o teste for ser executado esse valor será substituído em tempo de execução pelo valor existente nessa coluna para cada uma das linhas da tabela.
+
+
+Utilizando-se destes recursos concluiu-se de forma satisfatória a descrição de testes para todos os requisitos existentes neste sistema.
+
 
 \chapter{Resultados}
 

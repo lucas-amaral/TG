@@ -74,19 +74,25 @@
   testing}. [S.l.]: John Wiley \& Sons, 2011.
 
 \bibitem[NUNES(2009)NUNES]{nunescucumber} NUNES, D\@. Automa{\c{c}}{\~a}o de
-  Testes de Aceita{\c{c}}{\~a}o com Cucumber e JRuby. , [S.l.], 2009.
+  Testes de Aceita{\c{c}}{\~a}o com Cucumber e JRuby., [S.l.], 2009.
 
 \bibitem[OLIVEIRA et~al.(2007)OLIVEIRA; G{\'O}IS; SOUZA;
   FARIAS]{de2007utilizaccao} OLIVEIRA, R.~B.~de et~al\@. Utiliza{\c{c}}{\~a}o
   de Padr{\~o}es para Otimizar a Automa{\c{c}}{\~a}o de Testes Funcionais de
   Software. , [S.l.], 2007.
 
+\bibitem[PATEL; KOLLANA(2014)PATEL; KOLLANA]{patel2014test} PATEL, S.; KOLLANA,
+  R.~K\@. Test Case Reuse in Enterprise Software Implementation--An Experience
+  Report. In: SOFTWARE TESTING, VERIFICATION AND VALIDATION (ICST), 2014 IEEE
+  SEVENTH INTERNATIONAL CONFERENCE ON. \textbf{Anais{\ldots}} [S.l.:~s.n.],
+  2014. p.99--102.
+
 \bibitem[PEREIRA(2012)PEREIRA]{pereiraestudoselenium} PEREIRA, D.~V\@. Estudo
   da ferramenta selenium ide para testes automatizados de aplica{\c{c}}{\~o}es
   web. , [S.l.], 2012.
 
 \bibitem[PIQUEIRO; ZADRA(2015)PIQUEIRO; ZADRA]{piqueiro2015} PIQUEIRO, T.
-  J.~C.; ZADRA, A.~N\@. Processo de Testes: abordagem de projeto de testes.,
+  J.~C.; ZADRA, A.~N\@. Processo de Testes: abordagem de projeto de testes. ,
   [S.l.], January~2015.
 
 \bibitem[PRESSMAN(2011)PRESSMAN]{pressman2011engenharia} PRESSMAN, R.~S\@.
@@ -114,6 +120,6 @@
 \bibitem[VASCONCELOS et~al.(2006)VASCONCELOS; ROUILLER; MACHADO;
   MEDEIROS]{de2006introduccao} VASCONCELOS, A. M.~L.~de et~al\@.
   Introdu{\c{c}}{\~a}o {\`a} Engenharia de Software e {\`a} Qualidade de
-  Software., [S.l.], 2006.
+  Software. , [S.l.], 2006.
 
 \end{thebibliography}

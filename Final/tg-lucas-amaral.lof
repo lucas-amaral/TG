@@ -8,10 +8,16 @@
 \addvspace {0\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Um exemplo de c\IeC {\'o}digo cucumber.\relax }}{14}{figure.caption.6}
 \addvspace {0\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Estrutura da solu\IeC {\c c}\IeC {\~a}o.\relax }}{17}{figure.caption.7}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Classe gen\IeC {\'e}rica de teste desenvolvida\relax }}{18}{figure.caption.8}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Interface Teste\relax }}{19}{figure.caption.9}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Classe anotada com @Teste\relax }}{20}{figure.caption.10}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Estrutura da solu\IeC {\c c}\IeC {\~a}o.\relax }}{18}{figure.caption.7}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Classe gen\IeC {\'e}rica de teste desenvolvida\relax }}{19}{figure.caption.8}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Interface Teste\relax }}{20}{figure.caption.9}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Classe anotada com @Teste\relax }}{21}{figure.caption.10}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces M\IeC {\'e}todos para busca de elemento web utilizando Selenium WebDriver\relax }}{23}{figure.caption.11}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Classe gen\IeC {\'e}rica contendo steps Cucumber que descrevem a\IeC {\c c}\IeC {\~o}es do Selenium WebDriver\relax }}{24}{figure.caption.12}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces M\IeC {\'e}todo que permite manipula\IeC {\c c}\IeC {\~o}es com espera de tempo ou a\IeC {\c c}\IeC {\~a}o\relax }}{25}{figure.caption.13}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Testes de uma funcionalidade descrita por seus cen\IeC {\'a}rios em um arquivo .feature\relax }}{26}{figure.caption.14}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Exemplo de utiliza\IeC {\c c}\IeC {\~a}o do Contexto em um arquivo Cucumber\relax }}{27}{figure.caption.15}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Cen\IeC {\'a}rio executado para cada linha existente na tabela Exemplos\relax }}{28}{figure.caption.16}
 \addvspace {0\p@ }
 \addvspace {0\p@ }
 \addvspace {0\p@ }

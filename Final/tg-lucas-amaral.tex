@@ -821,11 +821,16 @@ Ao contrário do ocorrido com a aplicação de registro de disciplinas complemen
 A abordagem em questão, assim como as anteriores, apresenta vantagens e desvantagens. Como vantagem, pode-se elencar o fato de, por trabalhar somente com a linguagem Java, possibilitar uma série de ações, que não seriam possíveis, utilizando Cucumber na composição da solução. Como por exemplo, a utilização de testes condicionais, laços de repetição, busca de valores de um objeto Java, assim como manipulação de tipos que não façam parte dos tipos nativos da linguagem Java. Apesar disso, a solução apresenta um cenário mais complexo de ser entendido por qualquer interessado do projeto, comparado a solução utilizando Cucumber. Apresenta também, descrições mais poluídas visualmente e mais distantes de uma linguagem natural, além de possuir o mesmo problema referente à restauração da base de dados, após execução dos testes.
 
 \chapter{Resultados}
-Como forma de validação das abordagens criadas neste trabalho, onde as mesmas visam a redução do trabalho para um equipes de teste e desenvolvimento, realizou-se comparações que serviriam para levantar o ganho em utilizar uma abordagem ou outra. 
+Como forma de validação das abordagens criadas neste trabalho, onde as mesmas visam a redução do trabalho para uma equipe de teste e desenvolvimento, realizou-se comparações que serviriam para levantar o ganho em utilizar uma abordagem ou outra. 
 
 \section{Comparando as três abordagens propostas}
 Em um primeiro momento, resolveu-se comparar as soluções propostas elencando os pontos fortes e fracos das mesmas, e com isso torna-se possível realizar escolhas sobre qual abordagem é mais apropriada para o contexto onde se encontra.
-Por exemplo, quando a equipe decide que serão necessários apenas a realização de testes unitários, a abordagem que utiliza anotações apresenta-se como uma boa alternativa, pois a mesma apresenta recursos que permitem realizar este tipo de teste e ao mesmo tempo não 
+Por exemplo, quando a equipe decide que serão necessários apenas a realização de testes unitários, a abordagem que utiliza anotações apresenta-se como uma boa alternativa, pois a mesma apresenta recursos que permitem realizar este tipo de teste e ao mesmo tempo não necessita de codificação em classes de teste, pois a simples inserção de anotações nas classes do modelo é suficiente.
+
+Quando deseja-se realizar testes funcionais de aceitação e não se faz necessário utilizar verificações condicionais, adotar a segunda solução torna-se uma opção válida. A utilização do Cucumber, neste casos, torna-se prática e ainda possibilita que qualquer \emph{stakeholder} do projeto entenda as funcionalidades descritas pelos testes.
+A ultima abordagem pode ser apropriada quando o sistema em questão é mais complexo e necessita de maiores validações.
+
+A tabela \ref{tab:comparacaoSolucoes} apresenta os principais pontos fortes e as maiores fraquezas dessas três abordagens.
 
 \begin{table}[!htpb]
 	\centering
@@ -844,7 +849,7 @@ Por exemplo, quando a equipe decide que serão necessários apenas a realizaçã
 			\item Não retrocede o banco de dados ao ultimo estado válido após realizar os testes
 			\item Poluição no código fonte pelo excesso de anotações nas classes
 	 	\end{itemize}
-	 	\\ \hline
+	 	\\ 
 		
 		Cucumber + Selenium  & 
 		\begin{itemize} 
@@ -859,7 +864,7 @@ Por exemplo, quando a equipe decide que serão necessários apenas a realizaçã
 			\item Não retrocede o banco de dados ao ultimo estado válido após realizar os testes
 			\item Impossibilidade de utilizar parâmetros que diferem dos tipos básicos (int, float, String)
 		\end{itemize} 
-		\\ \hline
+		\\ 
 				
 		Selenium WebDriver & 
 		\begin{itemize} 
@@ -876,13 +881,83 @@ Por exemplo, quando a equipe decide que serão necessários apenas a realizaçã
 		\end{itemize} \\
 	\end{tabular}
 	\caption{Vantagens e desvantagens das abordagens de teste confeccionadas}
+	\label{tab:comparacaoSolucoes}
 \end{small}
 \end{table}
 
+\section{Vatagens na utilização das abordagens fucionais}
+Mesmo conhecendo as principais virtudes das abordagens criadas, e também em quais escopos as mesmas funcionavam de forma adequada, ainda era necessário expor o ganho em utilizar umas dessas abordagens ao invés de criar um teste funcional somente utilizando métodos que as ferramentas de teste web disponibilizam.
+
+Como forma de medir este ganho, resolveu-se descrever uma funcionalidade do sistema de registro de disciplina complementares, utilizando tanto a abordagem Cucumber + WebDriver, como a abordagem WebDriver e, por fim, criando um teste utilizando apenas os métodos disponíveis da ferramenta Selenium. Essas diferenças são apresentadas nas imagens \ref{code:seleniumAddDisciplina}, \ref{code:solucao2AddDisciplina} e \ref{code:solucao3AddDisciplina}.
+
+
+\begin{figure}[!htt]
+	\begin{lstlisting}
+@Test
+public void cadastrarDisciplinaSucesso() {
+    WebDriver webDriver = new FirefoxDriver();
+    webDriver.get(url + "/cadastro-disciplina.htm");
+    webDriver.findElement(By.id("codigo")).sendKeys("ELC9898");
+    webDriver.findElement(By.id("nome")).sendKeys("Disciplina nova");
+    Select cargaHoraria = new Select(webDriver.findElement(By.id("cargaHoraria")));
+    cargaHoraria.selectByVisibleText("60");
+    webDriver.findElement(By.id("ativa1")).click();
+    Select instituicao = new Select(webDriver.findElement(By.id("idInstituicao")));
+    instituicao.selectByVisibleText("UFSM - Universidade Federal de Santa Maria");
+    webDriver.findElement(By.id("preAprovada1")).click();
+    webDriver.findElement(By.id("salvar")).click();
+    assertEquals("Sucesso!", webDriver.findElement(By.cssSelector("h4")).getText());
+}
+	\end{lstlisting}
+	\caption{Teste utilizando apenas o Selenium}
+	\label{code:seleniumAddDisciplina}
+\end{figure}
+
+\begin{figure}[!htt]
+	\begin{lstlisting}
+Cenario: Cadastrar nova disciplina.
+    Dado acesso o endereco /cadastro-disciplina.htm
+    Quando preencho o campo codigo com o valor ELC9898 buscando pelo id
+    E preencho o campo nome com o valor Disciplina nova buscando pelo id
+    E seleciono a opcao 60 no campo cargaHoraria buscando pelo id
+    E clico no elemento ativa1 buscando pelo id
+    E seleciono a opcao UFSM - Universidade Federal de Santa Maria no campo idInstituicao buscando pelo id
+    E clico no elemento preAprovada1 buscando pelo id
+    E clico no elemento salvar buscando pelo id
+    Entao comparo a igualdade entre o valor esperado Sucesso! com atributo texto do elemento h4 buscando pelo css
+	\end{lstlisting}
+	\caption{Teste utilizando solução Cucumber + WebDriver}
+	\label{code:solucao2AddDisciplina}
+\end{figure}
+
+\begin{figure}[!htt]
+	\begin{lstlisting}
+@Test
+//Cadastrar nova disciplina
+public void cadastrarDisciplina() {
+    steps.acessarEndereco("/cadastro-disciplina.htm");
+    steps.preencherCampo("codigo", "ELC9898", TesteFormulario.IDENTIFICADOR_ID);
+    steps.preencherCampo("nome", "Disciplina nova", TesteFormulario.IDENTIFICADOR_ID);
+    steps.selecionarOpcaoCampo("60", "cargaHoraria", TesteFormulario.IDENTIFICADOR_ID);
+    steps.clicarElemento("ativa1");
+    steps.selecionarOpcaoCampo("UFSM - Universidade Federal de Santa Maria", "idInstituicao", TesteFormulario.IDENTIFICADOR_ID);
+    steps.clicarElemento("preAprovada1");
+    steps.clicarElemento("salvar");
+    steps.compararIgualdade("Sucesso!", TesteFormulario.ATRIBUTO_COMPARACAO_ASSERT_TEXTO, "h4", TesteFormulario.IDENTIFICADOR_CSS);
+}
+	\end{lstlisting}
+	\caption{Teste utilizando solução WebDriver}
+	\label{code:solucao3AddDisciplina}
+\end{figure}
+
+Como pode-se notar pelo código \ref{code:seleniumAddDisciplina}, \ref{code:solucao2AddDisciplina} e \ref{code:solucao3AddDisciplina}, existe uma diminuição no número de linhas escritas nos testes que exploram as duas abordagens deste trabalho em relação a codificação utilizando apenas o framework Selenium. Durante a realização dessas comparações percebeu-se também uma possível redução de caracteres digitados utilizando as abordagens apresentadas, isso quando trabalha-se com um IDE que possua suporte para as linguagens em questão. Por fim pode-se também levantar suspeita que a abordagem Cucumber + WebDriver trás ganhos na leitura dos testes, que se tornam mais compreensíveis, mesmo que não se entenda de linguagens de programação.
+
 \chapter{Consideração finais}
 A proposta inicial deste trabalho consistia em apresentar uma solução em forma de códigos de teste que permitisse o reaproveitamento e reutilização dos mesmo, acarretando em um menor esforço na codificação de novos testes para sistemas web desenvolvidos em Java. Entretanto o resultado final obtido pelo trabalho em questão trata-se não de uma solução, mas sim de três abordagens utilizando ferramentes para teste de software que diferem entre si, cada uma possuindo ponto fortes e pontos fracos e sendo mais relevante para uma determinada situação. A condução e criação dessas abordagens foram tomadas ao longo do desenvolvimento a partir dos percalços e necessidades que apareciam em meio a validação das abordagens em questão.
+
 Como contribuição este trabalho apresenta uma abordagem que mescla a utilização da linguagem Cucumber com o framework Selenium Webdriver, apresentando passos que podem tornar o processo de criação de testes em uma tarefa mais prática e rápida, sendo assim necessário apenas descrever cenários que correspondem a funcionalidades do sistema.
-A tabela a seguir apresenta algumas melhorias que poderiam ser incorporadas em uma nova versão deste projeto
+
+A tabela \ref{tab:melhorias} expõem algumas melhorias que poderiam ser incorporadas em uma nova versão deste projeto
 
 
 \begin{table}[!htpb]
@@ -891,9 +966,10 @@ A tabela a seguir apresenta algumas melhorias que poderiam ser incorporadas em u
 		 & Descrição & Relevância \\ \hline
 		 1 & Apresentar no auto completar do IDE, os campos pertencentes ao contexto atual do .feature  & Muito alta \\
 		 2 & Não persistir no BD as alterações realizadas pelos testes automatizados & Alta \\
-		 3 & Criar mecanismo que busque na árvore do projeto os Validators dos formulários e transcreva essas informações em cenários de teste cucumber & Alta \\
+		 3 & Criar mecanismo que busque na árvore do projeto classes de validação dos formulários e transcreva essas informações em cenários de teste Cucumber & Alta \\
 	\end{tabular}
 	\caption{Melhorias sugeridas}
+	\label{tab:melhorias}
 \end{table}
 
 

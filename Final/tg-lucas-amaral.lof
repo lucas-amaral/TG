@@ -22,5 +22,8 @@
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Estrutura da solu\IeC {\c c}\IeC {\~a}o utilizando somente Selenium.\relax }}{31}{figure.caption.18}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Cen\IeC {\'a}rio descrevendo mesma funcionalidade contida em \ref {code:Contexto}\relax }}{32}{figure.caption.19}
 \addvspace {0\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Teste utilizando apenas o Selenium\relax }}{36}{figure.caption.21}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Teste utilizando solu\IeC {\c c}\IeC {\~a}o Cucumber + WebDriver\relax }}{36}{figure.caption.22}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Teste utilizando solu\IeC {\c c}\IeC {\~a}o WebDriver\relax }}{36}{figure.caption.23}
 \addvspace {0\p@ }
 \addvspace {0\p@ }

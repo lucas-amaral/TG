@@ -788,9 +788,62 @@ Dada a impossibilidade de utilização da solução composta pelas ferramentas C
 Como descrito na imagem \ref{fig:solucao3}, esta abordagem reutiliza praticamente toda a estrutura existente na abordagem Cucumber + Selenium, com isso, somente os arquivos onde são escritos os cenários mudam. Ao invés de criarmos arquivos \texttt{.feature}, contento as funcionalidades e cenários que serão testados, tem-se, agora, classes Java de teste, que são responsáveis por descrever os testes.
 Na figura \ref{code:seleniumTeste} temos um exemplo de um cenário descrito utilizando a abordagem atual.  Pode-se notar que os métodos da classe \texttt{Steps.java} ainda são utilizados, porém de forma direta.
 
+\begin{figure}[!htt]
+	\begin{lstlisting}
+	//Quando um agrupamento é fechado, o sistema deve alterar a data de fechamento do mesmo para a data atual. No caso da caixa atual estar aberta
+	private void abreFechaAgrupamento() {
+		navegador.clicarElemento("img[alt=\"Visualizar\"]", Steps.IDENTIFICADOR_CSS);
+		navegador.aguardarCampoVisivel(100l, "img[alt=\"F\"]", Steps.IDENTIFICADOR_CSS);
+		WebElement dataAbertura = navegador.getEncontraCampo("data_abertura_agrupamento_1");
+		WebElement dataFechamento = navegador.getEncontraCampo("data_fechamento_agrupamento_1");
+		boolean aberto = true;
+		if (dataAbertura.getText() != null) {
+			aberto = false;
+		}
+		navegador.clicarElemento("img[alt=\"F\"]");
+		if (aberto) {
+			assertEquals(SilasFuncoesDatas.sdf.format(new Date()), dataFechamento.getText());
+		} else {
+			assertEquals(SilasFuncoesDatas.sdf.format(new Date()), dataAbertura.getText());
+		}
+	}	
+	\end{lstlisting}
+	\caption{Teste funcional utilizando abordagem Selenium WebDriver}
+	\label{code:seleniumTeste}
+\end{figure}
+
 Por tratar-se de código Java, além de tornar possível utilizar testes condicionais e armazenamento de valores, novas funções tornaram-se plausíveis, como apresentado no código \ref{code:seleniumDate}, onde realiza-se comparações com uma data utilizando um formato específico.
 
+\begin{figure}[!htt]
+	\begin{lstlisting}
+	//Quando navagamos pelos agrupamentos, verificamos que as datas de abertura das caixas não são necessariamente as mesmas.
+	private void navegarEntreAgrupamentos() {
+		navegador.clicarElemento("imagem_anterior_agrupamento_1");
+		assertNotEquals(SilasFuncoesDatas.sdf.format(new Date()), navegador.getEncontraCampo("data_abertura_agrupamento_1").getText());
+	}
+	\end{lstlisting}
+	\caption{Realizando comparações utilizando o tipo de dados data.}
+	\label{code:seleniumDate}
+\end{figure}
+
 Pode-se, também, localizar valores que não são estáticos na busca de elementos HTML existentes na tela atual de manipulação, como demonstra o trecho de código \ref{code:seleniumBuscaId}.
+
+\begin{figure}[!htt]
+	\begin{lstlisting}
+	@Test
+	//Colocar datas ao lado da indentificação do agrupamento (bateria), para assim contemplar as necessidades da embrapa acre
+	public void datasInicioFimBateria() {
+		navegador.acessarEndereco(url + "/gerenciar-agrupamentos.htm");
+		String idAgrupamento = navegador.getEncontraCampo(Steps.IDENTIFICADOR_ID, "id").getText();
+		Agrupamento agrupamento = service.getAgrupamento(Long.valueOf(idAgrupamento));
+		navegador.getEncontraCampo("data_abertura_agrupamento_" + agrupamento.getId());
+		navegarEntreAgrupamentos();
+	}	
+	\end{lstlisting}
+	\caption{Realizando comparações utilizando o tipo de dados data.}
+	\label{code:seleniumDate}
+\end{figure}
+
 
 \subsection{Validando solução em sistemas web}
 Para validar esta solução, foram utilizados os mesmos dois projetos já usados na solução anterior.

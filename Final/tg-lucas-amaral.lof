@@ -20,10 +20,13 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Exemplo de utiliza\IeC {\c c}\IeC {\~a}o do Contexto em um arquivo Cucumber\relax }}{28}{figure.caption.16}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Cen\IeC {\'a}rio executado para cada linha existente na tabela Exemplos\relax }}{29}{figure.caption.17}
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Estrutura da solu\IeC {\c c}\IeC {\~a}o utilizando somente Selenium.\relax }}{31}{figure.caption.18}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Cen\IeC {\'a}rio descrevendo mesma funcionalidade contida em \ref {code:Contexto}\relax }}{32}{figure.caption.19}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Teste funcional utilizando abordagem Selenium WebDriver\relax }}{32}{figure.caption.19}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Realizando compara\IeC {\c c}\IeC {\~o}es utilizando o tipo de dados data.\relax }}{32}{figure.caption.20}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Realizando compara\IeC {\c c}\IeC {\~o}es utilizando o tipo de dados data.\relax }}{32}{figure.caption.21}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Cen\IeC {\'a}rio descrevendo mesma funcionalidade contida em \ref {code:Contexto}\relax }}{33}{figure.caption.22}
 \addvspace {0\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Teste utilizando apenas o Selenium\relax }}{36}{figure.caption.21}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Teste utilizando solu\IeC {\c c}\IeC {\~a}o Cucumber + WebDriver\relax }}{36}{figure.caption.22}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Teste utilizando solu\IeC {\c c}\IeC {\~a}o WebDriver\relax }}{36}{figure.caption.23}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Teste utilizando apenas o Selenium\relax }}{36}{figure.caption.24}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Teste utilizando solu\IeC {\c c}\IeC {\~a}o Cucumber + WebDriver\relax }}{36}{figure.caption.25}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Teste utilizando solu\IeC {\c c}\IeC {\~a}o WebDriver\relax }}{36}{figure.caption.26}
 \addvspace {0\p@ }
 \addvspace {0\p@ }

@@ -14,23 +14,23 @@
 \contentsline {subsection}{\numberline {2.2.1}Plano de teste}{12}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Caso de teste}{13}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Tipos de Teste}{13}{subsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.3.1}Teste de unidade}{13}{subsubsection.2.2.3.1}
-\contentsline {subsubsection}{\numberline {2.2.3.2}Teste de aceita\IeC {\c c}\IeC {\~a}o}{13}{subsubsection.2.2.3.2}
+\contentsline {subsubsection}{\numberline {2.2.3.1}Teste unit\IeC {\'a}rio}{13}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.2}Teste funcional}{13}{subsubsection.2.2.3.2}
 \contentsline {subsection}{\numberline {2.2.4}Estrat\IeC {\'e}gias de Testes}{13}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Testes de Sistemas Web}{14}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}Ferramentas para teste de software}{14}{subsection.2.2.6}
-\contentsline {subsubsection}{\numberline {2.2.6.1}Cucumber}{14}{subsubsection.2.2.6.1}
-\contentsline {subsubsection}{\numberline {2.2.6.2}Selenium HQ}{15}{subsubsection.2.2.6.2}
-\contentsline {subsubsection}{\numberline {2.2.6.3}JUnit}{16}{subsubsection.2.2.6.3}
-\contentsline {section}{\numberline {2.3}Reuso de testes}{16}{section.2.3}
+\contentsline {section}{\numberline {2.3}Ferramentas para teste de software}{14}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Selenium HQ}{14}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Cucumber}{15}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}JUnit}{16}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Reuso de testes}{16}{section.2.4}
 \contentsline {chapter}{\numberline {3}Desenvolvimento}{19}{chapter.3}
 \contentsline {section}{\numberline {3.1}Delimita\IeC {\c c}\IeC {\~a}o de escopo}{19}{section.3.1}
-\contentsline {section}{\numberline {3.2}Solu\IeC {\c c}\IeC {\~a}o utilizando interface de anota\IeC {\c c}\IeC {\~a}o + Selenium WebDriver}{19}{section.3.2}
+\contentsline {section}{\numberline {3.2}Solu\IeC {\c c}\IeC {\~a}o para testes unit\IeC {\'a}rios com anota\IeC {\c c}\IeC {\~o}es e Selenium}{19}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Classe gen\IeC {\'e}rica de testes}{20}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Interface de anota\IeC {\c c}\IeC {\~a}o}{21}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Inser\IeC {\c c}\IeC {\~a}o das anota\IeC {\c c}\IeC {\~o}es no projeto}{22}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Discuss\IeC {\~a}o sobre a solu\IeC {\c c}\IeC {\~a}o}{22}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Solu\IeC {\c c}\IeC {\~a}o utilizando Cucumber + Selenium WebDriver}{23}{section.3.3}
+\contentsline {section}{\numberline {3.3}Solu\IeC {\c c}\IeC {\~a}o para testes funcionais com Cucumber e Selenium}{23}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Classe gen\IeC {\'e}rica de testes}{24}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Classe que descreve Steps}{25}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Descri\IeC {\c c}\IeC {\~a}o de cen\IeC {\'a}rios}{26}{subsection.3.3.3}
@@ -39,14 +39,14 @@
 \contentsline {subsubsection}{\numberline {3.3.5.1}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema de registro de disciplinas complementares}{28}{subsubsection.3.3.5.1}
 \contentsline {subsubsection}{\numberline {3.3.5.2}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema SILAS BPMs}{29}{subsubsection.3.3.5.2}
 \contentsline {subsection}{\numberline {3.3.6}Considera\IeC {\c c}\IeC {\~o}es sobre a solu\IeC {\c c}\IeC {\~a}o Cucumber + Selenium}{30}{subsection.3.3.6}
-\contentsline {section}{\numberline {3.4}Solu\IeC {\c c}\IeC {\~a}o utilizando Selenium WebDriver}{31}{section.3.4}
+\contentsline {section}{\numberline {3.4}Solu\IeC {\c c}\IeC {\~a}o para testes funcionais com Selenium WebDriver}{31}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Classes Java contendo testes funcionais}{31}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Validando solu\IeC {\c c}\IeC {\~a}o em sistemas web}{32}{subsection.3.4.2}
 \contentsline {subsubsection}{\numberline {3.4.2.1}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema de registro de disciplinas complementares}{33}{subsubsection.3.4.2.1}
 \contentsline {subsubsection}{\numberline {3.4.2.2}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema SILAS BPMs}{33}{subsubsection.3.4.2.2}
 \contentsline {subsection}{\numberline {3.4.3}Considera\IeC {\c c}\IeC {\~o}es sobre a solu\IeC {\c c}\IeC {\~a}o Selenium WebDriver}{33}{subsection.3.4.3}
 \contentsline {chapter}{\numberline {4}Resultados}{34}{chapter.4}
-\contentsline {section}{\numberline {4.1}Comparando as tr\IeC {\^e}s abordagens propostas}{34}{section.4.1}
-\contentsline {section}{\numberline {4.2}Vatagens na utiliza\IeC {\c c}\IeC {\~a}o das abordagens fucionais}{34}{section.4.2}
-\contentsline {chapter}{\numberline {5}Considera\IeC {\c c}\IeC {\~a}o finais}{38}{chapter.5}
-\contentsline {chapter}{Refer{\^e}ncias}{39}{chapter*.28}
+\contentsline {section}{\numberline {4.1}Comparando abordagens funcionais}{34}{section.4.1}
+\contentsline {section}{\numberline {4.2}Comparando as tr\IeC {\^e}s solu\IeC {\c c}\IeC {\~o}es propostas}{35}{section.4.2}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{37}{chapter.5}
+\contentsline {chapter}{Refer{\^e}ncias}{38}{chapter*.28}

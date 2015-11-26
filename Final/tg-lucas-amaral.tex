@@ -254,10 +254,10 @@ O propósito do caso de teste é definir uma unidade de teste que será executad
 \subsection{Tipos de Teste}
 Existem muitos tipos de teste, mas podemos destacar entre elas: teste de unidade, integração, sistema, aceitação e regressão. Serão descritos nas próximas subseções os tipos utilizados no desenvolvimento deste trabalho.
 
-\subsubsection{Teste de unidade}
+\subsubsection{Teste unitário}
 O teste de unidade focaliza o esforço de verificação na menor unidade de projeto do software \cite{pressman2011engenharia}. Em uma aplicação orientada a objeto, o teste, neste caso, seria voltado ao método.
 
-\subsubsection{Teste de aceitação}
+\subsubsection{Teste funcional}
 Um teste de aceitação individual tem o objetivo de verificar se um critério de aceitação de uma história ou um requisito foi atendido \cite{dornbusch2014entrega}.
  
 \subsection{Estratégias de Testes}
@@ -272,10 +272,22 @@ disso, a relevância econômica das aplicações Web aumenta a importância de c
 melhorar a sua qualidade \cite{fidelis2004fireweb}.
 
 
-\subsection{Ferramentas para teste de software}
+\section{Ferramentas para teste de software}
 Existem muitas ferramentas desenvolvidas para realização de testes de software web. Neste trabalho serão descritas três(3) dentre elas, que serão as ferramentas utilizadas no desenvolvimento dos testes estudados.
 
-\subsubsection{Cucumber}
+\subsection{Selenium HQ}
+É um \emph{framework} open source utilizado para automatização de testes funcionais em aplicações web \cite{chiavegatto1desenvolvimento}. Segundo \citeauthor{pereiraestudoselenium} \cite{pereiraestudoselenium} se trata
+de uma ferramenta de fácil uso e eficiente para desenvolver casos de teste, permitindo os testes de aceitação ou funcional, regressão e de desempenho.
+Selenium trabalha como um plugin do navegador Firefox, o mesmo traz muita praticidade, pois permite que se possa capturar cliques e valores digitados, transformando-os em um caso de teste. Ele é composto por
+quatro ferramentas: Selenium IDE, Selenium Grid, Selenium RC e Selenium WebDrive.
+
+A utilização de comandos no Selenium consiste em digitar o comando seguido de dois parâmetros tal como, por exemplo, \texttt{verifyText //div//a[2] Login}. Dependendo  do comando os parâmetros poderão ser opcionais, pois, alguns comandos não necessitam de parâmetros para serem executados \cite{sixpenceautomatizaccao}.
+
+Selenium foi escolhida como umas das ferramentas no desenvolvimento deste projeto pelo fato de ser um \emph{framework open source} que possui um vasto leque de ferramentas para testes de sistemas web. Outro fator
+importante para sua escolha é a possibilidade de interação do Selenium HQ com o Cucumber. Ela se destaca entre as demais ferramentas gratuitas pelo fato de ser a mais completa, permitindo integração com
+várias linguagens, outros \emph{frameworks}, além de suportar inúmeros navegadores e sistemas operacionais \cite{pereiraestudoselenium}.
+
+\subsection{Cucumber}
 Cucumber é uma ferramenta de desenvolvimento de testes, voltada para sistemas web, que adota uma linguagem de alto nível bem próxima a uma linguagem natural e tem suas origens fixadas sobre a metodologia BDD (\emph{Behavior Driven Development}). Cucumber
 é escrita em linguagem Ruby, mas pode ser utilizada para executar especificações de aplicações escritas em qualquer linguagem \cite{nunescucumber}.
 
@@ -289,31 +301,18 @@ executa seus arquivos \texttt{.feature} e esses arquivos contêm especificaçõe
 que, por sua vez, possui cenários; onde, um cenário é descrito da seguinte forma: \texttt{Dado} alguma condição \texttt{Quando} outra condição \texttt{E} terceira condição \texttt{Então} faça algo, conforme ilustra a figura \ref{fig:codigo_cucumber}.
 
 \begin{figure}[!htb]
-    \centering
-    \includegraphics[width=1.1
-    \textwidth]{codigo_cucumber}
-    \caption{Um exemplo de código cucumber.}
-    \label{fig:codigo_cucumber}
+	\centering
+	\includegraphics[width=1.1
+	\textwidth]{codigo_cucumber}
+	\caption{Um exemplo de código cucumber.}
+	\label{fig:codigo_cucumber}
 \end{figure}
 
-\subsubsection{Selenium HQ}
-É um \emph{framework} open source utilizado para automatização de testes funcionais em aplicações web \cite{chiavegatto1desenvolvimento}. Segundo \citeauthor{pereiraestudoselenium} \cite{pereiraestudoselenium} se trata
-de uma ferramenta de fácil uso e eficiente para desenvolver casos de teste, permitindo os testes de aceitação ou funcional, regressão e de desempenho.
-Selenium trabalha como um plugin do navegador Firefox, o mesmo traz muita praticidade, pois permite que se possa capturar cliques e valores digitados, transformando-os em um caso de teste. Ele é composto por
-quatro ferramentas: Selenium IDE, Selenium Grid, Selenium RC e Selenium WebDrive.
-
-A utilização de comandos no Selenium consiste em digitar o comando seguido de dois parâmetros tal como, por exemplo, \texttt{verifyText //div//a[2] Login}. Dependendo  do comando os parâmetros poderão ser opcionais, pois, alguns comandos não necessitam de parâmetros para serem executados \cite{sixpenceautomatizaccao}.
-
-Selenium foi escolhida como umas das ferramentas no desenvolvimento deste projeto pelo fato de ser um \emph{framework open source} que possui um vasto leque de ferramentas para testes de sistemas web. Outro fator
-importante para sua escolha é a possibilidade de interação do Selenium HQ com o Cucumber. Ela se destaca entre as demais ferramentas gratuitas pelo fato de ser a mais completa, permitindo integração com
-várias linguagens, outros \emph{frameworks}, além de suportar inúmeros navegadores e sistemas operacionais \cite{pereiraestudoselenium}.
-
-\subsubsection{JUnit}
+\subsection{JUnit}
 JUnit é uma ferramenta de apoio ao teste unitário, a qual auxilia desenvolvedores na automação dos testes e verificação dos resultados \cite{biasi2006geraccao}. A escolha desta ferramenta, como parte integrante da solução desenvolvida, deveu-se ao fato da mesma ser voltada para sistemas desenvolvidos na linguagem de programação Java, além de ser altamente versátil, possibilitando assim, integração em um único código da mesma com os demais \emph{frameworks} que serão utilizados (Selenium e Cucumber).
 
 Justifica-se a sua utilização neste trabalho por tratar-se de uma API (\emph{Application Programming Interface}), que viabiliza a comparação de um valor obtido em algum teste com o valor esperado pelo mesmo. Desta forma, pode-se validar e verificar se
 a funcionalidade de um sistema está trabalhando adequadamente.
-
 
 \section{Reuso de testes}
 
@@ -342,7 +341,7 @@ A seguir serão descritas as atividades desenvolvidas a fim de alcançar os obje
 Como escopo, foram delimitados alguns pré-requisitos necessários para utilização da solução proposta neste trabalho, onde o sistema deve ser um software web desenvolvido na linguagem de programação Java,
 podendo apresentar também funções Ajax e Javascript.
 
-\section{Solução utilizando interface de anotação + Selenium WebDriver}
+\section{Solução para testes unitários com anotações e Selenium}
 Em um primeiro momento, com objetivo de automatizar os testes de uma aplicação a fim de reduzir o esforço na confecção e codificação de novos testes para as equipes de desenvolvimento e testes de uma organização,
 escolheu-se desenvolver uma solução baseada em três etapas que são descritas conforme imagem \ref{fig:solucao1}.
 
@@ -494,8 +493,8 @@ Outro fator determinante para a alteração desta solução foi o fato de, ao se
 método um único valor utilizado no teste. Além disto, também não seria viável a execução de testes unitários para um sistema muito grande, pois é sabido que os testes devem ser executados sobre os pontos críticos do software e não na totalidade do projeto.
 %\end{lstlisting}
 
-\section{Solução utilizando Cucumber + Selenium WebDriver}
-Visando a produção de testes funcionais de aceitação, optou-se pela inclusão do \emph{framework} Cucumber na composição desta nova solução, somando-se assim as demais ferramentas já utilizadas até o atual momento. A mesma foi escolhida com base em sua interface amigável, que possibilita descrever um cenário completo e de fácil entendimento por todos os envolvidos do projeto, garantindo assim uma maior qualidade também quando pensamos em documentação das funcionalidades desenvolvidas em um sistema.
+\section{Solução para testes funcionais com Cucumber e Selenium}
+Visando a produção de testes funcionais, optou-se pela inclusão do \emph{framework} Cucumber na composição desta nova solução, somando-se assim as demais ferramentas já utilizadas até o atual momento. A mesma foi escolhida com base em sua interface amigável, que possibilita descrever um cenário completo e de fácil entendimento por todos os envolvidos do projeto, garantindo assim uma maior qualidade também quando pensamos em documentação das funcionalidades desenvolvidas em um sistema.
 
 \begin{figure}[!htb]
 	\centering
@@ -774,7 +773,7 @@ Com o avanço na confecção de testes aplicados em sistemas reais, percebeu-se 
 Como vantagens, podemos elencar o fato de, ao escrever cenários utilizando o IDE que tenha suporte para a linguagem Cucumber, pouco se escreve, reutilizando sempre os \emph{steps} descritos na classe \texttt{Steps.java}. Sendo, assim, necessário apenas informar os parâmetros esperados pelos mesmos. Ainda destaca-se o fato de os cenários descreverem, de forma simples, o que deve ocorrer na funcionalidade testada e, desta forma, serve também como documentação.
 Quando pensamos nos pontos fracos da solução, podemos destacar os empecilhos detectados no desenvolvimento de testes para a aplicação SILAS BPMs. Somam-se a estes, algumas limitações que a linguagem Cucumber possui, como o fato de não ser possível reutilizar um cenário dentro de outro cenário\footnote{Essa funcionalidade estava disponível na primeira versão da linguagem, mas a mesma foi removida. Embora o exemplo pode fazer sentido quando se trabalha de forma sequencial através dos cenários a longo prazo produz-se cenários que são difíceis de manter e entender \cite{givenscenario}. } ou até mesmo utilizar como parâmetro valores que diferem dos tipos comuns da linguagem Java (int, float, String). Outro fator problemático nessa solução é o fato de todos os dados utilizados nos testes serem persistidos e, com isso, ser necessário a restauração manual do ultimo estado válido da base de dados onde os testes se realizam.
 
-\section{Solução utilizando Selenium WebDriver}
+\section{Solução para testes funcionais com Selenium WebDriver}
 Dada a impossibilidade de utilização da solução composta pelas ferramentas Cucumber e Selenium WebDriver no projeto SILAS, optou-se por abrir mão da praticidade e interface amigável do Cucumber, adotando assim, uma nova abordagem neste projeto, em que os testes funcionais seriam descritos diretamente em classes de teste Java. A imagem \ref{fig:solucao3} apresenta essa mudança na abordagem dos testes.
 
 \begin{figure}[!htb]
@@ -876,69 +875,7 @@ A abordagem em questão, assim como as anteriores, apresenta vantagens e desvant
 \chapter{Resultados}
 Como forma de validação das abordagens criadas neste trabalho, onde as mesmas visam a redução do trabalho para uma equipe de teste e desenvolvimento, realizou-se comparações que serviriam para levantar o ganho em utilizar uma abordagem ou outra. 
 
-\section{Comparando as três abordagens propostas}
-Em um primeiro momento, resolveu-se comparar as soluções propostas elencando os pontos fortes e fracos das mesmas, e com isso torna-se possível realizar escolhas sobre qual abordagem é mais apropriada para o contexto onde se encontra.
-Por exemplo, quando a equipe decide que serão necessários apenas a realização de testes unitários, a abordagem que utiliza anotações apresenta-se como uma boa alternativa, pois a mesma apresenta recursos que permitem realizar este tipo de teste e ao mesmo tempo não necessita de codificação em classes de teste, pois a simples inserção de anotações nas classes do modelo é suficiente.
-
-Quando deseja-se realizar testes funcionais de aceitação e não se faz necessário utilizar verificações condicionais, adotar a segunda solução torna-se uma opção válida. A utilização do Cucumber, neste casos, torna-se prática e ainda possibilita que qualquer \emph{stakeholder} do projeto entenda as funcionalidades descritas pelos testes.
-A ultima abordagem pode ser apropriada quando o sistema em questão é mais complexo e necessita de maiores validações.
-
-A tabela \ref{tab:comparacaoSolucoes} apresenta os principais pontos fortes e as maiores fraquezas dessas três abordagens.
-
-\begin{table}[!htpb]
-	\centering
-	\begin{small}
-	\begin{tabular}{|p{2cm}|p{7cm}|p{7cm}|}
-		& Vantagens & Desvantagens \\ \hline
-		Interface de anotação + Selenium &
-		\begin{itemize} 
-		 	\item Suporta testes unitários 
-		 	\item Curva de aprendizado pequena, necessário apenas inserir anotações 
-	 	\end{itemize} & 
-	 	\begin{itemize}
-	 		\item Não possibilita a realização de testes funcionais
-	 		\item Um campo só pode conter um valor de teste
-	 		\item Não suporta elementos que dependam de funções Ajax e Javascript
-			\item Não retrocede o banco de dados ao ultimo estado válido após realizar os testes
-			\item Poluição no código fonte pelo excesso de anotações nas classes
-	 	\end{itemize}
-	 	\\ 
-		
-		Cucumber + Selenium  & 
-		\begin{itemize} 
-			\item Suporta testes funcionais de aplicação 
-			\item Cenários com linguagem próxima à linguagem natural 
-			\item Necessário apenas descrever funcionalidades e cenários em arquivos .feature
-			\item Suporte para testes com chamadas Ajax e Javascript
-		\end{itemize} & 
-		\begin{itemize}
-			\item Não possibilita a realização de testes que dependam de condições
-			\item Não permite a utilização de cenários dentro de outro cenário
-			\item Não retrocede o banco de dados ao ultimo estado válido após realizar os testes
-			\item Impossibilidade de utilizar parâmetros que diferem dos tipos básicos (int, float, String)
-		\end{itemize} 
-		\\ 
-				
-		Selenium WebDriver & 
-		\begin{itemize} 
-			\item Suporta testes funcionais de aplicação 
-			\item Suporte para testes com chamadas Ajax e Javascript
-			\item Possibilita a realização de testes condicionais
-			\item Permite armazenar valores de um campo antes que o mesmo sofra alterações
-		\end{itemize} & 
-		\begin{itemize}
-			\item Não retrocede o banco de dados ao ultimo estado válido após realizar os testes
-			\item Um campo só pode conter um valor de teste
-			\item Cenários com linguagem mais complexa que solução com Cucumber
-			\item Não suporta elementos que dependam de funções Ajax e Javascript
-		\end{itemize} \\
-	\end{tabular}
-	\caption{Vantagens e desvantagens das abordagens de teste confeccionadas}
-	\label{tab:comparacaoSolucoes}
-\end{small}
-\end{table}
-
-\section{Vatagens na utilização das abordagens fucionais}
+\section{Comparando abordagens funcionais}
 Mesmo conhecendo as principais virtudes das abordagens criadas, e também em quais escopos as mesmas funcionavam de forma adequada, ainda era necessário expor o ganho em utilizar umas dessas abordagens ao invés de criar um teste funcional somente utilizando métodos que as ferramentas de teste web disponibilizam.
 
 Como forma de medir este ganho, resolveu-se descrever uma funcionalidade do sistema de registro de disciplina complementares, utilizando tanto a abordagem Cucumber + WebDriver, como a abordagem WebDriver e, por fim, criando um teste utilizando apenas os métodos disponíveis da ferramenta Selenium. Essas diferenças são apresentadas nas imagens \ref{code:seleniumAddDisciplina}, \ref{code:solucao2AddDisciplina} e \ref{code:solucao3AddDisciplina}.
@@ -1005,7 +942,34 @@ public void cadastrarDisciplina() {
 
 Como pode-se notar pelo código \ref{code:seleniumAddDisciplina}, \ref{code:solucao2AddDisciplina} e \ref{code:solucao3AddDisciplina}, existe uma diminuição no número de linhas escritas nos testes que exploram as duas abordagens deste trabalho em relação a codificação utilizando apenas o framework Selenium. Durante a realização dessas comparações percebeu-se também uma possível redução de caracteres digitados utilizando as abordagens apresentadas, isso quando trabalha-se com um IDE que possua suporte para as linguagens em questão. Por fim pode-se também levantar suspeita que a abordagem Cucumber + WebDriver trás ganhos na leitura dos testes, que se tornam mais compreensíveis, mesmo que não se entenda de linguagens de programação.
 
-\chapter{Consideração finais}
+\section{Comparando as três soluções propostas}
+Visando mapear de forma mais externa as abordagens desenvolvidas, confrontou-se as soluções propostas elencando suas respectivas virtudes e limitações e, com isso torna-se possível realizar escolhas sobre qual abordagem é mais apropriada para um cenário específico que se apresente.
+Por exemplo, quando a equipe decide que serão necessários apenas a realização de testes unitários, a abordagem para testes unitários que utiliza anotações apresenta-se como uma boa alternativa, pois a mesma possui recursos que permitem realizar este tipo de teste e ao mesmo tempo não necessita de codificação em classes de teste, pois a simples inserção de anotações nas classes do modelo é suficiente.
+
+Quando deseja-se realizar testes funcionais e não se faz necessário utilizar verificações condicionais, adotar a segunda solução torna-se uma opção válida. A utilização do Cucumber, neste casos, torna-se prática e ainda possibilita que qualquer \emph{stakeholder} do projeto entenda as funcionalidades descritas pelos testes.
+A ultima abordagem pode ser apropriada quando o sistema em questão é mais complexo e necessita de maiores validações.
+
+A tabela \ref{tab:comparacaoSolucoes} apresenta os principais pontos fortes e as maiores fraquezas dessas três abordagens.
+
+\begin{table}[!htpb]
+	\centering
+	\begin{tabular}{p{5cm}|ccc}
+		& Unitário & Cucumber e Selenium & Funcional Selenium\\ \hline
+		Testes unitários & \checkmark & \checkmark & \checkmark \\ \hline
+		Testes funcionais &  & \checkmark & \checkmark \\ \hline
+		Elementos que dependam de funções Ajax e Javascript & & \checkmark & \checkmark \\ \hline
+		Cenários com escrita de fácil compreensão & & \checkmark & \\ \hline
+		Realização de testes dependentes de condições & & & \checkmark \\ \hline
+		Armazenar valor de um campo para utiliza-lo posteriormente & & & \checkmark \\ \hline
+		Possibilita utilizar parâmetros que diferem dos tipos básicos (int, float, String) & \checkmark & & \checkmark \\ \hline
+		Retroceder o banco de dados ao último estado válido após realizar os testes & & & \\ \hline
+		Utilização de cenários dentro de outro cenário & & & \checkmark \\
+	\end{tabular}
+	\caption{Vantagens e desvantagens das abordagens de teste confeccionadas}
+	\label{tab:comparacaoSolucoes}
+\end{table}
+
+\chapter{Conclusão}
 A proposta inicial deste trabalho consistia em apresentar uma solução em forma de códigos de teste que permitisse o reaproveitamento e reutilização dos mesmo, acarretando em um menor esforço na codificação de novos testes para sistemas web desenvolvidos em Java. Entretanto o resultado final obtido pelo trabalho em questão trata-se não de uma solução, mas sim de três abordagens utilizando ferramentes para teste de software que diferem entre si, cada uma possuindo ponto fortes e pontos fracos e sendo mais relevante para uma determinada situação. A condução e criação dessas abordagens foram tomadas ao longo do desenvolvimento a partir dos percalços e necessidades que apareciam em meio a validação das abordagens em questão.
 
 Como contribuição este trabalho apresenta uma abordagem que mescla a utilização da linguagem Cucumber com o framework Selenium Webdriver, apresentando passos que podem tornar o processo de criação de testes em uma tarefa mais prática e rápida, sendo assim necessário apenas descrever cenários que correspondem a funcionalidades do sistema.
@@ -1015,7 +979,7 @@ A tabela \ref{tab:melhorias} expõem algumas melhorias que poderiam ser incorpor
 
 \begin{table}[!htpb]
 	\centering
-	\begin{tabular}{|l|p{12cm}|c|}
+	\begin{tabular}{l|p{12cm}|c}
 		 & Descrição & Relevância \\ \hline
 		 1 & Apresentar no auto completar do IDE, os campos pertencentes ao contexto atual do .feature  & Muito alta \\
 		 2 & Não persistir no BD as alterações realizadas pelos testes automatizados & Alta \\

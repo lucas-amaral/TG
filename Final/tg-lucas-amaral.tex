@@ -494,7 +494,7 @@ método um único valor utilizado no teste. Além disto, também não seria viá
 %\end{lstlisting}
 
 \section{Solução para testes funcionais com Cucumber e Selenium}
-Visando a produção de testes funcionais, optou-se pela inclusão do \emph{framework} Cucumber na composição desta nova solução, somando-se assim as demais ferramentas já utilizadas até o atual momento. A mesma foi escolhida com base em sua interface amigável, que possibilita descrever um cenário completo e de fácil entendimento por todos os envolvidos do projeto, garantindo assim uma maior qualidade também quando pensamos em documentação das funcionalidades desenvolvidas em um sistema.
+Visando a produção de testes funcionais, optou-se pela inclusão do \emph{framework} Cucumber na composição desta nova solução, somando-se assim as demais ferramentas já utilizadas até o atual momento. A mesma foi escolhida por possibilitar a descrição de testes em forma de cenários. Um cenário pode ser vistos como uma composição de testes unitários que na primeira solução apresentada estariam dispersos. Sendo assim torna-se viável descrever os requisitos funcionais do sistema através de testes funcionais nos arquivos \emph{.feature} do Cucumber, onde os mesmo poderão ser compostos um uma série de cenários. Outro ponto relevante para a sua escolha seria sua interface amigável, onde os cenários são escritos em uma linguagem bem próxima a linguagem natural, tornando-os de fácil entendimento por todos os envolvidos do projeto, garantindo assim uma maior qualidade também quando pensamos em documentação das funcionalidades desenvolvidas em um sistema.
 
 \begin{figure}[!htb]
 	\centering
@@ -974,21 +974,13 @@ A proposta inicial deste trabalho consistia em apresentar uma solução em forma
 
 Como contribuição este trabalho apresenta uma abordagem que mescla a utilização da linguagem Cucumber com o framework Selenium Webdriver, apresentando passos que podem tornar o processo de criação de testes em uma tarefa mais prática e rápida, sendo assim necessário apenas descrever cenários que correspondem a funcionalidades do sistema.
 
-A tabela \ref{tab:melhorias} expõem algumas melhorias que poderiam ser incorporadas em uma nova versão deste projeto
+A lista a seguir expõem, em ordem de relevância, algumas melhorias que poderiam ser incorporadas em uma nova versão deste projeto:
 
-
-\begin{table}[!htpb]
-	\centering
-	\begin{tabular}{l|p{12cm}|c}
-		 & Descrição & Relevância \\ \hline
-		 1 & Apresentar no auto completar do IDE, os campos pertencentes ao contexto atual do .feature  & Muito alta \\
-		 2 & Não persistir no BD as alterações realizadas pelos testes automatizados & Alta \\
-		 3 & Criar mecanismo que busque na árvore do projeto classes de validação dos formulários e transcreva essas informações em cenários de teste Cucumber & Alta \\
-	\end{tabular}
-	\caption{Melhorias sugeridas}
-	\label{tab:melhorias}
-\end{table}
-
+\begin{itemize}
+	\item Apresentar no auto completar do IDE, os campos pertencentes ao contexto atual do .feature: Ao utilizar um IDE que possibilite manipulação de plugins, desenvolver mecanismo que pesquise nos arquivos JSP/JSF todos os campos referentes à um contexto atual, e assim apresente sugestão de alto completar para os cenários que estão sendo descritos pelo Cucumber.
+	\item Não persistir no BD as alterações realizadas pelos testes automatizados: Possibilitar que ao finalizar execução de um teste funcional, o bando de dados utilizado retorne ao estado inicial, não persistindo assim as alterações realizadas pelos testes executados.
+	\item Criar mecanismo que busque na árvore do projeto classes de validação dos formulários e transcreva essas informações em cenários de teste Cucumber: Criar mecanismo que permita gerar testes a partir das validações que são inseridas nas classes de validação referentes a uma classe de controle.
+\end{itemize}
 
 \setlength{\baselineskip}{\baselineskip}
 \bibliographystyle{abnt}

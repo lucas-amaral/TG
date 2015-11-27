@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.7)  27 NOV 2015 11:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.7)  27 NOV 2015 11:58
 entering extended mode
 **tg-lucas-amaral.tex
 (tg-lucas-amaral.tex
@@ -1810,7 +1810,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 496.
 
-<solucao2.png, id=468, 576.65437pt x 455.45157pt>
+<solucao2.png, id=469, 576.65437pt x 455.45157pt>
 File: solucao2.png Graphic file (type png)
  <use solucao2.png>
 Package pdftex.def Info: solucao2.png used on input line 501.
@@ -2767,7 +2767,7 @@ Package babel Info: Redefining portuges shorthand "|
  [30]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 776.
- <solucao3.png, id=553, 576.65437pt x 371.88937pt>
+ <solucao3.png, id=554, 576.65437pt x 371.88937pt>
 File: solucao3.png Graphic file (type png)
  <use solucao3.png>
 Package pdftex.def Info: solucao3.png used on input line 781.
@@ -3354,8 +3354,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 988.
  (tg-lucas-amaral.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 988.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 988.
-Package rerunfilecheck Info: File `tg-lucas-amaral.out' has not changed.
-(rerunfilecheck)             Checksum: 168886F0FADCD511556A87A55321B7CB;10365.
+
+
+Package rerunfilecheck Warning: File `tg-lucas-amaral.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `tg-lucas-amaral.out':
+(rerunfilecheck)             Before: 4123BCF31D36F5A281974D1D5F7703A8;10461
+(rerunfilecheck)             After:  168886F0FADCD511556A87A55321B7CB;10365.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 988.
  ) 
 Here is how much of TeX's memory you used:
@@ -3374,9 +3381,9 @@ iles (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.
 9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on tg-lucas-amaral.pdf (41 pages, 386478 bytes).
+Output written on tg-lucas-amaral.pdf (41 pages, 387572 bytes).
 PDF statistics:
- 715 PDF objects out of 1000 (max. 8388607)
+ 716 PDF objects out of 1000 (max. 8388607)
  215 named destinations out of 1000 (max. 500000)
  39853 words of extra memory for PDF output out of 42996 (max. 10000000)
 

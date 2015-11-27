@@ -211,15 +211,15 @@ Neste capítulo, serão apresentados conceitos relativos aos conteúdos abordado
 A qualidade de software é uma subárea, oriunda da engenharia de software, que tem como foco central apresentar metodologias,
 procedimentos e métricas que garantam a qualidade no processo de desenvolvimento de um sistema. Apesar de ocorrer no processo, a qualidade de software
 objetiva obter qualidade no produto final e, com isso, conseguir contemplar na totalidade os requisitos tratados com o cliente ao longo do processo.
-\citeauthor{de2006introduccao} \cite{de2006introduccao} afirmam que a qualidade de software está diretamente relacionada a um gerenciamento
+\citeauthor{de2006introduccao} (\citeyear{de2006introduccao}) afirmam que a qualidade de software está diretamente relacionada a um gerenciamento
 rigoroso de requisitos, uma gerência efetiva de projetos e em um processo de desenvolvimento bem definido gerenciado e em melhoria contínua. Afirmam também,
 que atividades de verificação e uso de métricas para controle de projetos e processo também estão inseridas nesse contexto, contribuindo para tomadas de
 decisão e para antecipação de problemas.
 
-Mas como medir a qualidade de um sistema em questão? Para responder este questionamento, Garvin \cite{garvin1987competing} propõe o conceito que ele chama de
+Mas como medir a qualidade de um sistema em questão? Para responder este questionamento, \citeauthor{garvin1987competing} (\citeyear{garvin1987competing}) propõe o conceito que ele chama de
 oito dimensões que seriam, em ordem, qualidade do desempenho, qualidade dos recursos, confiabilidade, conformidade, durabilidade, facilidade de manutenção,
 estética e percepção. Segundo \citeauthor{garvin1987competing}, atendendo a estes oito critérios, o sistema apresentará qualidade.
-\citeauthor{pressman2011engenharia} \cite{pressman2011engenharia} complementa a definição de Garvin, mesclando-a com a norma ISO 9126, e aponta os fatores
+\citeauthor{pressman2011engenharia} (\citeyear{pressman2011engenharia}) complementa a definição de Garvin, mesclando-a com a norma ISO 9126, e aponta os fatores
 críticos para o sucesso neste caso, como sendo: Intuição, Eficiência, Robustez e Riqueza.
 
 \subsection{Qualidade do processo}
@@ -240,7 +240,7 @@ evolui através das fases do projeto de desenvolvimento \cite{boehm1976quantitat
 
 Apesar de não ser possível, através de testes, provar que um programa está correto, os testes, se conduzidos sistemática e criteriosamente, contribuem para
 aumentar a confiança de que o software desempenha as funções especificadas e evidenciar algumas características mínimas do ponto de vista da qualidade do produto \cite{maldonado2004introduccao}. Sendo assim,
-faz-se essencial o mapeamento de um processo de testes para que se possa criar garantias e métricas que reduzam os erros, maximizando a qualidade, \citeauthor{crespo2004metodologia} \cite{crespo2004metodologia} descrevem o processo de
+faz-se essencial o mapeamento de um processo de testes para que se possa criar garantias e métricas que reduzam os erros, maximizando a qualidade, \citeauthor{crespo2004metodologia} (\citeyear{crespo2004metodologia}) descrevem o processo de
 teste como sendo a composição de quatro macro etapas: Planejamento, projeto, execução e acompanhamento dos testes de unidade.
 
 \subsection{Plano de teste}
@@ -258,7 +258,7 @@ Existem muitos tipos de teste, mas podemos destacar entre elas: teste de unidade
 O teste de unidade focaliza o esforço de verificação na menor unidade de projeto do software \cite{pressman2011engenharia}. Em uma aplicação orientada a objeto, o teste, neste caso, seria voltado ao método.
 
 \subsubsection{Teste funcional}
-Um teste de aceitação individual tem o objetivo de verificar se um critério de aceitação de uma história ou um requisito foi atendido \cite{dornbusch2014entrega}.
+Baseando-se numa descrição \emph{black-box} da funcionalidade do software, o teste funcional é capaz de checar se o software está de acordo com sua especificação independentemente da sua implementação \cite{fantinato2005autotest}.
  
 \subsection{Estratégias de Testes}
 A estratégia de testes se caracteriza pela definição da abordagem geral a ser aplicada nos testes, descrevendo como o software será testado, identificando os níveis de testes que serão aplicados, os métodos,
@@ -276,7 +276,7 @@ melhorar a sua qualidade \cite{fidelis2004fireweb}.
 Existem muitas ferramentas desenvolvidas para realização de testes de software web. Neste trabalho serão descritas três(3) dentre elas, que serão as ferramentas utilizadas no desenvolvimento dos testes estudados.
 
 \subsection{Selenium HQ}
-É um \emph{framework} open source utilizado para automatização de testes funcionais em aplicações web \cite{chiavegatto1desenvolvimento}. Segundo \citeauthor{pereiraestudoselenium} \cite{pereiraestudoselenium} se trata
+É um \emph{framework} open source utilizado para automatização de testes funcionais em aplicações web \cite{chiavegatto1desenvolvimento}. Segundo \citeauthor{pereiraestudoselenium} (\citeyear{pereiraestudoselenium}) se trata
 de uma ferramenta de fácil uso e eficiente para desenvolver casos de teste, permitindo os testes de aceitação ou funcional, regressão e de desempenho.
 Selenium trabalha como um plugin do navegador Firefox, o mesmo traz muita praticidade, pois permite que se possa capturar cliques e valores digitados, transformando-os em um caso de teste. Ele é composto por
 quatro ferramentas: Selenium IDE, Selenium Grid, Selenium RC e Selenium WebDrive.
@@ -292,7 +292,7 @@ Cucumber é uma ferramenta de desenvolvimento de testes, voltada para sistemas w
 é escrita em linguagem Ruby, mas pode ser utilizada para executar especificações de aplicações escritas em qualquer linguagem \cite{nunescucumber}.
 
 A escolha dessa ferramenta baseou-se na fácil transcrição dos requisitos do sistema para a linguagem em questão, tornando possível conferir se os requisitos estão contemplados pelas funções e métodos descritos no sistema web.
-\citeauthor{lopescucumbervalor}\cite{lopescucumbervalor} compara Cucumber com o software Capybara\footnote{Capybara é uma biblioteca escrita na linguagem de programação Ruby que torna fácil simular como um usuário interage com sua aplicação. http://jnicklas.github.io/capybara/} e afirma que o primeiro apresenta um código mais legível e amigável. Uma observação é que o código com Capybara faz
+\citeauthor{lopescucumbervalor} (\citeyear{lopescucumbervalor}) compara Cucumber com o software Capybara\footnote{Capybara é uma biblioteca escrita na linguagem de programação Ruby que torna fácil simular como um usuário interage com sua aplicação. http://jnicklas.github.io/capybara/} e afirma que o primeiro apresenta um código mais legível e amigável. Uma observação é que o código com Capybara faz
 referência para vários detalhes de implementação, enquanto o código do Cucumber reserva isso apenas para os \emph{Steps} e não para o arquivo de \texttt{feature} \cite{lopescucumbervalor}.
 
 A ferramenta funciona, basicamente, através da leitura de arquivos com a extensão \texttt{feature}, os quais descrevem em linguagem natural uma funcionalidade e casos de teste, conhecidos como cenários.

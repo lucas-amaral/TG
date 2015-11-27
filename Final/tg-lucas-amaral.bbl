@@ -30,10 +30,10 @@
   Accessed: 2015-11-24,
   \url{http://blog.josephwilk.net/ruby/cucumber-waves-goodbye-to-givenscenario.html}.
 
-\bibitem[DORNBUSCH; FISCHER; STARTZ(2014)DORNBUSCH; FISCHER;
-  STARTZ]{dornbusch2014entrega} DORNBUSCH, R.; FISCHER, S.; STARTZ, R\@.
-  \textbf{Entrega Cont{\'\i}nua}: como entregar software. [S.l.]: Bookman
-  Editora, 2014.
+\bibitem[FANTINATO et~al.(2005)FANTINATO; CUNHA; DIAS; CARDOSO;
+  CUNHA]{fantinato2005autotest} FANTINATO, M. et~al\@. AutoTest--Um framework
+  reutiliz{\'a}vel para a automa{\c{c}}{\~a}o de teste funcional de software.
+  \textbf{Cad. CPqD Tecnologia}, [S.l.], v.1, n.1, p.119--131, 2005.
 
 \bibitem[FIDELIS; MARTINS(2004)FIDELIS; MARTINS]{fidelis2004fireweb} FIDELIS,
   W. I.~O.; MARTINS, E\@. FireWeb: uma ferramenta de suporte aos testes de

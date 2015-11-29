@@ -183,32 +183,45 @@ envolvimento da equipe de qualidade. Pensando nesse problema, podemos buscar for
 
 \section{Objetivos}
 
-\subsection{Objetivo Geral}
+\subsection{Objetivo geral}
 
 Este trabalho tem como objetivo principal apresentar um conjunto de classes de teste e testes que possam ser reutilizados, de forma otimizada, em novas funcionalidades de uma aplicação ou em sistemas que sigam os mesmos padrões e comportamento dos softwares para os quais foram desenvolvidos.
-
-\subsection{Passos de Metodologia}
-\begin{itemize}
-	\item Apresentar solução para testes unitários utilizando interface de anotação + Selenium WebDriver;
-    \item Exibir solução para testes funcionais utilizando Cucumber + Selenium WebDriver;
-    \item Apresentar solução para testes funcionais utilizando Selenium WebDriver;
-    \item Expor qualidades e defeitos das soluções apresentadas.
-\end{itemize}
 
 \section{Justificativa}
 
 A qualidade de software  é uma das variáveis essenciais para que um projeto de software tenha sucesso.
-Sendo assim, torna-se cada vez mais necessária a inserção de testes automatizados em projetos web agregando, aos mesmos, uma maior confiabilidade e redução nos possíveis erros que o sistema possa
-apresentar. Para que haja a possibilidade de aumentar a qualidade dos sistemas, sem que seja necessária uma maior
+Sendo assim, torna-se cada vez mais necessária a inserção de testes automatizados em projetos web agregando, aos mesmos, uma maior confiabilidade e redução nos possíveis
+erros que o sistema possa apresentar. Para que haja a possibilidade de aumentar a qualidade dos sistemas, sem que seja necessária uma maior
 demanda de recursos humanos para a área de qualidade, podemos adotar práticas de reuso de códigos de testes, visando
 maximizar a produtividade e eficiência, além de, simultaneamente, obter um produto final com uma garantia de qualidade
 superior.
 
-\chapter{Fundamentos e Revisão de Literatura}
+\section{Abordagem metodológica}
+A seguir será descrita a sequência de passos que foram realizados neste trabalho
+objetivando reduzir o custo na confecção de testes de software em um projeto.
+
+\subsection{Desenvolvimento de solução para testes unitários}
+Como primeiro passo deste trabalho desenvolveu-se uma solução composta por anotações na linguagem Java e a execução dos testes através da ferramenta Selenium WebDriver.
+Essa solução permite descrever testes unitários apenas inserindo anotações aos métodos de uma classe Java.
+
+\subsection{Desenvolvimento de solução para testes funcionais com Cucumber}
+A fim de possibilitar a confecção de testes funcionais, criou-se uma nova abordagem composta pela utilização da linguagem Cucumber e o \emph{framework} Selenium WebDriver.
+Cucumber possibilitou descrever testes para funcionalidades do sistema através de cenários em uma linguagem que se aproxima da linguagem natural.
+
+\subsection{Desenvolvimento de solução para testes funcionais utilizando Selenium}
+Como meio de apresentar uma solução que permitisse testes funcionais com elementos mais complexos, como testes condicionais e manipulação de objetos Java, desenvolveu-se
+uma terceira abordagem neste trabalho, onde a mesma seguia os moldes da abordagem anterior diferindo-se apenas na forma como os testes funcionais eram descritos. Ao invés de
+escreve-los por meio da linguagem Cucumber, os mesmo foram descritos por métodos e classes Java, utilizando para isso recursos disponibilizados pela ferramenta Selenium.
+
+\subsection{Comparações entre as soluções}
+O ultimo passo deste trabalho, consistiu em apresentar comparações entre as soluções proposta, apresentando virtudes e limitações de cada uma. Também demonstrou-se
+vantagens na utilização das abordagens funcionais deste trabalho ao detrimento de desenvolver um teste utilizando apenas as ferramentas para testes de sistemas web disponíveis.
+
+\chapter{Fundamentos e revisão de literatura}
 
 Neste capítulo, serão apresentados conceitos relativos aos conteúdos abordados neste trabalho, descrevendo qualidade de software, ferramentas de teste de software, assim como, o reuso de testes.
 
-\section{Qualidade de Software}
+\section{Qualidade de software}
 
 A qualidade de software é uma subárea, oriunda da engenharia de software, que tem como foco central apresentar metodologias,
 procedimentos e métricas que garantam a qualidade no processo de desenvolvimento de um sistema. Apesar de ocorrer no processo, a qualidade de software
@@ -224,18 +237,18 @@ estética e percepção. Segundo \citeauthor{garvin1987competing}, atendendo a e
 \citeauthor{pressman2011engenharia} (\citeyear{pressman2011engenharia}) complementa a definição de Garvin, mesclando-a com a norma ISO 9126, e aponta os fatores
 críticos para o sucesso neste caso, como sendo: Intuição, Eficiência, Robustez e Riqueza.
 
-\subsection{Qualidade do Processo}
+\subsection{Qualidade do processo}
 A qualidade de software é largamente determinada pela qualidade dos processos utilizados para o desenvolvimento. Deste modo, a melhoria
 da qualidade de software é obtida pela melhoria da qualidade dos processos \cite{koscianski2007qualidade}.
 
-\subsection{Qualidade do Produto}
+\subsection{Qualidade do produto}
 Existe uma relação direta entre qualidade de produto e qualidade do processo, pois, para obtenção da qualidade do produto final,
 faz-se necessário adquirir, primeiramente, qualidade nos processos que compõem o desenvolvimento do mesmo.
 Avaliar a qualidade de um produto de software é verificar, através de técnicas e atividades operacionais, o quanto os requisitos são atendidos. Tais requisitos,
 de uma maneira geral são a expressão das necessidades, explicitados em termos quantitativos ou qualitativos e tem por objetivo definir as características de
 um software, a fim de permitir o exame de seu atendimento \cite{koscianski2007qualidade}.
 
-\section{Testes de Software}
+\section{Testes de software}
 É a atividade responsável por apresentar os erros existentes em um determinado programa. Por isso, pode ser vista como uma atividade destrutível, pois visa expor os defeitos para depois corrigir os mesmos e, de preferência, em
 um estágio inicial. Quanto mais tarde um defeito for identificado, mais caro fica para corrigi-lo, e mais, os custos de descobrir e corrigir o defeito no software aumentam exponencialmente na proporção em que o trabalho
 evolui através das fases do projeto de desenvolvimento \cite{boehm1976quantitative}. O teste possibilita também validar se os requisitos inicias do sistema, alinhados pelos \emph{stakeholders}, estão contemplados em sua plenitude.
@@ -245,36 +258,36 @@ aumentar a confiança de que o software desempenha as funções especificadas e 
 faz-se essencial o mapeamento de um processo de testes para que se possa criar garantias e métricas que reduzam os erros, maximizando a qualidade, \citeauthor{crespo2004metodologia} (\citeyear{crespo2004metodologia}) descrevem o processo de
 teste como sendo a composição de quatro macro etapas: Planejamento, projeto, execução e acompanhamento dos testes de unidade.
 
-\subsection{Plano de Teste}
+\subsection{Plano de teste}
 Embora pareça ideal realizar testes sobre o projeto inteiro, muitas vezes esta tarefa pode torna-se inviável devido ao tamanho e complexidade do sistema em questão. Desta forma, torna-se necessário descrever as áreas e testes necessários em um sistema. Podemos retratar esta situação com um plano de teste.
 O plano de teste estrutura e organiza as informações referentes  ao  processo  de  teste  durante  todo  o  projeto,  facilitando assim  o  planejamento  do  
 Projeto  de  Teste \cite{piqueiro2015}. Pode ser visto como uma etapa de planejamento do projeto e pode ser descrito como um conjunto de casos de teste.
 
-\subsection{Caso de Teste}
+\subsection{Caso de teste}
 O propósito do caso de teste é definir uma unidade de teste que será executada pelo testador, seja manual ou automaticamente \cite{rios2006teste}. Um caso de teste é constituído visando descrever passos sequenciais necessários para validação de um artefato de teste. O caso de teste deve especificar a saída esperada e os resultados esperados do processamento \cite{myers2011art}.
 
-\subsection{Tipos de Teste}
+\subsection{Tipos de teste}
 Existem muitos tipos de teste, mas podemos destacar entre elas: teste de unidade, integração, sistema, aceitação e regressão. Serão descritos nas próximas subseções os tipos utilizados no desenvolvimento deste trabalho.
 
-\subsubsection{Teste Unitário}
+\subsubsection{Teste unitário}
 O teste de unidade focaliza o esforço de verificação na menor unidade de projeto do software \cite{pressman2011engenharia}. Em uma aplicação orientada a objeto, o teste, neste caso, seria voltado ao método.
 
-\subsubsection{Teste Funcional}
+\subsubsection{Teste funcional}
 Baseando-se numa descrição \emph{black-box} da funcionalidade do software, o teste funcional é capaz de checar se o software está de acordo com sua especificação independentemente da sua implementação \cite{fantinato2005autotest}.
  
-\subsection{Estratégias de Testes}
+\subsection{Estratégias de testes}
 A estratégia de testes se caracteriza pela definição da abordagem geral a ser aplicada nos testes, descrevendo como o software será testado, identificando os níveis de testes que serão aplicados, os métodos,
 técnicas e ferramentas a serem utilizada \cite{rios2006teste}. Deve-se também escolher na etapa de estratégia os tipos de testes que deverão ser realizados, assim como os estágios de teste escolhidos. Uma estratégia de teste de software deve acomodar testes de baixo nível, necessários para verificar se um pequeno segmento de código fonte foi implementado corretamente, bem com testes de alto nível, que validam as funções principais do sistema de acordo com os requisitos do cliente \cite{pressman2011engenharia}.
 
 Tradicionalmente, entre desenvolvedores de teste, utiliza-se uma estratégia onde temos um equilíbrio entre testar o sistema após pronto e testar somente antes de desenvolver o sistema. Esta estratégia assume uma visão incremental do teste, começando com o teste de unidades individuais de programa, passando para os testes destinados a facilitar a integração de unidades e culminando com testes que usam o sistema concluído \cite{pressman2011engenharia}.
 
-\subsection{Testes de Sistemas Web}
+\subsection{Testes de sistemas web}
 O teste de aplicações Web se reveste de características peculiares, uma vez que se tratam, em geral, de aplicações colocadas na Internet e cujo acesso, em teoria, é aberto a qualquer usuário \cite{rios2006teste}. Sendo assim os tais sistemas diferem-se das aplicações web pelos cuidados necessários com questões como a possibilidade de utilização de sistemas operacionais e navegadores distintos, segurança e conectividade. Além
 disso, a relevância econômica das aplicações Web aumenta a importância de controlar e de
 melhorar a sua qualidade \cite{fidelis2004fireweb}.
 
 
-\section{Ferramentas para Teste de Software}
+\section{Ferramentas para teste de software}
 Existem muitas ferramentas desenvolvidas para realização de testes de software web. Neste trabalho serão descritas três(3) dentre elas, que serão as ferramentas utilizadas no desenvolvimento dos testes estudados.
 
 \subsection{Selenium HQ}
@@ -316,7 +329,7 @@ JUnit é uma ferramenta de apoio ao teste unitário, a qual auxilia desenvolvedo
 Justifica-se a sua utilização neste trabalho por tratar-se de uma API (\emph{Application Programming Interface}), que viabiliza a comparação de um valor obtido em algum teste com o valor esperado pelo mesmo. Desta forma, pode-se validar e verificar se
 a funcionalidade de um sistema está trabalhando adequadamente.
 
-\section{Reuso de Testes}
+\section{Reuso de testes}
 
 Visando melhor aproveitar os recursos existentes em uma instituição e, ainda assim, apresentar garantias na qualidade do produto/serviço entregues aos clientes, desenvolvedores do mundo todo começaram a apresentar
 teses e modelos que buscam criar testes genéricos e padronizados. Um padrão é um pedaço de informação instrutiva e nomeada, que captura a estrutura essencial
@@ -338,12 +351,12 @@ Segundo \cite{patel2014test}, Tata Consultancy Services (TCS)  é uma empresa pr
 
 A seguir serão descritas as atividades desenvolvidas a fim de alcançar os objetivos propostos por este trabalho. Será apresentado o escopo do projeto, assim como trechos dos códigos desenvolvidos e estrutura das soluções encontradas ao longo do desenvolvimento do projeto.
 
-\section{Delimitação de Escopo}
+\section{Delimitação de escopo}
 
 Como escopo, foram delimitados alguns pré-requisitos necessários para utilização da solução proposta neste trabalho, onde o sistema deve ser um software web desenvolvido na linguagem de programação Java,
 podendo apresentar também funções Ajax e Javascript.
 
-\section{Solução para Testes Unitários com Anotações e Selenium}
+\section{Solução para testes unitários com anotações e Selenium}
 Em um primeiro momento, com objetivo de automatizar os testes de uma aplicação a fim de reduzir o esforço na confecção e codificação de novos testes para as equipes de desenvolvimento e testes de uma organização,
 escolheu-se desenvolver uma solução baseada em três etapas que são descritas conforme imagem \ref{fig:solucao1}.
 
@@ -358,7 +371,7 @@ Temos como ponto de partida um sistema onde se possui pouco ou nenhum teste codi
 que seriam: criar uma classe de testes genérica, responsável por realizar os testes necessários na aplicação; descrever uma interface de anotação, que representaria ações de elementos web (\emph{HTML}) que
 seriam testados posteriormente e, por fim, inserir as anotações nos métodos e classes do sistema que devem ser testados nesta aplicação.
 
-\subsection{Classe Genérica de Testes}
+\subsection{Classe genérica de testes}
 Por tratar-se de uma abordagem para sistemas web, optou-se pela utilização de dois \emph{frameworks} de testes, que possibilitam interações com elementos web, para confecção da classe responsável pela execução dos testes automatizados.
 O primeiro é o Selenium. Através da utilização da classe \texttt{WebDrive}, contida em seu pacote, podemos descrever uma sequência de passos que são executados por um navegador, como cliques e inserção de dados em campos de um
 formulário. Sendo assim, instanciando um objeto \texttt{WebDrive}, podemos iniciar um navegador e realizar uma série de instruções pré-determinadas para validar se a aplicação comporta-se de forma adequada.
@@ -397,7 +410,7 @@ public void testaFormularios() {
 A classe desenvolvida possui um método principal denominado \texttt{testaFormularios}, onde a ideia principal do mesmo seria buscar,
 de forma recursiva, todas as classes do projeto anotadas pela interface que indica quais classes deverão ser testadas e para cada uma das mesmas cria-se elementos \texttt{webDrive} para executar as ações indicadas pela anotação.
 
-\subsection{Interface de Anotação}
+\subsection{Interface de anotação}
 
 Após finalizar o desenvolvimento da classe de testes genérica, passou a existir a necessidade de criar um mecanismo para informar, à classe de testes, quais seriam as validações necessárias. Para esta tarefa,
 por tratar-se de projetos Java, resolveu-se criar uma interface de anotação que seria vinculada aos métodos e classes, onde seriam necessários executar os testes posteriores. Desta forma, a classe \texttt{TestaFormulario.java},
@@ -442,7 +455,7 @@ public @interface Teste {
 
 Tem-se, então, que cada método existente nesta classe representa uma ação específica da classe \texttt{WebDrive}, possibilitando, assim, manipular elementos \emph{HTML} na execução do teste.
 
-\subsection{Inserção das Anotações no Projeto}
+\subsection{Inserção das anotações no projeto}
 Por fim, a última etapa da solução em questão, trata-se de uma etapa contínua no projeto, pois sempre que uma nova classe é mapeada no sistema ou um novo cadastro é criado, a mesma ocorrerá. Nesta etapa se faz necessária a
 adição das anotações nos códigos do projeto, onde se deve inserir a anotação em todas as classes e métodos que devem ser testados.
 O código \ref{code:Disciplina.java} ilustra e exemplifica uma classe Java contendo anotações referentes à interface Teste.
@@ -486,7 +499,7 @@ public class Disciplina {
 Na anotação são inseridas informações referente às ações que devem ser executadas para a propriedade em questão. Os métodos possuem anotações referentes apenas ao campo que representam, enquanto as informações mais gerais sobre
 a página, que está sendo testada, são inseridas na anotação da classe propriamente dita.
 
-\subsection{Discussão Sobre a Solução}
+\subsection{Discussão sobre a solução}
 Após a finalização do desenvolvimento desta primeira solução encontrada, notou-se a clara necessidade de alteração na sistemática de como os testes ocorreriam. Necessidade esta oriunda de algumas limitações que a solução trás,
 como, por exemplo, a não possibilidade de realizar testes que envolvam mais de um método, tornando praticamente inviável a tarefa de realizar testes funcionais, pois não seria possível mapear um cenário mais completo, que depende
 de mais de uma variável e tem uma sequência bem mapeada que deve ser seguida.
@@ -495,7 +508,7 @@ Outro fator determinante para a alteração desta solução foi o fato de, ao se
 método um único valor utilizado no teste. Além disto, também não seria viável a execução de testes unitários para um sistema muito grande, pois é sabido que os testes devem ser executados sobre os pontos críticos do software e não na totalidade do projeto.
 %\end{lstlisting}
 
-\section{Solução para Testes Funcionais com Cucumber e Selenium}
+\section{Solução para testes funcionais com Cucumber e Selenium}
 Visando a produção de testes funcionais, optou-se pela inclusão do \emph{framework} Cucumber na composição desta nova solução, somando-se assim as demais ferramentas já utilizadas até o atual momento. A mesma foi escolhida por possibilitar a descrição de testes em forma de cenários. Um cenário pode ser vistos como uma composição de testes unitários que na primeira solução apresentada estariam dispersos. Sendo assim torna-se viável descrever os requisitos funcionais do sistema através de testes funcionais nos arquivos \emph{.feature} do Cucumber, onde os mesmo poderão ser compostos um uma série de cenários. Outro ponto relevante para a sua escolha seria sua interface amigável, onde os cenários são escritos em uma linguagem bem próxima a linguagem natural, tornando-os de fácil entendimento por todos os envolvidos do projeto, garantindo assim uma maior qualidade também quando pensamos em documentação das funcionalidades desenvolvidas em um sistema.
 
 \begin{figure}[!htb]
@@ -507,7 +520,7 @@ Visando a produção de testes funcionais, optou-se pela inclusão do \emph{fram
 
 A solução é composta por três estágios, onde em um primeiro será inserido no projeto a classe genérica de testes já descrita, porem dela só serão utilizados os métodos que descrevem ações do Selenium WebDriver. No segundo estágio ocorre a adição de uma classe, onde são apresentados métodos que representam \emph{steps} da linguagem Cucumber o que possibilita descrever, no ultimo estágio, cenários no Cucumber em arquivos \texttt{.feature}, que descrevem testes para as funcionalidades codificadas no sistema. A imagem \ref{fig:solucao2} apresenta esse fluxo.
 
-\subsection{Classe Genérica de Testes}
+\subsection{Classe genérica de testes}
 Na classe genérica de testes foram mantidos os métodos anteriormente utilizados que permitiam gerenciar ações do Selenium WebDriver, como apresenta a figura \ref{code:Classe genérica contendo métodos WebDriver}.
 Entretanto, foram removidos os métodos que realizavam os testes com base nas anotações inseridas nas classes Java do projeto.
 
@@ -562,7 +575,7 @@ Entretanto, foram removidos os métodos que realizavam os testes com base nas an
 	\label{code:Classe genérica contendo métodos WebDriver}
 \end{figure}
 
-\subsection{Classe que Descreve Steps}
+\subsection{Classe que descreve \emph{steps}}
 A classe \texttt{Steps.java} foi criada com intuito de realizar o elo de ligação entre as ações da classe WebDriver e frases utilizadas nos arquivos \texttt{.feature} da linguagem Cucumber. Nesta classe foram confeccionados métodos que mapeiam ações do Cucumber e, dentro dos mesmos, ocorrem as chamadas dos métodos da classe WebDriver como ilustra o código em \ref{code:Classe com Steps Cucumber}.
 
 \begin{figure}[!htt]
@@ -656,7 +669,7 @@ public void aguardarCampoDesaparecer(Long tempo, String campo, String identifica
 
 Essas ações são possíveis através da utilização dos métodos oferecidos pela classe \texttt{WebDriverWait} do Selenium.
 
-\subsection{Descrição de Cenários}
+\subsection{Descrição de cenários}
 Após a inserção das duas classes Java apresentados anteriormente no projeto, torna-se possível escrever cenários que representem as funcionalidades que devem ser testadas.
 Desta forma, pode-se criar arquivos \texttt{.feature} em que os cenários são compostos por uma sequência definida utilizando os passos descritos na classe \texttt{Steps}, onde a mesma realiza as ações em um navegador.
 Podemos ver um exemplo desta abordagem no código apresentado em \ref{code:feature}.
@@ -697,14 +710,14 @@ Funcionalidade: Ações executadas por um aluno do curso de Ciência da Computa�
 
 Como visto em \ref{code:feature}, basta utilizar os passos previamente definidos nos métodos da classe \texttt{Steps.java} complementando apenas com os parâmetros necessários para identificação do elemento que se deseja manipular em uma tela do sistema web.
 
-\subsection{Utilizando a Mesma Janela do Navegador para Execução dos Testes}
+\subsection{Utilizando a mesma janela do navegador para execução dos testes}
 Ao iniciar os testes na solução, após finalizar a codificação da mesma, notou-se que existia uma perda de tempo quando os testes eram executados, pois, a cada cenário executado o Selenium WebDriver fechava a janela do navegador ativa e, quando um novo cenário fosse executado, uma nova janela era aberta. Para evitar que este retrabalho fosse realizado e, assim, fosse possível reutilizar a janela do navegador ativa, encontrou-se na documentação existente na página da linguagem Cucumber\footnote{https://cucumber.io/} a solução para esta questão, utilizando a classe \texttt{SharedDriver} desenvolvida por Aslak Hellesoy e disponibilizada no projeto \texttt{cucumber-jvm\footnote{https://github.com/cucumber/cucumber-jvm/blob/master/examples/java-webbit-websockets-selenium/src/test/java/cucumber/examples/java/websockets/SharedDriver.java}}, onde deve-se instanciar um objeto desta classe no lugar da classe WebDriver, utilizada anteriormente.
 
-\subsection{Validando Solução em Sistemas Web}
+\subsection{Validando solução em sistemas web}
 Após a finalização da codificação da solução, iniciou-se a fase de validação e aplicação da solução utilizando Cucumber + Selenium em softwares web. Nesta etapa foram escolhidos dois softwares web, que respeitassem os requisitos existentes no escopo delimitado pelo projeto em questão. O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicitação de disciplinas complementares de graduação, do curso de Ciência da Computação, da Universidade Federal de Santa Maria. O Segundo sistema, em que os testes funcionais seriam aplicados, seria um software de uma empresa privada, da região de Santa Maria, chamada Megatecnologia. Este sistema comercializado como SILAS BPMs, apresenta
 um sistema voltado para modelagem de processo BPMs, no qual é possível descrever etapas, tramitações, telas e campos de um processo.
 
-\subsubsection{Aplicando Solução no Sistema de Registro de Disciplinas Complementares}
+\subsubsection{Aplicando solução no sistema de registro de disciplinas Complementares}
 Para realização desta tarefa, foram utilizadas as funcionalidades descritas no documento de especificação deste software para validar se o mesmo apresenta todas as funcionalidades que se compromete a atender.
 Como o processo apresenta dois atores principais, onde o primeiro seria o aluno e, o segundo, um membro do colegiado do curso, foram separados os testes em dois arquivos \texttt{.feature}. O primeiro contendo ações realizadas por alunos e, o segundo, para ações que um membro do colegiado executa.
 
@@ -765,17 +778,17 @@ Em \texttt{Delineacao do Cenario} ao invés de ser inseridos valores para testes
 
 Utilizando-se destes recursos concluiu-se, de forma satisfatória, a codificação de cenários de testes para todos os requisitos existentes neste sistema.
 
-\subsubsection{Aplicando Solução no Sistema SILAS BPMs}
+\subsubsection{Aplicando solução no sistema SILAS BPMs}
 Para o software em questão, por tratar-se de um sistema que possui mais de oito anos de desenvolvimento e por não possuir nenhum tipo de teste automatizado codificado, optou-se por retirar, do \emph{task bord} onde a equipe de desenvolvimento, da empresa em questão, gerenciava tarefas a desenvolver e desenvolvidas, as ultimas funcionalidades finalizadas para descreve-las como cenários e, assim realizar os primeiros testes.
 Logo no início do mapeamento dos testes, notaram-se necessidades que o sistema de registros de disciplinas complementares não possuía. Como, por exemplo, a necessidade de guardar valores de um campo, para após submeter alguma função, comparar com o novo valor do campo em questão. Também percebeu-se a indispensabilidade de permitir ações condicionais nos testes. Essa necessidade se deu pelo fato de, em alguns casos, não se conhecer o estado atual de algum elemento na tela em questão e, desta forma, o teste poderia falhar mesmo quando não existisse problema.
 Após algumas tentativas de utilizar a solução proposta para esses novos cenários, notou-se que seria inviável trabalhar sem que essas questões fossem viabilizadas.
 
-\subsection{Considerações Sobre a Solução Cucumber + Selenium}
+\subsection{Considerações sobre a solução Cucumber e Selenium}
 Com o avanço na confecção de testes aplicados em sistemas reais, percebeu-se uma série de vantagens e desvantagens na utilização desta solução no processo de desenvolvimento e testes de funcionalidades.
 Como vantagens, podemos elencar o fato de, ao escrever cenários utilizando o IDE que tenha suporte para a linguagem Cucumber, pouco se escreve, reutilizando sempre os \emph{steps} descritos na classe \texttt{Steps.java}. Sendo, assim, necessário apenas informar os parâmetros esperados pelos mesmos. Ainda destaca-se o fato de os cenários descreverem, de forma simples, o que deve ocorrer na funcionalidade testada e, desta forma, serve também como documentação.
 Quando pensamos nos pontos fracos da solução, podemos destacar os empecilhos detectados no desenvolvimento de testes para a aplicação SILAS BPMs. Somam-se a estes, algumas limitações que a linguagem Cucumber possui, como o fato de não ser possível reutilizar um cenário dentro de outro cenário\footnote{Essa funcionalidade estava disponível na primeira versão da linguagem, mas a mesma foi removida. Embora o exemplo pode fazer sentido quando se trabalha de forma sequencial através dos cenários a longo prazo produz-se cenários que são difíceis de manter e entender \cite{givenscenario}. } ou até mesmo utilizar como parâmetro valores que diferem dos tipos comuns da linguagem Java (int, float, String). Outro fator problemático nessa solução é o fato de todos os dados utilizados nos testes serem persistidos e, com isso, ser necessário a restauração manual do ultimo estado válido da base de dados onde os testes se realizam.
 
-\section{Solução para Testes Funcionais com Selenium WebDriver}
+\section{Solução para testes funcionais com Selenium WebDriver}
 Como forma de possibilitar a utilização de testes condicionais, armazenamento de valores e manipulação de objetos Java dentro do testes funcionais, optou-se pela confecção de uma nova abordagem neste projeto, mesmo que para isso se tivesse que abdicar da praticidade e interface amigável do Cucumber. Assim, os testes funcionais seriam descritos diretamente em classes de teste Java. A imagem \ref{fig:solucao3} apresenta essa pequena alteração na abordagem dos testes proposta. 
 
 \begin{figure}[!htb]
@@ -785,7 +798,7 @@ Como forma de possibilitar a utilização de testes condicionais, armazenamento 
 	\label{fig:solucao3}
 \end{figure}
 
-\subsection{Classes Java Contendo Testes Funcionais}
+\subsection{Classes Java contendo testes funcionais}
 Como descrito na imagem \ref{fig:solucao3}, esta abordagem reutiliza praticamente toda a estrutura existente na abordagem Cucumber + Selenium, com isso, somente os arquivos onde são escritos os cenários mudam. Ao invés de criarmos arquivos \texttt{.feature}, contento as funcionalidades e cenários que serão testados, tem-se, agora, classes Java de teste, que são responsáveis por descrever os testes.
 Na figura \ref{code:seleniumTeste} temos um exemplo de um cenário descrito utilizando a abordagem atual.  Pode-se notar que os métodos da classe \texttt{Steps.java} ainda são utilizados, porém de forma direta.
 
@@ -846,10 +859,10 @@ Pode-se, também, localizar valores que não são estáticos na busca de element
 \end{figure}
 
 
-\subsection{Validando Solução em Sistemas Web}
+\subsection{Validando solução em sistemas web}
 Para validar esta solução, foram utilizados os mesmos dois projetos já usados na solução anterior.
 
-\subsubsection{Aplicando Solução no Sistema de Registro de Disciplinas Complementares}
+\subsubsection{Aplicando solução no sistema de registro de disciplinas Complementares}
 Como ocorrido com a solução anterior, essa solução viabiliza a codificação de testes para todos os requisitos funcionais deste software. Ilustração \ref{code:seleniumPiec} trás a codificação do mesmo teste executado na imagem \ref{code:Contexto}.
 
 \begin{figure}[!htt]
@@ -868,16 +881,16 @@ public void getLoginMembroColegiado() {
 	\label{code:seleniumPiec}
 \end{figure}
 
-\subsubsection{Aplicando Solução no Sistema SILAS BPMs}
+\subsubsection{Aplicando solução no sistema SILAS BPMs}
 Ao contrário do ocorrido com a aplicação de registro de disciplinas complementares do curso de Ciência da Computação da Universidade Federal de Santa Maria (UFSM), a solução que mescla a utilização da linguagem Cucumber juntamente com o \emph{framework} Selenium WebDriver não contemplava, na totalidade, os testes necessários. Agora utilizando essa nova abordagem, tornou-se viável a codificação dos testes necessários e, com isso, optou-se, na empresa Megatecnologia, pela continuidade da realização de testes através desta solução.
 
-\subsection{Considerações Sobre a Solução Selenium WebDriver}
+\subsection{Considerações sobre a solução Selenium WebDriver}
 A abordagem em questão, assim como as anteriores, apresenta vantagens e desvantagens. Como vantagem, pode-se elencar o fato de, por trabalhar somente com a linguagem Java, possibilitar uma série de ações, que não seriam possíveis, utilizando Cucumber na composição da solução. Como por exemplo, a utilização de testes condicionais, laços de repetição, busca de valores de um objeto Java, assim como manipulação de tipos que não façam parte dos tipos nativos da linguagem Java. Apesar disso, a solução apresenta um cenário mais complexo de ser entendido por qualquer interessado do projeto, comparado a solução utilizando Cucumber. Apresenta também, descrições mais poluídas visualmente e mais distantes de uma linguagem natural, além de possuir o mesmo problema referente à restauração da base de dados, após execução dos testes.
 
 \chapter{Resultados}
 Como forma de validação das abordagens criadas neste trabalho, onde as mesmas visam a redução do trabalho para uma equipe de teste e desenvolvimento, realizou-se comparações que serviriam para levantar o ganho em utilizar uma abordagem ou outra. 
 
-\section{Comparando Abordagens Funcionais}
+\section{Comparando abordagens funcionais}
 Mesmo conhecendo as principais virtudes das abordagens criadas, e também em quais escopos as mesmas funcionavam de forma adequada, ainda era necessário expor o ganho em utilizar umas dessas abordagens ao invés de criar um teste funcional somente utilizando métodos que as ferramentas de teste web disponibilizam.
 
 Como forma de medir este ganho, resolveu-se descrever uma funcionalidade do sistema de registro de disciplina complementares, utilizando tanto a abordagem Cucumber + WebDriver, como a abordagem WebDriver e, por fim, criando um teste utilizando apenas os métodos disponíveis da ferramenta Selenium. Essas diferenças são apresentadas nas imagens \ref{code:seleniumAddDisciplina}, \ref{code:solucao2AddDisciplina} e \ref{code:solucao3AddDisciplina}.
@@ -942,9 +955,13 @@ public void cadastrarDisciplina() {
 	\label{code:solucao3AddDisciplina}
 \end{figure}
 
-Como pode-se notar pelo código \ref{code:seleniumAddDisciplina}, \ref{code:solucao2AddDisciplina} e \ref{code:solucao3AddDisciplina}, existe uma diminuição no número de linhas escritas nos testes que exploram as duas abordagens deste trabalho em relação a codificação utilizando apenas o framework Selenium. Durante a realização dessas comparações percebeu-se também uma possível redução de caracteres digitados utilizando as abordagens apresentadas, isso quando trabalha-se com um IDE que possua suporte para as linguagens em questão. Por fim pode-se também levantar suspeita que a abordagem Cucumber + WebDriver trás ganhos na leitura dos testes, que se tornam mais compreensíveis, mesmo que não se entenda de linguagens de programação.
+Como pode-se notar pelo código \ref{code:seleniumAddDisciplina}, \ref{code:solucao2AddDisciplina} e \ref{code:solucao3AddDisciplina}, existe uma diminuição no número de linhas
+escritas nos testes que exploram as duas abordagens deste trabalho em relação a codificação utilizando apenas o \emph{framework} Selenium. Durante a realização dessas
+comparações percebeu-se também uma possível redução de caracteres digitados utilizando as abordagens apresentadas, isso quando trabalha-se com um IDE que possua suporte
+para as linguagens em questão. Por fim pode-se também levantar suspeita que a abordagem Cucumber + WebDriver trás ganhos na leitura dos testes, que se tornam mais
+compreensíveis, mesmo que não se entenda de linguagens de programação.
 
-\section{Comparando as Três Soluções Propostas}
+\section{Comparando as três soluções propostas}
 Visando mapear de forma mais externa as abordagens desenvolvidas, confrontou-se as soluções propostas elencando suas respectivas virtudes e limitações e, com isso torna-se possível realizar escolhas sobre qual abordagem é mais apropriada para um cenário específico que se apresente.
 Por exemplo, quando a equipe decide que serão necessários apenas a realização de testes unitários, a abordagem para testes unitários que utiliza anotações apresenta-se como uma boa alternativa, pois a mesma possui recursos que permitem realizar este tipo de teste e ao mesmo tempo não necessita de codificação em classes de teste, pois a simples inserção de anotações nas classes do modelo é suficiente.
 
@@ -974,7 +991,7 @@ A tabela \ref{tab:comparacaoSolucoes} apresenta os principais pontos fortes e as
 \chapter{Conclusão}
 A proposta inicial deste trabalho consistia em apresentar uma solução em forma de códigos de teste que permitisse o reaproveitamento e reutilização dos mesmo, acarretando em um menor esforço na codificação de novos testes para sistemas web desenvolvidos em Java. Entretanto o resultado final obtido pelo trabalho em questão trata-se não de uma solução, mas sim de três abordagens utilizando ferramentes para teste de software que diferem entre si, cada uma possuindo ponto fortes e pontos fracos e sendo mais relevante para uma determinada situação. A condução e criação dessas abordagens foram tomadas ao longo do desenvolvimento a partir dos percalços e necessidades que apareciam em meio a validação das abordagens em questão.
 
-Como contribuição este trabalho apresenta uma abordagem que mescla a utilização da linguagem Cucumber com o framework Selenium Webdriver, apresentando passos que podem tornar o processo de criação de testes em uma tarefa mais prática e rápida, sendo assim necessário apenas descrever cenários que correspondem a funcionalidades do sistema.
+Como contribuição este trabalho apresenta uma abordagem que mescla a utilização da linguagem Cucumber com o \emph{framework} Selenium Webdriver, apresentando passos que podem tornar o processo de criação de testes em uma tarefa mais prática e rápida, sendo assim necessário apenas descrever cenários que correspondem a funcionalidades do sistema.
 
 A lista a seguir expõem, em ordem de relevância, algumas melhorias que poderiam ser incorporadas em uma nova versão deste projeto:
 

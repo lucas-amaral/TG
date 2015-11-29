@@ -527,50 +527,25 @@ Entretanto, foram removidos os métodos que realizavam os testes com base nas an
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
-	public Object getValorPropriedadeCampo(WebElement webElement, String atributo, String valorAtributo) {
-        if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_TEXTO)) {
-            return webElement.getText();
-        } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_NOME_TAG)) {
-            return webElement.getTagName();
-        } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_ATRIBUTO)) {
-            return webElement.getAttribute(valorAtributo);
-        } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_VALOR_CSS)) {
-            return webElement.getCssValue(valorAtributo);
-        } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_CAMPO_EXIBIDO)) {
-            return webElement.isDisplayed();
-        } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_CAMPO_SELECIONADO)) {
-            return webElement.isSelected();
-        } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_CAMPO_HABILITADO)) {
-            return webElement.isEnabled();
-        } else if (atributo.equals(ATRIBUTO_COMPARACAO_URL)) {
-            return webDriver.getCurrentUrl();
-        } else if (atributo.equals(ATRIBUTO_COMPARACAO_TITULO_PAGINA)) {
-            return webDriver.getTitle();
-        }
-        return null;
-    }
+public Object getValorPropriedadeCampo(WebElement webElement, String atributo) {
+    if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_TEXTO)) {
+        return webElement.getText();
+    } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_NOME_TAG)) {
+        return webElement.getTagName();
+    } else if ...
+}
 
-    public WebElement getEncontraCampo(String identificador, String campo) {
-        return webDriver.findElement(getEncontra(identificador, campo));
-    }
+public WebElement getEncontraCampo(String identificador, String campo) {
+    return webDriver.findElement(getEncontra(identificador, campo));
+}
 
-    public By getEncontra(String identificador, String campo) {
-        if (identificador.equals(IDENTIFICADOR_ID)) {
-            return By.id(campo);
-        } else if (identificador.equals(IDENTIFICADOR_NOME)) {
-            return By.name(campo);
-        } else if (identificador.equals(IDENTIFICADOR_NOME_CLASSE)) {
-            return By.className(campo);
-        } else if (identificador.equals(IDENTIFICADOR_CSS)) {
-            return By.cssSelector(campo);
-        } else if (identificador.equals(IDENTIFICADOR_XPATH)) {
-            return By.xpath(campo);
-        } else if (identificador.equals(IDENTIFICADOR_TEXTO_DO_LINK)) {
-            return By.linkText(campo);
-        } else if (identificador.equals(IDENTIFICADOR_NOME_TAG)) {
-            return By.tagName(campo);
-        } return null;
-    }
+public By getEncontra(String identificador, String campo) {
+    if (identificador.equals(IDENTIFICADOR_ID)) {
+        return By.id(campo);
+    } else if (identificador.equals(IDENTIFICADOR_NOME)) {
+        return By.name(campo);
+    } else if ...
+}
 	\end{lstlisting}
 	\caption{Métodos para busca de elemento web utilizando Selenium WebDriver}
 	\label{code:Classe genérica contendo métodos WebDriver}
@@ -715,8 +690,12 @@ Como visto em \ref{code:feature}, basta utilizar os passos previamente definidos
 Ao iniciar os testes na solução, após finalizar a codificação da mesma, notou-se que existia uma perda de tempo quando os testes eram executados, pois, a cada cenário executado o Selenium WebDriver fechava a janela do navegador ativa e, quando um novo cenário fosse executado, uma nova janela era aberta. Para evitar que este retrabalho fosse realizado e, assim, fosse possível reutilizar a janela do navegador ativa, encontrou-se na documentação existente na página da linguagem Cucumber\footnote{https://cucumber.io/} a solução para esta questão, utilizando a classe \texttt{SharedDriver} desenvolvida por Aslak Hellesoy e disponibilizada no projeto \texttt{cucumber-jvm\footnote{https://github.com/cucumber/cucumber-jvm/blob/master/examples/java-webbit-websockets-selenium/src/test/java/cucumber/examples/java/websockets/SharedDriver.java}}, onde deve-se instanciar um objeto desta classe no lugar da classe WebDriver, utilizada anteriormente.
 
 \subsection{Validando solução em sistemas web}
-Após a finalização da codificação da solução, iniciou-se a fase de validação e aplicação da solução utilizando Cucumber e Selenium em softwares web. Nesta etapa foram escolhidos dois softwares web, que respeitassem os requisitos existentes no escopo delimitado pelo projeto em questão. O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicitação de disciplinas complementares de graduação, do curso de Ciência da Computação, da Universidade Federal de Santa Maria. O Segundo sistema, em que os testes funcionais seriam aplicados, seria um software de uma empresa privada, da região de Santa Maria, chamada Megatecnologia. Este sistema comercializado como SILAS BPMs, apresenta
-um sistema voltado para modelagem de processo BPMs, no qual é possível descrever etapas, tramitações, telas e campos de um processo.
+Após a finalização da codificação da solução, iniciou-se a fase de validação e aplicação da solução utilizando Cucumber e Selenium em softwares web. Nesta etapa foram escolhidos dois softwares web, que respeitassem os requisitos existentes no escopo delimitado pelo projeto em questão. 
+
+O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicitação de disciplinas complementares de graduação, do curso de Ciência da Computação, da Universidade Federal de Santa Maria. Sistema esse que pode ser definido como sistema de pequeno porte, pois possui poucas telas e processo bem definido, utilizando apenas recursos como; Ajax, Javascript e JasperReport para geração de relatórios. 
+
+O Segundo sistema, em que os testes funcionais seriam aplicados, seria um software de uma empresa privada, da região de Santa Maria, chamada Megatecnologia. Este software comercializado como SILAS BPMs, apresenta
+um sistema voltado para modelagem de processo BPMs, no qual é possível descrever etapas, tramitações, telas e campos de um processo. Este sistema apresenta complicações bem maiores que o primeiro, por tratar-se de um sistema comercializado a mais de 8 anos, onde existe a utilização de tecnologias como; Ajax, geração de documentos em XLS e PDF, comunicação via WebService, geração de gráficos e mapas utilizando API`s do Google e além disso possuir um processo que é descrito pelo usuário tornando mais difícil escrever um teste funcional em que se sabe com certeza o estado atual de um campo.
 
 \subsubsection{Aplicando solução no sistema de registro de disciplinas Complementares}
 Para realização desta tarefa, foram utilizadas as funcionalidades descritas no documento de especificação deste software para validar se o mesmo apresenta todas as funcionalidades que se compromete a atender.
@@ -805,7 +784,10 @@ Na figura \ref{code:seleniumTeste} temos um exemplo de um cenário descrito util
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
-	//Quando um agrupamento é fechado, o sistema deve alterar a data de fechamento do mesmo para a data atual. No caso da caixa atual estar aberta
+	
+	/*
+		Quando um agrupamento é fechado, o sistema deve alterar a data de fechamento do mesmo para a data atual. No caso da caixa atual estar aberta
+	*/
 	private void abreFechaAgrupamento() {
 		navegador.clicarElemento("img[alt=\"Visualizar\"]", Steps.IDENTIFICADOR_CSS);
 		navegador.aguardarCampoVisivel(100l, "img[alt=\"F\"]", Steps.IDENTIFICADOR_CSS);
@@ -831,11 +813,15 @@ Por tratar-se de código Java, além de tornar possível utilizar testes condici
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
-	//Quando navagamos pelos agrupamentos, verificamos que as datas de abertura das caixas não são necessariamente as mesmas.
+
+	/*
+		Quando navagamos pelos agrupamentos, verificamos que as datas de abertura das caixas não são necessariamente as mesmas.
+	*/		
 	private void navegarEntreAgrupamentos() {
 		navegador.clicarElemento("imagem_anterior_agrupamento_1");
 		assertNotEquals(SilasFuncoesDatas.sdf.format(new Date()), navegador.getEncontraCampo("data_abertura_agrupamento_1").getText());
 	}
+	
 	\end{lstlisting}
 	\caption{Realizando comparações utilizando o tipo de dados data.}
 	\label{code:seleniumDate}

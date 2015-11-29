@@ -282,9 +282,10 @@ técnicas e ferramentas a serem utilizada \cite{rios2006teste}. Deve-se também 
 Tradicionalmente, entre desenvolvedores de teste, utiliza-se uma estratégia onde temos um equilíbrio entre testar o sistema após pronto e testar somente antes de desenvolver o sistema. Esta estratégia assume uma visão incremental do teste, começando com o teste de unidades individuais de programa, passando para os testes destinados a facilitar a integração de unidades e culminando com testes que usam o sistema concluído \cite{pressman2011engenharia}.
 
 \subsection{Testes de sistemas web}
-O teste de aplicações Web se reveste de características peculiares, uma vez que se tratam, em geral, de aplicações colocadas na Internet e cujo acesso, em teoria, é aberto a qualquer usuário \cite{rios2006teste}. Sendo assim os tais sistemas diferem-se das aplicações web pelos cuidados necessários com questões como a possibilidade de utilização de sistemas operacionais e navegadores distintos, segurança e conectividade. Além
-disso, a relevância econômica das aplicações Web aumenta a importância de controlar e de
-melhorar a sua qualidade \cite{fidelis2004fireweb}.
+O teste de aplicações Web se reveste de características peculiares, uma vez que se tratam, em geral, de aplicações colocadas na Internet e cujo acesso, em teoria,
+é aberto a qualquer usuário \cite{rios2006teste}.  De forma geral, as aplicações web diferem-se dos sistemas \emph{Desktop} pelos cuidados necessários com questões como a
+possibilidade de utilização de sistemas operacionais e navegadores distintos, segurança e conectividade. Além disso, a relevância econômica das aplicações Web aumenta a
+importância de controlar e de melhorar a sua qualidade \cite{fidelis2004fireweb}.
 
 
 \section{Ferramentas para teste de software}
@@ -514,7 +515,7 @@ Visando a produção de testes funcionais, optou-se pela inclusão do \emph{fram
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.8\textwidth]{solucao2}
-	\caption{Estrutura da solução utilizando Selenium + Cucumber.}
+	\caption{Estrutura da solução utilizando Selenium e Cucumber.}
 	\label{fig:solucao2}
 \end{figure}
 
@@ -714,7 +715,7 @@ Como visto em \ref{code:feature}, basta utilizar os passos previamente definidos
 Ao iniciar os testes na solução, após finalizar a codificação da mesma, notou-se que existia uma perda de tempo quando os testes eram executados, pois, a cada cenário executado o Selenium WebDriver fechava a janela do navegador ativa e, quando um novo cenário fosse executado, uma nova janela era aberta. Para evitar que este retrabalho fosse realizado e, assim, fosse possível reutilizar a janela do navegador ativa, encontrou-se na documentação existente na página da linguagem Cucumber\footnote{https://cucumber.io/} a solução para esta questão, utilizando a classe \texttt{SharedDriver} desenvolvida por Aslak Hellesoy e disponibilizada no projeto \texttt{cucumber-jvm\footnote{https://github.com/cucumber/cucumber-jvm/blob/master/examples/java-webbit-websockets-selenium/src/test/java/cucumber/examples/java/websockets/SharedDriver.java}}, onde deve-se instanciar um objeto desta classe no lugar da classe WebDriver, utilizada anteriormente.
 
 \subsection{Validando solução em sistemas web}
-Após a finalização da codificação da solução, iniciou-se a fase de validação e aplicação da solução utilizando Cucumber + Selenium em softwares web. Nesta etapa foram escolhidos dois softwares web, que respeitassem os requisitos existentes no escopo delimitado pelo projeto em questão. O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicitação de disciplinas complementares de graduação, do curso de Ciência da Computação, da Universidade Federal de Santa Maria. O Segundo sistema, em que os testes funcionais seriam aplicados, seria um software de uma empresa privada, da região de Santa Maria, chamada Megatecnologia. Este sistema comercializado como SILAS BPMs, apresenta
+Após a finalização da codificação da solução, iniciou-se a fase de validação e aplicação da solução utilizando Cucumber e Selenium em softwares web. Nesta etapa foram escolhidos dois softwares web, que respeitassem os requisitos existentes no escopo delimitado pelo projeto em questão. O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicitação de disciplinas complementares de graduação, do curso de Ciência da Computação, da Universidade Federal de Santa Maria. O Segundo sistema, em que os testes funcionais seriam aplicados, seria um software de uma empresa privada, da região de Santa Maria, chamada Megatecnologia. Este sistema comercializado como SILAS BPMs, apresenta
 um sistema voltado para modelagem de processo BPMs, no qual é possível descrever etapas, tramitações, telas e campos de um processo.
 
 \subsubsection{Aplicando solução no sistema de registro de disciplinas Complementares}
@@ -799,7 +800,7 @@ Como forma de possibilitar a utilização de testes condicionais, armazenamento 
 \end{figure}
 
 \subsection{Classes Java contendo testes funcionais}
-Como descrito na imagem \ref{fig:solucao3}, esta abordagem reutiliza praticamente toda a estrutura existente na abordagem Cucumber + Selenium, com isso, somente os arquivos onde são escritos os cenários mudam. Ao invés de criarmos arquivos \texttt{.feature}, contento as funcionalidades e cenários que serão testados, tem-se, agora, classes Java de teste, que são responsáveis por descrever os testes.
+Como descrito na imagem \ref{fig:solucao3}, esta abordagem reutiliza praticamente toda a estrutura existente na abordagem Cucumber e Selenium, com isso, somente os arquivos onde são escritos os cenários mudam. Ao invés de criarmos arquivos \texttt{.feature}, contento as funcionalidades e cenários que serão testados, tem-se, agora, classes Java de teste, que são responsáveis por descrever os testes.
 Na figura \ref{code:seleniumTeste} temos um exemplo de um cenário descrito utilizando a abordagem atual.  Pode-se notar que os métodos da classe \texttt{Steps.java} ainda são utilizados, porém de forma direta.
 
 \begin{figure}[!htt]
@@ -893,7 +894,7 @@ Como forma de validação das abordagens criadas neste trabalho, onde as mesmas 
 \section{Comparando abordagens funcionais}
 Mesmo conhecendo as principais virtudes das abordagens criadas, e também em quais escopos as mesmas funcionavam de forma adequada, ainda era necessário expor o ganho em utilizar umas dessas abordagens ao invés de criar um teste funcional somente utilizando métodos que as ferramentas de teste web disponibilizam.
 
-Como forma de medir este ganho, resolveu-se descrever uma funcionalidade do sistema de registro de disciplina complementares, utilizando tanto a abordagem Cucumber + WebDriver, como a abordagem WebDriver e, por fim, criando um teste utilizando apenas os métodos disponíveis da ferramenta Selenium. Essas diferenças são apresentadas nas imagens \ref{code:seleniumAddDisciplina}, \ref{code:solucao2AddDisciplina} e \ref{code:solucao3AddDisciplina}.
+Como forma de medir este ganho, resolveu-se descrever uma funcionalidade do sistema de registro de disciplina complementares, utilizando tanto a abordagem Cucumber e WebDriver, como a abordagem WebDriver e, por fim, criando um teste utilizando apenas os métodos disponíveis da ferramenta Selenium. Essas diferenças são apresentadas nas imagens \ref{code:seleniumAddDisciplina}, \ref{code:solucao2AddDisciplina} e \ref{code:solucao3AddDisciplina}.
 
 
 \begin{figure}[!htt]
@@ -931,7 +932,7 @@ Cenario: Cadastrar nova disciplina.
     E clico no elemento salvar buscando pelo id
     Entao comparo a igualdade entre o valor esperado Sucesso! com atributo texto do elemento h4 buscando pelo css
 	\end{lstlisting}
-	\caption{Teste utilizando solução Cucumber + WebDriver}
+	\caption{Teste utilizando solução Cucumber e WebDriver}
 	\label{code:solucao2AddDisciplina}
 \end{figure}
 
@@ -958,7 +959,7 @@ public void cadastrarDisciplina() {
 Como pode-se notar pelo código \ref{code:seleniumAddDisciplina}, \ref{code:solucao2AddDisciplina} e \ref{code:solucao3AddDisciplina}, existe uma diminuição no número de linhas
 escritas nos testes que exploram as duas abordagens deste trabalho em relação a codificação utilizando apenas o \emph{framework} Selenium. Durante a realização dessas
 comparações percebeu-se também uma possível redução de caracteres digitados utilizando as abordagens apresentadas, isso quando trabalha-se com um IDE que possua suporte
-para as linguagens em questão. Por fim pode-se também levantar suspeita que a abordagem Cucumber + WebDriver trás ganhos na leitura dos testes, que se tornam mais
+para as linguagens em questão. Por fim pode-se também levantar suspeita que a abordagem Cucumber e WebDriver trás ganhos na leitura dos testes, que se tornam mais
 compreensíveis, mesmo que não se entenda de linguagens de programação.
 
 \section{Comparando as três soluções propostas}

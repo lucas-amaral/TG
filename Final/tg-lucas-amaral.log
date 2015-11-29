@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.15)  29 NOV 2015 18:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.15)  29 NOV 2015 18:38
 entering extended mode
 **tg-lucas-amaral.tex
 (C:\Projetos\TG\Final\tg-lucas-amaral.tex
@@ -1361,7 +1361,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--58
 
 ] [14]
 [15] [16]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 299.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 300.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -1374,10 +1374,10 @@ Package microtype Info: Loading generic settings for font family
 File: codigo_cucumber.png Graphic file (type png)
 
 <use codigo_cucumber.png>
-Package pdftex.def Info: codigo_cucumber.png used on input line 321.
+Package pdftex.def Info: codigo_cucumber.png used on input line 322.
 (pdftex.def)             Requested size: 500.77129pt x 81.43323pt.
 
-Overfull \hbox (45.52718pt too wide) in paragraph at lines 321--322
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 322--323
  [][] 
  []
 
@@ -1385,7 +1385,7 @@ Overfull \hbox (45.52718pt too wide) in paragraph at lines 321--322
 <solucao1.png, id=431, 579.66562pt x 299.61937pt>
 File: solucao1.png Graphic file (type png)
  <use solucao1.png>
-Package pdftex.def Info: solucao1.png used on input line 365.
+Package pdftex.def Info: solucao1.png used on input line 366.
 (pdftex.def)             Requested size: 364.19667pt x 188.24916pt.
  [21
 
@@ -1394,679 +1394,679 @@ th the same identifier (name{lstnumber.1}) has been already used, duplicate ign
 ored
 <to be read again> 
                    \relax 
-l.424 @Documented
+l.425 @Documented
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{lstnumber.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.425 @Retention(
+l.426 @Retention(
                  RetentionPolicy.RUNTIME)pdfTeX warning (ext4): destination wit
 h the same identifier (name{lstnumber.3}) has been already used, duplicate igno
 red
 <to be read again> 
                    \relax 
-l.426 @Target(
+l.427 @Target(
               {ElementType.TYPE, ElementType.METHOD})pdfTeX warning (ext4): des
 tination with the same identifier (name{lstnumber.4}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.427 public 
+l.428 public 
              @interface Teste {pdfTeX warning (ext4): destination with the same
  identifier (name{lstnumber.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.428     String 
+l.429     String 
                  getUrl() default "";pdfTeX warning (ext4): destination with th
 e same identifier (name{lstnumber.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.430     //f
+l.431     //f
              indElementpdfTeX warning (ext4): destination with the same identif
 ier (name{lstnumber.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.430     //f
+l.431     //f
              indElementpdfTeX warning (ext4): destination with the same identif
 ier (name{lstnumber.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.431     String 
+l.432     String 
                  getCampo() default ""; //campo html do formuláriopdfTeX warni
 ng (ext4): destination with the same identifier (name{lstnumber.9}) has been al
 ready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.432     String 
+l.433     String 
                  getIdentificador() default "id"; //Informar se deve buscar ...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.10}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.434     boolean 
+l.435     boolean 
                   isSelect() default false;pdfTeX warning (ext4): destination w
 ith the same identifier (name{lstnumber.11}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.434     boolean 
+l.435     boolean 
                   isSelect() default false;pdfTeX warning (ext4): destination w
 ith the same identifier (name{lstnumber.12}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.436     String 
+l.437     String 
                  getValor() default ""; //utilizado como sendKeys e selectTextp
 dfTeX warning (ext4): destination with the same identifier (name{lstnumber.13})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.436     String 
+l.437     String 
                  getValor() default ""; //utilizado como sendKeys e selectTextp
 dfTeX warning (ext4): destination with the same identifier (name{lstnumber.14})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.437     boolean 
+l.438     boolean 
                   click() default false;pdfTeX warning (ext4): destination with
  the same identifier (name{lstnumber.15}) has been already used, duplicate igno
 red
 <to be read again> 
                    \relax 
-l.438     boolean 
+l.439     boolean 
                   submit() default false;pdfTeX warning (ext4): destination wit
 h the same identifier (name{lstnumber.16}) has been already used, duplicate ign
 ored
 <to be read again> 
                    \relax 
-l.439     boolean 
+l.440     boolean 
                   limpar() default false;pdfTeX warning (ext4): destination wit
 h the same identifier (name{lstnumber.17}) has been already used, duplicate ign
 ored
 <to be read again> 
                    \relax 
-l.441     String 
+l.442     String 
                  getTipoAssert() default "igual";pdfTeX warning (ext4): destina
 tion with the same identifier (name{lstnumber.18}) has been already used, dupli
 cate ignored
 <to be read again> 
                    \relax 
-l.441     String 
+l.442     String 
                  getTipoAssert() default "igual";pdfTeX warning (ext4): destina
 tion with the same identifier (name{lstnumber.19}) has been already used, dupli
 cate ignored
 <to be read again> 
                    \relax 
-l.442     String 
+l.443     String 
                  getCampoAssert() default "";pdfTeX warning (ext4): destination
  with the same identifier (name{lstnumber.20}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.443     String 
+l.444     String 
                  getIdentificadorAssert() default "id"; [23]pdfTeX warning (ext
 4): destination with the same identifier (name{lstnumber.1}) has been already u
 sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.465 @Teste(
+l.466 @Teste(
              getUrl = "/cadastro-disciplina.htm", getCampo = "salvar", click...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.2})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.466 public 
+l.467 public 
              class Disciplina {pdfTeX warning (ext4): destination with the same
  identifier (name{lstnumber.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.467     private 
+l.468     private 
                   String codigo;pdfTeX warning (ext4): destination with the sam
 e identifier (name{lstnumber.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.468     private 
+l.469     private 
                   String nome;pdfTeX warning (ext4): destination with the same 
 identifier (name{lstnumber.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.469     private 
+l.470     private 
                   Integer cargaHoraria;pdfTeX warning (ext4): destination with 
 the same identifier (name{lstnumber.6}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.471     @Teste(
+l.472     @Teste(
                  getCampo = "ativa1", click = true)pdfTeX warning (ext4): desti
 nation with the same identifier (name{lstnumber.7}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.471     @Teste(
+l.472     @Teste(
                  getCampo = "ativa1", click = true)pdfTeX warning (ext4): desti
 nation with the same identifier (name{lstnumber.8}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.472     public 
+l.473     public 
                  Boolean getAtiva() {pdfTeX warning (ext4): destination with th
 e same identifier (name{lstnumber.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.473         return 
+l.474         return 
                      ativa == null || ativa;pdfTeX warning (ext4): destination 
 with the same identifier (name{lstnumber.10}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.474     }
+l.475     }
            pdfTeX warning (ext4): destination with the same identifier (name{ls
 tnumber.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.476     public 
+l.477     public 
                  void setAtiva(Boolean ativa) {pdfTeX warning (ext4): destinati
 on with the same identifier (name{lstnumber.12}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.476     public 
+l.477     public 
                  void setAtiva(Boolean ativa) {pdfTeX warning (ext4): destinati
 on with the same identifier (name{lstnumber.13}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.477         this.
+l.478         this.
                    ativa = ativa;pdfTeX warning (ext4): destination with the sa
 me identifier (name{lstnumber.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.478     }
+l.479     }
            pdfTeX warning (ext4): destination with the same identifier (name{ls
 tnumber.15}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.480     @Teste(
+l.481     @Teste(
                  getCampo = "cargaHoraria", getValor = "60", isSelect = true)pd
 fTeX warning (ext4): destination with the same identifier (name{lstnumber.16}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.480     @Teste(
+l.481     @Teste(
                  getCampo = "cargaHoraria", getValor = "60", isSelect = true)pd
 fTeX warning (ext4): destination with the same identifier (name{lstnumber.17}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.481     public 
+l.482     public 
                  Integer getCargaHoraria() {pdfTeX warning (ext4): destination 
 with the same identifier (name{lstnumber.18}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.482         return 
+l.483         return 
                      cargaHoraria;pdfTeX warning (ext4): destination with the s
 ame identifier (name{lstnumber.19}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.483     }
+l.484     }
            pdfTeX warning (ext4): destination with the same identifier (name{ls
 tnumber.20}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.485     public 
+l.486     public 
                  void setCargaHoraria(Integer cargaHoraria) {pdfTeX warning (ex
 t4): destination with the same identifier (name{lstnumber.21}) has been already
  used, duplicate ignored
 <to be read again> 
                    \relax 
-l.485     public 
+l.486     public 
                  void setCargaHoraria(Integer cargaHoraria) {pdfTeX warning (ex
 t4): destination with the same identifier (name{lstnumber.22}) has been already
  used, duplicate ignored
 <to be read again> 
                    \relax 
-l.486         this.
+l.487         this.
                    cargaHoraria = cargaHoraria;pdfTeX warning (ext4): destinati
 on with the same identifier (name{lstnumber.23}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.487     }
+l.488     }
            pdfTeX warning (ext4): destination with the same identifier (name{ls
 tnumber.24}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.489     @Teste(
+l.490     @Teste(
                  getCampo = "nome", getValor = "Disciplina teste")pdfTeX warnin
 g (ext4): destination with the same identifier (name{lstnumber.25}) has been al
 ready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.489     @Teste(
+l.490     @Teste(
                  getCampo = "nome", getValor = "Disciplina teste")pdfTeX warnin
 g (ext4): destination with the same identifier (name{lstnumber.26}) has been al
 ready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.490     public 
+l.491     public 
                  String getNome() {pdfTeX warning (ext4): destination with the 
 same identifier (name{lstnumber.27}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.491         return 
+l.492         return 
                      nome; [24]
 <solucao2.png, id=488, 576.65437pt x 455.45157pt>
 File: solucao2.png Graphic file (type png)
  <use solucao2.png>
-Package pdftex.def Info: solucao2.png used on input line 516.
+Package pdftex.def Info: solucao2.png used on input line 517.
 (pdftex.def)             Requested size: 364.19667pt x 287.65877pt.
  [25]pdfTeX warning (ext4): destination with the same identifier (name{lstnumbe
 r.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.529 	public 
+l.530 	public 
               Object getValorPropriedadeCampo(WebElement webElement, String ...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.2})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.530         if 
+l.531         if 
                  (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_TEXTO)) {pdfTeX wa
 rning (ext4): destination with the same identifier (name{lstnumber.3}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.531             return 
+l.532             return 
                          webElement.getText();pdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.4}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.532         } 
+l.533         } 
                 else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_NOME_TAG...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.533             return 
+l.534             return 
                          webElement.getTagName();pdfTeX warning (ext4): destina
 tion with the same identifier (name{lstnumber.6}) has been already used, duplic
 ate ignored
 <to be read again> 
                    \relax 
-l.534         } 
+l.535         } 
                 else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_ATRIBUTO...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.7})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.535             return 
+l.536             return 
                          webElement.getAttribute(valorAtributo);pdfTeX warning 
 (ext4): destination with the same identifier (name{lstnumber.8}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.536         } 
+l.537         } 
                 else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_VALOR_CS...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.9})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.537             return 
+l.538             return 
                          webElement.getCssValue(valorAtributo);pdfTeX warning (
 ext4): destination with the same identifier (name{lstnumber.10}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.538         } 
+l.539         } 
                 else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_CAMPO_EX...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.11}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.539             return 
+l.540             return 
                          webElement.isDisplayed();pdfTeX warning (ext4): destin
 ation with the same identifier (name{lstnumber.12}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.540         } 
+l.541         } 
                 else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_CAMPO_SE...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.13}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.541             return 
+l.542             return 
                          webElement.isSelected();pdfTeX warning (ext4): destina
 tion with the same identifier (name{lstnumber.14}) has been already used, dupli
 cate ignored
 <to be read again> 
                    \relax 
-l.542         } 
+l.543         } 
                 else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_CAMPO_HA...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.15}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.543             return 
+l.544             return 
                          webElement.isEnabled();pdfTeX warning (ext4): destinat
 ion with the same identifier (name{lstnumber.16}) has been already used, duplic
 ate ignored
 <to be read again> 
                    \relax 
-l.544         } 
+l.545         } 
                 else if (atributo.equals(ATRIBUTO_COMPARACAO_URL)) {pdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.17}) has been 
 already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.545             return 
+l.546             return 
                          webDriver.getCurrentUrl();pdfTeX warning (ext4): desti
 nation with the same identifier (name{lstnumber.18}) has been already used, dup
 licate ignored
 <to be read again> 
                    \relax 
-l.546         } 
+l.547         } 
                 else if (atributo.equals(ATRIBUTO_COMPARACAO_TITULO_PAGINA)) {p
 dfTeX warning (ext4): destination with the same identifier (name{lstnumber.19})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.547             return 
+l.548             return 
                          webDriver.getTitle();pdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.20}) has been already used, duplicat
 e ignored
 <to be read again> 
                    \relax 
-l.548         }
+l.549         }
                pdfTeX warning (ext4): destination with the same identifier (nam
 e{lstnumber.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.549         return 
+l.550         return 
                      null;pdfTeX warning (ext4): destination with the same iden
 tifier (name{lstnumber.22}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.550     }
+l.551     }
            pdfTeX warning (ext4): destination with the same identifier (name{ls
 tnumber.23}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.552     public 
+l.553     public 
                  WebElement getEncontraCampo(String identificador, String ca...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.24}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.552     public 
+l.553     public 
                  WebElement getEncontraCampo(String identificador, String ca...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.25}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.553         return 
+l.554         return 
                      webDriver.findElement(getEncontra(identificador, campo));p
 dfTeX warning (ext4): destination with the same identifier (name{lstnumber.26})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.554     }
+l.555     }
            pdfTeX warning (ext4): destination with the same identifier (name{ls
 tnumber.27}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.556     public 
+l.557     public 
                  By getEncontra(String identificador, String campo) {pdfTeX war
 ning (ext4): destination with the same identifier (name{lstnumber.28}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.556     public 
+l.557     public 
                  By getEncontra(String identificador, String campo) {pdfTeX war
 ning (ext4): destination with the same identifier (name{lstnumber.29}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.557         if 
+l.558         if 
                  (identificador.equals(IDENTIFICADOR_ID)) {pdfTeX warning (ext4
 ): destination with the same identifier (name{lstnumber.1}) has been already us
 ed, duplicate ignored
 <to be read again> 
                    \relax 
-l.583     @Dado(
+l.584     @Dado(
                 "^atribuir timeout navegador (\\d+)$")pdfTeX warning (ext4): de
 stination with the same identifier (name{lstnumber.2}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.584     public 
+l.585     public 
                  void setTimeoutNavegador(int timeout) {pdfTeX warning (ext4): 
 destination with the same identifier (name{lstnumber.3}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.585         webDriver.
+l.586         webDriver.
                         manage().timeouts().implicitlyWait(timeout, TimeUnit...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.4})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.586     }
+l.587     }
            pdfTeX warning (ext4): destination with the same identifier (name{ls
 tnumber.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.588     @Dado(
+l.589     @Dado(
                 "^acesso o endereco (.*)$")pdfTeX warning (ext4): destination w
 ith the same identifier (name{lstnumber.6}) has been already used, duplicate ig
 nored
 <to be read again> 
                    \relax 
-l.588     @Dado(
+l.589     @Dado(
                 "^acesso o endereco (.*)$")pdfTeX warning (ext4): destination w
 ith the same identifier (name{lstnumber.7}) has been already used, duplicate ig
 nored
 <to be read again> 
                    \relax 
-l.589     public 
+l.590     public 
                  void acessarEndereco(String url) {pdfTeX warning (ext4): desti
 nation with the same identifier (name{lstnumber.8}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.590         webDriver.
+l.591         webDriver.
                         get(TestePropriedades.urlSistema + url);pdfTeX warning 
 (ext4): destination with the same identifier (name{lstnumber.9}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.591     }
+l.592     }
            pdfTeX warning (ext4): destination with the same identifier (name{ls
 tnumber.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.593     @Quando(
+l.594     @Quando(
                   "^seleciono a opcao (.*) no campo (.*) buscando pelo (.*)$")p
 dfTeX warning (ext4): destination with the same identifier (name{lstnumber.11})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.593     @Quando(
+l.594     @Quando(
                   "^seleciono a opcao (.*) no campo (.*) buscando pelo (.*)$")p
 dfTeX warning (ext4): destination with the same identifier (name{lstnumber.12})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.594     public 
+l.595     public 
                  void selecionarOpcaoCampo(String opcao, String campo, Strin...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.13}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.595         WebElement 
+l.596         WebElement 
                          webElement = getEncontraCampo(identificador, campo);pd
 fTeX warning (ext4): destination with the same identifier (name{lstnumber.14}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.596         if 
+l.597         if 
                  (webElement != null) {pdfTeX warning (ext4): destination with 
 the same identifier (name{lstnumber.15}) has been already used, duplicate ignor
 ed
 <to be read again> 
                    \relax 
-l.597             Select 
+l.598             Select 
                          select = new Select(webElement);pdfTeX warning (ext4):
  destination with the same identifier (name{lstnumber.16}) has been already use
 d, duplicate ignored
 <to be read again> 
                    \relax 
-l.598             select.
+l.599             select.
                          selectByVisibleText(opcao);pdfTeX warning (ext4): dest
 ination with the same identifier (name{lstnumber.17}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.599         }
+l.600         }
                pdfTeX warning (ext4): destination with the same identifier (nam
 e{lstnumber.18}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.600     }
+l.601     }
            pdfTeX warning (ext4): destination with the same identifier (name{ls
 tnumber.19}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.602     @E(
+l.603     @E(
              "^limpo o campo (.*) buscando pelo (.*)$")pdfTeX warning (ext4): d
 estination with the same identifier (name{lstnumber.20}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.602     @E(
+l.603     @E(
              "^limpo o campo (.*) buscando pelo (.*)$")pdfTeX warning (ext4): d
 estination with the same identifier (name{lstnumber.21}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.603     public 
+l.604     public 
                  void limparCampo(String campo, String identificador) {pdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.22}) has be
 en already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.604         WebElement 
+l.605         WebElement 
                          webElement = getEncontraCampo(identificador, campo);pd
 fTeX warning (ext4): destination with the same identifier (name{lstnumber.23}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.605         if 
+l.606         if 
                  (webElement != null) {pdfTeX warning (ext4): destination with 
 the same identifier (name{lstnumber.24}) has been already used, duplicate ignor
 ed
 <to be read again> 
                    \relax 
-l.606             webElement.
+l.607             webElement.
                              clear();pdfTeX warning (ext4): destination with th
 e same identifier (name{lstnumber.25}) has been already used, duplicate ignored
 
 <to be read again> 
                    \relax 
-l.607         }
+l.608         }
                pdfTeX warning (ext4): destination with the same identifier (nam
 e{lstnumber.26}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.608     }
+l.609     }
            pdfTeX warning (ext4): destination with the same identifier (name{ls
 tnumber.27}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.610     @E(
+l.611     @E(
              "^preencho o campo (.*) com o valor (.*) buscando pelo (.*)$")pdfT
 eX warning (ext4): destination with the same identifier (name{lstnumber.28}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.610     @E(
+l.611     @E(
              "^preencho o campo (.*) com o valor (.*) buscando pelo (.*)$")pdfT
 eX warning (ext4): destination with the same identifier (name{lstnumber.29}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.611     public 
+l.612     public 
                  void preencherCampo(String campo, String valor, String iden...
 [26 <C:/Projetos/TG/Final/solucao2.png>]pdfTeX warning (ext4): destination with
  the same identifier (name{lstnumber.1}) has been already used, duplicate ignor
 ed
 <to be read again> 
                    \relax 
-l.646 @E(
+l.647 @E(
          "^aguardo (\\d+) milisegundos para verificar se elemento (.*) busca...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.2})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.647 public 
+l.648 public 
              void aguardarCampoExistente(Long tempo, String campo, String id...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.648     WebDriverWait 
+l.649     WebDriverWait 
                         webDriverWait = new WebDriverWait(webDriver, tempo);pdf
 TeX warning (ext4): destination with the same identifier (name{lstnumber.4}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.649     webDriverWait.
+l.650     webDriverWait.
                         until(ExpectedConditions.presenceOfElementLocated(pdfTe
 X warning (ext4): destination with the same identifier (name{lstnumber.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.650         funcoes.
+l.651         funcoes.
                       getEncontra(identificador, campo)));pdfTeX warning (ext4)
 : destination with the same identifier (name{lstnumber.6}) has been already use
 d, duplicate ignored
 <to be read again> 
                    \relax 
-l.651 }
+l.652 }
        pdfTeX warning (ext4): destination with the same identifier (name{lstnum
 ber.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.653 @E(
+l.654 @E(
          "^aguardo (\\d+) milisegundos para verificar se elemento (.*) busca...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.653 @E(
+l.654 @E(
          "^aguardo (\\d+) milisegundos para verificar se elemento (.*) busca...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.9})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.654 public 
+l.655 public 
              void aguardarCampoVisivel(Long tempo, String campo, String iden...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.10}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.655     WebDriverWait 
+l.656     WebDriverWait 
                         webDriverWait = new WebDriverWait(webDriver, tempo);pdf
 TeX warning (ext4): destination with the same identifier (name{lstnumber.11}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.656     webDriverWait.
+l.657     webDriverWait.
                         until(ExpectedConditions.visibilityOf(funcoes.getEnc...
 
-Overfull \hbox (5.56058pt too wide) in paragraph at lines 656--657
+Overfull \hbox (5.56058pt too wide) in paragraph at lines 657--658
 [][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -2074,297 +2074,297 @@ pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.12}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.657 }
+l.658 }
        pdfTeX warning (ext4): destination with the same identifier (name{lstnum
 ber.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.659 @E(
+l.660 @E(
          "^aguardo (\\d+) milisegundos para verificar se elemento (.*) busca...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.14}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.659 @E(
+l.660 @E(
          "^aguardo (\\d+) milisegundos para verificar se elemento (.*) busca...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.15}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.660 public 
+l.661 public 
              void aguardarCampoDesaparecer(Long tempo, String campo, String ...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.16}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.661     WebDriverWait 
+l.662     WebDriverWait 
                         webDriverWait = new WebDriverWait(webDriver, tempo);pdf
 TeX warning (ext4): destination with the same identifier (name{lstnumber.17}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.662     webDriverWait.
+l.663     webDriverWait.
                         until(ExpectedConditions.invisibilityOfElementLocated(p
 dfTeX warning (ext4): destination with the same identifier (name{lstnumber.18})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.663         funcoes.
+l.664         funcoes.
                       getEncontra(identificador, campo)));pdfTeX warning (ext4)
 : destination with the same identifier (name{lstnumber.19}) has been already us
 ed, duplicate ignored
 <to be read again> 
                    \relax 
-l.664 }
+l.665 }
         [27]pdfTeX warning (ext4): destination with the same identifier (name{l
 stnumber.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.679 #l
+l.680 #l
         anguage: ptpdfTeX warning (ext4): destination with the same identifier 
 (name{lstnumber.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.681 Funcionalidade:
+l.682 Funcionalidade:
                       Ações executadas por um aluno do curso de Ciência d...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.681 Funcionalidade:
+l.682 Funcionalidade:
                       Ações executadas por um aluno do curso de Ciência d...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.4})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.682   plano 
+l.683   plano 
               individual de estudos complementares.pdfTeX warning (ext4): desti
 nation with the same identifier (name{lstnumber.5}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.684   Contexto:
+l.685   Contexto:
                   Fazer login no sistema como um alunopdfTeX warning (ext4): de
 stination with the same identifier (name{lstnumber.6}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.684   Contexto:
+l.685   Contexto:
                   Fazer login no sistema como um alunopdfTeX warning (ext4): de
 stination with the same identifier (name{lstnumber.7}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.685     Dado 
+l.686     Dado 
                acesso o endereco /login.htmpdfTeX warning (ext4): destination w
 ith the same identifier (name{lstnumber.8}) has been already used, duplicate ig
 nored
 <to be read again> 
                    \relax 
-l.686     Quando 
+l.687     Quando 
                  preencho o campo login com o valor lamaral buscando pelo idpdf
 TeX warning (ext4): destination with the same identifier (name{lstnumber.9}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.687     E 
+l.688     E 
             preencho o campo senha com o valor teste123 buscando pelo idpdfTeX 
 warning (ext4): destination with the same identifier (name{lstnumber.10}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.688     E 
+l.689     E 
             clico no elemento button.btn.btn-default buscando pelo csspdfTeX wa
 rning (ext4): destination with the same identifier (name{lstnumber.11}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.689     Entao 
+l.690     Entao 
                 verifico se atributo nome tag do elemento id buscando pelo n...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.12}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.691   @aceitacao
+l.692   @aceitacao
                   pdfTeX warning (ext4): destination with the same identifier (
 name{lstnumber.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.691   @aceitacao
+l.692   @aceitacao
                   pdfTeX warning (ext4): destination with the same identifier (
 name{lstnumber.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.692   Cenario:
+l.693   Cenario:
                  Adicionar umas disciplina ao plano com sucesso.pdfTeX warning 
 (ext4): destination with the same identifier (name{lstnumber.15}) has been alre
 ady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.693     Dado 
+l.694     Dado 
                seleciono a opcao ELC1051 - Computação Gráfica Avançada (...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.16}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.694     Quando 
+l.695     Quando 
                  preencho o campo piecDisciplinaAdicionar.cursoOfertante com...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.17}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.695     E 
+l.696     E 
             preencho o campo piecDisciplinaAdicionar.semestreAnoRealizacao c...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.18}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.696     E 
+l.697     E 
             clico no elemento adicionarPiecDisciplina buscando pelo idpdfTeX wa
 rning (ext4): destination with the same identifier (name{lstnumber.19}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.697     Entao 
+l.698     Entao 
                 comparo a igualdade entre o valor esperado Sucesso! com atri...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.20}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.699   @rejeicao
+l.700   @rejeicao
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{lstnumber.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.699   @rejeicao
+l.700   @rejeicao
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{lstnumber.22}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.700   Cenario:
+l.701   Cenario:
                  Não permitir adicionar disciplina ao plano quando a mesma ...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.23}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.701     Dado 
+l.702     Dado 
                seleciono a opcao ELC1051 - Computação Gráfica Avançada (...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.24}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.702     Quando 
+l.703     Quando 
                  preencho o campo piecDisciplinaAdicionar.cursoOfertante com...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.25}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.703     E 
+l.704     E 
             preencho o campo piecDisciplinaAdicionar.semestreAnoRealizacao c...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.26}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.704     E 
+l.705     E 
             clico no elemento adicionarPiecDisciplina buscando pelo idpdfTeX wa
 rning (ext4): destination with the same identifier (name{lstnumber.27}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.705     Entao 
+l.706     Entao 
                 comparo a igualdade entre o valor esperado Disciplina já in...
 [28pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.
 30}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.31}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.32}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.33}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.34}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.35}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.36}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.37}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.38}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.39}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.40}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.41}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.42}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.43}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
 er.44}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.712 
+l.713 
       ] [29]
-Underfull \hbox (badness 10000) in paragraph at lines 714--714
+Underfull \hbox (badness 10000) in paragraph at lines 715--715
 []  [][]\T1/ptm/m/n/10 (+20) https://github.com/cucumber/cucumber-jvm/blob/mast
 er/examples/java-webbit-websockets-
  []
@@ -2373,196 +2373,196 @@ er/examples/java-webbit-websockets-
 .1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.728 Funcionalidade:
+l.729 Funcionalidade:
                       Ações executadas por um membro do colegiado do curso...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.2})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.730   Contexto:
+l.731   Contexto:
                   Fazer login no sistema como um membro do colegiadopdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.3}) has been a
 lready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.730   Contexto:
+l.731   Contexto:
                   Fazer login no sistema como um membro do colegiadopdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.4}) has been a
 lready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.731     Dado 
+l.732     Dado 
                acesso o endereco /login.htmpdfTeX warning (ext4): destination w
 ith the same identifier (name{lstnumber.5}) has been already used, duplicate ig
 nored
 <to be read again> 
                    \relax 
-l.732     Quando 
+l.733     Quando 
                  preencho o campo login com o valor colegiado buscando pelo idp
 dfTeX warning (ext4): destination with the same identifier (name{lstnumber.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.733     E 
+l.734     E 
             preencho o campo senha com o valor colegiado123 buscando pelo idpdf
 TeX warning (ext4): destination with the same identifier (name{lstnumber.7}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.734     E 
+l.735     E 
             clico no elemento button.btn.btn-default buscando pelo csspdfTeX wa
 rning (ext4): destination with the same identifier (name{lstnumber.8}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.735     Entao 
+l.736     Entao 
                 verifico se atributo nome tag do elemento id buscando pelo n...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.748 Delineacao 
+l.749 Delineacao 
                  do Cenario: 1 - Não permitir inserir no PIEC disciplina qu...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.2})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.749      2 
+l.750      2 
              - Não permitir cadastrar nova instituição com sigla já cada...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.750      3 
+l.751      3 
              - Não permitir cadastrar nova disciplina sem sua respectiva sigla
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.4})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.751      4 
+l.752      4 
              - Não permitir cadastrar nova disciplina sem sua respectiva nomep
 dfTeX warning (ext4): destination with the same identifier (name{lstnumber.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.752      5 
+l.753      5 
              - Não permitir inserir disciplina com uma sigla já cadastradapdf
 TeX warning (ext4): destination with the same identifier (name{lstnumber.6}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.753     Dado 
+l.754     Dado 
                seleciono a opcao Adicionar outra disciplina no campo idDisci...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.7})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.754     Quando 
+l.755     Quando 
                  preencho o campo novaDisciplina.codigo com o valor <codigoD...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.755     E 
+l.756     E 
             preencho o campo novaDisciplina.nome com o valor <nomeNovaDiscip...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.9})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.756     E 
+l.757     E 
             preencho o campo piecDisciplinaAdicionar.relevanciaIntegralizaca...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.10}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.757     E 
+l.758     E 
             seleciono a opcao Adicionar outra instituição no campo novaDis...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.11}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.758     E 
+l.759     E 
             seleciono a opcao 78 horas no campo novaDisciplina.cargaHoraria ...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.12}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.759     E 
+l.760     E 
             preencho o campo novaInstituicao.nome com o valor Universidade T...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.13}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.760     E 
+l.761     E 
             preencho o campo novaInstituicao.sigla com o valor <siglaInst> b...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.14}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.761     E 
+l.762     E 
             preencho o campo piecDisciplinaAdicionar.arquivoPlanoEnsino com ...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.15}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.762     E 
+l.763     E 
             clico no elemento adicionarPiecDisciplina buscando pelo idpdfTeX wa
 rning (ext4): destination with the same identifier (name{lstnumber.16}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.763     Entao 
+l.764     Entao 
                 comparo a igualdade entre o valor esperado <msgErro> com atr...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.17}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.765   Exemplos:
+l.766   Exemplos:
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{lstnumber.18}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.765   Exemplos:
+l.766   Exemplos:
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{lstnumber.19}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.766     | 
+l.767     | 
             codigoDis | nomeNovaDisciplina | relevancia | siglaInst | msgErr...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.20}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.767     | 
+l.768     | 
             TESTE95   | Teste informática  |            | USC       | Preen...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.21}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.768     | 
+l.769     | 
             TESTE95   | Teste informática  | Teste 1    | UFSM      | Sigla...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.22}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.769     | 
+l.770     | 
                       | Teste informática  | Teste 2    | UFT       | Preen...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.23}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.770     | 
+l.771     | 
             TESTE98   |                    | Teste 3    | UFS       | Preenc...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.24}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.771     | 
+l.772     | 
             ELC1051   | Computação Gráfica | Teste 4    | UFAR      | Có...
 [31] [32] <solucao3.png, id=574, 576.65437pt x 371.88937pt>
 File: solucao3.png Graphic file (type png)
  <use solucao3.png>
-Package pdftex.def Info: solucao3.png used on input line 796.
+Package pdftex.def Info: solucao3.png used on input line 797.
 (pdftex.def)             Requested size: 364.19667pt x 234.8817pt.
 
 [33 <C:/Projetos/TG/Final/solucao3.png>]pdfTeX warning (ext4): destination with
@@ -2570,467 +2570,468 @@ Package pdftex.def Info: solucao3.png used on input line 796.
 ed
 <to be read again> 
                    \relax 
-l.807 	//Q
+l.808 	//Q
           uando um agrupamento é fechado, o sistema deve alterar a data de ...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.2})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.808 	private 
+l.809 	private 
                void abreFechaAgrupamento() {pdfTeX warning (ext4): destination 
 with the same identifier (name{lstnumber.3}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.809 		navegador.
+l.810 		navegador.
                   clicarElemento("img[alt=\"Visualizar\"]", Steps.IDENTIFICA...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.4})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.810 		navegador.
+l.811 		navegador.
                   aguardarCampoVisivel(100l, "img[alt=\"F\"]", Steps.IDENTIF...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.811 		WebElement 
+l.812 		WebElement 
                    dataAbertura = navegador.getEncontraCampo("data_abertura_...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.6})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.812 		WebElement 
+l.813 		WebElement 
                    dataFechamento = navegador.getEncontraCampo("data_fechame...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.7})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.813 		boolean 
+l.814 		boolean 
                 aberto = true;pdfTeX warning (ext4): destination with the same 
 identifier (name{lstnumber.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.814 		if 
+l.815 		if 
            (dataAbertura.getText() != null) {pdfTeX warning (ext4): destination
  with the same identifier (name{lstnumber.9}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.815 			aberto 
+l.816 			aberto 
                 = false;pdfTeX warning (ext4): destination with the same identi
 fier (name{lstnumber.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.816 		}
+l.817 		}
          pdfTeX warning (ext4): destination with the same identifier (name{lstn
 umber.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.817 		navegador.
+l.818 		navegador.
                   clicarElemento("img[alt=\"F\"]");pdfTeX warning (ext4): desti
 nation with the same identifier (name{lstnumber.12}) has been already used, dup
 licate ignored
 <to be read again> 
                    \relax 
-l.818 		if 
+l.819 		if 
            (aberto) {pdfTeX warning (ext4): destination with the same identifie
 r (name{lstnumber.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.819 			assertEquals(
+l.820 			assertEquals(
                       SilasFuncoesDatas.sdf.format(new Date()), dataFechamen...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.14}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.820 		} 
+l.821 		} 
           else {pdfTeX warning (ext4): destination with the same identifier (na
 me{lstnumber.15}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.821 			assertEquals(
+l.822 			assertEquals(
                       SilasFuncoesDatas.sdf.format(new Date()), dataAbertura...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.16}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.822 		}
+l.823 		}
          pdfTeX warning (ext4): destination with the same identifier (name{lstn
 umber.17}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.823 	}
+l.824 	}
         pdfTeX warning (ext4): destination with the same identifier (name{lstnu
 mber.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.833 	//Q
+l.834 	//Q
           uando navagamos pelos agrupamentos, verificamos que as datas de ab...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.2})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.834 	private 
+l.835 	private 
                void navegarEntreAgrupamentos() {pdfTeX warning (ext4): destinat
 ion with the same identifier (name{lstnumber.3}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.835 		navegador.
+l.836 		navegador.
                   clicarElemento("imagem_anterior_agrupamento_1");pdfTeX warnin
 g (ext4): destination with the same identifier (name{lstnumber.4}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.836 		assertNotEquals(
+l.837 		assertNotEquals(
                         SilasFuncoesDatas.sdf.format(new Date()), navegador....
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.837 	}
+l.838 	}
         pdfTeX warning (ext4): destination with the same identifier (name{lstnu
 mber.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.847 	@Test
+l.848 	@Test
             pdfTeX warning (ext4): destination with the same identifier (name{l
 stnumber.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.848 	//C
+l.849 	//C
           olocar datas ao lado da indentificação do agrupamento (bateria),...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.849 	public 
+l.850 	public 
               void datasInicioFimBateria() {pdfTeX warning (ext4): destination 
 with the same identifier (name{lstnumber.4}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.850 		navegador.
+l.851 		navegador.
                   acessarEndereco(url + "/gerenciar-agrupamentos.htm");pdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.851 		String 
+l.852 		String 
                idAgrupamento = navegador.getEncontraCampo(Steps.IDENTIFICADO...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.6})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.852 		Agrupamento 
+l.853 		Agrupamento 
                     agrupamento = service.getAgrupamento(Long.valueOf(idAgru...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.7})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.853 		navegador.
+l.854 		navegador.
                   getEncontraCampo("data_abertura_agrupamento_" + agrupament...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.854 		navegarEntreAgrupamentos(
+l.855 		navegarEntreAgrupamentos(
                                  );pdfTeX warning (ext4): destination with the 
 same identifier (name{lstnumber.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.855 	}
+l.856 	}
          [34]pdfTeX warning (ext4): destination with the same identifier (name{
 lstnumber.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.870 @Test
+l.871 @Test
            pdfTeX warning (ext4): destination with the same identifier (name{ls
 tnumber.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.871 /*F
+l.872 /*F
          azer login no sistema como um membro do colegiado*/pdfTeX warning (ext
 4): destination with the same identifier (name{lstnumber.3}) has been already u
 sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.872 public 
+l.873 public 
              void getLoginMembroColegiado() {pdfTeX warning (ext4): destination
  with the same identifier (name{lstnumber.4}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.873     steps.
+l.874     steps.
                 acessarEndereco("/login.htm");pdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.874     steps.
+l.875     steps.
                 preencherCampo("login", "colegiado", TesteFormulario.IDENTIF...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.6})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.875     steps.
+l.876     steps.
                 preencherCampo("senha", "colegiado123", TesteFormulario.IDEN...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.7})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.876     steps.
+l.877     steps.
                 clicarElemento("button.btn-default", TesteFormulario.IDENTIF...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.877     steps.
+l.878     steps.
                 compararSeNaoNulo(TesteFormulario.ATRIBUTO_COMPARACAO_ASSERT...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.9})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.878 }
+l.879 }
         [35] [36]pdfTeX warning (ext4): destination with the same identifier (n
 ame{lstnumber.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.901 @Test
+l.902 @Test
            pdfTeX warning (ext4): destination with the same identifier (name{ls
 tnumber.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.902 public 
+l.903 public 
              void cadastrarDisciplinaSucesso() {pdfTeX warning (ext4): destinat
 ion with the same identifier (name{lstnumber.3}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.903     WebDriver 
+l.904     WebDriver 
                     webDriver = new FirefoxDriver();pdfTeX warning (ext4): dest
 ination with the same identifier (name{lstnumber.4}) has been already used, dup
 licate ignored
 <to be read again> 
                    \relax 
-l.904     webDriver.
+l.905     webDriver.
                     get(url + "/cadastro-disciplina.htm");pdfTeX warning (ext4)
 : destination with the same identifier (name{lstnumber.5}) has been already use
 d, duplicate ignored
 <to be read again> 
                    \relax 
-l.905     webDriver.
+l.906     webDriver.
                     findElement(By.id("codigo")).sendKeys("ELC9898");pdfTeX war
 ning (ext4): destination with the same identifier (name{lstnumber.6}) has been 
 already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.906     webDriver.
+l.907     webDriver.
                     findElement(By.id("nome")).sendKeys("Disciplina nova");pdfT
 eX warning (ext4): destination with the same identifier (name{lstnumber.7}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.907     Select 
+l.908     Select 
                  cargaHoraria = new Select(webDriver.findElement(By.id("carg...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.908     cargaHoraria.
+l.909     cargaHoraria.
                        selectByVisibleText("60");pdfTeX warning (ext4): destina
 tion with the same identifier (name{lstnumber.9}) has been already used, duplic
 ate ignored
 <to be read again> 
                    \relax 
-l.909     webDriver.
+l.910     webDriver.
                     findElement(By.id("ativa1")).click();pdfTeX warning (ext4):
  destination with the same identifier (name{lstnumber.10}) has been already use
 d, duplicate ignored
 <to be read again> 
                    \relax 
-l.910     Select 
+l.911     Select 
                  instituicao = new Select(webDriver.findElement(By.id("idIns...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.11}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.911     instituicao.
+l.912     instituicao.
                       selectByVisibleText("UFSM - Universidade Federal de Sa...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.12}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.912     webDriver.
+l.913     webDriver.
                     findElement(By.id("preAprovada1")).click();pdfTeX warning (
 ext4): destination with the same identifier (name{lstnumber.13}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.913     webDriver.
+l.914     webDriver.
                     findElement(By.id("salvar")).click();pdfTeX warning (ext4):
  destination with the same identifier (name{lstnumber.14}) has been already use
 d, duplicate ignored
 <to be read again> 
                    \relax 
-l.914     assertEquals(
+l.915     assertEquals(
                        "Sucesso!", webDriver.findElement(By.cssSelector("h4"...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.15}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.915 }
+l.916 }
        pdfTeX warning (ext4): destination with the same identifier (name{lstnum
 ber.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.923 Cenario:
+l.924 Cenario:
                Cadastrar nova disciplina.pdfTeX warning (ext4): destination wit
 h the same identifier (name{lstnumber.2}) has been already used, duplicate igno
 red
 <to be read again> 
                    \relax 
-l.924     Dado 
+l.925     Dado 
                acesso o endereco /cadastro-disciplina.htmpdfTeX warning (ext4):
  destination with the same identifier (name{lstnumber.3}) has been already used
 , duplicate ignored
 <to be read again> 
                    \relax 
-l.925     Quando 
+l.926     Quando 
                  preencho o campo codigo com o valor ELC9898 buscando pelo idpd
 fTeX warning (ext4): destination with the same identifier (name{lstnumber.4}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.926     E 
+l.927     E 
             preencho o campo nome com o valor Disciplina nova buscando pelo idp
 dfTeX warning (ext4): destination with the same identifier (name{lstnumber.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.927     E 
+l.928     E 
             seleciono a opcao 60 no campo cargaHoraria buscando pelo idpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.6}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.928     E 
+l.929     E 
             clico no elemento ativa1 buscando pelo idpdfTeX warning (ext4): des
 tination with the same identifier (name{lstnumber.7}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.929     E 
+l.930     E 
             seleciono a opcao UFSM - Universidade Federal de Santa Maria no ...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.930     E 
+l.931     E 
             clico no elemento preAprovada1 buscando pelo idpdfTeX warning (ext4
 ): destination with the same identifier (name{lstnumber.9}) has been already us
 ed, duplicate ignored
 <to be read again> 
                    \relax 
-l.931     E 
+l.932     E 
             clico no elemento salvar buscando pelo idpdfTeX warning (ext4): des
 tination with the same identifier (name{lstnumber.10}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.932     Entao 
+l.933     Entao 
                 comparo a igualdade entre o valor esperado Sucesso! com atri...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.940 @Test
+l.941 @Test
            pdfTeX warning (ext4): destination with the same identifier (name{ls
 tnumber.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.941 //C
+l.942 //C
          adastrar nova disciplinapdfTeX warning (ext4): destination with the sa
 me identifier (name{lstnumber.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.942 public 
+l.943 public 
              void cadastrarDisciplina() {pdfTeX warning (ext4): destination wit
 h the same identifier (name{lstnumber.4}) has been already used, duplicate igno
 red
 <to be read again> 
                    \relax 
-l.943     steps.
+l.944     steps.
                 acessarEndereco("/cadastro-disciplina.htm");pdfTeX warning (ext
 4): destination with the same identifier (name{lstnumber.5}) has been already u
 sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.944     steps.
+l.945     steps.
                 preencherCampo("codigo", "ELC9898", TesteFormulario.IDENTIFI...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.6})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.945     steps.
+l.946     steps.
                 preencherCampo("nome", "Disciplina nova", TesteFormulario.ID...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.7})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.946     steps.
+l.947     steps.
                 selecionarOpcaoCampo("60", "cargaHoraria", TesteFormulario.I...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.947     steps.
+l.948     steps.
                 clicarElemento("ativa1");pdfTeX warning (ext4): destination wit
 h the same identifier (name{lstnumber.9}) has been already used, duplicate igno
 red
 <to be read again> 
                    \relax 
-l.948     steps.
+l.949     steps.
                 selecionarOpcaoCampo("UFSM - Universidade Federal de Santa M...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.10}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.949     steps.
+l.950     steps.
                 clicarElemento("preAprovada1");pdfTeX warning (ext4): destinati
 on with the same identifier (name{lstnumber.11}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.950     steps.
+l.951     steps.
                 clicarElemento("salvar");pdfTeX warning (ext4): destination wit
 h the same identifier (name{lstnumber.12}) has been already used, duplicate ign
 ored
 <to be read again> 
                    \relax 
-l.951     steps.
+l.952     steps.
                 compararIgualdade("Sucesso!", TesteFormulario.ATRIBUTO_COMPA...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.13}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.952 }
+l.953 }
         [37
 
 ] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 982--982
+Underfull \hbox (badness 10000) in paragraph at lines 983--983
 []|\T1/ptm/m/n/12 (+20) Armazenar va-lor de um
  []
 
 [39]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 999.
-
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 1000
+.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 999.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1000.
+
 
 (C:\Projetos\TG\Final\tg-lucas-amaral.bbl [40
 
@@ -3075,22 +3076,22 @@ cr/m/n/12 http : / / pt . slideshare . net / LaisBerlatto2 /$
 [42]) 
 AED: lastpage setting LastPage
 [43]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1007.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1007.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1008.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1008.
  (C:\Projetos\TG\Final\tg-lucas-amaral.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1007.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1007.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1008.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1008.
 
 Package rerunfilecheck Info: File `tg-lucas-amaral.out' has not changed.
 (rerunfilecheck)             Checksum: 8873609A2AF0DC8C9F17094517E0C9F2;11750.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1007.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1008.
  ) 
 Here is how much of TeX's memory you used:
- 26502 strings out of 493921
- 461138 string characters out of 3147281
- 722851 words of memory out of 3000000
+ 26505 strings out of 493921
+ 461168 string characters out of 3147281
+ 723851 words of memory out of 3000000
  29054 multiletter control sequences out of 15000+200000
- 72062 words of font info for 241 fonts, out of 3000000 for 9000
+ 72287 words of font info for 243 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  42i,10n,42p,10387b,1232s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
@@ -3100,7 +3101,7 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2
 pe1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/u
 tmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tg-lucas-amaral.pdf (43 pages, 393083 bytes).
+Output written on tg-lucas-amaral.pdf (43 pages, 393166 bytes).
 PDF statistics:
  741 PDF objects out of 1000 (max. 8388607)
  222 named destinations out of 1000 (max. 500000)

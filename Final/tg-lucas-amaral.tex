@@ -139,13 +139,13 @@
 %\includepdf[pages={-}]{folha_de_aprovacao.pdf}
 
 \chapter*{Agradecimentos}
-Agradeço e dedico este trabalho, em primeiro lugar, aos meus filhos Anna Clara e Bernardo, por serem minha inspiração e por tornarem importante e válido cada dia ao longo desse processo, estimulando-me sempre com seus sorrisos e carinhos. Agradeço a minha esposa Ariane Mattezdolf pelo companheirismo em todos os momentos. 
+Agradeço e dedico este trabalho, em primeiro lugar, aos meus filhos Anna Clara e Bernardo, por serem minha inspiração e por tornarem importante e válido cada dia ao longo desse processo, estimulando-me sempre com seus sorrisos e carinhos. Agradeço a minha esposa, Ariane Mattezdolf, pelo companheirismo em todos os momentos. 
 
-Agradeço aos meus pais Dina Antunes e Éder Amaral, pelo apoio incondicional e por me tornarem a pessoa que hoje sou. Também a minha irmã, amiga e professora Larissa Amaral.
+Agradeço aos meus pais Dina Antunes e Éder Amaral, pelo apoio incondicional e por me tornarem a pessoa que hoje sou. Também a minha irmã, amiga e professora, Larissa Amaral.
 
-Em especial agradeço a minha professora e orientadora Andrea Charão, por sua paciência e dedicação ao conduzir-me durante a elaboração e desenvolvimento deste trabalho. Aos membros de minha banca, professora Giliane Bernardi e Adriano Pereira, pelas sugestões e comentários construtivos feitos na sessão prévia de apresentação do trabalho em questão.  
+Em especial, agradeço a minha professora e orientadora Andrea Charão, por sua paciência e dedicação ao conduzir-me durante a elaboração e desenvolvimento deste trabalho. Aos membros de minha banca, professora Giliane Bernardi e Adriano Pereira, pelas sugestões e comentários construtivos feitos na sessão prévia de apresentação do trabalho em questão.  
 
-Também agradeço aos meus amigos e demais familiares que de uma forma ou outra fizeram parte desta trajetória, dividindo momentos de descontração e amizade comigo.
+Também agradeço aos meus amigos e demais familiares que, de uma forma ou outra, fizeram parte desta trajetória, dividindo momentos de descontração e amizade comigo.
 \begin{abstract}
 A constante busca pela qualidade de uma solução em forma de software, fez com que empresas do ramo de desenvolvimento aderissem a realização de testes automatizados em seus sistemas. A partir deste cenário,
 surgiram inúmeras ferramentas e \emph{frameworks} para suprir esta demanda, que se propõem  a ampliar a otimização de tempo e eficácia das aplicações implementadas, visando uma garantia maior na qualidade das mesmas. Contudo, é sabido que criar um novo teste para cada nova funcionalidade ou demanda do sistema, torna-se muito custoso, sendo necessário um grande desprendimento de recursos humanos. Assim, este trabalho apresenta abordagens reutilizáveis de teste que objetivam trazer praticidade e facilidade na confecção de novos testes, utilizando para isso métodos de classes genéricas de testes confeccionados no mesmo, especificamente voltados para sistemas web desenvolvidos na linguagem de programação Java.
@@ -208,21 +208,21 @@ A seguir será descrita a sequência de passos que foram realizados neste trabal
 objetivando reduzir o custo na confecção de testes de software em um projeto.
 
 \subsection{Desenvolvimento de solução para testes unitários}
-Como primeiro passo deste trabalho desenvolveu-se uma solução composta por anotações na linguagem Java e a execução dos testes através da ferramenta Selenium WebDriver.
-Essa solução permite descrever testes unitários apenas inserindo anotações aos métodos de uma classe Java.
+Como primeiro passo deste trabalho, desenvolveu-se uma solução composta por anotações na linguagem Java e a execução dos testes através da ferramenta Selenium WebDriver.
+Essa solução, permite descrever testes unitários apenas inserindo anotações aos métodos de uma classe Java.
 
 \subsection{Desenvolvimento de solução para testes funcionais com Cucumber}
 A fim de possibilitar a confecção de testes funcionais, criou-se uma nova abordagem composta pela utilização da linguagem Cucumber e o \emph{framework} Selenium WebDriver.
-Cucumber possibilitou descrever testes para funcionalidades do sistema através de cenários em uma linguagem que se aproxima da linguagem natural.
+Cucumber possibilitou descrever testes para funcionalidades do sistema, através de cenários em uma linguagem que se aproxima da linguagem natural.
 
 \subsection{Desenvolvimento de solução para testes funcionais utilizando Selenium}
 Como meio de apresentar uma solução que permitisse testes funcionais com elementos mais complexos, como testes condicionais e manipulação de objetos Java, desenvolveu-se
-uma terceira abordagem neste trabalho, onde a mesma seguia os moldes da abordagem anterior diferindo-se apenas na forma como os testes funcionais eram descritos. Ao invés de
+uma terceira abordagem neste trabalho, onde a mesma seguia os moldes da abordagem anterior, diferindo-se apenas na forma como os testes funcionais eram descritos. Ao invés de
 escreve-los por meio da linguagem Cucumber, os mesmo foram descritos por métodos e classes Java, utilizando para isso recursos disponibilizados pela ferramenta Selenium.
 
 \subsection{Comparações entre as soluções}
-O ultimo passo deste trabalho, consistiu em apresentar comparações entre as soluções proposta, apresentando virtudes e limitações de cada uma. Também demonstrou-se
-vantagens na utilização das abordagens funcionais deste trabalho ao detrimento de desenvolver um teste utilizando apenas as ferramentas para testes de sistemas web disponíveis.
+O ultimo passo deste trabalho, consistiu em apresentar comparações entre as soluções propostas, apresentando virtudes e limitações de cada uma. Também demonstrou-se
+vantagens na utilização das abordagens funcionais deste trabalho ao detrimento de desenvolver um teste, utilizando apenas as ferramentas para testes de sistemas web disponíveis.
 
 \chapter{Fundamentos e revisão de literatura}
 
@@ -391,22 +391,22 @@ A imagem \ref{code:TestaFormularios.java} apresenta um trecho da classe confecci
 \begin{figure}[!htb]
 \begin{lstlisting}
 @Test
-public void testaFormularios() {
-	for (Class classe : getCarregaClasses()) {
-    		Teste testeClasse = TestePropriedades.teste(classe);
-        if (testeClasse.fazerLogin()) {
+public void testaFormularios() { //Método que executa os testes unitários
+	for (Class classe : getCarregaClasses()) { //Interando nas classes do sistema
+    		Teste testeClasse = TestePropriedades.teste(classe); //Busca valor @Teste classe
+        if (testeClasse.fazerLogin()) { //Fazendo login no sistema
             LoginTeste.login(TestePropriedades.urlSistema, testeClasse.getSenha(), testeClasse.getLogin(), webDriver);
         }
-        if (!testeClasse.getUrl().equals("")) {
+        if (!testeClasse.getUrl().equals("")) { //Acessar URL
             webDriver.get(TestePropriedades.urlSistema + testeClasse.getUrl());
         }
         for(Method metodo: classe.getDeclaredMethods()) {
             Teste teste = TestePropriedades.teste(metodo);
             if (teste != null) {
-                executaTeste(teste, true);
+                executaTeste(teste, true); //Executa testes para cada método
             }
         }
-        executaTeste(testeClasse, false);
+        executaTeste(testeClasse, false); //Executa testes da classe
         System.out.println("Formulário da classe " + classe.getName() + " testado!");
 	}
 }
@@ -445,7 +445,8 @@ public @interface Teste {
     boolean click() default false;
     boolean submit() default false;
     boolean limpar() default false;
-
+	
+		//Métodos referentes a classe
     String getTipoAssert() default "igual";
     String getCampoAssert() default "";
     String getIdentificadorAssert() default "id";
@@ -476,16 +477,14 @@ public class Disciplina {
     private String nome;
     private Integer cargaHoraria;
 
-    @Teste(getCampo = "ativa1", click = true)
+    @Teste(getCampo = "ativa1", click = true) //Clicar no campo ativa1
     public Boolean getAtiva() {
         return ativa == null || ativa;
     }
 
-    public void setAtiva(Boolean ativa) {
-        this.ativa = ativa;
-    }
+    public void setAtiva(Boolean ativa) { this.ativa = ativa; }
 
-    @Teste(getCampo = "cargaHoraria", getValor = "60", isSelect = true)
+    @Teste(getCampo = "cargaHoraria", getValor = "60", isSelect = true) //Selecionar valor 60 no campo carga horária
     public Integer getCargaHoraria() {
         return cargaHoraria;
     }
@@ -494,7 +493,7 @@ public class Disciplina {
         this.cargaHoraria = cargaHoraria;
     }
 
-    @Teste(getCampo = "nome", getValor = "Disciplina teste")
+    @Teste(getCampo = "nome", getValor = "Disciplina teste") //Preencher o campo nome com o valor "Disciplina teste"
     public String getNome() {
         return nome;
     }
@@ -540,9 +539,10 @@ public Object getValorPropriedadeCampo(WebElement webElement, String atributo) {
     } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_NOME_TAG)) {
         return webElement.getTagName();
     } else if ...
-}
+} //Retorna atributo de um campo
 
-public WebElement getEncontraCampo(String identificador, String campo) {
+//Retorna um elemento HTML
+public WebElement getEncontraCampo(String identificador, String campo) { 
     return webDriver.findElement(getEncontra(identificador, campo));
 }
 
@@ -699,10 +699,10 @@ Ao iniciar os testes na solução, após finalizar a codificação da mesma, not
 \subsection{Validando solução em sistemas web}
 Após a finalização da codificação da solução, iniciou-se a fase de validação e aplicação da solução utilizando Cucumber e Selenium em softwares web. Nesta etapa foram escolhidos dois softwares web, que respeitassem os requisitos existentes no escopo delimitado pelo projeto em questão. 
 
-O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicitação de disciplinas complementares de graduação, do curso de Ciência da Computação, da Universidade Federal de Santa Maria. Sistema esse que pode ser definido como sistema de pequeno porte, pois possui poucas telas e processo bem definido, utilizando apenas recursos como; Ajax, Javascript e JasperReport para geração de relatórios. 
+O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicitação de disciplinas complementares de graduação, do curso de Ciência da Computação, da Universidade Federal de Santa Maria. Sistema esse que pode ser definido como de pequeno porte, pois possui poucas telas e processo bem definido, utilizando apenas recursos como: Ajax, Javascript e JasperReport, para geração de relatórios.
 
 O Segundo sistema, em que os testes funcionais seriam aplicados, seria um software de uma empresa privada, da região de Santa Maria, chamada Megatecnologia. Este software comercializado como SILAS BPMs, apresenta
-um sistema voltado para modelagem de processo BPMs, no qual é possível descrever etapas, tramitações, telas e campos de um processo. Este sistema apresenta complicações bem maiores que o primeiro, por tratar-se de um sistema comercializado a mais de 8 anos, onde existe a utilização de tecnologias como; Ajax, geração de documentos em XLS e PDF, comunicação via WebService, geração de gráficos e mapas utilizando API`s do Google e além disso possuir um processo que é descrito pelo usuário tornando mais difícil escrever um teste funcional em que se sabe com certeza o estado atual de um campo.
+um sistema voltado para modelagem de processo BPMs, no qual é possível descrever etapas, tramitações, telas e campos de um processo. Este sistema apresenta complicações bem maiores que o primeiro, por tratar-se de um sistema comercializado há mais de 8 anos, onde existe a utilização de tecnologias como: Ajax, geração de documentos em XLS e PDF, comunicação via WebService, geração de gráficos e mapas, utilizando API`s do Google e, além disso, possuir um processo que é descrito pelo usuário, tornando mais difícil escrever um teste funcional, em que se sabe com certeza o estado atual de um campo.
 
 \subsubsection{Aplicando solução no sistema de registro de disciplinas Complementares}
 Para realização desta tarefa, foram utilizadas as funcionalidades descritas no documento de especificação deste software para validar se o mesmo apresenta todas as funcionalidades que se compromete a atender.

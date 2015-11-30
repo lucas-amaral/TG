@@ -54,21 +54,32 @@
 % These packages are all incorporated in the memoir class to one degree or another...
 
 \lstdefinelanguage{Java}{
-  keywords={public, private, new, true, false, catch, void, return, null, for, switch, var, if, in, while, else, case, break},
-  %keywords={struct, fn, let, box, mut, pub, impl, for, match, const},
-  keywordstyle=\color[rgb]{0.4,0.4,0.65}\bfseries,
-  ndkeywords={class, export, boolean, throw, implements, import, this,
-    @Before, @Test, @After, Funcionalidade, Contexto, Dado, Quando, E, Entao, @Dado, @Quando, @E, @Entao, @Documented, @Retention, @Target, @Teste},
+  keywords={public, private, new, true, boolean, false, catch, void, return, null, for, switch, var, if, in, while, else, case, break, class,
+  	Funcionalidade, Contexto, Dado, Quando, E, Entao, Cenario, Delineacao, Exemplos},
+  keywordstyle=\color[rgb]{0.2,0.4,0.55}\bfseries,
+  ndkeywords={export, throw, implements, import, this,
+    @Before, @Test, @After, @Dado, @Quando, @E, @Entao, @Documented, @Retention, @Target, @Teste, @aceitacao, @rejeicao, codigoDis, nomeNovaDisciplina, relevancia, siglaInst, msgErro},
   %ndkeywords={Add, Num},
-  ndkeywordstyle=\color{purple}\bfseries,
+  ndkeywordstyle=\color[RGB]{218,202,66}\bfseries,
   %identifierstyle=\color{black},
   sensitive=true,
   comment=[l]{//},
   morecomment=[s]{/*}{*/},
   commentstyle=\color{purple}\ttfamily,
-  stringstyle=\color[rgb]{0.0,0.4,0.65}\ttfamily,
+ % stringstyle=\color[rgb]{0.0,0.4,0.65}\ttfamily,
+  stringstyle=\color[RGB]{34,128,24}\ttfamily,
   %morestring=[b]',
   morestring=[b]"
+}
+
+\lstset{
+	language=Java,
+	basicstyle=\tiny,
+	commentstyle=\color[rgb]{0,0.2,0}\normalfont,
+	frame=single,
+	%texcl=true,
+	numbers=left,
+	showstringspaces=false,
 }
 
 \lstset{
@@ -192,7 +203,7 @@ envolvimento da equipe de qualidade. Pensando nesse problema, podemos buscar for
 
 \subsection{Objetivo geral}
 
-Este trabalho tem como objetivo principal apresentar um conjunto de classes de teste e testes que possam ser reutilizados, de forma otimizada, em novas funcionalidades de uma aplicação ou em sistemas que sigam os mesmos padrões e comportamento dos softwares para os quais foram desenvolvidos.
+Este trabalho tem como objetivo principal apresentar um conjunto de classes de teste e testes que possam ser reutilizados em novas funcionalidades de uma aplicação ou em sistemas que sigam os mesmos padrões e comportamento dos softwares para os quais foram desenvolvidos visando agilizar o desenvolvimento dos testes.
 
 \section{Justificativa}
 
@@ -205,7 +216,7 @@ superior.
 
 \section{Abordagem metodológica}
 A seguir será descrita a sequência de passos que foram realizados neste trabalho
-objetivando reduzir o custo na confecção de testes de software em um projeto.
+objetivando agilizar a confecção de testes de software em um projeto.
 
 \subsection{Desenvolvimento de solução para testes unitários}
 Como primeiro passo deste trabalho, desenvolveu-se uma solução composta por anotações na linguagem Java e a execução dos testes através da ferramenta Selenium WebDriver.
@@ -264,11 +275,6 @@ Apesar de não ser possível, através de testes, provar que um programa está c
 aumentar a confiança de que o software desempenha as funções especificadas e evidenciar algumas características mínimas do ponto de vista da qualidade do produto \cite{maldonado2004introduccao}. Sendo assim,
 faz-se essencial o mapeamento de um processo de testes para que se possa criar garantias e métricas que reduzam os erros, maximizando a qualidade. \citeauthor{crespo2004metodologia} (\citeyear{crespo2004metodologia}) descrevem o processo de
 teste como sendo a composição de quatro macro etapas: planejamento, projeto, execução e acompanhamento dos testes de unidade.
-
-\subsection{Plano de teste}
-Embora pareça ideal realizar testes sobre o projeto inteiro, muitas vezes esta tarefa pode torna-se inviável devido ao tamanho e complexidade do sistema em questão. Desta forma, torna-se importante descrever as áreas e testes necessários em um sistema. Podemos retratar esta situação com um plano de teste.
-O plano de teste estrutura e organiza as informações referentes  ao  processo  de  teste  durante  todo  o  projeto,  facilitando assim  o  planejamento  do  
-Projeto  de  Teste \cite{piqueiro2015}. Pode ser visto como uma etapa de planejamento do projeto e pode ser descrito como um conjunto de casos de teste.
 
 \subsection{Caso de teste}
 O propósito do caso de teste é definir uma unidade de teste que será executada pelo testador, seja manual ou automaticamente \cite{rios2006teste}. Um caso de teste é constituído visando descrever passos sequenciais necessários para validação de um artefato de teste. O caso de teste deve especificar a saída esperada e os resultados esperados do processamento \cite{myers2011art}.
@@ -421,7 +427,7 @@ de forma recursiva, todas as classes do projeto anotadas pela interface que indi
 \subsection{Interface de anotação}
 
 Após finalizar o desenvolvimento da classe de testes genérica, passou a existir a necessidade de criar um mecanismo para informar, à classe de testes, quais seriam as validações necessárias. Para esta tarefa,
-por tratar-se de projetos Java, resolveu-se criar uma interface de anotação que seria vinculada aos métodos e classes, onde seriam necessários executar os testes posteriores. Desta forma, a classe \texttt{TestaFormulario.java},
+por tratar-se de projetos Java, resolveu-se criar uma interface de anotação que seria vinculada aos métodos e classes, onde seriam necessários executar os casos de teste posteriores. Desta forma, a classe \texttt{TestaFormulario.java},
 responsável pela execução dos testes, varreria as classes do sistemas e, toda vez que encontrar uma classe anotada por essa interface, executaria um teste, onde, cada método que necessitaria de um teste possuiria, em sua anotação, o tipo do campo,
 as ações que deveriam ser executas e o valor que deveria ser preenchido.
 
@@ -508,7 +514,7 @@ a página, que está sendo testada, são inseridas na anotação da classe propr
 
 \subsection{Discussão sobre a solução}
 Após a finalização do desenvolvimento desta primeira solução encontrada, notou-se a clara necessidade de alteração na sistemática de como os testes ocorreriam. Necessidade esta oriunda de algumas limitações que a solução trás,
-como, por exemplo, a não possibilidade de realizar testes que envolvam mais de um método, tornando praticamente inviável a tarefa de realizar testes funcionais, pois não seria possível mapear um cenário mais completo, que depende
+como, por exemplo, a não possibilidade de realizar casos de teste que envolvam mais de um método, tornando praticamente inviável a tarefa de realizar testes funcionais, pois não seria possível mapear um cenário mais completo, que depende
 de mais de uma variável e tem uma sequência bem mapeada que deve ser seguida.
 
 Outro fator determinante para a alteração desta solução foi o fato de, ao se utilizar anotações, o mesmo não possibilitaria o teste de um mesmo campo com dois valores diferentes, pois só seria possível informar na anotação do
@@ -525,7 +531,7 @@ Visando a produção de testes funcionais, optou-se pela inclusão do \emph{fram
 	\label{fig:solucao2}
 \end{figure}
 
-A solução é composta por três estágios, onde no primeiro será inserido no projeto a classe genérica de testes já descrita, porem dela só serão utilizados os métodos que descrevem ações do Selenium WebDriver. No segundo estágio ocorre a adição de uma classe, onde são apresentados métodos que representam \emph{steps} da linguagem Cucumber o que possibilita descrever, no ultimo estágio, cenários no Cucumber em arquivos \texttt{.feature}, que descrevem testes para as funcionalidades codificadas no sistema. A imagem \ref{fig:solucao2} apresenta esse fluxo.
+A solução é composta por três estágios, onde no primeiro será inserido no projeto a classe genérica de testes já descrita, porem dela só serão utilizados os métodos que descrevem ações do Selenium WebDriver. No segundo estágio ocorre a adição de uma classe, onde são apresentados métodos que representam \emph{steps} da linguagem Cucumber o que possibilita descrever, no ultimo estágio, cenários no Cucumber em arquivos \texttt{.feature}, que descrevem casos de teste para as funcionalidades codificadas no sistema. A imagem \ref{fig:solucao2} apresenta esse fluxo.
 
 \subsection{Classe genérica de testes}
 Na classe genérica de testes foram mantidos os métodos anteriormente utilizados que permitiam gerenciar ações do Selenium WebDriver, como apresenta a figura \ref{code:Classe genérica contendo métodos WebDriver}.
@@ -665,27 +671,27 @@ Funcionalidade: Ações executadas por um aluno do curso de Ciência da Computa�
   plano individual de estudos complementares.
 
   Contexto: Fazer login no sistema como um aluno
-    Dado acesso o endereco /login.htm
-    Quando preencho o campo login com o valor lamaral buscando pelo id
-    E preencho o campo senha com o valor teste123 buscando pelo id
-    E clico no elemento button.btn.btn-default buscando pelo css
-    Entao verifico se atributo nome tag do elemento id buscando pelo nome não está nulo
+    Dado acesso o endereco "/login.htm"
+    Quando preencho o campo "login" com o valor "lamaral" buscando pelo "id"
+    E preencho o campo "senha" com o valor "teste123" buscando pelo "id"
+    E clico no elemento "button.btn.btn-default" buscando pelo "css"
+    Entao verifico se atributo "nome tag" do elemento "id" buscando pelo "nome" não está nulo
 
   @aceitacao
   Cenario: Adicionar umas disciplina ao plano com sucesso.
-    Dado seleciono a opcao ELC1051 - Computação Gráfica Avançada (60h) no campo idDisciplinaAdicionar buscando pelo id
-    Quando preencho o campo piecDisciplinaAdicionar.cursoOfertante com o valor Ciência da Computação buscando pelo id
-    E preencho o campo piecDisciplinaAdicionar.semestreAnoRealizacao com o valor II/2011 buscando pelo id
-    E clico no elemento adicionarPiecDisciplina buscando pelo id
-    Entao comparo a igualdade entre o valor esperado Sucesso! com atributo texto do elemento h4 buscando pelo css
+    Dado seleciono a opcao "ELC1051 - Computação Gráfica Avançada (60h)" no campo "idDisciplinaAdicionar" buscando pelo "id"
+    Quando preencho o campo "piecDisciplinaAdicionar.cursoOfertante" com o valor "Ciência da Computação" buscando pelo "id"
+    E preencho o campo "piecDisciplinaAdicionar.semestreAnoRealizacao" com o valor "II/2011" buscando pelo "id"
+    E clico no elemento "adicionarPiecDisciplina" buscando pelo "id"
+    Entao comparo a igualdade entre o valor esperado "Sucesso!" com atributo "texto" do elemento "h4" buscando pelo "css"
 
   @rejeicao
   Cenario: Não permitir adicionar disciplina ao plano quando a mesma já está incluida.
-    Dado seleciono a opcao ELC1051 - Computação Gráfica Avançada (60h) no campo idDisciplinaAdicionar buscando pelo id
-    Quando preencho o campo piecDisciplinaAdicionar.cursoOfertante com o valor Ciência da Computação buscando pelo id
-    E preencho o campo piecDisciplinaAdicionar.semestreAnoRealizacao com o valor II/2011 buscando pelo id
-    E clico no elemento adicionarPiecDisciplina buscando pelo id
-    Entao comparo a igualdade entre o valor esperado Disciplina já inserida no plano. com atributo texto do elemento piec.errors buscando pelo id
+    Dado seleciono a opcao "ELC1051 - Computação Gráfica Avançada (60h)" no campo "idDisciplinaAdicionar" buscando pelo "id"
+    Quando preencho o campo "piecDisciplinaAdicionar.cursoOfertante" com o valor "Ciência da Computação" buscando pelo "id"
+    E preencho o campo "piecDisciplinaAdicionar.semestreAnoRealizacao" com o valor "II/2011" buscando pelo "id"
+    E clico no elemento "adicionarPiecDisciplina" buscando pelo "id"
+    Entao comparo a igualdade entre o valor esperado "Disciplina já inserida no plano." com atributo "texto" do elemento "piec.errors" buscando pelo "id"
 	\end{lstlisting}
 	\caption{Testes de uma funcionalidade descrita por seus cenários em um arquivo .feature}
 	\label{code:feature}
@@ -715,11 +721,11 @@ Como forma de reduzir o trabalho de um desenvolvedor de teste, utilizando os rec
 Funcionalidade: Ações executadas por um membro do colegiado do curso de Ciência da Computação na aprovação/regeição de planos individuais de estudos complementares.
 
   Contexto: Fazer login no sistema como um membro do colegiado
-    Dado acesso o endereco /login.htm
-    Quando preencho o campo login com o valor colegiado buscando pelo id
-    E preencho o campo senha com o valor colegiado123 buscando pelo id
-    E clico no elemento button.btn.btn-default buscando pelo css
-    Entao verifico se atributo nome tag do elemento id buscando pelo nome não está nulo
+    Dado acesso o endereco "/login.htm"
+    Quando preencho o campo "login" com o valor "colegiado" buscando pelo "id"
+    E preencho o campo "senha" com o valor "colegiado123" buscando pelo "id"
+    E clico no elemento "button.btn.btn-default" buscando pelo "css"
+    Entao verifico se atributo "nome tag" do elemento "id" buscando pelo "nome" não está nulo
 	\end{lstlisting}
 	\caption{Exemplo de utilização do Contexto em um arquivo Cucumber}
 	\label{code:Contexto}
@@ -737,17 +743,17 @@ Delineacao do Cenario: 1 - Não permitir inserir no PIEC disciplina que não fa�
      3 - Não permitir cadastrar nova disciplina sem sua respectiva sigla
      4 - Não permitir cadastrar nova disciplina sem sua respectiva nome
      5 - Não permitir inserir disciplina com uma sigla já cadastrada
-    Dado seleciono a opcao Adicionar outra disciplina no campo idDisciplinaAdicionar buscando pelo id
-    Quando preencho o campo novaDisciplina.codigo com o valor <codigoDis> buscando pelo id
-    E preencho o campo novaDisciplina.nome com o valor <nomeNovaDisciplina> buscando pelo id
-    E preencho o campo piecDisciplinaAdicionar.relevanciaIntegralizacao com o valor <relevancia> buscando pelo id
-    E seleciono a opcao Adicionar outra instituição no campo novaDisciplina.idInstituicao buscando pelo id
-    E seleciono a opcao 78 horas no campo novaDisciplina.cargaHoraria buscando pelo id
-    E preencho o campo novaInstituicao.nome com o valor Universidade Teste buscando pelo id
-    E preencho o campo novaInstituicao.sigla com o valor <siglaInst> buscando pelo id
-    E preencho o campo piecDisciplinaAdicionar.arquivoPlanoEnsino com o valor C:\\arquivo.pdf buscando pelo id
-    E clico no elemento adicionarPiecDisciplina buscando pelo id
-    Entao comparo a igualdade entre o valor esperado <msgErro> com atributo texto do elemento piec.errors buscando pelo id
+    Dado seleciono a opcao "Adicionar outra disciplina" no campo "idDisciplinaAdicionar" buscando pelo "id"
+    Quando preencho o campo "novaDisciplina.codigo" com o valor <codigoDis> buscando pelo "id"
+    E preencho o campo "novaDisciplina.nome" com o valor <nomeNovaDisciplina> buscando pelo "id"
+    E preencho o campo "piecDisciplinaAdicionar.relevanciaIntegralizacao" com o valor <relevancia> buscando pelo "id"
+    E seleciono a opcao "Adicionar outra instituição" no campo "novaDisciplina.idInstituicao" buscando pelo "id"
+    E seleciono a opcao "78 horas" no campo "novaDisciplina.cargaHoraria" buscando pelo "id"
+    E preencho o campo "novaInstituicao.nome" com o valor "Universidade Teste" buscando pelo "id"
+    E preencho o campo "novaInstituicao.sigla" com o valor <siglaInst> buscando pelo "id"
+    E preencho o campo "piecDisciplinaAdicionar.arquivoPlanoEnsino" com o valor "C:\\arquivo.pdf" buscando pelo "id"
+    E clico no elemento "adicionarPiecDisciplina" buscando pelo "id"
+    Entao comparo a igualdade entre o valor esperado <msgErro> com atributo "texto" do elemento "piec.errors" buscando pelo "id"
 
   Exemplos:
     | codigoDis | nomeNovaDisciplina | relevancia | siglaInst | msgErro                     |
@@ -893,15 +899,15 @@ Como forma de medir este ganho, resolveu-se descrever uma funcionalidade do sist
 \begin{figure}[!htt]
 	\begin{lstlisting}
 Cenario: Cadastrar nova disciplina.
-    Dado acesso o endereco /cadastro-disciplina.htm
-    Quando preencho o campo codigo com o valor ELC9898 buscando pelo id
-    E preencho o campo nome com o valor Disciplina nova buscando pelo id
-    E seleciono a opcao 60 no campo cargaHoraria buscando pelo id
-    E clico no elemento ativa1 buscando pelo id
-    E seleciono a opcao UFSM - Universidade Federal de SM no campo idInstituicao buscando pelo id
-    E clico no elemento preAprovada1 buscando pelo id
-    E clico no elemento salvar buscando pelo id
-    Entao comparo a igualdade entre o valor esperado Sucesso! com atributo texto do elemento h4 buscando pelo css
+    Dado acesso o endereco "/cadastro-disciplina.htm"
+    Quando preencho o campo "codigo" com o valor "ELC9898" buscando pelo "id"
+    E preencho o campo "nome" com o valor "Disciplina nova" buscando pelo "id"
+    E seleciono a opcao "60" no campo "cargaHoraria" buscando pelo "id"
+    E clico no elemento "ativa1" buscando pelo "id"
+    E seleciono a opcao "UFSM - Universidade Federal de SM" no campo "idInstituicao" buscando pelo "id"
+    E clico no elemento "preAprovada1" buscando pelo "id"
+    E clico no elemento "salvar" buscando pelo "id"
+    Entao comparo a igualdade entre o valor esperado "Sucesso!" com atributo "texto" do elemento "h4" buscando pelo "css"
 	\end{lstlisting}
 	\caption{Teste utilizando solução Cucumber e WebDriver}
 	\label{code:solucao2AddDisciplina}

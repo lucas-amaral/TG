@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: tg-lucas-amaral.aux
 The style file: abnt.bst
 Database file #1: ../referências.bib
-Repeated entry---line 149 of file ../referências.bib
+Repeated entry---line 142 of file ../referências.bib
  : @article{cagnin2004reuso
  :                         ,
 I'm skipping whatever remains of this entry
@@ -15,8 +15,6 @@ while executing---line 1346 of file abnt.bst
 while executing---line 1346 of file abnt.bst
 `journal' is a missing field, not a string, for entry pereiraestudoselenium
 while executing---line 1346 of file abnt.bst
-`journal' is a missing field, not a string, for entry piqueiro2015
-while executing---line 1346 of file abnt.bst
 `journal' is a missing field, not a string, for entry de2006introduccao
 while executing---line 1346 of file abnt.bst
-(There were 8 error messages)
+(There were 7 error messages)

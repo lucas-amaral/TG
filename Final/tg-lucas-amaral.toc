@@ -17,42 +17,41 @@
 \contentsline {subsection}{\numberline {2.1.1}Qualidade do processo}{14}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Qualidade do produto}{15}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}Testes de software}{15}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Plano de teste}{15}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Caso de teste}{16}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Tipos de teste}{16}{subsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.3.1}Teste unit\IeC {\'a}rio}{16}{subsubsection.2.2.3.1}
-\contentsline {subsubsection}{\numberline {2.2.3.2}Teste funcional}{16}{subsubsection.2.2.3.2}
-\contentsline {subsection}{\numberline {2.2.4}Estrat\IeC {\'e}gias de testes}{16}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Testes de sistemas web}{17}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.1}Caso de teste}{15}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Tipos de teste}{16}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Teste unit\IeC {\'a}rio}{16}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.2}Teste funcional}{16}{subsubsection.2.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Estrat\IeC {\'e}gias de testes}{16}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Testes de sistemas web}{17}{subsection.2.2.4}
 \contentsline {section}{\numberline {2.3}Ferramentas para teste de software}{17}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Selenium HQ}{17}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Cucumber}{18}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}JUnit}{19}{subsection.2.3.3}
 \contentsline {section}{\numberline {2.4}Reuso de testes}{19}{section.2.4}
-\contentsline {chapter}{\numberline {3}Desenvolvimento}{22}{chapter.3}
-\contentsline {section}{\numberline {3.1}Delimita\IeC {\c c}\IeC {\~a}o de escopo}{22}{section.3.1}
-\contentsline {section}{\numberline {3.2}Solu\IeC {\c c}\IeC {\~a}o para testes unit\IeC {\'a}rios com anota\IeC {\c c}\IeC {\~o}es e Selenium}{22}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Classe gen\IeC {\'e}rica de testes}{23}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Interface de anota\IeC {\c c}\IeC {\~a}o}{24}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Inser\IeC {\c c}\IeC {\~a}o das anota\IeC {\c c}\IeC {\~o}es no projeto}{25}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Discuss\IeC {\~a}o sobre a solu\IeC {\c c}\IeC {\~a}o}{25}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Solu\IeC {\c c}\IeC {\~a}o para testes funcionais com Cucumber e Selenium}{26}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Classe gen\IeC {\'e}rica de testes}{27}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Classe que descreve \emph {steps}}{28}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Descri\IeC {\c c}\IeC {\~a}o de cen\IeC {\'a}rios}{29}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Utilizando a mesma janela do navegador para execu\IeC {\c c}\IeC {\~a}o dos testes}{30}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Validando solu\IeC {\c c}\IeC {\~a}o em sistemas web}{31}{subsection.3.3.5}
-\contentsline {subsubsection}{\numberline {3.3.5.1}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema de registro de disciplinas Complementares}{31}{subsubsection.3.3.5.1}
-\contentsline {subsubsection}{\numberline {3.3.5.2}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema SILAS BPMs}{33}{subsubsection.3.3.5.2}
-\contentsline {subsection}{\numberline {3.3.6}Considera\IeC {\c c}\IeC {\~o}es sobre a solu\IeC {\c c}\IeC {\~a}o Cucumber e Selenium}{33}{subsection.3.3.6}
-\contentsline {section}{\numberline {3.4}Solu\IeC {\c c}\IeC {\~a}o para testes funcionais com Selenium WebDriver}{34}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Classes Java contendo testes funcionais}{34}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Validando solu\IeC {\c c}\IeC {\~a}o em sistemas web}{36}{subsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.2.1}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema de registro de disciplinas Complementares}{36}{subsubsection.3.4.2.1}
-\contentsline {subsubsection}{\numberline {3.4.2.2}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema SILAS BPMs}{36}{subsubsection.3.4.2.2}
-\contentsline {subsection}{\numberline {3.4.3}Considera\IeC {\c c}\IeC {\~o}es sobre a solu\IeC {\c c}\IeC {\~a}o Selenium WebDriver}{37}{subsection.3.4.3}
-\contentsline {chapter}{\numberline {4}Resultados}{38}{chapter.4}
-\contentsline {section}{\numberline {4.1}Comparando abordagens funcionais}{38}{section.4.1}
-\contentsline {section}{\numberline {4.2}Comparando as tr\IeC {\^e}s solu\IeC {\c c}\IeC {\~o}es propostas}{39}{section.4.2}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{41}{chapter.5}
-\contentsline {chapter}{Refer{\^e}ncias}{42}{chapter*.28}
+\contentsline {chapter}{\numberline {3}Desenvolvimento}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Delimita\IeC {\c c}\IeC {\~a}o de escopo}{21}{section.3.1}
+\contentsline {section}{\numberline {3.2}Solu\IeC {\c c}\IeC {\~a}o para testes unit\IeC {\'a}rios com anota\IeC {\c c}\IeC {\~o}es e Selenium}{21}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Classe gen\IeC {\'e}rica de testes}{22}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Interface de anota\IeC {\c c}\IeC {\~a}o}{23}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Inser\IeC {\c c}\IeC {\~a}o das anota\IeC {\c c}\IeC {\~o}es no projeto}{24}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Discuss\IeC {\~a}o sobre a solu\IeC {\c c}\IeC {\~a}o}{24}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Solu\IeC {\c c}\IeC {\~a}o para testes funcionais com Cucumber e Selenium}{25}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Classe gen\IeC {\'e}rica de testes}{26}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Classe que descreve \emph {steps}}{27}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Descri\IeC {\c c}\IeC {\~a}o de cen\IeC {\'a}rios}{28}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Utilizando a mesma janela do navegador para execu\IeC {\c c}\IeC {\~a}o dos testes}{29}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Validando solu\IeC {\c c}\IeC {\~a}o em sistemas web}{30}{subsection.3.3.5}
+\contentsline {subsubsection}{\numberline {3.3.5.1}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema de registro de disciplinas Complementares}{30}{subsubsection.3.3.5.1}
+\contentsline {subsubsection}{\numberline {3.3.5.2}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema SILAS BPMs}{32}{subsubsection.3.3.5.2}
+\contentsline {subsection}{\numberline {3.3.6}Considera\IeC {\c c}\IeC {\~o}es sobre a solu\IeC {\c c}\IeC {\~a}o Cucumber e Selenium}{32}{subsection.3.3.6}
+\contentsline {section}{\numberline {3.4}Solu\IeC {\c c}\IeC {\~a}o para testes funcionais com Selenium WebDriver}{33}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Classes Java contendo testes funcionais}{33}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Validando solu\IeC {\c c}\IeC {\~a}o em sistemas web}{35}{subsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.2.1}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema de registro de disciplinas Complementares}{35}{subsubsection.3.4.2.1}
+\contentsline {subsubsection}{\numberline {3.4.2.2}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema SILAS BPMs}{35}{subsubsection.3.4.2.2}
+\contentsline {subsection}{\numberline {3.4.3}Considera\IeC {\c c}\IeC {\~o}es sobre a solu\IeC {\c c}\IeC {\~a}o Selenium WebDriver}{36}{subsection.3.4.3}
+\contentsline {chapter}{\numberline {4}Resultados}{37}{chapter.4}
+\contentsline {section}{\numberline {4.1}Comparando abordagens funcionais}{37}{section.4.1}
+\contentsline {section}{\numberline {4.2}Comparando as tr\IeC {\^e}s solu\IeC {\c c}\IeC {\~o}es propostas}{38}{section.4.2}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{40}{chapter.5}
+\contentsline {chapter}{Refer{\^e}ncias}{41}{chapter*.28}

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.15)  29 NOV 2015 23:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.11.25)  30 NOV 2015 14:28
 entering extended mode
 **tg-lucas-amaral.tex
-(C:\Projetos\TG\Final\tg-lucas-amaral.tex
+(D:\Pessoal\Comp\TG\Final\tg-lucas-amaral.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,7 +13,7 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Projetos\TG\Final\mdtufsm.cls
+(D:\Pessoal\Comp\TG\Final\mdtufsm.cls
 Document Class: mdtufsm 2012/06/08 v1.4 Formatacao de monografias, dissertacoes
  e teses da UFSM
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
@@ -60,7 +60,8 @@ Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 \l@brazilian = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
 ))
-(C:\Projetos\TG\Final\brazilian.babel) (C:\Projetos\TG\Final\english.babel)
+(D:\Pessoal\Comp\TG\Final\brazilian.babel)
+(D:\Pessoal\Comp\TG\Final\english.babel)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
 
 LaTeX Warning: You have requested release `2014/05/01' of LaTeX,
@@ -725,17 +726,17 @@ File: pppdftex.def 2015/09/18 v0.5d Pdfpages driver for pdfTeX (AM)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty"
-Package: expl3 2015/10/14 v6210 L3 programming layer (loader) 
+Package: expl3 2015/11/04 v6224 L3 programming layer (loader) 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex"
-Package: expl3 2015/10/14 v6210 L3 programming layer (code) 
-L3 Module: l3bootstrap 2015/09/30 v6139 L3 Bootstrap code
+Package: expl3 2015/11/04 v6224 L3 programming layer (code) 
+L3 Module: l3bootstrap 2015/10/18 v6213 L3 Bootstrap code
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\misc\etex.sty"
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 \et@xins=\count125
 )
-L3 Module: l3names 2015/10/10 v6209 L3 Namespace for primitives
+L3 Module: l3names 2015/11/03 v6220 L3 Namespace for primitives
 L3 Module: l3basics 2015/09/22 v6033 L3 Basic definitions
 L3 Module: l3expan 2015/09/10 v5983 L3 Argument expansion
 L3 Module: l3tl 2015/09/29 v6121 L3 Token lists
@@ -748,7 +749,7 @@ L3 Module: l3int 2015/09/25 v6089 L3 Integers
 \g_tmpa_int=\count129
 \g_tmpb_int=\count130
 L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
-L3 Module: l3prg 2015/10/09 v6208 L3 Control structures
+L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
 \g__prg_map_int=\count131
 L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
 L3 Module: l3token 2015/09/28 v6114 L3 Experimental token manipulation
@@ -819,7 +820,7 @@ L3 Module: l3coffins 2015/08/06 v5789 L3 Coffin code layer
 \l__coffin_display_x_dim=\dimen146
 \l__coffin_display_y_dim=\dimen147
 L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
-L3 Module: l3candidates 2015/10/09 v6208 L3 Experimental additions to l3kernel
+L3 Module: l3candidates 2015/11/01 v6216 L3 Experimental additions to l3kernel
 \l__box_top_dim=\dimen148
 \l__box_bottom_dim=\dimen149
 \l__box_left_dim=\dimen150
@@ -847,7 +848,7 @@ File: l3pdfmode.def 2015/09/10 v5983 L3 Experimental driver: PDF mode
 \l__driver_color_stack_int=\count148
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty"
-Package: xparse 2015/10/14 v6210 L3 Experimental document command parser
+Package: xparse 2015/11/04 v6224 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count149
 \l__xparse_m_args_int=\count150
 \l__xparse_mandatory_args_int=\count151
@@ -865,7 +866,7 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \backup@length=\skip68
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty"
-Package: l3keys2e 2015/10/14 v6210 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2015/11/04 v6224 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box45
 \l__siunitx_tmp_dim=\dimen165
@@ -1090,8 +1091,8 @@ Package caption Info: listings package is loaded.
 )
 \c@subfigure=\count180
 \c@subtable=\count181
-) (C:\Projetos\TG\Final\macros/bugcaption.tex)
-(C:\Projetos\TG\Final\tg-lucas-amaral.aux)
+) (D:\Pessoal\Comp\TG\Final\macros/bugcaption.tex)
+(D:\Pessoal\Comp\TG\Final\tg-lucas-amaral.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
 LaTeX Font Info:    ... okay on input line 136.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
@@ -1161,8 +1162,8 @@ LaTeX Info: Redefining \ref on input line 136.
 LaTeX Info: Redefining \pageref on input line 136.
 LaTeX Info: Redefining \nameref on input line 136.
 
-(C:\Projetos\TG\Final\tg-lucas-amaral.out)
-(C:\Projetos\TG\Final\tg-lucas-amaral.out)
+(D:\Pessoal\Comp\TG\Final\tg-lucas-amaral.out)
+(D:\Pessoal\Comp\TG\Final\tg-lucas-amaral.out)
 \@outlinefile=\write3
 
 *geometry* driver: auto-detecting
@@ -1306,7 +1307,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
 [6
 
 
-] (C:\Projetos\TG\Final\tg-lucas-amaral.toc
+] (D:\Pessoal\Comp\TG\Final\tg-lucas-amaral.toc
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
  []  
  []
@@ -1350,12 +1351,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--58
 
 )
 \tf@toc=\write4
- [8] (C:\Projetos\TG\Final\tg-lucas-amaral.lof)
+ [8] (D:\Pessoal\Comp\TG\Final\tg-lucas-amaral.lof)
 \tf@lof=\write5
  [9
 
 ]
-(C:\Projetos\TG\Final\tg-lucas-amaral.lot)
+(D:\Pessoal\Comp\TG\Final\tg-lucas-amaral.lot)
 \tf@lot=\write6
  [10
 
@@ -1363,8 +1364,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--58
 
 ] [12] [13] [14
 
-] [15]
-[16] [17]
+]
+[15] [16] [17]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 307.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -1373,8 +1374,8 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [18]
-<codigo_cucumber.png, id=393, 495.35063pt x 80.55093pt>
+
+[18] <codigo_cucumber.png, id=393, 495.35063pt x 80.55093pt>
 File: codigo_cucumber.png Graphic file (type png)
 
 <use codigo_cucumber.png>
@@ -1385,7 +1386,7 @@ Overfull \hbox (45.52718pt too wide) in paragraph at lines 329--330
  [][] 
  []
 
-[19 <C:/Projetos/TG/Final/codigo_cucumber.png>] [20] [21]
+[19 <D:/Pessoal/Comp/TG/Final/codigo_cucumber.png>] [20] [21]
 <solucao1.png, id=435, 579.66562pt x 299.61937pt>
 File: solucao1.png Graphic file (type png)
  <use solucao1.png>
@@ -1393,9 +1394,9 @@ Package pdftex.def Info: solucao1.png used on input line 373.
 (pdftex.def)             Requested size: 364.19667pt x 188.24916pt.
  [22
 
- <C:/Projetos/TG/Final/solucao1.png>] [23]pdfTeX warning (ext4): destination wi
-th the same identifier (name{lstnumber.1}) has been already used, duplicate ign
-ored
+ <D:/Pessoal/Comp/TG/Final/solucao1.png>] [23]pdfTeX warning (ext4): destinatio
+n with the same identifier (name{lstnumber.1}) has been already used, duplicate
+ ignored
 <to be read again> 
                    \relax 
 l.432 @Documented
@@ -1777,9 +1778,9 @@ ier (name{lstnumber.20}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.555 }
-        [27 <C:/Projetos/TG/Final/solucao2.png>]pdfTeX warning (ext4): destinat
-ion with the same identifier (name{lstnumber.1}) has been already used, duplica
-te ignored
+        [27 <D:/Pessoal/Comp/TG/Final/solucao2.png>]pdfTeX warning (ext4): dest
+ination with the same identifier (name{lstnumber.1}) has been already used, dup
+licate ignored
 <to be read again> 
                    \relax 
 l.566     @Dado(
@@ -2415,9 +2416,9 @@ File: solucao3.png Graphic file (type png)
 Package pdftex.def Info: solucao3.png used on input line 783.
 (pdftex.def)             Requested size: 364.19667pt x 234.8817pt.
 
-[34 <C:/Projetos/TG/Final/solucao3.png>]pdfTeX warning (ext4): destination with
- the same identifier (name{lstnumber.1}) has been already used, duplicate ignor
-ed
+[34 <D:/Pessoal/Comp/TG/Final/solucao3.png>]pdfTeX warning (ext4): destination 
+with the same identifier (name{lstnumber.1}) has been already used, duplicate i
+gnored
 <to be read again> 
                    \relax 
 l.795 	/*
@@ -2682,242 +2683,237 @@ l.872 }
 ame{lstnumber.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.895 @Test
-           pdfTeX warning (ext4): destination with the same identifier (name{ls
-tnumber.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.896 public 
-             void cadastrarDisciplinaSucesso() {pdfTeX warning (ext4): destinat
-ion with the same identifier (name{lstnumber.3}) has been already used, duplica
-te ignored
-<to be read again> 
-                   \relax 
-l.897     WebDriver 
-                    webDriver = new FirefoxDriver();pdfTeX warning (ext4): dest
-ination with the same identifier (name{lstnumber.4}) has been already used, dup
-licate ignored
-<to be read again> 
-                   \relax 
-l.898     webDriver.
-                    get(url + "/cadastro-disciplina.htm");pdfTeX warning (ext4)
-: destination with the same identifier (name{lstnumber.5}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.899     webDriver.
-                    findElement(By.id("codigo")).sendKeys("ELC9898");pdfTeX war
-ning (ext4): destination with the same identifier (name{lstnumber.6}) has been 
-already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.900     webDriver.
-                    findElement(By.id("nome")).sendKeys("Disciplina nova");pdfT
-eX warning (ext4): destination with the same identifier (name{lstnumber.7}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.901     Select 
-                 cargaHoraria = new Select(webDriver.findElement(By.id("carg...
-pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
- has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.902     cargaHoraria.
-                       selectByVisibleText("60");pdfTeX warning (ext4): destina
-tion with the same identifier (name{lstnumber.9}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.903     webDriver.
-                    findElement(By.id("ativa1")).click();pdfTeX warning (ext4):
- destination with the same identifier (name{lstnumber.10}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.904     Select 
-                 instituicao = new Select(webDriver.findElement(By.id("idIns...
-pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.11}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.905     instituicao.
-                      selectByVisibleText("UFSM - Universidade Federal de Sa...
-pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.12}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.906     webDriver.
-                    findElement(By.id("preAprovada1")).click();pdfTeX warning (
-ext4): destination with the same identifier (name{lstnumber.13}) has been alrea
-dy used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.907     webDriver.
-                    findElement(By.id("salvar")).click();pdfTeX warning (ext4):
- destination with the same identifier (name{lstnumber.14}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.908     assertEquals(
-                       "Sucesso!", webDriver.findElement(By.cssSelector("h4"...
-pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.15}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.909 }
-       pdfTeX warning (ext4): destination with the same identifier (name{lstnum
-ber.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.917 Cenario:
+l.895 Cenario:
                Cadastrar nova disciplina.pdfTeX warning (ext4): destination wit
 h the same identifier (name{lstnumber.2}) has been already used, duplicate igno
 red
 <to be read again> 
                    \relax 
-l.918     Dado 
+l.896     Dado 
                acesso o endereco /cadastro-disciplina.htmpdfTeX warning (ext4):
  destination with the same identifier (name{lstnumber.3}) has been already used
 , duplicate ignored
 <to be read again> 
                    \relax 
-l.919     Quando 
+l.897     Quando 
                  preencho o campo codigo com o valor ELC9898 buscando pelo idpd
 fTeX warning (ext4): destination with the same identifier (name{lstnumber.4}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.920     E 
+l.898     E 
             preencho o campo nome com o valor Disciplina nova buscando pelo idp
 dfTeX warning (ext4): destination with the same identifier (name{lstnumber.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.921     E 
+l.899     E 
             seleciono a opcao 60 no campo cargaHoraria buscando pelo idpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.6}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.922     E 
+l.900     E 
             clico no elemento ativa1 buscando pelo idpdfTeX warning (ext4): des
 tination with the same identifier (name{lstnumber.7}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.923     E 
-            seleciono a opcao UFSM - Universidade Federal de Santa Maria no ...
+l.901     E 
+            seleciono a opcao UFSM - Universidade Federal de SM no campo idI...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.924     E 
+l.902     E 
             clico no elemento preAprovada1 buscando pelo idpdfTeX warning (ext4
 ): destination with the same identifier (name{lstnumber.9}) has been already us
 ed, duplicate ignored
 <to be read again> 
                    \relax 
-l.925     E 
+l.903     E 
             clico no elemento salvar buscando pelo idpdfTeX warning (ext4): des
 tination with the same identifier (name{lstnumber.10}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.926     Entao 
+l.904     Entao 
                 comparo a igualdade entre o valor esperado Sucesso! com atri...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.934 @Test
-           pdfTeX warning (ext4): destination with the same identifier (name{ls
-tnumber.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.935 //C
+l.912 //C
          adastrar nova disciplinapdfTeX warning (ext4): destination with the sa
-me identifier (name{lstnumber.3}) has been already used, duplicate ignored
+me identifier (name{lstnumber.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.936 public 
+l.913 public 
              void cadastrarDisciplina() {pdfTeX warning (ext4): destination wit
-h the same identifier (name{lstnumber.4}) has been already used, duplicate igno
+h the same identifier (name{lstnumber.3}) has been already used, duplicate igno
 red
 <to be read again> 
                    \relax 
-l.937     steps.
+l.914     steps.
                 acessarEndereco("/cadastro-disciplina.htm");pdfTeX warning (ext
-4): destination with the same identifier (name{lstnumber.5}) has been already u
+4): destination with the same identifier (name{lstnumber.4}) has been already u
 sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.938     steps.
+l.915     steps.
                 preencherCampo("codigo", "ELC9898", TesteFormulario.IDENTIFI...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.916     steps.
+                preencherCampo("nome", "Disciplina nova", TesteFormulario.ID...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.6})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.939     steps.
-                preencherCampo("nome", "Disciplina nova", TesteFormulario.ID...
+l.917     steps.
+                selecionarOpcaoCampo("60", "cargaHoraria", TesteFormulario.I...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.7})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.940     steps.
-                selecionarOpcaoCampo("60", "cargaHoraria", TesteFormulario.I...
+l.918     steps.
+                clicarElemento("ativa1");pdfTeX warning (ext4): destination wit
+h the same identifier (name{lstnumber.8}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.919     steps.
+                selecionarOpcaoCampo("UFSM - Universidade Federal de SM", "i...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.9})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.920     steps.
+                clicarElemento("preAprovada1");pdfTeX warning (ext4): destinati
+on with the same identifier (name{lstnumber.10}) has been already used, duplica
+te ignored
+<to be read again> 
+                   \relax 
+l.921     steps.
+                clicarElemento("salvar");pdfTeX warning (ext4): destination wit
+h the same identifier (name{lstnumber.11}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.922     steps.
+                compararIgualdade("Sucesso!", "texto", "h4", "css");pdfTeX warn
+ing (ext4): destination with the same identifier (name{lstnumber.12}) has been 
+already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.923 }
+       pdfTeX warning (ext4): destination with the same identifier (name{lstnum
+ber.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.931 	@Test
+            pdfTeX warning (ext4): destination with the same identifier (name{l
+stnumber.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.932 	public 
+              void cadastrarDisciplinaSucesso() {pdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3}) has been already used, duplic
+ate ignored
+<to be read again> 
+                   \relax 
+l.933 	WebDriver 
+                 webDriver = new FirefoxDriver();pdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.4}) has been already used, duplic
+ate ignored
+<to be read again> 
+                   \relax 
+l.934 	webDriver.
+                 get(url + "/cadastro-disciplina.htm");pdfTeX warning (ext4): d
+estination with the same identifier (name{lstnumber.5}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.935 	webDriver.
+                 findElement(By.id("codigo")).sendKeys("ELC9898");pdfTeX warnin
+g (ext4): destination with the same identifier (name{lstnumber.6}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.936 	webDriver.
+                 findElement(By.id("nome")).sendKeys("Disciplina nova");pdfTeX 
+warning (ext4): destination with the same identifier (name{lstnumber.7}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.937 	Select 
+              cargaHoraria = new Select(webDriver.findElement(By.id("cargaHo...
 pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.941     steps.
-                clicarElemento("ativa1");pdfTeX warning (ext4): destination wit
-h the same identifier (name{lstnumber.9}) has been already used, duplicate igno
-red
+l.938 	cargaHoraria.
+                    selectByVisibleText("60");pdfTeX warning (ext4): destinatio
+n with the same identifier (name{lstnumber.9}) has been already used, duplicate
+ ignored
 <to be read again> 
                    \relax 
-l.942     steps.
-                selecionarOpcaoCampo("UFSM - Universidade Federal de Santa M...
-pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.10}
+l.939 	webDriver.
+                 findElement(By.id("ativa1")).click();pdfTeX warning (ext4): de
+stination with the same identifier (name{lstnumber.10}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.940 	Select 
+              instituicao = new Select(webDriver.findElement(By.id("idInstit...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.11}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.943     steps.
-                clicarElemento("preAprovada1");pdfTeX warning (ext4): destinati
-on with the same identifier (name{lstnumber.11}) has been already used, duplica
-te ignored
+l.941 	instituicao.
+                   selectByVisibleText("UFSM - Universidade Federal de SM");pdf
+TeX warning (ext4): destination with the same identifier (name{lstnumber.12}) h
+as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.944     steps.
-                clicarElemento("salvar");pdfTeX warning (ext4): destination wit
-h the same identifier (name{lstnumber.12}) has been already used, duplicate ign
-ored
+l.942 	webDriver.
+                 findElement(By.id("preAprovada1")).click();pdfTeX warning (ext
+4): destination with the same identifier (name{lstnumber.13}) has been already 
+used, duplicate ignored
 <to be read again> 
                    \relax 
-l.945     steps.
-                compararIgualdade("Sucesso!", TesteFormulario.ATRIBUTO_COMPA...
-pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.13}
+l.943 	webDriver.
+                 findElement(By.id("salvar")).click();pdfTeX warning (ext4): de
+stination with the same identifier (name{lstnumber.14}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.944 	assertEquals(
+                    "Sucesso!", webDriver.findElement(By.cssSelector("h4"))....
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.15}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.946 }
-        [38
+l.945 	}
+         [38
 
 ] [39]
-Underfull \hbox (badness 10000) in paragraph at lines 976--976
+Underfull \hbox (badness 10000) in paragraph at lines 975--975
 []|\T1/ptm/m/n/12 (+20) Armazenar va-lor de um
  []
 
 [40]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 993.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 992.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 993.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 992.
 
-(C:\Projetos\TG\Final\tg-lucas-amaral.bbl [41
+(D:\Pessoal\Comp\TG\Final\tg-lucas-amaral.bbl [41
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 29--32
@@ -2960,20 +2956,20 @@ cr/m/n/12 http : / / pt . slideshare . net / LaisBerlatto2 /$
 [43]) 
 AED: lastpage setting LastPage
 [44]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1001.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1001.
- (C:\Projetos\TG\Final\tg-lucas-amaral.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1001.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1001.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1000.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1000.
+ (D:\Pessoal\Comp\TG\Final\tg-lucas-amaral.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1000.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1000.
 
 Package rerunfilecheck Info: File `tg-lucas-amaral.out' has not changed.
 (rerunfilecheck)             Checksum: 8873609A2AF0DC8C9F17094517E0C9F2;11750.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1001.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1000.
  ) 
 Here is how much of TeX's memory you used:
  26508 strings out of 493921
- 461204 string characters out of 3147281
- 661851 words of memory out of 3000000
+ 461316 string characters out of 3147281
+ 660859 words of memory out of 3000000
  29057 multiletter control sequences out of 15000+200000
  75943 words of font info for 244 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -2985,7 +2981,7 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2
 pe1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/u
 tmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tg-lucas-amaral.pdf (44 pages, 397040 bytes).
+Output written on tg-lucas-amaral.pdf (44 pages, 396894 bytes).
 PDF statistics:
  746 PDF objects out of 1000 (max. 8388607)
  223 named destinations out of 1000 (max. 500000)

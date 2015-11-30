@@ -745,7 +745,7 @@ Delineacao do Cenario: 1 - Não permitir inserir no PIEC disciplina que não fa�
     E seleciono a opcao 78 horas no campo novaDisciplina.cargaHoraria buscando pelo id
     E preencho o campo novaInstituicao.nome com o valor Universidade Teste buscando pelo id
     E preencho o campo novaInstituicao.sigla com o valor <siglaInst> buscando pelo id
-    E preencho o campo piecDisciplinaAdicionar.arquivoPlanoEnsino com o valor C:\\Users\\Lucas\\Desktop\\putty.exe buscando pelo id
+    E preencho o campo piecDisciplinaAdicionar.arquivoPlanoEnsino com o valor C:\\arquivo.pdf buscando pelo id
     E clico no elemento adicionarPiecDisciplina buscando pelo id
     Entao comparo a igualdade entre o valor esperado <msgErro> com atributo texto do elemento piec.errors buscando pelo id
 
@@ -892,35 +892,13 @@ Como forma de medir este ganho, resolveu-se descrever uma funcionalidade do sist
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
-@Test
-public void cadastrarDisciplinaSucesso() {
-    WebDriver webDriver = new FirefoxDriver();
-    webDriver.get(url + "/cadastro-disciplina.htm");
-    webDriver.findElement(By.id("codigo")).sendKeys("ELC9898");
-    webDriver.findElement(By.id("nome")).sendKeys("Disciplina nova");
-    Select cargaHoraria = new Select(webDriver.findElement(By.id("cargaHoraria")));
-    cargaHoraria.selectByVisibleText("60");
-    webDriver.findElement(By.id("ativa1")).click();
-    Select instituicao = new Select(webDriver.findElement(By.id("idInstituicao")));
-    instituicao.selectByVisibleText("UFSM - Universidade Federal de Santa Maria");
-    webDriver.findElement(By.id("preAprovada1")).click();
-    webDriver.findElement(By.id("salvar")).click();
-    assertEquals("Sucesso!", webDriver.findElement(By.cssSelector("h4")).getText());
-}
-	\end{lstlisting}
-	\caption{Teste utilizando apenas o Selenium}
-	\label{code:seleniumAddDisciplina}
-\end{figure}
-
-\begin{figure}[!htt]
-	\begin{lstlisting}
 Cenario: Cadastrar nova disciplina.
     Dado acesso o endereco /cadastro-disciplina.htm
     Quando preencho o campo codigo com o valor ELC9898 buscando pelo id
     E preencho o campo nome com o valor Disciplina nova buscando pelo id
     E seleciono a opcao 60 no campo cargaHoraria buscando pelo id
     E clico no elemento ativa1 buscando pelo id
-    E seleciono a opcao UFSM - Universidade Federal de Santa Maria no campo idInstituicao buscando pelo id
+    E seleciono a opcao UFSM - Universidade Federal de SM no campo idInstituicao buscando pelo id
     E clico no elemento preAprovada1 buscando pelo id
     E clico no elemento salvar buscando pelo id
     Entao comparo a igualdade entre o valor esperado Sucesso! com atributo texto do elemento h4 buscando pelo css
@@ -931,7 +909,6 @@ Cenario: Cadastrar nova disciplina.
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
-@Test
 //Cadastrar nova disciplina
 public void cadastrarDisciplina() {
     steps.acessarEndereco("/cadastro-disciplina.htm");
@@ -939,14 +916,36 @@ public void cadastrarDisciplina() {
     steps.preencherCampo("nome", "Disciplina nova", TesteFormulario.IDENTIFICADOR_ID);
     steps.selecionarOpcaoCampo("60", "cargaHoraria", TesteFormulario.IDENTIFICADOR_ID);
     steps.clicarElemento("ativa1");
-    steps.selecionarOpcaoCampo("UFSM - Universidade Federal de Santa Maria", "idInstituicao", TesteFormulario.IDENTIFICADOR_ID);
+    steps.selecionarOpcaoCampo("UFSM - Universidade Federal de SM", "idInstituicao", "id");
     steps.clicarElemento("preAprovada1");
     steps.clicarElemento("salvar");
-    steps.compararIgualdade("Sucesso!", TesteFormulario.ATRIBUTO_COMPARACAO_ASSERT_TEXTO, "h4", TesteFormulario.IDENTIFICADOR_CSS);
+    steps.compararIgualdade("Sucesso!", "texto", "h4", "css");
 }
 	\end{lstlisting}
 	\caption{Teste utilizando solução WebDriver}
 	\label{code:solucao3AddDisciplina}
+\end{figure}
+
+\begin{figure}[!htt]
+	\begin{lstlisting}
+	@Test
+	public void cadastrarDisciplinaSucesso() {
+	WebDriver webDriver = new FirefoxDriver();
+	webDriver.get(url + "/cadastro-disciplina.htm");
+	webDriver.findElement(By.id("codigo")).sendKeys("ELC9898");
+	webDriver.findElement(By.id("nome")).sendKeys("Disciplina nova");
+	Select cargaHoraria = new Select(webDriver.findElement(By.id("cargaHoraria")));
+	cargaHoraria.selectByVisibleText("60");
+	webDriver.findElement(By.id("ativa1")).click();
+	Select instituicao = new Select(webDriver.findElement(By.id("idInstituicao")));
+	instituicao.selectByVisibleText("UFSM - Universidade Federal de SM");
+	webDriver.findElement(By.id("preAprovada1")).click();
+	webDriver.findElement(By.id("salvar")).click();
+	assertEquals("Sucesso!", webDriver.findElement(By.cssSelector("h4")).getText());
+	}
+	\end{lstlisting}
+	\caption{Teste utilizando apenas o Selenium}
+	\label{code:seleniumAddDisciplina}
 \end{figure}
 
 Como pode-se notar pelo código \ref{code:seleniumAddDisciplina}, \ref{code:solucao2AddDisciplina} e \ref{code:solucao3AddDisciplina}, existe uma diminuição no número de linhas

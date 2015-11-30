@@ -45,7 +45,7 @@
 \contentsline {subsubsection}{\numberline {3.3.5.2}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema SILAS BPMs}{32}{subsubsection.3.3.5.2}
 \contentsline {subsection}{\numberline {3.3.6}Considera\IeC {\c c}\IeC {\~o}es sobre a solu\IeC {\c c}\IeC {\~a}o Cucumber e Selenium}{32}{subsection.3.3.6}
 \contentsline {section}{\numberline {3.4}Solu\IeC {\c c}\IeC {\~a}o para testes funcionais com Selenium WebDriver}{33}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Classes Java contendo testes funcionais}{33}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.1}Classes Java contendo testes funcionais}{34}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Validando solu\IeC {\c c}\IeC {\~a}o em sistemas web}{35}{subsection.3.4.2}
 \contentsline {subsubsection}{\numberline {3.4.2.1}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema de registro de disciplinas Complementares}{35}{subsubsection.3.4.2.1}
 \contentsline {subsubsection}{\numberline {3.4.2.2}Aplicando solu\IeC {\c c}\IeC {\~a}o no sistema SILAS BPMs}{35}{subsubsection.3.4.2.2}

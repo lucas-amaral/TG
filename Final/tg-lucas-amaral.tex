@@ -392,7 +392,7 @@ formulário. Sendo assim, instanciando um objeto \texttt{WebDrive}, podemos inic
 
 Por fim, necessitamos validar se após realizar o preenchimento de formulários do software, o resultado obtido condiz com o resultado esperado. Neste momento é onde se faz necessária a adição de trechos de códigos Junit na classe de teste
 desenvolvida, pois o mesmo disponibiliza em seu pacote um conjunto de métodos \emph{assert}, com os quais é possível comparar, por exemplo, se após salvar um formulário de cadastro, a mensagem de "cadastrado com sucesso" aparece na tela.
-A imagem \ref{code:TestaFormularios.java} apresenta um trecho da classe confeccionada para realização dos testes.
+A imagem \ref{code:TestaFormularios.java} apresenta um trecho da classe\footnote{Código completo disponível no repositório https://github.com/lucas-amaral/TG/blob/master/Códigos/Java} confeccionada para realização dos testes.
 
 \begin{figure}[!htb]
 \begin{lstlisting}
@@ -534,7 +534,7 @@ Visando a produção de testes funcionais, optou-se pela inclusão do \emph{fram
 A solução é composta por três estágios, onde no primeiro será inserido no projeto a classe genérica de testes já descrita, porem dela só serão utilizados os métodos que descrevem ações do Selenium WebDriver. No segundo estágio ocorre a adição de uma classe, onde são apresentados métodos que representam \emph{steps} da linguagem Cucumber o que possibilita descrever, no ultimo estágio, cenários no Cucumber em arquivos \texttt{.feature}, que descrevem casos de teste para as funcionalidades codificadas no sistema. A imagem \ref{fig:solucao2} apresenta esse fluxo.
 
 \subsection{Classe genérica de testes}
-Na classe genérica de testes foram mantidos os métodos anteriormente utilizados que permitiam gerenciar ações do Selenium WebDriver, como apresenta a figura \ref{code:Classe genérica contendo métodos WebDriver}.
+Na classe genérica de testes foram mantidos os métodos anteriormente utilizados que permitiam gerenciar ações do Selenium WebDriver, como apresenta a figura \ref{code:Classe genérica contendo métodos WebDriver}\footnote{Código completo no repositório https://github.com/lucas-amaral/TG/blob/master/Códigos/Java}.
 Entretanto, foram removidos os métodos que realizavam os testes com base nas anotações inseridas nas classes Java do projeto.
 
 \begin{figure}[!htt]
@@ -555,8 +555,6 @@ public WebElement getEncontraCampo(String identificador, String campo) {
 public By getEncontra(String identificador, String campo) {
     if (identificador.equals(IDENTIFICADOR_ID)) {
         return By.id(campo);
-    } else if (identificador.equals(IDENTIFICADOR_NOME)) {
-        return By.name(campo);
     } else if ...
 }
 	\end{lstlisting}
@@ -661,7 +659,7 @@ Essas ações são possíveis através da utilização dos métodos oferecidos p
 \subsection{Descrição de cenários}
 Após a inserção das duas classes Java apresentados anteriormente no projeto, torna-se possível escrever cenários que representem as funcionalidades que devem ser testadas.
 Desta forma, pode-se criar arquivos \texttt{.feature} em que os cenários são compostos por uma sequência definida utilizando os passos descritos na classe \texttt{Steps}, onde a mesma realiza as ações em um navegador.
-Podemos ver um exemplo desta abordagem no código apresentado em \ref{code:feature}.
+Podemos ver um exemplo desta abordagem no código apresentado em \ref{code:feature}\footnote{Demais arquivos features podem ser acessados no link https://github.com/lucas-amaral/TG/tree/master/Códigos/features}.
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
@@ -738,11 +736,8 @@ valores contidos em uma tabela descrita pelo recurso \texttt{Exemplos} como most
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
-Delineacao do Cenario: 1 - Não permitir inserir no PIEC disciplina que não faça parte do curso, sem o preenchimento do campo relevância da integralização
-     2 - Não permitir cadastrar nova instituição com sigla já cadastrada
-     3 - Não permitir cadastrar nova disciplina sem sua respectiva sigla
-     4 - Não permitir cadastrar nova disciplina sem sua respectiva nome
-     5 - Não permitir inserir disciplina com uma sigla já cadastrada
+Delineacao do Cenario: 1 - Não permitir cadastrar nova instituição com sigla já cadastrada
+     2 - Não permitir cadastrar nova disciplina sem sua respectiva sigla
     Dado seleciono a opcao "Adicionar outra disciplina" no campo "idDisciplinaAdicionar" buscando pelo "id"
     Quando preencho o campo "novaDisciplina.codigo" com o valor <codigoDis> buscando pelo "id"
     E preencho o campo "novaDisciplina.nome" com o valor <nomeNovaDisciplina> buscando pelo "id"

@@ -159,7 +159,8 @@ Em especial, agradeço a minha professora e orientadora Andrea Charão, por sua 
 Também agradeço aos meus amigos e demais familiares que, de uma forma ou outra, fizeram parte desta trajetória, dividindo momentos de descontração e amizade comigo.
 \begin{abstract}
 A constante busca pela qualidade de uma solução em forma de software, fez com que empresas do ramo de desenvolvimento aderissem a realização de testes automatizados em seus sistemas. A partir deste cenário,
-surgiram inúmeras ferramentas e \emph{frameworks} para suprir esta demanda, que se propõem  a ampliar a otimização de tempo e eficácia das aplicações implementadas, visando uma garantia maior na qualidade das mesmas. Contudo, é sabido que criar um novo teste para cada nova funcionalidade ou demanda do sistema, torna-se muito custoso, sendo necessário um grande desprendimento de recursos humanos. Assim, este trabalho apresenta abordagens reutilizáveis de teste que objetivam trazer praticidade e facilidade na confecção de novos testes, utilizando para isso métodos de classes genéricas de testes confeccionados no mesmo, especificamente voltados para sistemas web desenvolvidos na linguagem de programação Java.
+surgiram inúmeras ferramentas e \emph{frameworks} para suprir esta demanda, que se propõem  a ampliar a otimização de tempo e eficácia das aplicações implementadas. Contudo, é sabido que criar um novo teste para cada nova funcionalidade ou demanda do sistema, torna-se muito custoso, sendo necessário um grande desprendimento de recursos humanos. Assim, este trabalho apresenta abordagens reutilizáveis de teste que objetivam trazer praticidade e facilidade na confecção de novos testes. Foram desenvolvidas, ao longo deste trabalho, três soluções para testes de sistemas web, onde a primeira trata-se de uma abordagem para testes unitários e as demais voltadas para testes funcionais, utilizando para isto, a linguagem Cucumber e os \emph{frameworks} Selenium e JUnit.
+
 \end{abstract}
 
 \begin{englishabstract}
@@ -203,7 +204,7 @@ envolvimento da equipe de qualidade. Pensando nesse problema, podemos buscar for
 
 \subsection{Objetivo geral}
 
-Este trabalho tem como objetivo principal apresentar um conjunto de classes de teste e testes que possam ser reutilizados em novas funcionalidades de uma aplicação ou em sistemas que sigam os mesmos padrões e comportamento dos softwares para os quais foram desenvolvidos visando agilizar o desenvolvimento dos testes.
+Este trabalho tem como objetivo principal apresentar um conjunto de classes de teste e testes, para sistemas web, que possam ser reutilizados em novas funcionalidades de uma aplicação ou em sistemas que sigam os mesmos padrões e comportamento dos softwares para os quais foram desenvolvidos visando agilizar o desenvolvimento dos testes.
 
 \section{Justificativa}
 
@@ -244,15 +245,15 @@ Neste capítulo, serão apresentados conceitos relativos aos conteúdos abordado
 A qualidade de software é uma subárea, oriunda da engenharia de software, que tem como foco central apresentar metodologias,
 procedimentos e métricas que garantam a qualidade no processo de desenvolvimento de um sistema. Apesar de ocorrer no processo, a qualidade de software
 objetiva obter qualidade no produto final e, com isso, conseguir contemplar na totalidade os requisitos tratados com o cliente ao longo do processo.
-\citeauthor{de2006introduccao} (\citeyear{de2006introduccao}) afirmam que a qualidade de software está diretamente relacionada a um gerenciamento
+Vasconcelos et al. \citeyearpar{de2006introduccao} afirmam que a qualidade de software está diretamente relacionada a um gerenciamento
 rigoroso de requisitos, uma gerência efetiva de projetos e em um processo de desenvolvimento bem definido gerenciado e em melhoria contínua. Afirmam também,
 que atividades de verificação e uso de métricas para controle de projetos e processo também estão inseridas nesse contexto, contribuindo para tomadas de
 decisão e para antecipação de problemas.
 
-Mas como medir a qualidade de um sistema em questão? Para responder este questionamento, \citeauthor{garvin1987competing} (\citeyear{garvin1987competing}) propõe o conceito que ele chama de
+Mas como medir a qualidade de um sistema em questão? Para responder este questionamento, Garvin \citeyearpar{garvin1987competing} propõe o conceito que ele chama de
 oito dimensões que seriam, em ordem, qualidade do desempenho, qualidade dos recursos, confiabilidade, conformidade, durabilidade, facilidade de manutenção,
-estética e percepção. Segundo \citeauthor{garvin1987competing}, atendendo a estes oito critérios, o sistema apresentará qualidade.
-\citeauthor{pressman2011engenharia} (\citeyear{pressman2011engenharia}) complementa a definição de Garvin, mesclando-a com a norma ISO 9126 e, aponta os fatores
+estética e percepção. Segundo Garvin, atendendo a estes oito critérios, o sistema apresentará qualidade.
+Pressman \citeyearpar{pressman2011engenharia} complementa a definição de Garvin, mesclando-a com a norma ISO 9126 e, aponta os fatores
 críticos para o sucesso neste caso, como sendo: Intuição, Eficiência, Robustez e Riqueza.
 
 \subsection{Qualidade do processo}
@@ -273,7 +274,7 @@ evolui através das fases do projeto de desenvolvimento \cite{boehm1976quantitat
 
 Apesar de não ser possível, através de testes, provar que um programa está correto, os testes, se conduzidos sistemática e criteriosamente, contribuem para
 aumentar a confiança de que o software desempenha as funções especificadas e evidenciar algumas características mínimas do ponto de vista da qualidade do produto \cite{maldonado2004introduccao}. Sendo assim,
-faz-se essencial o mapeamento de um processo de testes para que se possa criar garantias e métricas que reduzam os erros, maximizando a qualidade. \citeauthor{crespo2004metodologia} (\citeyear{crespo2004metodologia}) descrevem o processo de
+faz-se essencial o mapeamento de um processo de testes para que se possa criar garantias e métricas que reduzam os erros, maximizando a qualidade. Crespo et al. \citeyearpar{crespo2004metodologia} descrevem o processo de
 teste como sendo a composição de quatro macro etapas: planejamento, projeto, execução e acompanhamento dos testes de unidade.
 
 \subsection{Caso de teste}
@@ -305,12 +306,47 @@ importância de controlar e de melhorar a sua qualidade \cite{fidelis2004fireweb
 Existem muitas ferramentas desenvolvidas para realização de testes de software web. Neste trabalho serão descritas três(3) dentre elas, que serão as ferramentas utilizadas no desenvolvimento dos testes estudados.
 
 \subsection{Selenium HQ}
-É um \emph{framework} open source utilizado para automatização de testes funcionais em aplicações web \cite{chiavegatto1desenvolvimento}. Segundo \citeauthor{pereiraestudoselenium} (\citeyear{pereiraestudoselenium}) se trata
+É um \emph{framework} open source utilizado para automatização de testes funcionais em aplicações web \cite{chiavegatto1desenvolvimento}. Segundo Pereira \citeyearpar{pereiraestudoselenium} se trata
 de uma ferramenta de fácil uso e eficiente para desenvolver casos de teste, permitindo os testes de aceitação ou funcional, regressão e de desempenho.
-Selenium trabalha como um plugin do navegador Firefox, o mesmo traz muita praticidade, pois permite que se possa capturar cliques e valores digitados, transformando-os em um caso de teste. Ele é composto por
-quatro ferramentas: Selenium IDE, Selenium Grid, Selenium RC e Selenium WebDrive.
+Ele é composto por quatro ferramentas: Selenium IDE, Selenium Grid, Selenium RC e Selenium WebDrive.
 
-A utilização de comandos no Selenium consiste em digitar o comando seguido de dois parâmetros tal como, por exemplo, \texttt{verifyText //div//a[2] Login}. Dependendo  do comando os parâmetros poderão ser opcionais, pois, alguns comandos não necessitam de parâmetros para serem executados \cite{sixpenceautomatizaccao}.
+Dentro do desenvolvimento deste trabalho foram utilizados as ferramentas Selenium IDE e Selenium WebDriver. Onde a primeira trabalha como um \emph{plugin} do navegador Firefox, o mesmo traz muita praticidade, pois permite que se possa capturar cliques e valores digitados, transformando-os em um caso de teste que podem ser salvos e executados novamente em um segundo momento ou até mesmo exportado para outra linguagem que se queira trabalhar. A imagem \ref{fig:seleniumIDE} apresenta a tela deste \emph{plugin}.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.8
+	\textwidth]{selenium_ide}
+	\caption{Tela do Selenium IDE.}
+	\label{fig:seleniumIDE}
+\end{figure}
+
+Selenium WebDriver por sua vez, trata-se de um \emph{framework} que permite realizar as mesmas operações que o Selenium IDE, porem trabalhando diretamente em código, no caso deste trabalho utilizando a linguagem Java como ilustra a imagem \ref{code:seleniumWebDriver}.
+
+\begin{figure}[!htt]
+	\begin{lstlisting}
+public class LoginTeste {
+	private WebDriver driver;
+	private static String url = "inf.ufsm.br/piec";
+	
+	@Before
+	public void setUp() throws Exception { driver = new FirefoxDriver(); }
+	
+	@Test
+	public void testeLoginSucesso() {
+		driver.get(url);
+		driver.findElement(By.id("login")).sendKeys("lucas");
+		driver.findElement(By.name("senha")).sendKeys("senha123");
+		driver.findElement(By.cssSelector("button.btn.btn-default")).click();
+		assertEquals("Sucesso!", driver.findElement(By.cssSelector("h4")).getText());
+	}
+	
+	@After
+	public void tearDown() { driver.quit(); }
+}
+	\end{lstlisting}
+	\caption{Um exemplo de código escrito com Selenium WebDriver.}
+	\label{code:seleniumWebDriver}
+\end{figure}
 
 Selenium foi escolhida como umas das ferramentas no desenvolvimento deste projeto pelo fato de ser um \emph{framework open source} que possui um vasto leque de ferramentas para testes de sistemas web. Outro fator
 importante para sua escolha é a possibilidade de interação do Selenium HQ com o Cucumber. Ela se destaca entre as demais ferramentas gratuitas pelo fato de ser a mais completa, permitindo integração com
@@ -321,7 +357,7 @@ Cucumber é uma ferramenta de desenvolvimento de testes, voltada para sistemas w
 é escrita em linguagem Ruby, mas pode ser utilizada para executar especificações de aplicações escritas em qualquer linguagem \cite{nunescucumber}.
 
 A escolha dessa ferramenta baseou-se na fácil transcrição dos requisitos do sistema para a linguagem em questão, tornando possível conferir se os requisitos estão contemplados pelas funções e métodos descritos no sistema web.
-\citeauthor{lopescucumbervalor} (\citeyear{lopescucumbervalor}) compara Cucumber com o software Capybara\footnote{Capybara é uma biblioteca escrita na linguagem de programação Ruby que torna fácil simular como um usuário interage com sua aplicação. http://jnicklas.github.io/capybara/} e afirma que o primeiro apresenta um código mais legível e amigável. Uma observação é que o código com Capybara faz
+Lopes \citeyearpar{lopescucumbervalor} compara Cucumber com o software Capybara\footnote{Capybara é uma biblioteca escrita na linguagem de programação Ruby que torna fácil simular como um usuário interage com sua aplicação. http://jnicklas.github.io/capybara/} e afirma que o primeiro apresenta um código mais legível e amigável. Uma observação é que o código com Capybara faz
 referência para vários detalhes de implementação, enquanto o código do Cucumber reserva isso apenas para os \emph{Steps} e não para o arquivo de \texttt{feature} \cite{lopescucumbervalor}.
 
 A ferramenta funciona, basicamente, através da leitura de arquivos com a extensão \texttt{feature}, os quais descrevem em linguagem natural uma funcionalidade e casos de teste, conhecidos como cenários.
@@ -349,7 +385,7 @@ Visando melhor aproveitar os recursos existentes em uma instituição e, ainda a
 teses e modelos que buscam criar testes genéricos e padronizados. Um padrão é um pedaço de informação instrutiva e nomeada, que captura a estrutura essencial
 e \emph{"insights"}, de uma família bem sucedida de soluções aprovadas, para um determinado problema, o qual surge em um determinado contexto \cite{cagnin2004reuso}.
 
-\citeauthor{guizzardi2000desenvolvimento} diz que, por razões históricas, a área de desenvolvimento de software não atingiu a maturidade que outras áreas da engenharia atingiram. Complementa afirmando que, apesar disso, é inegável que algum avanço tenha sido alcançado, pois a forma de realização dessa atividade evoluiu de uma atividade realizada de forma quase artesanal, para um processo de
+Guizzardi \citeyearpar{guizzardi2000desenvolvimento} diz que, por razões históricas, a área de desenvolvimento de software não atingiu a maturidade que outras áreas da engenharia atingiram. Complementa afirmando que, apesar disso, é inegável que algum avanço tenha sido alcançado, pois a forma de realização dessa atividade evoluiu de uma atividade realizada de forma quase artesanal, para um processo de
 desenvolvimento bem estruturado e que, nos melhores casos, contempla inclusive atividades de gerência e avaliação da qualidade \cite{guizzardi2000desenvolvimento}.
 Com isso, a reutilização dos testes já codificados se mostra uma importante prática no desenvolvimento e que ainda apresenta muitas incógnitas e possibilidades para as equipes de TI,
 principalmente na geração de casos de testes que possam ser reutilizados em situações que apresentem um padrão parecido com os casos já conhecidos.
@@ -390,7 +426,7 @@ Por tratar-se de uma abordagem para sistemas web, optou-se pela utilização de 
 O primeiro é o Selenium. Através da utilização da classe \texttt{WebDrive}, contida em seu pacote, podemos descrever uma sequência de passos que são executados por um navegador, como cliques e inserção de dados em campos de um
 formulário. Sendo assim, instanciando um objeto \texttt{WebDrive}, podemos iniciar um navegador e realizar uma série de instruções pré-determinadas para validar se a aplicação comporta-se de forma adequada.
 
-Por fim, necessitamos validar se após realizar o preenchimento de formulários do software, o resultado obtido condiz com o resultado esperado. Neste momento é onde se faz necessária a adição de trechos de códigos Junit na classe de teste
+Por fim, necessitamos validar se após realizar o preenchimento de formulários do software, o resultado obtido condiz com o resultado esperado. Neste momento é onde se faz necessária a adição de trechos de códigos JUnit na classe de teste
 desenvolvida, pois o mesmo disponibiliza em seu pacote um conjunto de métodos \emph{assert}, com os quais é possível comparar, por exemplo, se após salvar um formulário de cadastro, a mensagem de "cadastrado com sucesso" aparece na tela.
 A imagem \ref{code:TestaFormularios.java} apresenta um trecho da classe\footnote{Código completo disponível no repositório https://github.com/lucas-amaral/TG/blob/master/Códigos/Java} confeccionada para realização dos testes.
 
@@ -624,7 +660,25 @@ A classe \texttt{Steps.java} foi criada com intuito de realizar o elo de ligaç�
 \end{figure}
 
 A linguagem Cucumber, quando trabalha conjuntamente com Java, disponibiliza anotações como: \texttt{@Dado, @Quando, @E e @Entao}, que corresponde de forma 1 para 1 frases descritas nos arquivos \texttt{.feature}.
-Como podemos ver na ilustração, cada método que corresponde a um \emph{Step} do Cucumber apresenta uma anotação que identifica o mesmo, contendo uma frase fixa e parâmetros que são esperados. Dessa forma, podem-se descrever frases que correspondam a pequenas ações executadas em um navegador. Assim, cada método é responsável por executar uma ação específica, tornando possível reutilizar estes métodos para compor os cenários que posteriormente serão descritos.
+Como podemos ver na ilustração, cada método que corresponde a um \emph{Step} do Cucumber apresenta uma anotação que identifica o mesmo, contendo uma frase fixa e parâmetros que são esperados. Dessa forma, podem-se descrever frases que correspondam a pequenas ações executadas em um navegador. Assim, cada método é responsável por executar uma ação específica, tornando possível reutilizar estes métodos para compor os cenários que posteriormente serão descritos. 
+
+Nesta classe também estão definidos, como demonstra ilustração \ref{code:stepsJUnit}, métodos necessários para realização das comparações que definem se o teste passou ou não. Esses métodos utilizam chamadas dos métodos asserts, oriundos do \emph{framework} de teste JUnit.
+
+\begin{figure}[!htt]
+	\begin{lstlisting}
+@Entao("^comparo a igualdade entre o valor esperado (.*) com atributo (.*) do elemento (.*) buscando pelo (.*)$")
+	public void compararIgualdade(String valorEsperado, String atributo, String campo, String identificador) {
+	assertEquals(valorEsperado, getValorPropriedadeCampo(getEncontraCampo(identificador, campo), atributo));
+}
+
+@Entao("^verifico se atributo (.*) do elemento (.*) buscando pelo (.*) é falso")
+	public void compararSeFalso(String atributo, String campo, String identificador) {
+	assertFalse((Boolean) getValorPropriedadeCampo(getEncontraCampo(identificador, campo), atributo));
+}
+	\end{lstlisting}
+	\caption{Métodos de comparação da classe \texttt{Steps.java}}
+	\label{code:stepsJUnit}
+\end{figure}
 
 Para tornar a solução mais completa, inseriu-se nessa classe, métodos que permitissem manipular campos que dependessem de chamadas Ajax e JavaScript, como demonstra a imagem \ref{code:Método WebDriverWait}
 
@@ -641,13 +695,6 @@ public void aguardarCampoExistente(Long tempo, String campo, String identificado
 public void aguardarCampoVisivel(Long tempo, String campo, String identificador) {
     WebDriverWait webDriverWait = new WebDriverWait(webDriver, tempo);
     webDriverWait.until(ExpectedConditions.visibilityOf(funcoes.getEncontraCampo(identificador, campo)));
-}
-
-@E("^aguardo (\\d+) milisegundos para verificar se elemento (.*) buscando pelo (.*) desapareceu$")
-public void aguardarCampoDesaparecer(Long tempo, String campo, String identificador) {
-    WebDriverWait webDriverWait = new WebDriverWait(webDriver, tempo);
-    webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(
-        funcoes.getEncontra(identificador, campo)));
 }
 	\end{lstlisting}
 	\caption{Método que permite manipulações com espera de tempo ou ação}
@@ -703,12 +750,28 @@ Ao iniciar os testes na solução, após finalizar a codificação da mesma, not
 \subsection{Validando solução em sistemas web}
 Após a finalização da codificação da solução, iniciou-se a fase de validação e aplicação da solução utilizando Cucumber e Selenium em softwares web. Nesta etapa foram escolhidos dois softwares web, que respeitassem os requisitos existentes no escopo delimitado pelo projeto em questão. 
 
-O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicitação de disciplinas complementares de graduação, do curso de Ciência da Computação, da Universidade Federal de Santa Maria. Sistema esse que pode ser definido como de pequeno porte, pois possui poucas telas e processo bem definido, utilizando apenas recursos como: Ajax, Javascript e JasperReport, para geração de relatórios.
+O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicitação de disciplinas complementares de graduação, do curso de Ciência da Computação, da Universidade Federal de Santa Maria. Sistema esse que pode ser definido como de pequeno porte, pois possui poucas telas e processo bem definido, utilizando apenas recursos como: Ajax, Javascript e JasperReport, para geração de relatórios. A imagem \ref{fig:piec} apresenta uma tela deste sistema.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.8
+	\textwidth]{piec}
+	\caption{Tela do sistema para registro de disciplinas complementares.}
+	\label{fig:piec}
+\end{figure}
 
 O Segundo sistema, em que os testes funcionais seriam aplicados, seria um software de uma empresa privada, da região de Santa Maria, chamada Megatecnologia. Este software comercializado como SILAS BPMs, apresenta
-um sistema voltado para modelagem de processo BPMs, no qual é possível descrever etapas, tramitações, telas e campos de um processo. Este sistema apresenta complicações bem maiores que o primeiro, por tratar-se de um sistema comercializado há mais de 8 anos, onde existe a utilização de tecnologias como: Ajax, geração de documentos em XLS e PDF, comunicação via WebService, geração de gráficos e mapas, utilizando API`s do Google e, além disso, possuir um processo que é descrito pelo usuário, tornando mais difícil escrever um teste funcional, em que se sabe com certeza o estado atual de um campo.
+um sistema voltado para modelagem de processo BPMs, no qual é possível descrever etapas, tramitações, telas e campos de um processo. Este sistema apresenta complicações bem maiores que o primeiro, por tratar-se de um sistema comercializado há mais de 8 anos, onde existe a utilização de tecnologias como: Ajax, geração de documentos em XLS e PDF, comunicação via WebService, geração de gráficos e mapas, utilizando API`s do Google e, além disso, possuir um processo que é descrito pelo usuário, tornando mais difícil escrever um teste funcional, em que se sabe com certeza o estado atual de um campo. \ref{fig:silas} apresenta tela de configuração deste sistema.
 
-\subsubsection{Aplicando solução no sistema de registro de disciplinas Complementares}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.8
+	\textwidth]{silas}
+	\caption{Tela do sistema SILAS BPM's.}
+	\label{fig:silas}
+\end{figure}
+
+\subsubsection{Aplicando solução no sistema de registro de disciplinas complementares}
 Para realização desta tarefa, foram utilizadas as funcionalidades descritas no documento de especificação deste software para validar se o mesmo apresenta todas as funcionalidades que se compromete a atender.
 Como o processo apresenta dois atores principais, onde o primeiro seria o aluno e, o segundo, um membro do colegiado do curso, foram separados os testes em dois arquivos \texttt{.feature}. O primeiro contendo ações realizadas por alunos e, o segundo, para ações que um membro do colegiado executa.
 
@@ -931,18 +994,18 @@ public void cadastrarDisciplina() {
 	\begin{lstlisting}
 	@Test
 	public void cadastrarDisciplinaSucesso() {
-	WebDriver webDriver = new FirefoxDriver();
-	webDriver.get(url + "/cadastro-disciplina.htm");
-	webDriver.findElement(By.id("codigo")).sendKeys("ELC9898");
-	webDriver.findElement(By.id("nome")).sendKeys("Disciplina nova");
-	Select cargaHoraria = new Select(webDriver.findElement(By.id("cargaHoraria")));
-	cargaHoraria.selectByVisibleText("60");
-	webDriver.findElement(By.id("ativa1")).click();
-	Select instituicao = new Select(webDriver.findElement(By.id("idInstituicao")));
-	instituicao.selectByVisibleText("UFSM - Universidade Federal de SM");
-	webDriver.findElement(By.id("preAprovada1")).click();
-	webDriver.findElement(By.id("salvar")).click();
-	assertEquals("Sucesso!", webDriver.findElement(By.cssSelector("h4")).getText());
+		WebDriver webDriver = new FirefoxDriver();
+		webDriver.get(url + "/cadastro-disciplina.htm");
+		webDriver.findElement(By.id("codigo")).sendKeys("ELC9898");
+		webDriver.findElement(By.id("nome")).sendKeys("Disciplina nova");
+		Select cargaHoraria = new Select(webDriver.findElement(By.id("cargaHoraria")));
+		cargaHoraria.selectByVisibleText("60");
+		webDriver.findElement(By.id("ativa1")).click();
+		Select instituicao = new Select(webDriver.findElement(By.id("idInstituicao")));
+		instituicao.selectByVisibleText("UFSM - Universidade Federal de SM");
+		webDriver.findElement(By.id("preAprovada1")).click();
+		webDriver.findElement(By.id("salvar")).click();
+		assertEquals("Sucesso!", webDriver.findElement(By.cssSelector("h4")).getText());
 	}
 	\end{lstlisting}
 	\caption{Teste utilizando apenas o Selenium}
@@ -990,7 +1053,7 @@ Como contribuição, este trabalho apresenta uma abordagem que mescla a utiliza�
 A lista a seguir expõe, em ordem de relevância, algumas melhorias que poderiam ser incorporadas em uma nova versão deste projeto:
 
 \begin{itemize}
-	\item Apresentar no auto completar do IDE, os campos pertencentes ao contexto atual do .feature: Ao utilizar um IDE que possibilite manipulação de plugins, desenvolver mecanismo que pesquise nos arquivos JSP/JSF todos os campos referentes à um contexto atual, e assim apresente sugestão de autocompletar para os cenários que estão sendo descritos pelo Cucumber.
+	\item Apresentar no auto completar do IDE, os campos pertencentes ao contexto atual do .feature: Ao utilizar um IDE que possibilite manipulação de \emph{plugins}, desenvolver mecanismo que pesquise nos arquivos JSP/JSF todos os campos referentes à um contexto atual, e assim apresente sugestão de autocompletar para os cenários que estão sendo descritos pelo Cucumber.
 	\item Não persistir no BD as alterações realizadas pelos testes automatizados: Possibilitar que ao finalizar execução de um teste funcional, o bando de dados utilizado retorne ao estado inicial, não persistindo assim as alterações realizadas pelos testes executados.
 	\item Criar mecanismo que busque na árvore do projeto classes de validação dos formulários e transcreva essas informações em cenários de teste Cucumber: Criar mecanismo que permita gerar testes a partir das validações que são inseridas nas classes de validação referentes a uma classe de controle.
 \end{itemize}

@@ -11,30 +11,31 @@
 \addvspace {0\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Tela do Selenium IDE.\relax }}{18}{figure.caption.7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Um exemplo de c\IeC {\'o}digo escrito com Selenium WebDriver.\relax }}{18}{figure.caption.8}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Um exemplo de c\IeC {\'o}digo cucumber.\relax }}{20}{figure.caption.9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Um exemplo de c\IeC {\'o}digo cucumber.\relax }}{19}{figure.caption.9}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces M\IeC {\'e}todo assert utilizado para comparar valor obtido com valor esperado.\relax }}{20}{figure.caption.10}
 \addvspace {0\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Estrutura da solu\IeC {\c c}\IeC {\~a}o.\relax }}{22}{figure.caption.10}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Classe gen\IeC {\'e}rica de teste desenvolvida\relax }}{23}{figure.caption.11}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Interface Teste\relax }}{24}{figure.caption.12}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Classe anotada com @Teste\relax }}{25}{figure.caption.13}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Estrutura da solu\IeC {\c c}\IeC {\~a}o utilizando Selenium e Cucumber.\relax }}{27}{figure.caption.14}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces M\IeC {\'e}todos para busca de elemento web utilizando Selenium WebDriver\relax }}{27}{figure.caption.15}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Classe gen\IeC {\'e}rica contendo steps Cucumber que descrevem a\IeC {\c c}\IeC {\~o}es do Selenium WebDriver\relax }}{28}{figure.caption.16}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces M\IeC {\'e}todos de compara\IeC {\c c}\IeC {\~a}o da classe \texttt {Steps.java}\relax }}{29}{figure.caption.17}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces M\IeC {\'e}todo que permite manipula\IeC {\c c}\IeC {\~o}es com espera de tempo ou a\IeC {\c c}\IeC {\~a}o\relax }}{29}{figure.caption.18}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Testes de uma funcionalidade descrita por seus cen\IeC {\'a}rios em um arquivo .feature\relax }}{30}{figure.caption.19}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Tela do sistema para registro de disciplinas complementares.\relax }}{32}{figure.caption.20}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Tela do sistema SILAS BPM's.\relax }}{32}{figure.caption.21}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Exemplo de utiliza\IeC {\c c}\IeC {\~a}o do Contexto em um arquivo Cucumber\relax }}{33}{figure.caption.22}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Cen\IeC {\'a}rio executado para cada linha existente na tabela Exemplos\relax }}{34}{figure.caption.23}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Estrutura da solu\IeC {\c c}\IeC {\~a}o utilizando somente Selenium.\relax }}{36}{figure.caption.24}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Teste funcional utilizando abordagem Selenium WebDriver\relax }}{36}{figure.caption.25}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Realizando compara\IeC {\c c}\IeC {\~o}es utilizando o tipo de dados data.\relax }}{37}{figure.caption.26}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Realizando compara\IeC {\c c}\IeC {\~o}es utilizando o tipo de dados data.\relax }}{37}{figure.caption.27}
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Cen\IeC {\'a}rio descrevendo mesma funcionalidade contida em \ref {code:Contexto}\relax }}{37}{figure.caption.28}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Estrutura da solu\IeC {\c c}\IeC {\~a}o.\relax }}{22}{figure.caption.11}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Classe gen\IeC {\'e}rica de teste desenvolvida\relax }}{23}{figure.caption.12}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Interface Teste\relax }}{24}{figure.caption.13}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Classe anotada com @Teste\relax }}{25}{figure.caption.14}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Estrutura da solu\IeC {\c c}\IeC {\~a}o utilizando Selenium e Cucumber.\relax }}{27}{figure.caption.15}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces M\IeC {\'e}todos para busca de elemento web utilizando Selenium WebDriver\relax }}{27}{figure.caption.16}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Classe gen\IeC {\'e}rica contendo steps Cucumber que descrevem a\IeC {\c c}\IeC {\~o}es do Selenium WebDriver\relax }}{28}{figure.caption.17}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces M\IeC {\'e}todos de compara\IeC {\c c}\IeC {\~a}o da classe \texttt {Steps.java}\relax }}{29}{figure.caption.18}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces M\IeC {\'e}todo que permite manipula\IeC {\c c}\IeC {\~o}es com espera de tempo ou a\IeC {\c c}\IeC {\~a}o\relax }}{29}{figure.caption.19}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Testes de uma funcionalidade descrita por seus cen\IeC {\'a}rios em um arquivo .feature\relax }}{30}{figure.caption.20}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Tela do sistema para registro de disciplinas complementares.\relax }}{31}{figure.caption.21}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Tela do sistema SILAS BPM's.\relax }}{32}{figure.caption.22}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Exemplo de utiliza\IeC {\c c}\IeC {\~a}o do Contexto em um arquivo Cucumber\relax }}{33}{figure.caption.23}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Cen\IeC {\'a}rio executado para cada linha existente na tabela Exemplos\relax }}{34}{figure.caption.24}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Estrutura da solu\IeC {\c c}\IeC {\~a}o utilizando somente Selenium.\relax }}{35}{figure.caption.25}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Teste funcional utilizando abordagem Selenium WebDriver\relax }}{36}{figure.caption.26}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Realizando compara\IeC {\c c}\IeC {\~o}es utilizando o tipo de dados data.\relax }}{36}{figure.caption.27}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Realizando compara\IeC {\c c}\IeC {\~o}es utilizando o tipo de dados data.\relax }}{37}{figure.caption.28}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Cen\IeC {\'a}rio descrevendo mesma funcionalidade contida em \ref {code:Contexto}\relax }}{37}{figure.caption.29}
 \addvspace {0\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Teste utilizando solu\IeC {\c c}\IeC {\~a}o Cucumber e WebDriver\relax }}{39}{figure.caption.29}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Teste utilizando solu\IeC {\c c}\IeC {\~a}o WebDriver\relax }}{39}{figure.caption.30}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Teste utilizando apenas o Selenium\relax }}{40}{figure.caption.31}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Teste utilizando solu\IeC {\c c}\IeC {\~a}o Cucumber e WebDriver\relax }}{39}{figure.caption.30}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Teste utilizando solu\IeC {\c c}\IeC {\~a}o WebDriver\relax }}{39}{figure.caption.31}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Teste utilizando apenas o Selenium\relax }}{40}{figure.caption.32}
 \addvspace {0\p@ }
 \addvspace {0\p@ }

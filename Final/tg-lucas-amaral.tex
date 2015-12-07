@@ -314,7 +314,7 @@ Dentro do desenvolvimento deste trabalho foram utilizados as ferramentas Seleniu
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.8
+	\includegraphics[width=0.7
 	\textwidth]{selenium_ide}
 	\caption{Tela do Selenium IDE.}
 	\label{fig:seleniumIDE}
@@ -378,6 +378,16 @@ JUnit é uma ferramenta de apoio ao teste unitário, a qual auxilia desenvolvedo
 
 Justifica-se a sua utilização neste trabalho por tratar-se de uma API (\emph{Application Programming Interface}), que viabiliza a comparação de um valor obtido em algum teste com o valor esperado pelo mesmo. Desta forma, pode-se validar e verificar se
 a funcionalidade de um sistema está trabalhando adequadamente.
+No desenvolvimento deste trabalho, sua importância se deu, pelo fato de possibilitar realizar comparações ao final dos testes codificados, como apresentado na linha 2 da imagem \ref{code:JUnit assert}.
+
+\begin{figure}[!htb]
+	\begin{lstlisting}
+	webDriver.findElement(By.id("salvar")).click();
+	assertEquals("Sucesso!", webDriver.findElement(By.cssSelector("h4")).getText());
+	\end{lstlisting}
+	\caption{Método assert utilizado para comparar valor obtido com valor esperado.}
+	\label{code:JUnit assert}
+\end{figure}
 
 \section{Reuso de testes}
 
@@ -754,7 +764,7 @@ O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicita
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.8
+	\includegraphics[width=0.5
 	\textwidth]{piec}
 	\caption{Tela do sistema para registro de disciplinas complementares.}
 	\label{fig:piec}

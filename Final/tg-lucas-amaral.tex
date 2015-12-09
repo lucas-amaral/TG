@@ -158,8 +158,8 @@ Em especial, agradeço a minha professora e orientadora Andrea Charão, por sua 
 
 Também agradeço aos meus amigos e demais familiares que, de uma forma ou outra, fizeram parte desta trajetória, dividindo momentos de descontração e amizade comigo.
 \begin{abstract}
-A constante busca pela qualidade de uma solução em forma de software, fez com que empresas do ramo de desenvolvimento aderissem a realização de testes automatizados em seus sistemas. A partir deste cenário,
-surgiram inúmeras ferramentas e \emph{frameworks} para suprir esta demanda, que se propõem  a ampliar a otimização de tempo e eficácia das aplicações implementadas. Contudo, é sabido que criar um novo teste para cada nova funcionalidade ou demanda do sistema, torna-se muito custoso, sendo necessário um grande desprendimento de recursos humanos. Assim, este trabalho apresenta abordagens reutilizáveis de teste que objetivam trazer praticidade e facilidade na confecção de novos testes. Foram desenvolvidas, ao longo deste trabalho, três soluções para testes de sistemas web, onde a primeira trata-se de uma abordagem para testes unitários e as demais voltadas para testes funcionais, utilizando para isto, a linguagem Cucumber e os \emph{frameworks} Selenium e JUnit.
+A constante busca pela qualidade de uma solução em forma de software fez com que empresas do ramo de desenvolvimento aderissem à realização de testes automatizados em seus sistemas. A partir deste cenário,
+surgiram inúmeras ferramentas e \emph{frameworks} para suprir esta demanda, que se propõem  a ampliar a otimização de tempo e eficácia das aplicações implementadas. Contudo, é sabido que criar um novo teste para cada nova funcionalidade, ou demanda do sistema, torna-se muito custoso, sendo necessário um grande desprendimento de recursos humanos. Assim, este trabalho apresenta abordagens reutilizáveis de teste que objetivam trazer praticidade e facilidade na confecção de novos testes. Foram desenvolvidas, ao longo deste trabalho, três soluções para testes de sistemas web, onde a primeira trata-se de uma abordagem para testes unitários e as demais voltadas para testes funcionais, utilizando para isto, a linguagem Cucumber e os \emph{frameworks} Selenium e JUnit.
 
 \end{abstract}
 
@@ -187,14 +187,13 @@ The ongoing need for a reliable software solution, compelled development compani
 
 \chapter{Introdução}
 
-Dada a atual conjectura do mercado de desenvolvimento de software é fundamental, para
+Dada a atual conjectura do mercado de desenvolvimento de software, é fundamental, para
 que uma aplicação se mantenha viva de forma competitiva, apresentar diferenciais ao seu público alvo. Desta maneira, a área de qualidade de software ganha cada vez mais espaço dentro das empresas de tecnologia da informação e, em especial, as ferramentas e
 metodologias de teste de software ganham maior visibilidade. Além do aumento da produtividade e da diminuição do retrabalho, as empresas na área de tecnologia da informação buscam um melhor relacionamento com seus clientes por meio do melhor planejamento e gestão de suas atividades de desenvolvimento e da diminuição no número de defeitos nos produtos entregues \cite{jomori2004qualidade}.
 
 Os testes de software podem ocorrer em todas as etapas do desenvolvimento e de diferentes formas, contudo,
 sempre objetivam atender na totalidade os requisitos do sistema e, simultaneamente, amplificar a qualidade da solução
-codificada. Apesar de, aparentemente, ser mais prático e rápido realizar um teste manual, a cada nova alteração em um módulo do sistema,
-o teste tem que ser todo refeito e a tendência que novos erros sejam gerados, até mesmo em funcionalidades já testadas, é enorme,
+codificada. Apesar de, aparentemente, ser mais prático e rápido realizar um teste manual, a cada nova alteração em um módulo do sistema, o teste tem que ser todo refeito e a tendência que novos erros sejam gerados, até mesmo em funcionalidades já testadas, é enorme,
 problema este que não ocorre quando a abordagem escolhida é a automatização dos testes. 
 
 Os testes automatizados angariam cada vez mais adeptos ao longo dos últimos anos. Tal fato se deve principalmente à grande redução de custo observada a médio e longo prazos com o uso desta prática \cite{de2007utilizaccao}. Em contrapartida, os testes automatizados demandam um grande custo inicial em sua codificação e, com isso, aumentam o
@@ -205,6 +204,8 @@ envolvimento da equipe de qualidade. Pensando nesse problema, podemos buscar for
 \subsection{Objetivo geral}
 
 Este trabalho tem como objetivo principal apresentar um conjunto de classes de teste e testes, para sistemas web, que possam ser reutilizados em novas funcionalidades de uma aplicação ou em sistemas que sigam os mesmos padrões e comportamento dos softwares para os quais foram desenvolvidos visando agilizar o desenvolvimento dos testes.
+
+\subsubsection{Objetivos específicos}
 
 \section{Justificativa}
 
@@ -242,17 +243,15 @@ Neste capítulo, serão apresentados conceitos relativos aos conteúdos abordado
 
 \section{Qualidade de software}
 
-A qualidade de software é uma subárea, oriunda da engenharia de software, que tem como foco central apresentar metodologias,
+A qualidade de software é uma subárea oriunda da engenharia de software, que tem como foco central apresentar metodologias,
 procedimentos e métricas que garantam a qualidade no processo de desenvolvimento de um sistema. Apesar de ocorrer no processo, a qualidade de software
-objetiva obter qualidade no produto final e, com isso, conseguir contemplar na totalidade os requisitos tratados com o cliente ao longo do processo.
+objetiva obter qualidade no produto final e, com isso, conseguir contemplar na totalidade os requisitos tratados com o cliente.
 Vasconcelos et al. \citeyearpar{de2006introduccao} afirmam que a qualidade de software está diretamente relacionada a um gerenciamento
-rigoroso de requisitos, uma gerência efetiva de projetos e em um processo de desenvolvimento bem definido gerenciado e em melhoria contínua. Afirmam também,
-que atividades de verificação e uso de métricas para controle de projetos e processo também estão inseridas nesse contexto, contribuindo para tomadas de
+rigoroso de requisitos, uma gerência efetiva de projetos e em um processo de desenvolvimento bem definido gerenciado e em melhoria contínua. Afirmam também que atividades de verificação e uso de métricas para controle de projetos e processos também estão inseridas nesse contexto, contribuindo para tomadas de
 decisão e para antecipação de problemas.
 
 Mas como medir a qualidade de um sistema em questão? Para responder este questionamento, Garvin \citeyearpar{garvin1987competing} propõe o conceito que ele chama de
-oito dimensões que seriam, em ordem, qualidade do desempenho, qualidade dos recursos, confiabilidade, conformidade, durabilidade, facilidade de manutenção,
-estética e percepção. Segundo Garvin, atendendo a estes oito critérios, o sistema apresentará qualidade.
+oito dimensões, que seriam, em ordem: (i)qualidade do desempenho; (ii)qualidade dos recursos; (iii)confiabilidade; (iv)conformidade; (v)durabilidade; (vi)facilidade de manutenção; (vii)estética e percepção. Segundo Garvin, atendendo a estes oito critérios, o sistema apresentará qualidade.
 Pressman \citeyearpar{pressman2011engenharia} complementa a definição de Garvin, mesclando-a com a norma ISO 9126 e, aponta os fatores
 críticos para o sucesso neste caso, como sendo: Intuição, Eficiência, Robustez e Riqueza.
 
@@ -264,13 +263,12 @@ da qualidade de software é obtida pela melhoria da qualidade dos processos \cit
 Existe uma relação direta entre qualidade de produto e qualidade do processo, pois, para obtenção da qualidade do produto final,
 faz-se necessário adquirir, primeiramente, qualidade nos processos que compõem o desenvolvimento do mesmo.
 Avaliar a qualidade de um produto de software é verificar, através de técnicas e atividades operacionais, o quanto os requisitos são atendidos. Tais requisitos,
-de uma maneira geral, são a expressão das necessidades, explicitados em termos quantitativos ou qualitativos e tem por objetivo definir as características de
+de uma maneira geral, são a expressão das necessidades, explicitados em termos quantitativos ou qualitativos e têm por objetivo definir as características de
 um software, a fim de permitir o exame de seu atendimento \cite{koscianski2007qualidade}.
 
 \section{Testes de software}
-É a atividade responsável por apresentar os erros existentes em um determinado programa. Por isso, pode ser vista como uma atividade destrutível, pois visa expor os defeitos para depois corrigir os mesmos e, de preferência, em
-um estágio inicial. Quanto mais tarde um defeito for identificado, mais caro fica para corrigi-lo e, mais, os custos de descobrir e corrigir o defeito no software aumentam exponencialmente na proporção em que o trabalho
-evolui através das fases do projeto de desenvolvimento \cite{boehm1976quantitative}. O teste possibilita também validar se os requisitos inicias do sistema, alinhados pelos \emph{stakeholders}, estão contemplados em sua plenitude.
+É a atividade responsável por apresentar os erros existentes em um determinado programa. Por isso, pode ser vista como uma atividade destrutível, pois visa expor os defeitos para depois corrigir os mesmos e, de preferência, em um estágio inicial. Quanto mais tarde um defeito for identificado, mais caro fica para corrigi-lo. Mais, os custos de descobrir e corrigir o defeito no software aumentam exponencialmente na proporção em que o trabalho
+evolui através das fases do projeto de desenvolvimento \cite{boehm1976quantitative}. O teste possibilita também validar se os requisitos iniciais do sistema, alinhados pelos \emph{stakeholders}, estão contemplados em sua plenitude.
 
 Apesar de não ser possível, através de testes, provar que um programa está correto, os testes, se conduzidos sistemática e criteriosamente, contribuem para
 aumentar a confiança de que o software desempenha as funções especificadas e evidenciar algumas características mínimas do ponto de vista da qualidade do produto \cite{maldonado2004introduccao}. Sendo assim,
@@ -281,7 +279,7 @@ teste como sendo a composição de quatro macro etapas: planejamento, projeto, e
 O propósito do caso de teste é definir uma unidade de teste que será executada pelo testador, seja manual ou automaticamente \cite{rios2006teste}. Um caso de teste é constituído visando descrever passos sequenciais necessários para validação de um artefato de teste. O caso de teste deve especificar a saída esperada e os resultados esperados do processamento \cite{myers2011art}.
 
 \subsection{Tipos de teste}
-Existem muitos tipos de teste, mas podemos destacar entre elas: teste de unidade, integração, sistema, aceitação e regressão. Serão descritos nas próximas subseções os tipos utilizados no desenvolvimento deste trabalho.
+Existem muitos tipos de teste, mas podemos destacar entre eles: teste de unidade, integração, sistema, aceitação e regressão. Serão descritos, nas próximas subseções, os tipos utilizados no desenvolvimento deste trabalho.
 
 \subsubsection{Teste unitário}
 O teste de unidade focaliza o esforço de verificação na menor unidade de projeto do software \cite{pressman2011engenharia}. Em uma aplicação orientada a objeto, o teste, neste caso, seria voltado ao método.
@@ -291,26 +289,26 @@ Baseando-se numa descrição \emph{black-box} da funcionalidade do software, o t
  
 \subsection{Estratégias de testes}
 A estratégia de testes se caracteriza pela definição da abordagem geral a ser aplicada nos testes, descrevendo como o software será testado, identificando os níveis de testes que serão aplicados, os métodos,
-técnicas e ferramentas a serem utilizada \cite{rios2006teste}. Deve-se também escolher na etapa de estratégia os tipos de testes que deverão ser realizados, assim como os estágios de teste escolhidos. Uma estratégia de teste de software deve acomodar testes de baixo nível, necessários para verificar se um pequeno segmento de código fonte foi implementado corretamente, bem com testes de alto nível, que validam as funções principais do sistema de acordo com os requisitos do cliente \cite{pressman2011engenharia}.
+técnicas e ferramentas a serem utilizada \cite{rios2006teste}. Deve-se também escolher, na etapa de estratégia, os tipos de testes que deverão ser realizados, assim como os estágios de teste escolhidos. Uma estratégia de teste de software deve acomodar testes de baixo nível, necessários para verificar se um pequeno segmento de código fonte foi implementado corretamente, bem com testes de alto nível, que validam as funções principais do sistema de acordo com os requisitos do cliente \cite{pressman2011engenharia}.
 
 Tradicionalmente, entre desenvolvedores de teste, utiliza-se uma estratégia onde temos um equilíbrio entre testar o sistema após pronto e testar somente antes de desenvolver o sistema. Esta estratégia assume uma visão incremental do teste, começando com o teste de unidades individuais de programa, passando para os testes destinados a facilitar a integração de unidades e culminando com testes que usam o sistema concluído \cite{pressman2011engenharia}.
 
 \subsection{Testes de sistemas web}
-O teste de aplicações Web se reveste de características peculiares, uma vez que se tratam, em geral, de aplicações colocadas na Internet e cujo acesso, em teoria,
+O teste de aplicações web se reveste de características peculiares, uma vez que se tratam, em geral, de aplicações colocadas na Internet e cujo acesso, em teoria,
 é aberto a qualquer usuário \cite{rios2006teste}.  De forma geral, as aplicações web diferem-se dos sistemas \emph{Desktop} pelos cuidados necessários com questões como a
-possibilidade de utilização de sistemas operacionais e navegadores distintos, segurança e conectividade. Além disso, a relevância econômica das aplicações Web aumenta a
+possibilidade de utilização de sistemas operacionais e navegadores distintos, segurança e conectividade. Além disso, a relevância econômica das aplicações web aumenta a
 importância de controlar e de melhorar a sua qualidade \cite{fidelis2004fireweb}.
 
 
 \section{Ferramentas para teste de software}
-Existem muitas ferramentas desenvolvidas para realização de testes de software web. Neste trabalho serão descritas três(3) dentre elas, que serão as ferramentas utilizadas no desenvolvimento dos testes estudados.
+Existem muitas ferramentas desenvolvidas para realização de testes de software web. Neste trabalho, serão descritas três dentre elas, que serão as ferramentas utilizadas no desenvolvimento dos testes estudados.
 
 \subsection{Selenium HQ}
-É um \emph{framework} open source utilizado para automatização de testes funcionais em aplicações web \cite{chiavegatto1desenvolvimento}. Segundo Pereira \citeyearpar{pereiraestudoselenium} se trata
+É um \emph{framework open source} utilizado para automatização de testes funcionais em aplicações web \cite{chiavegatto1desenvolvimento}. Segundo Pereira \citeyearpar{pereiraestudoselenium} trata-se
 de uma ferramenta de fácil uso e eficiente para desenvolver casos de teste, permitindo os testes de aceitação ou funcional, regressão e de desempenho.
 Ele é composto por quatro ferramentas: Selenium IDE, Selenium Grid, Selenium RC e Selenium WebDrive.
 
-Dentro do desenvolvimento deste trabalho foram utilizados as ferramentas Selenium IDE e Selenium WebDriver. Onde a primeira trabalha como um \emph{plugin} do navegador Firefox, o mesmo traz muita praticidade, pois permite que se possa capturar cliques e valores digitados, transformando-os em um caso de teste que podem ser salvos e executados novamente em um segundo momento ou até mesmo exportado para outra linguagem que se queira trabalhar. A imagem \ref{fig:seleniumIDE} apresenta a tela deste \emph{plugin}.
+Dentro do desenvolvimento deste trabalho foram utilizados as ferramentas Selenium IDE e Selenium WebDriver. Onde a primeira trabalha como um \emph{plugin} do navegador Firefox, e traz muita praticidade, pois permite que se possa capturar cliques e valores digitados, transformando-os em um caso de teste que podem ser salvos e executados novamente em um segundo momento ou até mesmo exportado para outra linguagem que se queira trabalhar. A imagem \ref{fig:seleniumIDE} apresenta a tela deste \emph{plugin}.
 
 \begin{figure}[!htb]
 	\centering
@@ -360,10 +358,9 @@ A escolha dessa ferramenta baseou-se na fácil transcrição dos requisitos do s
 Lopes \citeyearpar{lopescucumbervalor} compara Cucumber com o software Capybara\footnote{Capybara é uma biblioteca escrita na linguagem de programação Ruby que torna fácil simular como um usuário interage com sua aplicação. http://jnicklas.github.io/capybara/} e afirma que o primeiro apresenta um código mais legível e amigável. Uma observação é que o código com Capybara faz
 referência para vários detalhes de implementação, enquanto o código do Cucumber reserva isso apenas para os \emph{Steps} e não para o arquivo de \texttt{feature} \cite{lopescucumbervalor}.
 
-A ferramenta funciona, basicamente, através da leitura de arquivos com a extensão \texttt{feature}, os quais descrevem em linguagem natural uma funcionalidade e casos de teste, conhecidos como cenários.
-Como os testes estão escritos em uma linguagem natural e não de programação, Cucumber precisa pesquisar pelo código associado aos passos que formam o cenário em arquivos auxiliares \cite{scmitzcucumberreview}. Cucumber
+A ferramenta funciona, basicamente, através da leitura de arquivos com a extensão \texttt{feature}, os quais descrevem em linguagem natural uma funcionalidade e casos de teste, conhecidos como "cenários". Como os testes estão escritos em uma linguagem natural e não de programação, Cucumber precisa pesquisar pelo código associado aos passos que formam o cenário em arquivos auxiliares \cite{scmitzcucumberreview}. Cucumber
 executa seus arquivos \texttt{.feature} e esses arquivos contêm especificações executáveis escritos em uma linguagem chamada Gherkin \cite{cucumberwiki}, que possui um layout bem definido. Inicia pela descrição de uma funcionalidade
-que, por sua vez, possui cenários; onde, um cenário é descrito da seguinte forma: \texttt{Dado} alguma condição \texttt{Quando} outra condição \texttt{E} terceira condição \texttt{Então} faça algo, conforme ilustra a figura \ref{fig:codigo_cucumber}.
+que, por sua vez, possui cenários; onde um cenário é descrito da seguinte forma: \texttt{Dado} alguma condição \texttt{Quando} outra condição \texttt{E} terceira condição \texttt{Então} faça algo, conforme ilustra a figura \ref{fig:codigo_cucumber}.
 
 \begin{figure}[!htb]
 	\centering
@@ -393,7 +390,7 @@ No desenvolvimento deste trabalho, sua importância se deu, pelo fato de possibi
 
 Visando melhor aproveitar os recursos existentes em uma instituição e, ainda assim, apresentar garantias na qualidade do produto/serviço entregues aos clientes, desenvolvedores do mundo todo começaram a apresentar
 teses e modelos que buscam criar testes genéricos e padronizados. Um padrão é um pedaço de informação instrutiva e nomeada, que captura a estrutura essencial
-e \emph{"insights"}, de uma família bem sucedida de soluções aprovadas, para um determinado problema, o qual surge em um determinado contexto \cite{cagnin2004reuso}.
+e \emph{"insights"}, de uma família bem sucedida de soluções aprovadas para um determinado problema, o qual surge em um determinado contexto \cite{cagnin2004reuso}.
 
 Guizzardi \citeyearpar{guizzardi2000desenvolvimento} diz que, por razões históricas, a área de desenvolvimento de software não atingiu a maturidade que outras áreas da engenharia atingiram. Complementa afirmando que, apesar disso, é inegável que algum avanço tenha sido alcançado, pois a forma de realização dessa atividade evoluiu de uma atividade realizada de forma quase artesanal, para um processo de
 desenvolvimento bem estruturado e que, nos melhores casos, contempla inclusive atividades de gerência e avaliação da qualidade \cite{guizzardi2000desenvolvimento}.
@@ -401,15 +398,15 @@ Com isso, a reutilização dos testes já codificados se mostra uma importante p
 principalmente na geração de casos de testes que possam ser reutilizados em situações que apresentem um padrão parecido com os casos já conhecidos.
 
 Como solução em forma de reutilização de teste, \cite{cagnin2004reuso} apresentam uma abordagem composta por: a) uma estratégia, que define e associa requisitos de teste a padrões de linguagens de padrões  de análise; b) diretrizes, que apoiam o engenheiro de software na decisão de quais requisitos de teste disponíveis devem ser reusados e instanciados para casos de teste concretos. A estratégia que define os requisitos de teste da abordagem proposta foi aplicada aos padrões de uma
-linguagem de padrões de análise, utilizados na reengenharia de um sistema legado de biblioteca. Já \cite{karinsalo2004software} sugerem um modelo de processo de desenvolvimento de teste que leva técnicas de reutilização de software e atividades em conta, revela ainda que, a fim de produzir material de teste reutilizável, as entidades de software têm de ser expressa em termos de recursos, em que os materiais de ensaio estão anexados.
+linguagem de padrões de análise, utilizados na reengenharia de um sistema legado de biblioteca. Já \cite{karinsalo2004software} sugerem um modelo de processo de desenvolvimento de teste que leva técnicas de reutilização de software e atividades em conta. Revelam ainda que, a fim de produzir material de teste reutilizável, as entidades de software têm de ser expressa em termos de recursos, em que os materiais de ensaio estão anexados.
 
 Segundo \cite{patel2014test}, Tata Consultancy Services (TCS)  é uma empresa provedora de serviços em TI (ITSP) que desenvolveu um repositório de casos de teste reutilizáveis com o objetivo de reduzir o custo dos testes em projetos de Implementação de software empresarial (ESI).\cite{patel2014test} trás um estudo do programa de reutilização para analisar o seu impacto. Um conjunto de métricas foram definidos e os dados pertinentes foram obtidas a partir de usuários do repositório.
 
-\cite{crespo2004metodologia} apresentam uma metodologia para implantação ou melhoria do processo de teste em empresas desenvolvedoras de software, com o objetivo de viabilizar a utilização das práticas de teste pelas empresas. Apesar de não tratar-se de uma solução que contenha reutilização de software este trabalho tem relação direta com o trabalho desenvolvido, pois a reutilização nada mais visa que melhorias no processo de desenvolvimento dos testes de software.
+\cite{crespo2004metodologia} apresentam uma metodologia para implantação ou melhoria do processo de teste em empresas desenvolvedoras de software, com o objetivo de viabilizar a utilização das práticas de teste pelas empresas. Apesar de não se tratar de uma solução que contenha reutilização de software, este trabalho tem relação direta com o trabalho desenvolvido, pois a reutilização nada mais visa que melhorias no processo de desenvolvimento dos testes de software.
 
 \chapter{Desenvolvimento}
 
-A seguir serão descritas as atividades desenvolvidas a fim de alcançar os objetivos propostos por este trabalho. Será apresentado o escopo do projeto, assim como trechos dos códigos desenvolvidos e estrutura das soluções encontradas ao longo do desenvolvimento do projeto.
+A seguir serão descritas as atividades desenvolvidas a fim de alcançar os objetivos propostos por este trabalho. Será apresentado o escopo do projeto, assim como trechos dos códigos desenvolvidos e estrutura das soluções encontradas ao longo do desenvolvimento.
 
 \section{Delimitação de escopo}
 
@@ -432,7 +429,7 @@ que seriam: criar uma classe de testes genérica, responsável por realizar os t
 seriam testados posteriormente e, por fim, inserir as anotações nos métodos e classes do sistema que devem ser testados nesta aplicação.
 
 \subsection{Classe genérica de testes}
-Por tratar-se de uma abordagem para sistemas web, optou-se pela utilização de dois \emph{frameworks} de testes, que possibilitam interações com elementos web, para confecção da classe responsável pela execução dos testes automatizados.
+Por se tratar de uma abordagem para sistemas web, optou-se pela utilização de dois \emph{frameworks} de testes, que possibilitam interações com elementos web, para confecção da classe responsável pela execução dos testes automatizados.
 O primeiro é o Selenium. Através da utilização da classe \texttt{WebDrive}, contida em seu pacote, podemos descrever uma sequência de passos que são executados por um navegador, como cliques e inserção de dados em campos de um
 formulário. Sendo assim, instanciando um objeto \texttt{WebDrive}, podemos iniciar um navegador e realizar uma série de instruções pré-determinadas para validar se a aplicação comporta-se de forma adequada.
 
@@ -472,8 +469,7 @@ de forma recursiva, todas as classes do projeto anotadas pela interface que indi
 
 \subsection{Interface de anotação}
 
-Após finalizar o desenvolvimento da classe de testes genérica, passou a existir a necessidade de criar um mecanismo para informar, à classe de testes, quais seriam as validações necessárias. Para esta tarefa,
-por tratar-se de projetos Java, resolveu-se criar uma interface de anotação que seria vinculada aos métodos e classes, onde seriam necessários executar os casos de teste posteriores. Desta forma, a classe \texttt{TestaFormulario.java},
+Após finalizar o desenvolvimento da classe de testes genérica, passou a existir a necessidade de criar um mecanismo para informar, à classe de testes, quais seriam as validações necessárias. Para esta tarefa, por se tratar de projetos Java, resolveu-se criar uma interface de anotação que seria vinculada aos métodos e classes, onde seriam necessários executar os casos de teste posteriores. Desta forma, a classe \texttt{TestaFormulario.java},
 responsável pela execução dos testes, varreria as classes do sistemas e, toda vez que encontrar uma classe anotada por essa interface, executaria um teste, onde, cada método que necessitaria de um teste possuiria, em sua anotação, o tipo do campo,
 as ações que deveriam ser executas e o valor que deveria ser preenchido.
 
@@ -568,7 +564,7 @@ método um único valor utilizado no teste. Além disto, também não seria viá
 %\end{lstlisting}
 
 \section{Solução para testes funcionais com Cucumber e Selenium}
-Visando a produção de testes funcionais, optou-se pela inclusão do \emph{framework} Cucumber na composição desta nova solução, somando-se assim as demais ferramentas já utilizadas até o atual momento. A mesma foi escolhida por possibilitar a descrição de testes em forma de cenários. Um cenário pode ser vistos como uma composição de testes unitários que na primeira solução apresentada estariam dispersos. Sendo assim, torna-se viável descrever os requisitos funcionais do sistema através de testes funcionais nos arquivos \emph{.feature} do Cucumber, onde os mesmo poderão ser compostos um uma série de cenários. Outro ponto relevante para a sua escolha, seria sua interface amigável, onde os cenários são escritos em uma linguagem bem próxima a linguagem natural, tornando-os de fácil entendimento por todos os envolvidos do projeto, garantindo, assim, uma maior qualidade também quando pensamos em documentação das funcionalidades desenvolvidas em um sistema.
+Visando a produção de testes funcionais, optou-se pela inclusão do \emph{framework} Cucumber na composição desta nova solução, somando-se assim as demais ferramentas já utilizadas até o atual momento. A mesma foi escolhida por possibilitar a descrição de testes em forma de cenários. Um cenário pode ser vistos como uma composição de testes unitários que na primeira solução apresentada estariam dispersos. Sendo assim, torna-se viável descrever os requisitos funcionais do sistema através de testes funcionais nos arquivos \texttt{.feature} do Cucumber, onde os mesmos poderão ser compostos um uma série de cenários. Outro ponto relevante para a sua escolha, seria sua interface amigável, onde os cenários são escritos em uma linguagem bem próxima a linguagem natural, tornando-os de fácil entendimento por todos os envolvidos do projeto, garantindo, assim, uma maior qualidade também quando pensamos em documentação das funcionalidades desenvolvidas em um sistema.
 
 \begin{figure}[!htb]
 	\centering
@@ -669,7 +665,7 @@ A classe \texttt{Steps.java} foi criada com intuito de realizar o elo de ligaç�
 	\label{code:Classe com Steps Cucumber}
 \end{figure}
 
-A linguagem Cucumber, quando trabalha conjuntamente com Java, disponibiliza anotações como: \texttt{@Dado, @Quando, @E e @Entao}, que corresponde de forma 1 para 1 frases descritas nos arquivos \texttt{.feature}.
+A linguagem Cucumber, quando trabalha conjuntamente com Java, disponibiliza anotações como: \texttt{@Dado, @Quando, @E e @Entao}, que corresponde de forma 1 para 1 frases descritas nos arquivos \texttt{.feature}. Estas anotações são fornecidas no framework do Cucumber para a linguagem Java.
 Como podemos ver na ilustração, cada método que corresponde a um \emph{Step} do Cucumber apresenta uma anotação que identifica o mesmo, contendo uma frase fixa e parâmetros que são esperados. Dessa forma, podem-se descrever frases que correspondam a pequenas ações executadas em um navegador. Assim, cada método é responsável por executar uma ação específica, tornando possível reutilizar estes métodos para compor os cenários que posteriormente serão descritos. 
 
 Nesta classe também estão definidos, como demonstra ilustração \ref{code:stepsJUnit}, métodos necessários para realização das comparações que definem se o teste passou ou não. Esses métodos utilizam chamadas dos métodos asserts, oriundos do \emph{framework} de teste JUnit.

@@ -710,8 +710,8 @@ public void aguardarCampoVisivel(Long tempo, String campo, String identificador)
 Essas ações são possíveis através da utilização dos métodos oferecidos pela classe \texttt{WebDriverWait} do Selenium.
 
 \subsection{Descrição de cenários}
-Após a inserção das duas classes Java apresentados anteriormente no projeto, torna-se possível escrever cenários que representem as funcionalidades que devem ser testadas.
-Desta forma, pode-se criar arquivos \texttt{.feature} em que os cenários são compostos por uma sequência definida utilizando os passos descritos na classe \texttt{Steps}, onde a mesma realiza as ações em um navegador.
+Após a inserção das duas classes Java, apresentadas anteriormente, no projeto, torna-se possível escrever cenários que representem as funcionalidades que devem ser testadas.
+Desta forma, pode-se criar arquivos \texttt{.feature}, em que os cenários são compostos por uma sequência definida utilizando os passos descritos na classe \texttt{Steps}, onde a mesma realiza as ações em um navegador.
 Podemos ver um exemplo desta abordagem no código apresentado em \ref{code:feature}\footnote{Demais arquivos features podem ser acessados no link https://github.com/lucas-amaral/TG/tree/master/Códigos/features}.
 
 \begin{figure}[!htt]
@@ -751,10 +751,10 @@ Funcionalidade: Ações executadas por um aluno do curso de Ciência da Computa�
 Como visto em \ref{code:feature}, basta utilizar os passos previamente definidos nos métodos da classe \texttt{Steps.java} complementando apenas com os parâmetros necessários para identificação do elemento que se deseja manipular em uma tela do sistema web.
 
 \subsection{Utilizando a mesma janela do navegador para execução dos testes}
-Ao iniciar os testes na solução, após finalizar a codificação da mesma, notou-se que existia uma perda de tempo quando os testes eram executados, pois, a cada cenário executado o Selenium WebDriver fechava a janela do navegador ativa e, quando um novo cenário fosse executado, uma nova janela era aberta. Para evitar que este retrabalho fosse realizado e, assim, fosse possível reutilizar a janela do navegador ativa, encontrou-se na documentação existente na página da linguagem Cucumber\footnote{https://cucumber.io/} a solução para esta questão, utilizando a classe \texttt{SharedDriver} desenvolvida por Aslak Hellesoy e disponibilizada no projeto \texttt{cucumber-jvm\footnote{https://github.com/cucumber/cucumber-jvm/blob/master/examples/java-webbit-websockets-selenium/src/test/java/cucumber/examples/java/websockets/SharedDriver.java}}, onde deve-se instanciar um objeto desta classe no lugar da classe WebDriver, utilizada anteriormente.
+Ao iniciar os testes na solução, após finalizar a codificação da mesma, notou-se que existia uma perda de tempo quando os testes eram executados, pois, a cada cenário executado, o Selenium WebDriver fechava a janela do navegador ativa e, quando um novo cenário fosse executado, uma nova janela era aberta. Para evitar que este retrabalho fosse realizado e, assim, fosse possível reutilizar a janela do navegador ativa, encontrou-se na documentação existente na página da linguagem Cucumber\footnote{https://cucumber.io/} a solução para esta questão, utilizando a classe \texttt{SharedDriver}, desenvolvida por Aslak Hellesoy e disponibilizada no projeto \texttt{cucumber-jvm\footnote{https://github.com/cucumber/cucumber-jvm/blob/master/examples/java-webbit-websockets-selenium/src/test/java/cucumber/examples/java/websockets/SharedDriver.java}}, onde se deve instanciar um objeto desta classe no lugar da classe WebDriver, utilizada anteriormente.
 
 \subsection{Validando solução em sistemas web}
-Após a finalização da codificação da solução, iniciou-se a fase de validação e aplicação da solução utilizando Cucumber e Selenium em softwares web. Nesta etapa foram escolhidos dois softwares web, que respeitassem os requisitos existentes no escopo delimitado pelo projeto em questão. 
+Após a finalização da codificação da solução, iniciou-se a fase de validação e aplicação utilizando Cucumber e Selenium em softwares web. Nesta etapa, foram escolhidos dois softwares web, que respeitassem os requisitos existentes no escopo delimitado pelo projeto em questão. 
 
 O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicitação de disciplinas complementares de graduação, do curso de Ciência da Computação, da Universidade Federal de Santa Maria. Sistema esse que pode ser definido como de pequeno porte, pois possui poucas telas e processo bem definido, utilizando apenas recursos como: Ajax, Javascript e JasperReport, para geração de relatórios. A imagem \ref{fig:piec} apresenta uma tela deste sistema.
 
@@ -779,7 +779,7 @@ um sistema voltado para modelagem de processo BPMs, no qual é possível descrev
 
 \subsubsection{Aplicando solução no sistema de registro de disciplinas complementares}
 Para realização desta tarefa, foram utilizadas as funcionalidades descritas no documento de especificação deste software para validar se o mesmo apresenta todas as funcionalidades que se compromete a atender.
-Como o processo apresenta dois atores principais, onde o primeiro seria o aluno e, o segundo, um membro do colegiado do curso, foram separados os testes em dois arquivos \texttt{.feature}. O primeiro contendo ações realizadas por alunos e, o segundo, para ações que um membro do colegiado executa.
+Como o processo apresenta dois atores principais, onde o primeiro é o aluno e, o segundo, um membro do colegiado do curso, foram separados os testes em dois arquivos \texttt{.feature}. O primeiro contendo ações realizadas por alunos e, o segundo, para ações que um membro do colegiado executa.
 
 Como forma de reduzir o trabalho de um desenvolvedor de teste, utilizando os recursos disponibilizados pela linguagem Cucumber, pode-se utilizar o recurso \texttt{Contexto} para descrever uma sequência de passos que deverá ser executada para cada um dos cenários de uma funcionalidade. Assim, evita-se de ter que reescrever a mesma sequência de passos para todos os cenários. A imagem \ref{code:Contexto} exemplifica essa utilização.
 
@@ -801,7 +801,7 @@ Funcionalidade: Ações executadas por um membro do colegiado do curso de Ciênc
 O \texttt{Contexto} deve ser descrito no inicio do código de uma funcionalidade, antes dos cenários do mesmo.
 
 Outro recurso da linguagem Cucumber útil para redução na escrita de novos testes, é a \texttt{Delineacao do Cenario}, que permite reutilizar o mesmo cenário, aplicando os
-valores contidos em uma tabela descrita pelo recurso \texttt{Exemplos} como mostra o código \ref{code:Delineacao}
+valores contidos em uma tabela descrita pelo recurso \texttt{Exemplos} como mostra a figura \ref{code:Delineacao}
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
@@ -831,22 +831,22 @@ Delineacao do Cenario: 1 - Não permitir cadastrar nova instituição com sigla 
 	\label{code:Delineacao}
 \end{figure}
 
-Em \texttt{Delineacao do Cenario} ao invés de ser inseridos valores para testes, são informados os rótulos existentes no cabeçalho da tabela do recurso \texttt{Exemplos}. Desta forma, quando o teste for ser executado, esse valor será substituído, em tempo de execução, pelo valor existente nessa coluna para cada uma das linhas da tabela.
+Em \texttt{Delineacao do Cenario}, ao invés de serem inseridos valores para testes, são informados os rótulos existentes no cabeçalho da tabela do recurso \texttt{Exemplos}. Desta forma, quando o teste for ser executado, esse valor será substituído, em tempo de execução, pelo valor existente nessa coluna para cada uma das linhas da tabela.
 
 Utilizando-se destes recursos concluiu-se, de forma satisfatória, a codificação de cenários de testes para todos os requisitos existentes neste sistema.
 
 \subsubsection{Aplicando solução no sistema SILAS BPMs}
-Para o software em questão, por tratar-se de um sistema que possui mais de oito anos de desenvolvimento e por não possuir nenhum tipo de teste automatizado codificado, optou-se por retirar do \emph{task bord}, onde a equipe de desenvolvimento, da empresa em questão, gerenciava tarefas a desenvolver e desenvolvidas, as ultimas funcionalidades finalizadas para descreve-las como cenários e, assim, realizar os primeiros testes.
+Para o software em questão, por tratar-se de um sistema que possui mais de oito anos de desenvolvimento e por não possuir nenhum tipo de teste automatizado codificado, optou-se por retirar do \emph{task bord}, onde a equipe de desenvolvimento, gerenciava tarefas a desenvolver e já desenvolvidas, as últimas funcionalidades finalizadas para descreve-las como cenários e, assim, realizar os primeiros testes.
 Logo no início do mapeamento dos testes, notaram-se necessidades que o sistema de registros de disciplinas complementares não possuía. Como, por exemplo, a necessidade de guardar valores de um campo para, após submeter alguma função, comparar com o novo valor do campo em questão. Também percebeu-se a indispensabilidade de permitir ações condicionais nos testes. Essa necessidade se deu pelo fato de, em alguns casos, não se conhecer o estado atual de algum elemento na tela em questão e, desta forma, o teste poderia falhar mesmo quando não existisse problema.
-Após algumas tentativas de utilizar a solução proposta para esses novos cenários, notou-se que seria inviável trabalhar sem que essas questões fossem viabilizadas.
+Após algumas tentativas de utilizar a solução proposta para esses novos cenários, notou-se que a solução proposta não seria aplicável para este sistema e outros sistemas que possuíssem as mesmas necessidades, pois, seria inviável trabalhar sem que essas questões fossem viabilizadas.
 
 \subsection{Considerações sobre a solução Cucumber e Selenium}
 Com o avanço na confecção de testes aplicados em sistemas reais, percebeu-se uma série de vantagens e desvantagens na utilização desta solução no processo de desenvolvimento e testes de funcionalidades.
 Como vantagens, podemos elencar o fato de, ao escrever cenários utilizando o IDE que tenha suporte para a linguagem Cucumber, pouco se escreve, reutilizando sempre os \emph{steps} descritos na classe \texttt{Steps.java}. Sendo, assim, necessário apenas informar os parâmetros esperados pelos mesmos. Ainda destaca-se o fato de os cenários descreverem, de forma simples, o que deve ocorrer na funcionalidade testada e, desta forma, serve também como documentação.
-Quando pensamos nos pontos fracos da solução, podemos destacar os empecilhos detectados no desenvolvimento de testes para a aplicação SILAS BPMs. Somam-se a estes, algumas limitações que a linguagem Cucumber possui, como o fato de não ser possível reutilizar um cenário dentro de outro cenário\footnote{Essa funcionalidade estava disponível na primeira versão da linguagem, mas a mesma foi removida. Embora o exemplo pode fazer sentido quando se trabalha de forma sequencial através dos cenários a longo prazo produz-se cenários que são difíceis de manter e entender \cite{givenscenario}. } ou até mesmo utilizar como parâmetro valores que diferem dos tipos comuns da linguagem Java (int, float, String). Outro fator problemático nessa solução é o fato de todos os dados utilizados nos testes serem persistidos e, com isso, ser necessário a restauração manual do ultimo estado válido da base de dados onde os testes se realizam.
+Quando pensamos nos pontos fracos da solução, podemos destacar os empecilhos detectados no desenvolvimento de testes para a aplicação SILAS BPMs. Somam-se a estes, algumas limitações que a linguagem Cucumber possui, como o fato de não ser possível reutilizar um cenário dentro de outro cenário\footnote{Essa funcionalidade estava disponível na primeira versão da linguagem, mas foi removida. Embora o exemplo pode fazer sentido quando se trabalha de forma sequencial através dos cenários, a longo prazo produzem-se cenários que são difíceis de manter e entender \cite{givenscenario}. } ou até mesmo utilizar como parâmetro valores que diferem dos tipos comuns da linguagem Java (int, float, String). Outro fator problemático nessa solução é o fato de todos os dados utilizados nos testes serem persistidos e, com isso, ser necessário a restauração manual do ultimo estado válido da base de dados onde os testes se realizam, mesmo que o banco de dados utilizado for um banco voltado apenas para testes, pois a persistência dos dados de um teste poderia acarretar no insucesso do mesmo teste executado em um segundo momento, pelo simples fato de entrada dos dados não ser mais a esperada.
 
 \section{Solução para testes funcionais com Selenium WebDriver}
-Como forma de possibilitar a utilização de testes condicionais, armazenamento de valores e manipulação de objetos Java dentro do testes funcionais, optou-se pela confecção de uma nova abordagem neste projeto, mesmo que para isso se tivesse que abdicar da praticidade e interface amigável do Cucumber. Assim, os testes funcionais seriam descritos diretamente em classes de teste Java. A imagem \ref{fig:solucao3} apresenta essa pequena alteração na abordagem dos testes proposta. 
+Como forma de possibilitar a utilização de testes condicionais, armazenamento de valores e manipulação de objetos Java dentro de testes funcionais, optou-se pela confecção de uma nova abordagem neste projeto, mesmo que para isso se tivesse que abdicar da praticidade e interface amigável do Cucumber. Assim, os testes funcionais seriam descritos diretamente em classes de teste Java. A imagem \ref{fig:solucao3} apresenta essa alteração na abordagem dos testes proposta. 
 
 \begin{figure}[!htb]
 	\centering
@@ -886,7 +886,7 @@ Na figura \ref{code:seleniumTeste} temos um exemplo de um cenário descrito util
 	\label{code:seleniumTeste}
 \end{figure}
 
-Por tratar-se de código Java, além de tornar possível utilizar testes condicionais e armazenamento de valores, novas funções tornaram-se plausíveis, como apresentado no código \ref{code:seleniumDate}, onde realiza-se comparações com uma data utilizando um formato específico.
+Por tratar-se de código Java, além de tornar possível utilizar testes condicionais e armazenamento de valores, novas funções tornaram-se plausíveis, como apresentado no código \ref{code:seleniumDate}, onde comparações são realizadas com uma data utilizando um formato específico.
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
@@ -949,7 +949,7 @@ public void getLoginMembroColegiado() {
 Ao contrário do ocorrido com a aplicação de registro de disciplinas complementares do curso de Ciência da Computação da Universidade Federal de Santa Maria (UFSM), a solução que mescla a utilização da linguagem Cucumber juntamente com o \emph{framework} Selenium WebDriver não contemplava, na totalidade, os testes necessários. Agora utilizando essa nova abordagem, tornou-se viável a codificação dos testes necessários e, com isso, optou-se, na empresa Megatecnologia, pela continuidade da realização de testes através desta solução.
 
 \subsection{Considerações sobre a solução Selenium WebDriver}
-A abordagem em questão, assim como as anteriores, apresenta vantagens e desvantagens. Como vantagem, pode-se elencar o fato de, por trabalhar somente com a linguagem Java, possibilitar uma série de ações, que não seriam possíveis, utilizando Cucumber na composição da solução. Como por exemplo, a utilização de testes condicionais, laços de repetição, busca de valores de um objeto Java, assim como manipulação de tipos que não façam parte dos tipos nativos da linguagem Java. Apesar disso, a solução apresenta um cenário mais complexo de ser entendido por qualquer interessado do projeto, comparado a solução utilizando Cucumber. Apresenta também, descrições mais poluídas visualmente e mais distantes de uma linguagem natural, além de possuir o mesmo problema referente à restauração da base de dados, após execução dos testes.
+A abordagem em questão, assim como as anteriores, apresenta vantagens e desvantagens. Como vantagem, pode-se elencar o fato de, por trabalhar somente com a linguagem Java, possibilitar uma série de ações, que não seriam possíveis utilizando Cucumber na composição da solução. Como por exemplo, a utilização de testes condicionais, laços de repetição, busca de valores de um objeto Java, assim como manipulação de tipos que não façam parte dos tipos nativos da linguagem Java. Apesar disso, a solução apresenta um cenário mais complexo de ser entendido por qualquer interessado do projeto, comparado a solução utilizando Cucumber. Apresenta também, descrições mais poluídas visualmente e mais distantes de uma linguagem natural, além de possuir o mesmo problema referente à restauração da base de dados, após execução dos testes.
 
 \chapter{Resultados}
 Como forma de validação das abordagens criadas neste trabalho, onde as mesmas visam a redução do trabalho para uma equipe de teste e desenvolvimento, realizou-se comparações que serviriam para levantar o ganho em utilizar uma abordagem ou outra. 
@@ -957,7 +957,7 @@ Como forma de validação das abordagens criadas neste trabalho, onde as mesmas 
 \section{Comparando abordagens funcionais}
 Mesmo conhecendo as principais virtudes das abordagens criadas e, também em quais escopos as mesmas funcionavam de forma adequada, ainda era necessário expor o ganho em utilizar umas dessas abordagens ao invés de criar um teste funcional somente utilizando métodos que as ferramentas de teste web disponibilizam.
 
-Como forma de medir este ganho, resolveu-se descrever uma funcionalidade do sistema de registro de disciplina complementares, utilizando tanto a abordagem Cucumber e WebDriver, como a abordagem WebDriver e, por fim, criando um teste utilizando apenas os métodos disponíveis da ferramenta Selenium. Essas diferenças são apresentadas nas imagens \ref{code:seleniumAddDisciplina}, \ref{code:solucao2AddDisciplina} e \ref{code:solucao3AddDisciplina}.
+Como forma de medir este ganho, resolveu-se descrever uma funcionalidade do sistema de registro de disciplina complementares, utilizando tanto a abordagem Cucumber e WebDriver, como a abordagem WebDriver e, por fim, criando um teste utilizando apenas os métodos disponíveis da ferramenta Selenium. Essas diferenças são apresentadas nas imagens \ref{code:solucao2AddDisciplina}, \ref{code:solucao3AddDisciplina} e \ref{code:seleniumAddDisciplina}, respectivamente.
 
 
 \begin{figure}[!htt]
@@ -1018,17 +1018,15 @@ public void cadastrarDisciplina() {
 	\label{code:seleniumAddDisciplina}
 \end{figure}
 
-Como pode-se notar pelo código \ref{code:seleniumAddDisciplina}, \ref{code:solucao2AddDisciplina} e \ref{code:solucao3AddDisciplina}, existe uma diminuição no número de linhas
-escritas nos testes que exploram as duas abordagens deste trabalho em relação a codificação utilizando apenas o \emph{framework} Selenium. Durante a realização dessas
-comparações percebeu-se, também, uma possível redução de caracteres digitados utilizando as abordagens apresentadas, isso quando trabalha-se com um IDE que possua suporte
-para as linguagens em questão. Por fim, pode-se também levantar suspeita que a abordagem Cucumber e WebDriver trás ganhos na leitura dos testes, que se tornam mais
+Como pode-se notar pelos códigos das figuras \ref{code:solucao2AddDisciplina}, \ref{code:solucao3AddDisciplina} e \ref{code:seleniumAddDisciplina}, existe uma diminuição no número de linhas
+escritas nos testes que exploram as duas abordagens deste trabalho em relação a codificação utilizando apenas o \emph{framework} Selenium. Durante a realização dessas comparações, percebeu-se, também, uma possível redução de caracteres digitados utilizando as abordagens apresentadas, isso quando se trabalha com um IDE que possua suporte para as linguagens em questão. Por fim, pode-se também levantar suspeita que a abordagem Cucumber e WebDriver traz ganhos na leitura dos testes, que se tornam mais
 compreensíveis, mesmo que não se entenda de linguagens de programação.
 
 \section{Comparando as três soluções propostas}
-Visando mapear, de forma mais externa, as abordagens desenvolvidas, confrontou-se as soluções propostas elencando suas respectivas virtudes e limitações e, com isso, torna-se possível realizar escolhas sobre qual abordagem é mais apropriada para um cenário específico que se apresente.
-Por exemplo, quando a equipe decide que serão necessários apenas a realização de testes unitários, a abordagem para testes unitários que utiliza anotações apresenta-se como uma boa alternativa, pois a mesma possui recursos que permitem realizar este tipo de teste e, ao mesmo tempo, não necessita de codificação em classes de teste, pois a simples inserção de anotações nas classes do modelo é suficiente.
+Visando mapear, de forma mais externa, as abordagens desenvolvidas, confrontaram-se as soluções propostas elencando suas respectivas virtudes e limitações. Com isso, torna-se possível realizar escolhas sobre qual abordagem é mais apropriada para um cenário específico que se apresente.
+Por exemplo, quando a equipe decide que serão necessários apenas a realização de testes unitários, a abordagem para testes unitários que utiliza anotações apresenta-se como uma boa alternativa, pois a mesma possui recursos que permitem realizar este tipo de teste e, ao mesmo tempo, não necessita codificação em classes de teste, pois a simples inserção de anotações nas classes do modelo é suficiente.
 
-Quando deseja-se realizar testes funcionais e não se faz necessário utilizar verificações condicionais, adotar a segunda solução torna-se uma opção válida. A utilização do Cucumber, neste casos, torna-se prática e ainda possibilita que qualquer \emph{stakeholder} do projeto entenda as funcionalidades descritas pelos testes.
+Quando se deseja realizar testes funcionais e não se faz necessário utilizar verificações condicionais, adotar a segunda solução torna-se uma opção válida. A utilização do Cucumber, neste casos, torna-se prática e ainda possibilita que qualquer \emph{stakeholder} do projeto entenda as funcionalidades descritas pelos testes.
 A ultima abordagem pode ser apropriada, quando o sistema em questão é mais complexo e necessita de maiores validações.
 
 A tabela \ref{tab:comparacaoSolucoes} apresenta os principais pontos fortes e as maiores fraquezas dessas três abordagens.
@@ -1052,14 +1050,14 @@ A tabela \ref{tab:comparacaoSolucoes} apresenta os principais pontos fortes e as
 \end{table}
 
 \chapter{Conclusão}
-A proposta inicial deste trabalho consistia em apresentar uma solução em forma de códigos de teste, que permitisse o reaproveitamento e reutilização dos mesmo, acarretando em um menor esforço na codificação de novos testes para sistemas web, desenvolvidos em Java. Entretanto, o resultado final, obtido pelo trabalho em questão, trata-se não de uma solução, mas, sim, de três abordagens utilizando ferramentes para teste de software que diferem entre si, cada uma possuindo ponto fortes e pontos fracos e sendo mais relevante para uma determinada situação. A condução e criação dessas abordagens foram tomadas, ao longo do desenvolvimento, a partir dos percalços e necessidades que apareciam e em meio a validação das abordagens em questão.
+A proposta inicial deste trabalho consistia em apresentar uma solução em forma de códigos de teste, que permitisse o reaproveitamento e reutilização dos mesmo, acarretando em um menor esforço na codificação de novos testes para sistemas web, desenvolvidos em Java. Entretanto, o resultado final, obtido pelo trabalho em questão, trata-se não de uma solução, mas, sim, de três abordagens utilizando ferramentes para teste de software que diferem entre si, cada uma possuindo ponto fortes e pontos fracos e sendo mais relevante para uma determinada situação. A condução e criação dessas abordagens foram tomadas ao longo do desenvolvimento, a partir dos percalços e necessidades que apareciam e em meio a validação das abordagens em questão.
 
 Como contribuição, este trabalho apresenta uma abordagem que mescla a utilização da linguagem Cucumber com o \emph{framework} Selenium Webdriver, apresentando passos, que podem tornar o processo de criação dos testes em uma tarefa mais prática e rápida, sendo, assim, necessário apenas descrever cenários que correspondem a funcionalidades do sistema.
 
 A lista a seguir expõe, em ordem de relevância, algumas melhorias que poderiam ser incorporadas em uma nova versão deste projeto:
 
 \begin{itemize}
-	\item Apresentar no auto completar do IDE, os campos pertencentes ao contexto atual do .feature: Ao utilizar um IDE que possibilite manipulação de \emph{plugins}, desenvolver mecanismo que pesquise nos arquivos JSP/JSF todos os campos referentes à um contexto atual, e assim apresente sugestão de autocompletar para os cenários que estão sendo descritos pelo Cucumber.
+	\item Apresentar no auto completar do IDE, os campos pertencentes ao contexto atual do \texttt{.feature}: Ao utilizar um IDE que possibilite manipulação de \emph{plugins}, desenvolver mecanismo que pesquise nos arquivos JSP/JSF todos os campos referentes à um contexto atual, e assim, apresente sugestão de autocompletar para os cenários que estão sendo descritos pelo Cucumber.
 	\item Não persistir no BD as alterações realizadas pelos testes automatizados: Possibilitar que ao finalizar execução de um teste funcional, o bando de dados utilizado retorne ao estado inicial, não persistindo assim as alterações realizadas pelos testes executados.
 	\item Criar mecanismo que busque na árvore do projeto classes de validação dos formulários e transcreva essas informações em cenários de teste Cucumber: Criar mecanismo que permita gerar testes a partir das validações que são inseridas nas classes de validação referentes a uma classe de controle.
 \end{itemize}

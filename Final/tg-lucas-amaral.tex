@@ -193,7 +193,7 @@ metodologias de teste de software ganham maior visibilidade. Além do aumento da
 
 Os testes de software podem ocorrer em todas as etapas do desenvolvimento e de diferentes formas, contudo,
 sempre objetivam atender na totalidade os requisitos do sistema e, simultaneamente, amplificar a qualidade da solução
-codificada. Apesar de, aparentemente, ser mais prático e rápido realizar um teste manual, a cada nova alteração em um módulo do sistema, o teste tem que ser todo refeito e a tendência que novos erros sejam gerados, até mesmo em funcionalidades já testadas, é enorme,
+codificada. Apesar de, aparentemente, ser mais prático e rápido realizar um teste manual, a cada nova alteração em um módulo do sistema o teste tem que ser todo refeito e a tendência que novos erros sejam gerados, até mesmo em funcionalidades já testadas, é enorme,
 problema este que não ocorre quando a abordagem escolhida é a automatização dos testes. 
 
 Os testes automatizados angariam cada vez mais adeptos ao longo dos últimos anos. Tal fato se deve principalmente à grande redução de custo observada a médio e longo prazos com o uso desta prática \cite{de2007utilizaccao}. Em contrapartida, os testes automatizados demandam um grande custo inicial em sua codificação e, com isso, aumentam o
@@ -203,7 +203,7 @@ envolvimento da equipe de qualidade. Pensando nesse problema, podemos buscar for
 
 \subsection{Objetivo geral}
 
-Este trabalho tem como objetivo principal apresentar um conjunto de classes de teste e testes, para sistemas web, que possam ser reutilizados em novas funcionalidades de uma aplicação ou em sistemas que sigam os mesmos padrões e comportamento dos softwares para os quais foram desenvolvidos visando agilizar o desenvolvimento dos testes.
+Este trabalho tem como objetivo principal apresentar um conjunto de classes de teste e testes, para sistemas web, que possam ser reutilizados em novas funcionalidades de uma aplicação ou em sistemas que sigam os mesmos padrões e comportamento dos softwares para os quais foram desenvolvidos, visando agilizar o desenvolvimento dos testes.
 
 \subsubsection{Objetivos específicos}
 
@@ -304,7 +304,7 @@ importância de controlar e de melhorar a sua qualidade \cite{fidelis2004fireweb
 Existem muitas ferramentas desenvolvidas para realização de testes de software web. Neste trabalho, serão descritas três dentre elas, que serão as ferramentas utilizadas no desenvolvimento dos testes estudados.
 
 \subsection{Selenium HQ}
-É um \emph{framework open source} utilizado para automatização de testes funcionais em aplicações web \cite{chiavegatto1desenvolvimento}. Segundo Pereira \citeyearpar{pereiraestudoselenium} trata-se
+É um \emph{framework open source} utilizado para automatização de testes funcionais em aplicações web \cite{chiavegatto1desenvolvimento}. Segundo Pereira \citeyearpar{pereiraestudoselenium}, trata-se
 de uma ferramenta de fácil uso e eficiente para desenvolver casos de teste, permitindo os testes de aceitação ou funcional, regressão e de desempenho.
 Ele é composto por quatro ferramentas: Selenium IDE, Selenium Grid, Selenium RC e Selenium WebDrive.
 
@@ -397,12 +397,12 @@ desenvolvimento bem estruturado e que, nos melhores casos, contempla inclusive a
 Com isso, a reutilização dos testes já codificados se mostra uma importante prática no desenvolvimento e que ainda apresenta muitas incógnitas e possibilidades para as equipes de TI,
 principalmente na geração de casos de testes que possam ser reutilizados em situações que apresentem um padrão parecido com os casos já conhecidos.
 
-Como solução em forma de reutilização de teste, \cite{cagnin2004reuso} apresentam uma abordagem composta por: a) uma estratégia, que define e associa requisitos de teste a padrões de linguagens de padrões  de análise; b) diretrizes, que apoiam o engenheiro de software na decisão de quais requisitos de teste disponíveis devem ser reusados e instanciados para casos de teste concretos. A estratégia que define os requisitos de teste da abordagem proposta foi aplicada aos padrões de uma
+Como solução em forma de reutilização de teste, Cagnin et al. \citeyearpar{cagnin2004reuso} apresentam uma abordagem composta por: a) uma estratégia, que define e associa requisitos de teste a padrões de linguagens de padrões  de análise; b) diretrizes, que apoiam o engenheiro de software na decisão de quais requisitos de teste disponíveis devem ser reusados e instanciados para casos de teste concretos. A estratégia que define os requisitos de teste da abordagem proposta foi aplicada aos padrões de uma
 linguagem de padrões de análise, utilizados na reengenharia de um sistema legado de biblioteca. Já \cite{karinsalo2004software} sugerem um modelo de processo de desenvolvimento de teste que leva técnicas de reutilização de software e atividades em conta. Revelam ainda que, a fim de produzir material de teste reutilizável, as entidades de software têm de ser expressa em termos de recursos, em que os materiais de ensaio estão anexados.
 
 Segundo \cite{patel2014test}, Tata Consultancy Services (TCS)  é uma empresa provedora de serviços em TI (ITSP) que desenvolveu um repositório de casos de teste reutilizáveis com o objetivo de reduzir o custo dos testes em projetos de Implementação de software empresarial (ESI).\cite{patel2014test} trás um estudo do programa de reutilização para analisar o seu impacto. Um conjunto de métricas foram definidos e os dados pertinentes foram obtidas a partir de usuários do repositório.
 
-\cite{crespo2004metodologia} apresentam uma metodologia para implantação ou melhoria do processo de teste em empresas desenvolvedoras de software, com o objetivo de viabilizar a utilização das práticas de teste pelas empresas. Apesar de não se tratar de uma solução que contenha reutilização de software, este trabalho tem relação direta com o trabalho desenvolvido, pois a reutilização nada mais visa que melhorias no processo de desenvolvimento dos testes de software.
+Crespo et al. \citeyearpar{crespo2004metodologia} apresentam uma metodologia para implantação ou melhoria do processo de teste em empresas desenvolvedoras de software, com o objetivo de viabilizar a utilização das práticas de teste pelas empresas. Apesar de não se tratar de uma solução que contenha reutilização de software, este trabalho tem relação direta com o trabalho desenvolvido, pois a reutilização nada mais visa que melhorias no processo de desenvolvimento dos testes de software.
 
 \chapter{Desenvolvimento}
 
@@ -686,7 +686,7 @@ Nesta classe também estão definidos, como demonstra ilustração \ref{code:ste
 	\label{code:stepsJUnit}
 \end{figure}
 
-Para tornar a solução mais completa, inseriu-se nessa classe, métodos que permitissem manipular campos que dependessem de chamadas Ajax e JavaScript, como demonstra a imagem \ref{code:Método WebDriverWait}
+Para tornar a solução mais completa, inseriu-se, nessa classe, métodos que permitissem manipular campos que dependessem de chamadas Ajax e JavaScript, como demonstra a imagem \ref{code:Método WebDriverWait}
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
@@ -728,7 +728,6 @@ Funcionalidade: Ações executadas por um aluno do curso de Ciência da Computa�
     E clico no elemento "button.btn.btn-default" buscando pelo "css"
     Entao verifico se atributo "nome tag" do elemento "id" buscando pelo "nome" não está nulo
 
-  @aceitacao
   Cenario: Adicionar umas disciplina ao plano com sucesso.
     Dado seleciono a opcao "ELC1051 - Computação Gráfica Avançada (60h)" no campo "idDisciplinaAdicionar" buscando pelo "id"
     Quando preencho o campo "piecDisciplinaAdicionar.cursoOfertante" com o valor "Ciência da Computação" buscando pelo "id"
@@ -736,7 +735,6 @@ Funcionalidade: Ações executadas por um aluno do curso de Ciência da Computa�
     E clico no elemento "adicionarPiecDisciplina" buscando pelo "id"
     Entao comparo a igualdade entre o valor esperado "Sucesso!" com atributo "texto" do elemento "h4" buscando pelo "css"
 
-  @rejeicao
   Cenario: Não permitir adicionar disciplina ao plano quando a mesma já está incluida.
     Dado seleciono a opcao "ELC1051 - Computação Gráfica Avançada (60h)" no campo "idDisciplinaAdicionar" buscando pelo "id"
     Quando preencho o campo "piecDisciplinaAdicionar.cursoOfertante" com o valor "Ciência da Computação" buscando pelo "id"
@@ -946,7 +944,7 @@ public void getLoginMembroColegiado() {
 \end{figure}
 
 \subsubsection{Aplicando solução no sistema SILAS BPMs}
-Ao contrário do ocorrido com a aplicação de registro de disciplinas complementares do curso de Ciência da Computação da Universidade Federal de Santa Maria (UFSM), a solução que mescla a utilização da linguagem Cucumber juntamente com o \emph{framework} Selenium WebDriver não contemplava, na totalidade, os testes necessários. Agora utilizando essa nova abordagem, tornou-se viável a codificação dos testes necessários e, com isso, optou-se, na empresa Megatecnologia, pela continuidade da realização de testes através desta solução.
+Ao contrário do ocorrido com a aplicação de registro de disciplinas complementares do curso de Ciência da Computação da Universidade Federal de Santa Maria (UFSM), a solução que mescla a utilização da linguagem Cucumber juntamente com o \emph{framework} Selenium WebDriver não contemplava, na totalidade, os testes necessários. Agora, utilizando essa nova abordagem, tornou-se viável a codificação dos testes necessários e, com isso, optou-se, na empresa Megatecnologia, pela continuidade da realização de testes através desta solução.
 
 \subsection{Considerações sobre a solução Selenium WebDriver}
 A abordagem em questão, assim como as anteriores, apresenta vantagens e desvantagens. Como vantagem, pode-se elencar o fato de, por trabalhar somente com a linguagem Java, possibilitar uma série de ações, que não seriam possíveis utilizando Cucumber na composição da solução. Como por exemplo, a utilização de testes condicionais, laços de repetição, busca de valores de um objeto Java, assim como manipulação de tipos que não façam parte dos tipos nativos da linguagem Java. Apesar disso, a solução apresenta um cenário mais complexo de ser entendido por qualquer interessado do projeto, comparado a solução utilizando Cucumber. Apresenta também, descrições mais poluídas visualmente e mais distantes de uma linguagem natural, além de possuir o mesmo problema referente à restauração da base de dados, após execução dos testes.

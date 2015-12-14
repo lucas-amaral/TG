@@ -159,7 +159,7 @@ Em especial, agradeço a minha professora e orientadora Andrea Charão, por sua 
 Também agradeço aos meus amigos e demais familiares que, de uma forma ou outra, fizeram parte desta trajetória, dividindo momentos de descontração e amizade comigo.
 \begin{abstract}
 A constante busca pela qualidade de uma solução em forma de software fez com que empresas do ramo de desenvolvimento aderissem à realização de testes automatizados em seus sistemas. A partir deste cenário,
-surgiram inúmeras ferramentas e \emph{frameworks} para suprir esta demanda, que se propõem  a ampliar a otimização de tempo e eficácia das aplicações implementadas. Contudo, é sabido que criar um novo teste para cada nova funcionalidade, ou demanda do sistema, torna-se muito custoso, sendo necessário um grande desprendimento de recursos humanos. Assim, este trabalho apresenta abordagens reutilizáveis de teste que objetivam trazer praticidade e facilidade na confecção de novos testes. Foram desenvolvidas, ao longo deste trabalho, três soluções para testes de sistemas web, onde a primeira trata-se de uma abordagem para testes unitários e as demais voltadas para testes funcionais, utilizando para isto, a linguagem Cucumber e os \emph{frameworks} Selenium e JUnit.
+surgiram inúmeras ferramentas e \emph{frameworks} para suprir esta demanda, que se propõem  a ampliar a otimização de tempo e eficácia das aplicações implementadas. Contudo, é sabido que criar um novo teste para cada nova funcionalidade, ou demanda do sistema, torna-se muito custoso, sendo necessário um grande desprendimento de recursos humanos. Assim, este trabalho apresenta abordagens reutilizáveis de teste que objetivam trazer praticidade e facilidade na confecção de novos testes escritos na linguagem Java. Desenvolveu-se neste trabalho, três soluções para testes de sistemas web, onde a primeira trata-se de uma abordagem para testes unitários e as demais voltadas para testes funcionais, utilizando para isto, a linguagem Cucumber e os \emph{frameworks} Selenium e JUnit. Para finalizar, apresentou-se comparações entre as soluções desenvolvidas mostrando em qual cenário cada abordagem se destaca.
 
 \end{abstract}
 
@@ -192,8 +192,8 @@ que uma aplicação se mantenha viva de forma competitiva, apresentar diferencia
 metodologias de teste de software ganham maior visibilidade. Além do aumento da produtividade e da diminuição do retrabalho, as empresas na área de tecnologia da informação buscam um melhor relacionamento com seus clientes por meio do melhor planejamento e gestão de suas atividades de desenvolvimento e da diminuição no número de defeitos nos produtos entregues \cite{jomori2004qualidade}.
 
 Os testes de software podem ocorrer em todas as etapas do desenvolvimento e de diferentes formas, contudo,
-sempre objetivam atender na totalidade os requisitos do sistema e, simultaneamente, amplificar a qualidade da solução
-codificada. Apesar de, aparentemente, ser mais prático e rápido realizar um teste manual, a cada nova alteração em um módulo do sistema o teste tem que ser todo refeito e a tendência que novos erros sejam gerados, até mesmo em funcionalidades já testadas, é enorme,
+sempre objetivam atender na totalidade os requisitos do sistema e, simultaneamente, amplificar a qualidade da solução codificada. A execução manual de um caso de teste é rápida e efetiva, mas a execução e repetição de um vasto conjunto de testes manualmente é uma tarefa muito dispendiosa e cansativa  \cite{bernardo2008importancia}.
+Além disto, a cada nova alteração em um módulo do sistema o teste tem que ser todo refeito e a tendência que novos erros sejam gerados, até mesmo em funcionalidades já testadas, é enorme,
 problema este que não ocorre quando a abordagem escolhida é a automatização dos testes. 
 
 Os testes automatizados angariam cada vez mais adeptos ao longo dos últimos anos. Tal fato se deve principalmente à grande redução de custo observada a médio e longo prazos com o uso desta prática \cite{de2007utilizaccao}. Em contrapartida, os testes automatizados demandam um grande custo inicial em sua codificação e, com isso, aumentam o
@@ -207,9 +207,19 @@ Este trabalho tem como objetivo principal apresentar um conjunto de classes de t
 
 \subsubsection{Objetivos específicos}
 
+\begin{itemize}
+	\item Reduzir o trabalho na criação de novos códigos de teste
+	\item Tornar solução apresentada genérica e replicável
+	\item Exibir comparações que demonstrem as vantagens na utilização da solução desenvolvida
+\end{itemize}
+
+
+
 \section{Justificativa}
 
-A qualidade de software  é uma das variáveis essenciais para que um projeto de software tenha sucesso.
+Controlar a qualidade de sistemas de software é um grande desafio devido à alta
+complexidade dos produtos e às inúmeras dificuldades relacionadas ao processo de
+desenvolvimento, que envolve questões humanas, técnicas, burocráticas, de negócio e políticas \cite{bernardo2008importancia}.
 Sendo assim, torna-se cada vez mais necessária a inserção de testes automatizados em projetos web agregando, aos mesmos, uma maior confiabilidade e redução nos possíveis
 erros que o sistema possa apresentar. Para que haja a possibilidade de aumentar a qualidade dos sistemas, sem que seja necessária uma maior
 demanda de recursos humanos para a área de qualidade, podemos adotar práticas de reuso de códigos de testes, visando
@@ -356,7 +366,7 @@ Cucumber é uma ferramenta de desenvolvimento de testes, voltada para sistemas w
 
 A escolha dessa ferramenta baseou-se na fácil transcrição dos requisitos do sistema para a linguagem em questão, tornando possível conferir se os requisitos estão contemplados pelas funções e métodos descritos no sistema web.
 Lopes \citeyearpar{lopescucumbervalor} compara Cucumber com o software Capybara\footnote{Capybara é uma biblioteca escrita na linguagem de programação Ruby que torna fácil simular como um usuário interage com sua aplicação. http://jnicklas.github.io/capybara/} e afirma que o primeiro apresenta um código mais legível e amigável. Uma observação é que o código com Capybara faz
-referência para vários detalhes de implementação, enquanto o código do Cucumber reserva isso apenas para os \emph{Steps} e não para o arquivo de \texttt{feature} \cite{lopescucumbervalor}.
+referência para vários detalhes de implementação, enquanto o código do Cucumber reserva isso apenas para os \emph{steps} e não para o arquivo de \texttt{feature} \cite{lopescucumbervalor}.
 
 A ferramenta funciona, basicamente, através da leitura de arquivos com a extensão \texttt{feature}, os quais descrevem em linguagem natural uma funcionalidade e casos de teste, conhecidos como "cenários". Como os testes estão escritos em uma linguagem natural e não de programação, Cucumber precisa pesquisar pelo código associado aos passos que formam o cenário em arquivos auxiliares \cite{scmitzcucumberreview}. Cucumber
 executa seus arquivos \texttt{.feature} e esses arquivos contêm especificações executáveis escritos em uma linguagem chamada Gherkin \cite{cucumberwiki}, que possui um layout bem definido. Inicia pela descrição de uma funcionalidade
@@ -446,7 +456,7 @@ public void testaFormularios() { //Método que executa os testes unitários
         if (testeClasse.fazerLogin()) { //Fazendo login no sistema
             LoginTeste.login(TestePropriedades.urlSistema, testeClasse.getSenha(), testeClasse.getLogin(), webDriver);
         }
-        if (!testeClasse.getUrl().equals("")) { //Acessar URL
+        if (StringUtils.isNotBlank(testeClasse.getUrl())) { //Acessar URL
             webDriver.get(TestePropriedades.urlSistema + testeClasse.getUrl());
         }
         for(Method metodo: classe.getDeclaredMethods()) {
@@ -666,7 +676,7 @@ A classe \texttt{Steps.java} foi criada com intuito de realizar o elo de ligaç�
 \end{figure}
 
 A linguagem Cucumber, quando trabalha conjuntamente com Java, disponibiliza anotações como: \texttt{@Dado, @Quando, @E e @Entao}, que corresponde de forma 1 para 1 frases descritas nos arquivos \texttt{.feature}. Estas anotações são fornecidas no framework do Cucumber para a linguagem Java.
-Como podemos ver na ilustração, cada método que corresponde a um \emph{Step} do Cucumber apresenta uma anotação que identifica o mesmo, contendo uma frase fixa e parâmetros que são esperados. Dessa forma, podem-se descrever frases que correspondam a pequenas ações executadas em um navegador. Assim, cada método é responsável por executar uma ação específica, tornando possível reutilizar estes métodos para compor os cenários que posteriormente serão descritos. 
+Como podemos ver na ilustração, cada método que corresponde a um \emph{step} do Cucumber apresenta uma anotação que identifica o mesmo, contendo uma frase fixa e parâmetros que são esperados. Dessa forma, podem-se descrever frases que correspondam a pequenas ações executadas em um navegador. Assim, cada método é responsável por executar uma ação específica, tornando possível reutilizar estes métodos para compor os cenários que posteriormente serão descritos. 
 
 Nesta classe também estão definidos, como demonstra ilustração \ref{code:stepsJUnit}, métodos necessários para realização das comparações que definem se o teste passou ou não. Esses métodos utilizam chamadas dos métodos asserts, oriundos do \emph{framework} de teste JUnit.
 
@@ -944,7 +954,7 @@ public void getLoginMembroColegiado() {
 \end{figure}
 
 \subsubsection{Aplicando solução no sistema SILAS BPMs}
-Ao contrário do ocorrido com a aplicação de registro de disciplinas complementares do curso de Ciência da Computação da Universidade Federal de Santa Maria (UFSM), a solução que mescla a utilização da linguagem Cucumber juntamente com o \emph{framework} Selenium WebDriver não contemplava, na totalidade, os testes necessários. Agora, utilizando essa nova abordagem, tornou-se viável a codificação dos testes necessários e, com isso, optou-se, na empresa Megatecnologia, pela continuidade da realização de testes através desta solução.
+Ao contrário do ocorrido com a aplicação de registro de disciplinas complementares do curso de Ciência da Computação da Universidade Federal de Santa Maria (UFSM), a solução que mescla a utilização da linguagem Cucumber juntamente com o \emph{framework} Selenium WebDriver não contemplava, na totalidade, os testes necessários. Agora, utilizando essa nova abordagem, tornou-se viável a codificação dos testes necessários e, com isso, optou-se, na empresa Megatecnologia, pela continuidade da realização de testes através desta solução. Na imagem \ref{code:seleniumTeste} vemos um teste que não era possível escrever com a solução utilizando Cucumber é com esta solução tornou-se viável.
 
 \subsection{Considerações sobre a solução Selenium WebDriver}
 A abordagem em questão, assim como as anteriores, apresenta vantagens e desvantagens. Como vantagem, pode-se elencar o fato de, por trabalhar somente com a linguagem Java, possibilitar uma série de ações, que não seriam possíveis utilizando Cucumber na composição da solução. Como por exemplo, a utilização de testes condicionais, laços de repetição, busca de valores de um objeto Java, assim como manipulação de tipos que não façam parte dos tipos nativos da linguagem Java. Apesar disso, a solução apresenta um cenário mais complexo de ser entendido por qualquer interessado do projeto, comparado a solução utilizando Cucumber. Apresenta também, descrições mais poluídas visualmente e mais distantes de uma linguagem natural, além de possuir o mesmo problema referente à restauração da base de dados, após execução dos testes.
@@ -977,8 +987,7 @@ Cenario: Cadastrar nova disciplina.
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
-//Cadastrar nova disciplina
-public void cadastrarDisciplina() {
+public void cadastrarDisciplina() { //Cadastrar nova disciplina
     steps.acessarEndereco("/cadastro-disciplina.htm");
     steps.preencherCampo("codigo", "ELC9898", TesteFormulario.IDENTIFICADOR_ID);
     steps.preencherCampo("nome", "Disciplina nova", TesteFormulario.IDENTIFICADOR_ID);

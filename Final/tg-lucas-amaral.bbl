@@ -1,5 +1,9 @@
 \begin{thebibliography}{\hspace{\parindent}}
 
+\bibitem[BERNARDO; KON(2008)BERNARDO; KON]{bernardo2008importancia} BERNARDO,
+  P.~C.; KON, F\@. A import{\^a}ncia dos testes automatizados.
+  \textbf{Engenharia de Software Magazine}, [S.l.], v.1, n.3, p.54--57, 2008.
+
 \bibitem[BIASI(2006)BIASI]{biasi2006geraccao} BIASI, L.~B\@. Gera{\c{c}}{\~a}o
   automatizada de drivers e stubs de teste para JUnit a partir de
   especifica{\c{c}}{\~o}es U2TP. , [S.l.], 2006.

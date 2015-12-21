@@ -1,0 +1,552 @@
+% !TEX TS-program = XeLaTeX
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  \usetheme{Dresden}
+
+  \setbeamercovered{transparent}
+  \useinnertheme{circles}
+  \usecolortheme{lsc}
+  \beamertemplatenavigationsymbolsempty
+}
+
+\setbeamertemplate{headline}{}
+\setbeamercovered{invisible}
+
+
+\usepackage[brazil]{babel}
+% or whatever
+
+%\usepackage[utf8]{inputenc}
+
+%\usefonttheme{serif}
+
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+%\setmainfont{Linux Libertine G}
+%\setsansfont{Source Sans Pro}
+%\setmonofont{Source Code Pro}
+
+\usepackage{textcomp}
+\usepackage{listings}
+
+\lstdefinelanguage{Java}{
+  keywords={public, private, new, true, boolean, false, catch, void, return, null, for, switch, var, if, in, while, else, case, break, class,
+  	Funcionalidade, Contexto, Dado, Quando, E, Entao, Cenario, Delineacao, Exemplos},
+  keywordstyle=\color[rgb]{0.2,0.4,0.55}\bfseries,
+  ndkeywords={export, throw, implements, import, this,
+    @Before, @Test, @After, @Dado, @Quando, @E, @Entao, @Documented, @Retention, @Target, @Teste, @aceitacao, @rejeicao, codigoDis, nomeNovaDisciplina, relevancia, siglaInst, msgErro},
+  %ndkeywords={Add, Num},
+  ndkeywordstyle=\color[RGB]{218,202,66}\bfseries,
+  %identifierstyle=\color{black},
+  sensitive=true,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+ % stringstyle=\color[rgb]{0.0,0.4,0.65}\ttfamily,
+  stringstyle=\color[RGB]{34,128,24}\ttfamily,
+  %morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+	language=Java,
+	basicstyle=\tiny,
+	commentstyle=\color[rgb]{0,0.2,0}\normalfont,
+	frame=single,
+	%texcl=true,
+	numbers=left,
+	showstringspaces=false,
+}
+
+\def\Cpp{{C\nolinebreak[4]\raisebox{.2ex}{\scriptsize\bf++}}}
+%\def\Cpp{{C\nolinebreak[4]\raisebox{.3ex}{\small++}}}
+
+\title{Desenvolvimento e Reutilização de Testes Automatizados em Aplicações Web}
+\author[Lucas Antunes Amaral]{Lucas Antunes Amaral\\Orientador: Profª Drª Andrea Schwertner Charão}
+\institute[UFSM]{Ciência da Computação\\Universidade Federal de Santa Maria}
+\date{04/12/2015}
+
+\pgfdeclareimage[height=0.75cm]{university-logo}{images/CienciaDaComputacao.png}
+\logo{\pgfuseimage{university-logo}}
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+	%\pgfuseimage{university-logo}
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Introdução}
+\begin{frame}{Introdução}
+	\begin{block}{Teste de software}
+
+	\end{block}
+	\begin{itemize}
+		\item Responsável por apresentar os erros existentes em um determinado programa
+		\item Aumenta a confiança de que o software desempenha as funções especificadas
+	\end{itemize}
+\end{frame}
+
+\subsection{Objetivos}
+\begin{frame}{Objetivos}
+    \begin{block}{Objetivo principal}
+	    Apresentar solução de teste reutilizável para novos casos de teste ou novos projetos.
+	\end{block}
+	\begin{itemize}
+		\item Reduzir o trabalho na criação de novos códigos de teste
+		\item Tornar solução genérica e replicável
+	\end{itemize}
+\end{frame}
+
+\subsection{Justificativa}
+\begin{frame}{Justificativa}
+	\begin{itemize}
+		\item Entregar software com maior qualidade
+		\item Equipes com recursos humanos limitados
+		\item Garantir maior confiabilidade e redução de erros
+	\end{itemize}
+\end{frame}
+\pgfdeclareimage[height=1.0cm]{selenium_logo}{images/selenium_logo.png}
+\pgfdeclareimage[height=1.0cm]{cucumber_logo}{images/cucumber_logo.png}
+\pgfdeclareimage[height=2.0cm]{junit_logo}{images/junit_logo.jpg}
+\pgfdeclareimage[height=6.0cm]{selenium_ide}{images/selenium_ide.PNG}
+\section{Fundamentação}
+\subsection{Ferramentas de teste de software}
+\begin{frame}{Ferramentas de teste de software}
+    \pgfuseimage{selenium_logo}
+    Selenium HQ
+	\begin{itemize}
+		\item Ferramenta para testes em aplicações web pelo browser de forma automatizada
+        \item Os testes rodam diretamente num browser simulando ações de um usuário
+        \item Testa se a página web produz o resultado esperado
+	\end{itemize}
+\end{frame}
+\begin{frame}{Ferramentas de teste de software}
+    \pgfuseimage{selenium_logo}
+    Selenium IDE
+    \begin{center}\pgfuseimage{selenium_ide}\end{center}
+\end{frame}
+\begin{frame}[fragile]{Ferramentas de teste de software}
+    \item Selenium WebDriver
+    \begin{lstlisting}
+public class LoginTeste {
+    private WebDriver driver;
+    private static String url = "inf.ufsm.br/piec";
+
+    @Before
+    public void setUp() throws Exception {
+        driver = new FirefoxDriver();
+    }
+
+    @Test
+    public void testeLoginSucesso() {
+        driver.get(url);
+        driver.findElement(By.id("login")).sendKeys("lucas");
+        driver.findElement(By.name("senha")).sendKeys("senha123");
+        driver.findElement(By.cssSelector("button.btn.btn-default")).click();
+        assertEquals("Sucesso!", driver.findElement(By.cssSelector("h4")).getText());
+    }
+
+    @After
+    public void tearDown() { driver.quit(); }
+}
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Ferramentas de teste de software}
+    \pgfuseimage{cucumber_logo}
+    \item Cucumber
+	\begin{itemize}
+		\item Linguagem bem próxima da linguagem natural
+		\item Permite escrever cenários que ilustrem as regras de negócio
+        \item Serve como documentação das funcionalidades solicitadas
+	\end{itemize}
+\end{frame}
+\begin{frame}[fragile]{Ferramentas de teste de software}
+    \pgfuseimage{cucumber_logo}
+    \item Cucumber
+    \begin{lstlisting}
+Funcionalidade: Fazer login
+  Contexto: Login com sucesso
+    Dado que eu queira acessar o endereço "inf.ufsm.br/login.htm"
+    Quando preencho o campo "login" com o valor "lamaral" buscando pelo "id"
+    E preencho o campo "senha" com o valor "teste123" buscando pelo "id"
+    E clico no elemento "button.btn.btn-default" buscando pelo "css"
+    Entao o atributo "Sucesso!" do elemento "box_s" buscando pelo "id" não está nulo
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Ferramentas de teste de software}
+    \pgfuseimage{cucumber_logo}
+    \item Cucumber
+    \begin{lstlisting}
+@Dado("^que eu queira acessar o endereco (.*)$")
+public void acessarEndereco(String url) {
+    // descrever ações aqui
+}
+
+@E("^preencho o campo (.*) com o valor (.*) buscando pelo (.*)$")
+public void preencherCampo(String campo, String valor, String identificador) {
+    // descrever ações aqui
+}
+
+@E("^clico no elemento (.*) buscando pelo (.*)$")
+public void clicarElemento(String campo, String identificador) {
+    // descrever ações aqui
+}
+
+@Entao("^comparar se atributo (.*) do elemento (.*) buscando pelo (.*) é nulo$")
+public void compararSeNulo(String atributo, String campo, String identificador) {
+    assertNull(...);
+}
+
+	\end{lstlisting}
+\end{frame}
+%\begin{frame}[fragile]{Ferramentas de teste de software}
+%    \pgfuseimage{junit_logo}
+%    \item JUnit
+	%\begin{itemize}
+	%	\item Usa asserções para testar os resultados esperados
+     %   \item Adequado para os testes unitários e de integração
+	%\end{itemize}
+%\end{frame}
+\section{Desenvolvimento}
+\subsection{Delimitação do escopo}
+\begin{frame}{Delimitação do escopo}
+	\begin{itemize}
+		\item Sistemas web
+		\begin{itemize}
+			\item Desenvolvidos em Java
+			\item Suporte para funções Ajax e Javascript
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\pgfdeclareimage[height=4.0cm]{solucao1}{images/solucao1.png}
+\subsection{Solução para testes unitários}
+\begin{frame}{Solução para testes unitários}
+    Modelagem da solução utilizando anotações e Selenium
+	\begin{center}\pgfuseimage{solucao1}\end{center}
+\end{frame}
+\begin{frame}[fragile]{Solução para testes unitários}
+    Interface de anotação
+    \begin{lstlisting}
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.TYPE, ElementType.METHOD})
+public @interface Teste {
+    String getUrl() default "";
+
+    //findElement
+    String getCampo() default ""; //campo html do formulário
+    String getIdentificador() default "id"; //Informar se deve buscar um id, name, etc
+
+    boolean isSelect() default false;
+
+    String getValor() default ""; //utilizado como sendKeys e selectText
+    boolean click() default false;
+    boolean submit() default false;
+    boolean limpar() default false;
+
+    String getTipoAssert() default "igual";
+    String getCampoAssert() default "";
+    String getIdentificadorAssert() default "id";
+    String getValorEsperadoAssert() default "";
+    String getAtributoCampoComparacaoAssert() default "texto";
+}
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Solução para testes unitários}
+    Exemplo de classe contendo anotações
+    \begin{lstlisting}
+@Teste(getUrl = "/cadastro-disciplina.htm", getCampo = "salvar", click = true
+    ,getIdentificadorAssert = TestePropriedades.IDENTIFICADOR_CSS
+    , getCampoAssert = "h4", getValorEsperadoAssert = "Sucesso!")
+public class Disciplina {
+    private String codigo;
+    private String nome;
+    private Integer cargaHoraria;
+
+    @Teste(getCampo = "ativa1", click = true)
+    public Boolean getAtiva() {
+        return ativa == null || ativa;
+    }
+
+    public void setAtiva(Boolean ativa) { this.ativa = ativa; }
+
+    @Teste(getCampo = "cargaHoraria", getValor = "60", isSelect = true)
+    public Integer getCargaHoraria() { return cargaHoraria; }
+
+    public void setCargaHoraria(Integer cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
+    }
+
+    @Teste(getCampo = "nome", getValor = "Disciplina teste")
+    public String getNome() { return nome; }
+}
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Solução para testes unitários}
+    Classe genérica de teste
+    \begin{lstlisting}
+@Test
+public void testaFormularios() {
+    for (Class classe : getCarregaClasses()) {
+        Teste testeClasse = TestePropriedades.teste(classe);
+        if (!testeClasse.getUrl().equals("")) {
+            webDriver.get(TestePropriedades.urlSistema + testeClasse.getUrl());
+        }
+        for(Method metodo: classe.getDeclaredMethods()) {
+            Teste teste = TestePropriedades.teste(metodo);
+            if (teste != null) {
+                executaTeste(teste, true);
+            }
+        }
+        executaTeste(testeClasse, false);
+        System.out.println("Formulário da classe "+classe.getName()+" testado!");
+    }
+}
+	\end{lstlisting}
+\end{frame}
+%\subsubsection{Discussão sobre a solução para testes unitários}
+\begin{frame}{Discussão sobre a solução para testes unitários}
+     \begin{columns}[T] % contents are top vertically aligned
+     \begin{column}[T]{5cm} % each column can also be its own environment
+        \begin{block}{Qualidades}
+    	    \begin{itemize}
+        		\item Suporta testes unitários
+        		\item Curva de aprendizado pequena, necessário apenas inserir anotações
+        		\item Suporte para funções básicas executadas em um sistema web (click's, seleções, etc)
+        	\end{itemize}
+    	\end{block}
+     \end{column}
+     \begin{column}[T]{5cm} % alternative top-align that's better for graphics
+        \begin{alertblock}{Limitações}
+            \begin{itemize}
+            	\item Não possibilita a realização de testes funcionais
+            	\item Um campo só pode conter um valor de teste
+            	\item Não suporta elementos que dependam de funções Ajax
+            \end{itemize}
+        \end{alertblock}
+     \end{column}
+     \end{columns}
+\end{frame}
+\pgfdeclareimage[height=6.0cm]{solucao2}{images/solucao2.png}
+\subsection{Solução para testes funcionais utilizando Cucumber}
+\begin{frame}{Solução para testes funcionais utilizando Cucumber}
+    Modelagem da solução utilizando Cucumber e Selenium WebDriver
+	\begin{center}\pgfuseimage{solucao2}\end{center}
+\end{frame}
+\begin{frame}[fragile]{Solução para testes funcionais utilizando Cucumber}
+    \item Classe genérica de teste
+    \begin{lstlisting}
+public Object getValorPropriedadeCampo(WebElement webElement, String atributo) {
+    if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_TEXTO)) {
+        return webElement.getText();
+    } else if (atributo.equals(ATRIBUTO_COMPARACAO_ASSERT_NOME_TAG)) {
+        return webElement.getTagName();
+    } else if ...
+} //Retorna atributo de um campo
+
+//Retorna um elemento HTML
+public WebElement getEncontraCampo(String identificador, String campo) {
+    return webDriver.findElement(getEncontra(identificador, campo));
+}
+
+public By getEncontra(String identificador, String campo) {
+    if (identificador.equals(IDENTIFICADOR_ID)) {
+        return By.id(campo);
+    } else if ...
+}
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Solução para testes funcionais utilizando Cucumber}
+    \item Classe que descreve steps
+    \begin{lstlisting}
+@Quando("^seleciono a opcao (.*) no campo (.*) buscando pelo (.*)$")
+public void selecionarOpcaoCampo(String opcao, String campo, String identificador) {
+    WebElement webElement = getEncontraCampo(identificador, campo);
+    Select select = new Select(webElement);
+    select.selectByVisibleText(opcao);
+}
+
+ @E("^preencho o campo (.*) com o valor (.*) buscando pelo (.*)$")
+public void preencherCampo(String campo, String valor, String identificador) {
+    WebElement webElement = getEncontraCampo(identificador, campo);
+    webElement.sendKeys(valor);
+}
+
+@E("^aguardo (\\d+) milisegundos para verificar se elemento (.*) buscando pelo (.*)
+    esta visivel$")
+public void aguardarCampoVisivel(Long tempo, String campo, String identificador) {
+    WebDriverWait webDriverWait = new WebDriverWait(webDriver, tempo);
+    webDriverWait.until(ExpectedConditions.visibilityOf(funcoes.
+        getEncontraCampo(identificador, campo)));
+}
+    \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Solução para testes funcionais utilizando Cucumber}
+    \item Escrevendo cenários com Cucumber
+    \begin{lstlisting}
+Funcionalidade: Ações executadas por um aluno do curso de Ciência da Computação no
+registro de seu plano individual de estudos complementares.
+
+  Contexto: Fazer login no sistema como um aluno
+    Dado acesso o endereco "/login.htm"
+    Quando preencho o campo "login" com o valor "lamaral" buscando pelo "id"
+    E preencho o campo "senha" com o valor "teste123" buscando pelo "id"
+    E clico no elemento "button.btn.btn-default" buscando pelo "css"
+    Entao verifico se atributo "nome tag" do elemento "id" buscando pelo "nome"
+        não está nulo
+
+  Cenario: Adicionar umas disciplina ao plano com sucesso.
+    Dado seleciono a opcao "ELC1051" no campo "idDiscpAdicionar" buscando pelo "id"
+    Quando preencho o campo "curso" com o valor "C. da Computação" buscando pelo "id"
+    E preencho o campo "semestreRealizacao" com o valor "II/2011" buscando pelo "id"
+    E clico no elemento "adicionarPiecDisciplina" buscando pelo "id"
+    Entao comparo a igualdade entre o valor esperado "Sucesso!" com atributo "texto"
+    do elemento "h4" buscando pelo "css"
+    \end{lstlisting}
+\end{frame}
+\begin{frame}{Discussão sobre a solução para testes funcionais utilizando Cucumber}
+     \begin{columns}[T] % contents are top vertically aligned
+     \begin{column}[T]{5cm} % each column can also be its own environment
+        \begin{block}{Qualidades}
+    	    \begin{itemize}
+    	        \item Permite realizar testes funcionais
+        		\item Reutilização dos \emph{steps} definidos
+        		\item Cenários com escrita de fácil compreensão (documentação)
+        		\item Suporte para funções dependentes de chamadas Ajax e Javascript
+        	\end{itemize}
+    	\end{block}
+     \end{column}
+     \begin{column}[T]{5cm} % alternative top-align that's better for graphics
+        \begin{alertblock}{Limitações}
+            \begin{itemize}
+            	\item Não possibilita realizar testes que dependam de condições (if, else)
+            	\item Reutilizar cenário dentro de outro cenário
+            	\item Retroceder o BD para estado inicial após os testes
+            	\item Somente possibilita manipular tipos de dados básicos (int, float, String)
+            \end{itemize}
+        \end{alertblock}
+     \end{column}
+     \end{columns}
+\end{frame}
+\pgfdeclareimage[height=5.0cm]{solucao3}{images/solucao3.png}
+\subsection{Solução para testes funcionais utilizando Selenium}
+\begin{frame}{Solução para testes funcionais utilizando Selenium}
+    Modelagem da solução utilizando Selenium WebDriver
+	\begin{center}\pgfuseimage{solucao3}\end{center}
+\end{frame}
+\begin{frame}[fragile]{Solução para testes funcionais utilizando Selenium}
+    Escrevendo cenários em Java
+    \begin{lstlisting}
+private void abreFechaAgrupamento() {
+	navegador.clicarElemento("img[alt=\"Visualizar\"]", "css");
+	navegador.aguardarCampoVisivel(100l, "img[alt=\"F\"]", "css");
+	WebElement dataAbertura = navegador.getEncontraCampo("data_abertura_1");
+	WebElement dataFechamento = navegador.getEncontraCampo("data_fechamento_1");
+	boolean aberto = true;
+	if (dataAbertura.getText() != null) {
+		aberto = false;
+	}
+	navegador.clicarElemento("img[alt=\"F\"]");
+	if (aberto) {
+		assertEquals(SilasFuncoesDatas.sdf.format(new Date()),
+		    dataFechamento.getText());
+	} else {
+		assertEquals(SilasFuncoesDatas.sdf.format(new Date()),
+		    dataAbertura.getText());
+	}
+}
+    \end{lstlisting}
+\end{frame}
+\begin{frame}{Discussão sobre a solução para testes funcionais utilizando Selenium}
+     \begin{columns}[T] % contents are top vertically aligned
+     \begin{column}[T]{5cm} % each column can also be its own environment
+        \begin{block}{Qualidades}
+    	    \begin{itemize}
+    	        \item Permite realizar testes funcionais
+        		\item Reutilização dos \emph{steps} definidos
+        		\item Reutilizar cenário dentro de outro cenário
+        		\item Possibilita realizar testes que dependam de condições (if, else)
+        		\item Permite manipular todos tipos de dados disponíveis em Java
+        	\end{itemize}
+    	\end{block}
+     \end{column}
+     \begin{column}[T]{5cm} % alternative top-align that's better for graphics
+        \begin{alertblock}{Limitações}
+            \begin{itemize}
+            	\item Maior complexidade na compreensão do cenário
+            	\item Retroceder o BD para estado inicial após os testes
+            	\item Digita-se mais em comparação com a solução anterior
+            \end{itemize}
+        \end{alertblock}
+     \end{column}
+     \end{columns}
+\end{frame}
+
+\section{Resultados}
+\subsection{Resultados}
+\begin{frame}{Resultados}
+    Vantagens e desvantagens das abordagens de teste confeccionadas
+    \begin{table}[!htpb]
+        \tiny
+        \begin{tabular}{p{5cm}|c|c|c}
+        	& Unitário & Cucumber e Selenium & Funcional Selenium\\ \hline
+        	Testes unitários & \checkmark & \checkmark & \checkmark \\ \hline
+        	Testes funcionais &  & \checkmark & \checkmark \\ \hline
+        	Elementos que dependam de funções Ajax e Javascript & & \checkmark & \checkmark \\ \hline
+        	Cenários com escrita de fácil compreensão & & \checkmark & \\ \hline
+        	Realização de testes dependentes de condições & & & \checkmark \\ \hline
+        	Armazenar valor de um campo para utiliza-lo posteriormente & & & \checkmark \\ \hline
+        	Possibilita utilizar parâmetros que diferem dos tipos básicos (int, float, String) & \checkmark & & \checkmark \\ \hline
+        	Retroceder o banco de dados ao último estado válido após realizar os testes & & & \\ \hline
+        	Utilização de cenários dentro de outro cenário & & & \checkmark \\ \hline
+        \end{tabular}
+    \end{table}
+\end{frame}
+\begin{frame}{Resultados}
+    Comparação com teste descrito somente com ferramenta para teste web
+    \begin{lstlisting}
+public void cadastrarDisciplinaSucesso() {
+	WebDriver webDriver = new FirefoxDriver();
+	webDriver.get(url + "/cadastro-disciplina.htm");
+	webDriver.findElement(By.id("codigo")).sendKeys("ELC9898");
+	webDriver.findElement(By.id("nome")).sendKeys("Disciplina nova");
+	Select cargaHoraria = new Select(webDriver.findElement(By.id("cargaHoraria")));
+	cargaHoraria.selectByVisibleText("60");
+	webDriver.findElement(By.id("ativa1")).click();
+	Select instituicao = new Select(webDriver.findElement(By.id("idInstituicao")));
+	instituicao.selectByVisibleText("UFSM - Universidade Federal de SM");
+	webDriver.findElement(By.id("preAprovada1")).click();
+	webDriver.findElement(By.id("salvar")).click();
+	assertEquals("Sucesso!", webDriver.findElement(By.cssSelector("h4")).getText());
+}
+    \end{lstlisting}
+\end{frame}
+\begin{frame}
+	\titlepage
+\end{frame}
+\end{document}

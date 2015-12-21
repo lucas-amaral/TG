@@ -204,12 +204,12 @@ envolvimento da equipe de qualidade. Pensando nesse problema, podemos buscar for
 
 Este trabalho tem como objetivo principal apresentar um conjunto de classes de teste e testes, para sistemas web, que possam ser reutilizados em novas funcionalidades de uma aplicação ou em sistemas que sigam os mesmos padrões e comportamento dos softwares para os quais foram desenvolvidos, visando agilizar o desenvolvimento dos testes.
 
-\subsubsection{Objetivos específicos}
+\subsection{Objetivos específicos}
 
 \begin{itemize}
-	\item Reduzir o trabalho na criação de novos códigos de teste
-	\item Tornar solução apresentada genérica e replicável
-	\item Exibir comparações que demonstrem as vantagens na utilização da solução desenvolvida
+	\item Reduzir o trabalho na criação de novos códigos de teste.
+	\item Tornar solução apresentada genérica e replicável.
+	\item Exibir comparações que demonstrem as vantagens na utilização da solução desenvolvida.
 \end{itemize}
 
 
@@ -243,7 +243,7 @@ uma terceira abordagem neste trabalho, onde a mesma seguia os moldes da abordage
 escreve-los por meio da linguagem Cucumber, os mesmo foram descritos por métodos e classes Java, utilizando, para isso, recursos disponibilizados pela ferramenta Selenium.
 
 \subsection{Comparações entre as soluções}
-O ultimo passo deste trabalho, consistiu em apresentar comparações entre as soluções propostas, apresentando virtudes e limitações de cada uma. Também demonstrou-se
+O último passo deste trabalho, consistiu em apresentar comparações entre as soluções propostas, apresentando virtudes e limitações de cada uma. Também demonstrou-se
 vantagens na utilização das abordagens funcionais deste trabalho ao detrimento de desenvolver um teste, utilizando apenas as ferramentas para testes de sistemas web disponíveis.
 
 \chapter{Fundamentos e revisão de literatura}
@@ -327,7 +327,7 @@ Dentro do desenvolvimento deste trabalho foram utilizados as ferramentas Seleniu
 	\label{fig:seleniumIDE}
 \end{figure}
 
-Selenium WebDriver por sua vez, trata-se de um \emph{framework} que permite realizar as mesmas operações que o Selenium IDE, porem trabalhando diretamente em código, no caso deste trabalho utilizando a linguagem Java como ilustra a imagem \ref{code:seleniumWebDriver}.
+Selenium WebDriver por sua vez, trata-se de um \emph{framework} que permite realizar as mesmas operações que o Selenium IDE, porém trabalhando diretamente em código, no caso deste trabalho utilizando a linguagem Java como ilustra a imagem \ref{code:seleniumWebDriver}.
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
@@ -408,7 +408,7 @@ principalmente, na geração de casos de testes que possam ser reutilizados em s
 Como solução em forma de reutilização de teste, Cagnin et al. \citeyearpar{cagnin2004reuso} apresentam uma abordagem composta por: a) uma estratégia, que define e associa requisitos de teste a padrões de linguagens de padrões  de análise; b) diretrizes, que apoiam o engenheiro de software na decisão de quais requisitos de teste disponíveis devem ser reusados e instanciados para casos de teste concretos. A estratégia que define os requisitos de teste da abordagem proposta foi aplicada aos padrões de uma
 linguagem de padrões de análise, utilizados na reengenharia de um sistema legado de biblioteca. Já \cite{karinsalo2004software} sugerem um modelo de processo de desenvolvimento de teste que leva técnicas de reutilização de software e atividades em conta. Revelam ainda que, a fim de produzir material de teste reutilizável, as entidades de software têm de ser expressa em termos de recursos, em que os materiais de ensaio estão anexados.
 
-Segundo \cite{patel2014test}, Tata Consultancy Services (TCS)  é uma empresa provedora de serviços em TI (ITSP) que desenvolveu um repositório de casos de teste reutilizáveis com o objetivo de reduzir o custo dos testes em projetos de Implementação de software empresarial (ESI).\cite{patel2014test} trás um estudo do programa de reutilização para analisar o seu impacto. Um conjunto de métricas foram definidos e os dados pertinentes foram obtidas a partir de usuários do repositório.
+Segundo \cite{patel2014test}, Tata Consultancy Services (TCS)  é uma empresa provedora de serviços em TI (ITSP) que desenvolveu um repositório de casos de teste reutilizáveis com o objetivo de reduzir o custo dos testes em projetos de Implementação de software empresarial (ESI).\cite{patel2014test} traz um estudo do programa de reutilização para analisar o seu impacto. Um conjunto de métricas foram definidos e os dados pertinentes foram obtidas a partir de usuários do repositório.
 
 Crespo et al. \citeyearpar{crespo2004metodologia} apresentam uma metodologia para implantação ou melhoria do processo de teste em empresas desenvolvedoras de software, com o objetivo de viabilizar a utilização das práticas de teste pelas empresas. Apesar de não se tratar de uma solução que contenha reutilização de software, este trabalho tem relação direta com o trabalho desenvolvido, pois a reutilização nada mais visa que melhorias no processo de desenvolvimento dos testes de software.
 
@@ -563,7 +563,7 @@ Na anotação são inseridas informações referente às ações que devem ser e
 a página, que está sendo testada, são inseridas na anotação da classe propriamente dita.
 
 \subsection{Discussão sobre a solução}
-Após a finalização do desenvolvimento desta primeira solução encontrada, notou-se a clara necessidade de alteração na sistemática de como os testes ocorreriam. Necessidade esta oriunda de algumas limitações que a solução trás,
+Após a finalização do desenvolvimento desta primeira solução encontrada, notou-se a clara necessidade de alteração na sistemática de como os testes ocorreriam. Necessidade esta oriunda de algumas limitações que a solução traz,
 como, por exemplo, a não possibilidade de realizar casos de teste que envolvam mais de um método, tornando praticamente inviável a tarefa de realizar testes funcionais, pois não seria possível mapear um cenário mais completo, que depende
 de mais de uma variável e tem uma sequência bem mapeada que deve ser seguida.
 
@@ -581,7 +581,7 @@ Visando a produção de testes funcionais, optou-se pela inclusão do \emph{fram
 	\label{fig:solucao2}
 \end{figure}
 
-A solução é composta por três estágios, onde no primeiro será inserido no projeto a classe genérica de testes já descrita, porem dela só serão utilizados os métodos que descrevem ações do Selenium WebDriver. No segundo estágio ocorre a adição de uma classe, onde são apresentados métodos que representam \emph{steps} da linguagem Cucumber o que possibilita descrever, no ultimo estágio, cenários no Cucumber em arquivos \texttt{.feature}, que descrevem casos de teste para as funcionalidades codificadas no sistema. A imagem \ref{fig:solucao2} apresenta esse fluxo.
+A solução é composta por três estágios, onde no primeiro será inserido no projeto a classe genérica de testes já descrita, porém dela só serão utilizados os métodos que descrevem ações do Selenium WebDriver. No segundo estágio ocorre a adição de uma classe, onde são apresentados métodos que representam \emph{steps} da linguagem Cucumber o que possibilita descrever, no último estágio, cenários no Cucumber em arquivos \texttt{.feature}, que descrevem casos de teste para as funcionalidades codificadas no sistema. A imagem \ref{fig:solucao2} apresenta esse fluxo.
 
 \subsection{Classe genérica de testes}
 Na classe genérica de testes foram mantidos os métodos anteriormente utilizados que permitiam gerenciar ações do Selenium WebDriver, como apresenta a figura \ref{code:Classe genérica contendo métodos WebDriver}\footnote{Código completo no repositório https://github.com/lucas-amaral/TG/blob/master/Códigos/Java}.
@@ -772,7 +772,7 @@ O primeiro sistema escolhido foi um sistema desenvolvido para efetuar a solicita
 	\label{fig:piec}
 \end{figure}
 
-O Segundo sistema, em que os testes funcionais seriam aplicados, seria um software de uma empresa privada, da região de Santa Maria, chamada Megatecnologia. Este software comercializado como SILAS BPMs, apresenta
+O segundo sistema, em que os testes funcionais seriam aplicados, seria um software de uma empresa privada, da região de Santa Maria, chamada Megatecnologia. Este software comercializado como SILAS BPMs, apresenta
 um sistema voltado para modelagem de processo BPMs, no qual é possível descrever etapas, tramitações, telas e campos de um processo. Este sistema apresenta complicações bem maiores que o primeiro, por tratar-se de um sistema comercializado há mais de 8 anos, onde existe a utilização de tecnologias como: Ajax, geração de documentos em XLS e PDF, comunicação via WebService, geração de gráficos e mapas, utilizando API`s do Google e, além disso, possuir um processo que é descrito pelo usuário, tornando mais difícil escrever um teste funcional, em que se sabe com certeza o estado atual de um campo. \ref{fig:silas} apresenta tela de configuração deste sistema.
 
 \begin{figure}[!htb]
@@ -849,7 +849,7 @@ Após algumas tentativas de utilizar a solução proposta para esses novos cená
 \subsection{Considerações sobre a solução Cucumber e Selenium}
 Com o avanço na confecção de testes aplicados em sistemas reais, percebeu-se uma série de vantagens e desvantagens na utilização desta solução no processo de desenvolvimento e testes de funcionalidades.
 Como vantagens, podemos elencar o fato de, ao escrever cenários utilizando o IDE que tenha suporte para a linguagem Cucumber, pouco se escreve, reutilizando sempre os \emph{steps} descritos na classe \texttt{Steps.java}. Sendo, assim, necessário apenas informar os parâmetros esperados pelos mesmos. Ainda destaca-se o fato de os cenários descreverem, de forma simples, o que deve ocorrer na funcionalidade testada e, desta forma, serve também como documentação.
-Quando pensamos nos pontos fracos da solução, podemos destacar os empecilhos detectados no desenvolvimento de testes para a aplicação SILAS BPMs. Somam-se a estes, algumas limitações que a linguagem Cucumber possui, como o fato de não ser possível reutilizar um cenário dentro de outro cenário\footnote{Essa funcionalidade estava disponível na primeira versão da linguagem, mas foi removida. Embora o exemplo pode fazer sentido quando se trabalha de forma sequencial através dos cenários, a longo prazo produzem-se cenários que são difíceis de manter e entender \cite{givenscenario}. } ou até mesmo utilizar como parâmetro valores que diferem dos tipos comuns da linguagem Java (int, float, String). Outro fator problemático nessa solução é o fato de todos os dados utilizados nos testes serem persistidos e, com isso, ser necessário a restauração manual do ultimo estado válido da base de dados onde os testes se realizam, mesmo que o banco de dados utilizado for um banco voltado apenas para testes, pois a persistência dos dados de um teste poderia acarretar no insucesso do mesmo teste executado em um segundo momento, pelo simples fato de entrada dos dados não ser mais a esperada.
+Quando pensamos nos pontos fracos da solução, podemos destacar os empecilhos detectados no desenvolvimento de testes para a aplicação SILAS BPMs. Somam-se a estes, algumas limitações que a linguagem Cucumber possui, como o fato de não ser possível reutilizar um cenário dentro de outro cenário\footnote{Essa funcionalidade estava disponível na primeira versão da linguagem, mas foi removida. Embora o exemplo pode fazer sentido quando se trabalha de forma sequencial através dos cenários, a longo prazo produzem-se cenários que são difíceis de manter e entender \cite{givenscenario}. } ou até mesmo utilizar como parâmetro valores que diferem dos tipos comuns da linguagem Java (int, float, String). Outro fator problemático nessa solução é o fato de todos os dados utilizados nos testes serem persistidos e, com isso, ser necessário a restauração manual do último estado válido da base de dados onde os testes se realizam, mesmo que o banco de dados utilizado for um banco voltado apenas para testes, pois a persistência dos dados de um teste poderia acarretar no insucesso do mesmo teste executado em um segundo momento, pelo simples fato de entrada dos dados não ser mais a esperada.
 
 \section{Solução para testes funcionais com Selenium WebDriver}
 Como forma de possibilitar a utilização de testes condicionais, armazenamento de valores e manipulação de objetos Java dentro de testes funcionais, optou-se pela confecção de uma nova abordagem neste projeto, mesmo que para isso se tivesse que abdicar da praticidade e interface amigável do Cucumber. Assim, os testes funcionais seriam descritos diretamente em classes de teste Java. A imagem \ref{fig:solucao3} apresenta essa alteração na abordagem dos testes proposta. 
@@ -933,7 +933,7 @@ Pode-se, também, localizar valores que não são estáticos na busca de element
 Para validar esta solução, foram utilizados os mesmos dois projetos já usados na solução anterior.
 
 \subsubsection{Aplicando solução no sistema de registro de disciplinas Complementares}
-Como ocorrido com a solução anterior, essa solução viabiliza a codificação de testes para todos os requisitos funcionais deste software. Ilustração \ref{code:seleniumPiec} trás a codificação do mesmo teste executado na imagem \ref{code:Contexto}.
+Como ocorrido com a solução anterior, essa solução viabiliza a codificação de testes para todos os requisitos funcionais deste software. Ilustração \ref{code:seleniumPiec} traz a codificação do mesmo teste executado na imagem \ref{code:Contexto}.
 
 \begin{figure}[!htt]
 	\begin{lstlisting}
